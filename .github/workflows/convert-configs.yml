@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   
+  contents: write
+
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -15,7 +16,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}  
+        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -31,9 +32,8 @@ jobs:
         python scripts/converter.py
     
     - name: Commit and push changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add output/
-        git diff --staged --quiet || git commit -m "Auto-update configs $(date +'%Y-%m-%d %H:%M:%S')"
-        git push
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto-update configs $(date +'%Y-%m-%d %H:%M:%S')"
+        branch: main
+        file_pattern: 'output/*.yaml'

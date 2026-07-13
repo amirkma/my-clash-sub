@@ -2,9 +2,11 @@ name: Convert Configs to YML
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # هر 6 ساعت یکبار اجرا می‌شود
-  workflow_dispatch:  # امکان اجرای دستی
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
+permissions:
+  contents: write   
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -12,6 +14,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  
     
     - name: Setup Python
       uses: actions/setup-python@v5

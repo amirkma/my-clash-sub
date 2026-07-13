@@ -2,6 +2,8 @@ import requests
 import yaml
 import json
 import os
+import base64
+import urllib.parse
 from datetime import datetime
 
 # لینک‌های کانفیگ
@@ -14,37 +16,346 @@ CONFIG_URLS = {
     "ss": "https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss-all.txt"
 }
 
-def fetch_configs():
-    """دریافت کانفیگ‌ها از لینک‌های raw"""
-    configs = {}
-    for name, url in CONFIG_URLS.items():
-        try:
-            response = requests.get(url, timeout=30)
-            if response.status_code == 200:
-                configs[name] = response.text
-                print(f"✅ دریافت {name} با موفقیت")
-            else:
-                print(f"❌ خطا در دریافت {name}: {response.status_code}")
-        except Exception as e:
-            print(f"❌ خطا در دریافت {name}: {str(e)}")
-    return configs
+def parse_vmess(url):
+    """پارس کردن لینک VMESS"""
+    try:
+        encoded = url.replace('vmess://', '')
+        # اضافه کردن padding اگر نیاز باشد
+        missing_padding = len(encoded) % 4
+        if missing_padding:
+            encoded += '=' * (4 - missing_padding)
+        
+        decoded = base64.b64decode(encoded).decode('utf-8')
+        data = json.loads(decoded)
+        
+        proxy = {
+            "name": data.get("ps", f"VMESS-{data.get('add', 'unknown')}"),
+            "type": "vmess",
+            "server": data.get("add", ""),
+            "port": int(data.get("port", 443)),
+            "uuid": data.get("id", ""),
+            "alterId": int(data.get("aid", 0)),
+            "cipher": data.get("scy", "auto"),
+            "udp": True
+        }
+        
+        # تنظیمات TLS - به صورت بولین (true/false)
+        tls = data.get("tls", "")
+        if tls == "tls" or tls == "true":
+            proxy["tls"] = True
+        else:
+            proxy["tls"] = False
+        
+        # تنظیمات Network
+        network = data.get("net", "tcp")
+        proxy["network"] = network
+        
+        # تنظیمات WS
+        if network == "ws":
+            proxy["ws-path"] = data.get("path", "/")
+            host = data.get("host", "")
+            if host:
+                proxy["ws-headers"] = {
+                    "Host": host
+                }
+        
+        # تنظیمات GRPC
+        if network == "grpc":
+            proxy["grpc-service-name"] = data.get("path", "")
+        
+        # تنظیمات HTTP
+        if network == "http":
+            proxy["http-opts"] = {
+                "method": "GET",
+                "path": [data.get("path", "/")]
+            }
+            host = data.get("host", "")
+            if host:
+                proxy["http-opts"]["headers"] = {
+                    "Host": [host]
+                }
+        
+        # تنظیمات H2
+        if network == "h2":
+            proxy["h2-opts"] = {
+                "host": [data.get("host", "")]
+            }
+            proxy["h2-opts"]["path"] = data.get("path", "/")
+        
+        # تنظیمات QUIC
+        if network == "quic":
+            proxy["quic-opts"] = {
+                "method": "CHACHA20-POLY1305",
+                "key": data.get("id", ""),
+                "security": "none"
+            }
+        
+        # تنظیمات Reality
+        if data.get("flow", "") == "xtls-rprx-vision":
+            proxy["flow"] = "xtls-rprx-vision"
+        
+        return proxy
+    except Exception as e:
+        print(f"⚠️ خطا در پارس VMESS: {e}")
+        return None
 
-def convert_to_clash_format(config_data):
-    """تبدیل کانفیگ‌ها به فرمت Clash YML"""
+def parse_vless(url):
+    """پارس کردن لینک VLESS"""
+    try:
+        # حذف vless://
+        url = url.replace('vless://', '')
+        
+        # جداسازی UUID و بقیه
+        if '@' not in url:
+            return None
+        
+        uuid, rest = url.split('@', 1)
+        
+        # جداسازی server:port و پارامترها
+        if '?' not in rest:
+            server_port = rest
+            params = ''
+        else:
+            server_port, params = rest.split('?', 1)
+        
+        server, port = server_port.split(':', 1)
+        port = int(port)
+        
+        # پارس کردن پارامترها
+        param_dict = {}
+        if params:
+            for param in params.split('&'):
+                if '=' in param:
+                    key, value = param.split('=', 1)
+                    param_dict[key] = urllib.parse.unquote(value)
+        
+        # ساخت پروکسی
+        proxy = {
+            "name": param_dict.get("remark", f"VLESS-{server}"),
+            "type": "vless",
+            "server": server,
+            "port": port,
+            "uuid": uuid,
+            "udp": True
+        }
+        
+        # تنظیمات TLS - بولین
+        security = param_dict.get("security", "")
+        if security == "tls" or security == "reality":
+            proxy["tls"] = True
+            if security == "reality":
+                proxy["flow"] = "xtls-rprx-vision"
+        else:
+            proxy["tls"] = False
+        
+        # تنظیمات Network
+        network = param_dict.get("type", "tcp")
+        proxy["network"] = network
+        
+        # تنظیمات WS
+        if network == "ws":
+            proxy["ws-path"] = param_dict.get("path", "/")
+            host = param_dict.get("host", "")
+            if host:
+                proxy["ws-headers"] = {
+                    "Host": host
+                }
+        
+        # تنظیمات GRPC
+        if network == "grpc":
+            proxy["grpc-service-name"] = param_dict.get("serviceName", "")
+        
+        # تنظیمات Reality
+        if security == "reality":
+            proxy["reality-opts"] = {
+                "public-key": param_dict.get("pbk", ""),
+                "short-id": param_dict.get("sid", "")
+            }
+            if param_dict.get("fp", ""):
+                proxy["reality-opts"]["fingerprint"] = param_dict.get("fp", "")
+        
+        # تنظیمات Flow
+        if param_dict.get("flow", ""):
+            proxy["flow"] = param_dict.get("flow", "")
+        
+        # تنظیمات SNI
+        if param_dict.get("sni", ""):
+            proxy["sni"] = param_dict.get("sni", "")
+        
+        return proxy
+    except Exception as e:
+        print(f"⚠️ خطا در پارس VLESS: {e}")
+        return None
+
+def parse_trojan(url):
+    """پارس کردن لینک TROJAN"""
+    try:
+        # حذف trojan://
+        url = url.replace('trojan://', '')
+        
+        if '@' not in url:
+            return None
+        
+        password, rest = url.split('@', 1)
+        
+        if '?' not in rest:
+            server_port = rest
+            params = ''
+        else:
+            server_port, params = rest.split('?', 1)
+        
+        server, port = server_port.split(':', 1)
+        port = int(port)
+        
+        param_dict = {}
+        if params:
+            for param in params.split('&'):
+                if '=' in param:
+                    key, value = param.split('=', 1)
+                    param_dict[key] = urllib.parse.unquote(value)
+        
+        proxy = {
+            "name": param_dict.get("remark", f"TROJAN-{server}"),
+            "type": "trojan",
+            "server": server,
+            "port": port,
+            "password": password,
+            "udp": True
+        }
+        
+        # تنظیمات TLS - بولین
+        tls = param_dict.get("tls", "")
+        if tls == "1" or tls == "true" or tls == "tls":
+            proxy["tls"] = True
+        else:
+            proxy["tls"] = False
+        
+        # تنظیمات SNI
+        if param_dict.get("sni", ""):
+            proxy["sni"] = param_dict.get("sni", "")
+        
+        # تنظیمات ALPN
+        if param_dict.get("alpn", ""):
+            proxy["alpn"] = param_dict.get("alpn", "").split(',')
+        
+        # تنظیمات Skip Cert Verify
+        allow_insecure = param_dict.get("allowInsecure", "")
+        if allow_insecure == "1" or allow_insecure == "true":
+            proxy["skip-cert-verify"] = True
+        else:
+            proxy["skip-cert-verify"] = False
+        
+        return proxy
+    except Exception as e:
+        print(f"⚠️ خطا در پارس TROJAN: {e}")
+        return None
+
+def parse_ss(url):
+    """پارس کردن لینک Shadowsocks"""
+    try:
+        # حذف ss://
+        url = url.replace('ss://', '')
+        
+        # اگر لینک با @ باشد
+        if '@' in url:
+            # فرمت: method:password@server:port
+            method_pass, rest = url.split('@', 1)
+            method, password = method_pass.split(':', 1)
+            server, port = rest.split(':', 1)
+            port = int(port)
+        else:
+            # فرمت base64
+            # اضافه کردن padding
+            missing_padding = len(url) % 4
+            if missing_padding:
+                url += '=' * (4 - missing_padding)
+            
+            decoded = base64.b64decode(url).decode('utf-8')
+            method_pass, server_port = decoded.split('@', 1)
+            method, password = method_pass.split(':', 1)
+            server, port = server_port.split(':', 1)
+            port = int(port)
+        
+        proxy = {
+            "name": f"SS-{server}",
+            "type": "ss",
+            "server": server,
+            "port": port,
+            "cipher": method,
+            "password": password,
+            "udp": True
+        }
+        
+        return proxy
+    except Exception as e:
+        print(f"⚠️ خطا در پارس SS: {e}")
+        return None
+
+def parse_config_line(line):
+    """تشخیص نوع لینک و پارس کردن آن"""
+    line = line.strip()
+    if not line or line.startswith('#'):
+        return None
+    
+    try:
+        if line.startswith('vmess://'):
+            return parse_vmess(line)
+        elif line.startswith('vless://'):
+            return parse_vless(line)
+        elif line.startswith('trojan://'):
+            return parse_trojan(line)
+        elif line.startswith('ss://'):
+            return parse_ss(line)
+        else:
+            return None
+    except Exception as e:
+        print(f"⚠️ خطا در پردازش خط: {e}")
+        return None
+
+def create_clash_config(proxies, config_name):
+    """ایجاد کانفیگ استاندارد Clash"""
+    
+    # محدود کردن تعداد پروکسی‌ها
+    max_proxies = 100
+    if len(proxies) > max_proxies:
+        proxies = proxies[:max_proxies]
     
     # ساختار پایه Clash
-    clash_config = {
-        "mixed-port": 7890,
+    config = {
+        "port": 7890,
+        "socks-port": 7891,
         "allow-lan": False,
         "mode": "rule",
         "log-level": "info",
         "external-controller": "127.0.0.1:9090",
-        "proxies": [],
+        "proxies": proxies,
         "proxy-groups": [
             {
                 "name": "PROXY",
                 "type": "select",
-                "proxies": []
+                "proxies": [p["name"] for p in proxies]
+            },
+            {
+                "name": "Auto",
+                "type": "url-test",
+                "proxies": [p["name"] for p in proxies],
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300
+            },
+            {
+                "name": "Fallback",
+                "type": "fallback",
+                "proxies": [p["name"] for p in proxies],
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300
+            },
+            {
+                "name": "LoadBalance",
+                "type": "load-balance",
+                "proxies": [p["name"] for p in proxies],
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300,
+                "strategy": "consistent-hashing"
             }
         ],
         "rules": [
@@ -52,189 +363,72 @@ def convert_to_clash_format(config_data):
         ]
     }
     
-    # پردازش کانفیگ‌ها
-    proxies = []
-    lines = config_data.strip().split('\n')
-    
-    for line in lines:
-        line = line.strip()
-        if not line or line.startswith('#'):
-            continue
-            
-        try:
-            # تشخیص نوع پروکسی
-            if line.startswith('vmess://'):
-                proxy = parse_vmess(line)
-            elif line.startswith('vless://'):
-                proxy = parse_vless(line)
-            elif line.startswith('trojan://'):
-                proxy = parse_trojan(line)
-            elif line.startswith('ss://'):
-                proxy = parse_ss(line)
-            else:
-                continue
-                
-            if proxy:
-                proxies.append(proxy)
-        except Exception as e:
-            print(f"⚠️ خطا در پردازش خط: {e}")
-            continue
-    
-    clash_config["proxies"] = proxies
-    clash_config["proxy-groups"][0]["proxies"] = [p["name"] for p in proxies[:50]]  # حداکثر 50 تا
-    
-    return clash_config
-
-def parse_vmess(line):
-    """پارس کردن لینک vmess"""
-    import base64
-    import json
-    
-    try:
-        encoded = line.replace('vmess://', '')
-        decoded = base64.b64decode(encoded).decode('utf-8')
-        data = json.loads(decoded)
-        
-        return {
-            "name": data.get("ps", "vmess-proxy"),
-            "type": "vmess",
-            "server": data.get("add", ""),
-            "port": int(data.get("port", 443)),
-            "uuid": data.get("id", ""),
-            "alterId": int(data.get("aid", 0)),
-            "cipher": data.get("scy", "auto"),
-            "tls": data.get("tls", ""),
-            "network": data.get("net", "tcp"),
-            "ws-path": data.get("path", ""),
-            "ws-headers": {"Host": data.get("host", "")}
-        }
-    except:
-        return None
-
-def parse_vless(line):
-    """پارس کردن لینک vless"""
-    import urllib.parse
-    
-    try:
-        encoded = line.replace('vless://', '')
-        parts = encoded.split('@')
-        if len(parts) != 2:
-            return None
-            
-        uuid = parts[0]
-        server_part = parts[1].split('?')[0]
-        server, port = server_part.split(':')
-        
-        query = parts[1].split('?')[1] if '?' in parts[1] else ''
-        params = urllib.parse.parse_qs(query)
-        
-        return {
-            "name": params.get('remark', ['vless-proxy'])[0],
-            "type": "vless",
-            "server": server,
-            "port": int(port),
-            "uuid": uuid,
-            "tls": "tls" in params.get('security', []),
-            "network": params.get('type', ['tcp'])[0],
-            "ws-path": params.get('path', [''])[0],
-            "ws-headers": {"Host": params.get('host', [''])[0]} if params.get('host') else {}
-        }
-    except:
-        return None
-
-def parse_trojan(line):
-    """پارس کردن لینک trojan"""
-    import urllib.parse
-    
-    try:
-        encoded = line.replace('trojan://', '')
-        parts = encoded.split('@')
-        if len(parts) != 2:
-            return None
-            
-        password = parts[0]
-        server_part = parts[1].split('?')[0]
-        server, port = server_part.split(':')
-        
-        query = parts[1].split('?')[1] if '?' in parts[1] else ''
-        params = urllib.parse.parse_qs(query)
-        
-        return {
-            "name": params.get('remark', ['trojan-proxy'])[0],
-            "type": "trojan",
-            "server": server,
-            "port": int(port),
-            "password": password,
-            "sni": params.get('sni', [''])[0] if params.get('sni') else '',
-            "skip-cert-verify": True
-        }
-    except:
-        return None
-
-def parse_ss(line):
-    """پارس کردن لینک ss"""
-    import base64
-    
-    try:
-        encoded = line.replace('ss://', '')
-        if '@' in encoded:
-            # فرمت: method:password@server:port
-            method_pass, rest = encoded.split('@')
-            method, password = method_pass.split(':')
-            server, port = rest.split(':')
-        else:
-            # فرمت base64
-            decoded = base64.b64decode(encoded).decode('utf-8')
-            method_pass, server_port = decoded.split('@')
-            method, password = method_pass.split(':')
-            server, port = server_port.split(':')
-            
-        return {
-            "name": f"ss-{server}",
-            "type": "ss",
-            "server": server,
-            "port": int(port),
-            "cipher": method,
-            "password": password
-        }
-    except:
-        return None
+    return config
 
 def main():
     """تابع اصلی"""
-    print("🚀 شروع فرآیند تبدیل کانفیگ‌ها...")
+    print("🚀 شروع فرآیند تبدیل کانفیگ‌ها به فرمت Clash...")
     
-    # ایجاد پوشه output اگر وجود ندارد
+    # ایجاد پوشه output
     os.makedirs("output", exist_ok=True)
     
-    # دریافت کانفیگ‌ها
-    configs = fetch_configs()
-    
-    # تبدیل هر کانفیگ
-    for name, data in configs.items():
-        if data:
-            try:
-                clash_config = convert_to_clash_format(data)
+    # دریافت و پردازش هر کانفیگ
+    for name, url in CONFIG_URLS.items():
+        print(f"\n📥 دریافت {name} از {url}")
+        
+        try:
+            response = requests.get(url, timeout=30)
+            if response.status_code != 200:
+                print(f"❌ خطا در دریافت {name}: {response.status_code}")
+                continue
+            
+            lines = response.text.split('\n')
+            proxies = []
+            success_count = 0
+            
+            for line in lines:
+                proxy = parse_config_line(line)
+                if proxy:
+                    proxies.append(proxy)
+                    success_count += 1
+            
+            print(f"✅ {success_count} پروکسی معتبر از {len(lines)} خط دریافت شد")
+            
+            if proxies:
+                # ایجاد کانفیگ کامل
+                config = create_clash_config(proxies, name)
                 
-                # ذخیره فایل YML
-                output_file = f"output/{name}.yml"
+                # ذخیره فایل اصلی
+                output_file = f"output/{name}.yaml"
                 with open(output_file, 'w', encoding='utf-8') as f:
-                    yaml.dump(clash_config, f, allow_unicode=True, default_flow_style=False)
+                    yaml.dump(config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+                print(f"✅ فایل {output_file} ایجاد شد")
                 
-                print(f"✅ فایل {output_file} با موفقیت ایجاد شد")
+                # ایجاد نسخه لایت (50 پروکسی اول)
+                if len(proxies) > 50:
+                    lite_proxies = proxies[:50]
+                    lite_config = create_clash_config(lite_proxies, f"{name}-lite")
+                    output_file_lite = f"output/{name}-lite.yaml"
+                    with open(output_file_lite, 'w', encoding='utf-8') as f:
+                        yaml.dump(lite_config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+                    print(f"✅ فایل {output_file_lite} ایجاد شد (نسخه لایت)")
                 
-                # ایجاد نسخه لایت (فقط 20 تا پروکسی)
-                clash_config["proxy-groups"][0]["proxies"] = clash_config["proxy-groups"][0]["proxies"][:20]
-                output_file_lite = f"output/{name}-lite.yml"
-                with open(output_file_lite, 'w', encoding='utf-8') as f:
-                    yaml.dump(clash_config, f, allow_unicode=True, default_flow_style=False)
+                # ایجاد نسخه بسیار سبک (20 پروکسی اول)
+                if len(proxies) > 20:
+                    mini_proxies = proxies[:20]
+                    mini_config = create_clash_config(mini_proxies, f"{name}-mini")
+                    output_file_mini = f"output/{name}-mini.yaml"
+                    with open(output_file_mini, 'w', encoding='utf-8') as f:
+                        yaml.dump(mini_config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+                    print(f"✅ فایل {output_file_mini} ایجاد شد (نسخه مینی)")
+            else:
+                print(f"❌ هیچ پروکسی معتبری برای {name} یافت نشد")
                 
-                print(f"✅ فایل {output_file_lite} با موفقیت ایجاد شد")
-                
-            except Exception as e:
-                print(f"❌ خطا در تبدیل {name}: {str(e)}")
+        except Exception as e:
+            print(f"❌ خطا در پردازش {name}: {str(e)}")
     
-    print("🎉 فرآیند تبدیل با موفقیت به پایان رسید!")
+    print("\n🎉 فرآیند تبدیل با موفقیت به پایان رسید!")
+    print("📁 فایل‌های خروجی در پوشه output/ قرار دارند")
 
 if __name__ == "__main__":
     main()

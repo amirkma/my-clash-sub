@@ -22,6 +22,16 @@ CONFIG_URLS = {
     "ss": "https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss-all.txt"
 }
 
+# متدهای معتبر Shadowsocks
+VALID_SS_CIPHERS = [
+    'aes-128-gcm', 'aes-192-gcm', 'aes-256-gcm',
+    'aes-128-ctr', 'aes-192-ctr', 'aes-256-ctr',
+    'aes-128-cfb', 'aes-192-cfb', 'aes-256-cfb',
+    'chacha20-ietf-poly1305', 'chacha20-ietf', 'chacha20',
+    'xchacha20-ietf-poly1305', 'xchacha20',
+    'rc4-md5', 'salsa20'
+]
+
 def safe_bool(value):
     """تبدیل ایمن به بولین"""
     if isinstance(value, bool):
@@ -47,9 +57,7 @@ def clean_short_id(sid):
     """پاکسازی و اعتبارسنجی short-id برای Reality"""
     if not sid:
         return None
-    # فقط کاراکترهای مجاز (اعداد و حروف کوچک)
     cleaned = re.sub(r'[^a-f0-9]', '', str(sid).lower())
-    # باید بین 2 تا 8 کاراکتر باشد
     if len(cleaned) < 2 or len(cleaned) > 8:
         return None
     return cleaned
@@ -57,17 +65,23 @@ def clean_short_id(sid):
 def decode_base64_url(data):
     """دیکد کردن Base64 با پشتیبانی از URL-safe"""
     try:
-        # حذف whitespace
         data = data.strip()
-        # اضافه کردن padding
+        # حذف whitespace و کاراکترهای اضافی
+        data = re.sub(r'\s+', '', data)
         missing_padding = len(data) % 4
         if missing_padding:
             data += '=' * (4 - missing_padding)
-        # جایگزینی کاراکترهای URL-safe
         data = data.replace('-', '+').replace('_', '/')
         return base64.b64decode(data).decode('utf-8')
     except Exception:
         return None
+
+def is_valid_ss_cipher(cipher):
+    """بررسی معتبر بودن متد SS"""
+    if not cipher:
+        return False
+    cipher = cipher.lower().strip()
+    return cipher in VALID_SS_CIPHERS
 
 def parse_vmess(url):
     """پارس کردن لینک VMESS"""
@@ -79,6 +93,10 @@ def parse_vmess(url):
         
         data = json.loads(decoded)
         
+        # اعتبارسنجی اولیه
+        if not data.get("add") or not data.get("id"):
+            return None
+        
         proxy = {
             "name": data.get("ps", f"VMESS-{data.get('add', 'unknown')}"),
             "type": "vmess",
@@ -89,10 +107,6 @@ def parse_vmess(url):
             "cipher": data.get("scy", "auto"),
             "udp": True
         }
-        
-        # فقط اگر server و uuid معتبر باشن
-        if not proxy["server"] or not proxy["uuid"]:
-            return None
         
         # TLS
         tls = data.get("tls", "")
@@ -270,7 +284,7 @@ def parse_trojan(url):
         
         # TLS
         tls = param_dict.get("tls", "")
-        proxy["tls"] = safe_bool(tls) or True  # تروجان معمولاً TLS داره
+        proxy["tls"] = safe_bool(tls) or True
         
         # SNI
         sni = param_dict.get("sni", "")
@@ -289,28 +303,45 @@ def parse_trojan(url):
         return None
 
 def parse_ss(url):
-    """پارس کردن لینک Shadowsocks با پشتیبانی از فرمت‌های مختلف"""
+    """پارس کردن لینک Shadowsocks با اعتبارسنجی قوی"""
     try:
         url = url.replace('ss://', '').strip()
+        
+        # حذف کاراکترهای غیرمجاز
+        url = re.sub(r'[^\w\d:@/?&=+%.-]', '', url)
+        
+        if not url:
+            return None
+        
+        method = None
+        password = None
+        server = None
+        port = None
         
         # فرمت 1: ss://method:password@server:port
         if '@' in url:
             method_pass, rest = url.split('@', 1)
             
-            # بررسی اینکه method:password به درستی جدا بشه
-            if ':' not in method_pass:
+            # بررسی روش
+            if ':' in method_pass:
+                method, password = method_pass.split(':', 1)
+                # اعتبارسنجی متد
+                if not is_valid_ss_cipher(method):
+                    return None
+            else:
                 # ممکنه base64 باشه
                 decoded = decode_base64_url(method_pass)
                 if decoded and ':' in decoded:
                     method, password = decoded.split(':', 1)
+                    if not is_valid_ss_cipher(method):
+                        return None
                 else:
                     return None
-            else:
-                method, password = method_pass.split(':', 1)
             
             # جدا کردن server:port
             if ':' not in rest:
                 return None
+            # استفاده از rsplit برای پشتیبانی از IPv6
             server, port = rest.rsplit(':', 1)
             port = safe_int(port, 443)
         
@@ -329,19 +360,28 @@ def parse_ss(url):
                 return None
                 
             method, password = method_pass.split(':', 1)
+            if not is_valid_ss_cipher(method):
+                return None
+                
             server, port = rest.rsplit(':', 1)
             port = safe_int(port, 443)
         
-        # اعتبارسنجی
+        # اعتبارسنجی نهایی
         if not all([method, password, server, port]):
             return None
         
+        if port <= 0 or port > 65535:
+            return None
+        
+        # اسم پروکسی
+        proxy_name = f"SS-{server}-{method[:8]}"
+        
         proxy = {
-            "name": f"SS-{server}",
+            "name": proxy_name,
             "type": "ss",
             "server": server,
             "port": port,
-            "cipher": method,
+            "cipher": method.lower(),
             "password": password,
             "udp": True
         }
@@ -384,6 +424,14 @@ def create_clash_config(proxies, config_name):
         # بررسی وجود فیلدهای ضروری
         if not p.get("server") or not p.get("port") or not p.get("type"):
             continue
+        
+        # بررسی نوع
+        if p["type"] == "ss":
+            if not p.get("cipher") or not p.get("password"):
+                continue
+            # بررسی متد معتبر
+            if not is_valid_ss_cipher(p["cipher"]):
+                continue
         
         # حذف موارد تکراری بر اساس نام
         name = p.get("name", "")
@@ -443,6 +491,7 @@ def main():
     
     total_proxies = 0
     total_files = 0
+    total_errors = 0
     
     for name, url in CONFIG_URLS.items():
         logger.info(f"\n📥 دریافت {name}...")
@@ -462,13 +511,13 @@ def main():
                 if proxy:
                     proxies.append(proxy)
                 else:
-                    # فقط خطاهای SS رو نمایش بده
-                    if line.strip() and line.strip().startswith('ss://'):
+                    if line.strip() and not line.strip().startswith('#'):
                         error_count += 1
             
             logger.info(f"✅ {len(proxies)} پروکسی معتبر دریافت شد")
             if error_count > 0:
-                logger.warning(f"⚠️ {error_count} لینک SS نامعتبر")
+                logger.warning(f"⚠️ {error_count} لینک نامعتبر نادیده گرفته شد")
+                total_errors += error_count
             
             if proxies:
                 # نسخه کامل
@@ -504,10 +553,11 @@ def main():
                 logger.warning(f"❌ هیچ پروکسی معتبری برای {name} یافت نشد")
                 
         except Exception as e:
-            logger.error(f"❌ خطا: {str(e)}")
+            logger.error(f"❌ خطا در پردازش {name}: {str(e)}")
     
     logger.info(f"\n🎉 فرآیند با موفقیت به پایان رسید!")
     logger.info(f"📊 جمعاً {total_proxies} پروکسی در {total_files} فایل ذخیره شد")
+    logger.info(f"⚠️ {total_errors} لینک نامعتبر نادیده گرفته شد")
     logger.info("📁 فایل‌های خروجی در پوشه output/ قرار دارند")
 
 if __name__ == "__main__":

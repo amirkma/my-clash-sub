@@ -413,24 +413,6 @@ proxies:
   tls: true
   sni: global.fastly.com
   skip-cert-verify: false
-- name: TROJAN-84.234.30.16
-  type: trojan
-  server: 84.234.30.16
-  port: 30000
-  password: '---------BanV2ray--------'
-  udp: true
-  tls: true
-  sni: chi.yahoo.com
-  skip-cert-verify: true
-- name: TROJAN-162.159.38.119
-  type: trojan
-  server: 162.159.38.119
-  port: 443
-  password: MITIVPN
-  udp: true
-  tls: true
-  sni: de-ms.Maqror.ir
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
@@ -481,8 +463,6 @@ proxy-groups:
   - TROJAN-185.137.157.138
   - TROJAN-141.193.213.21
   - TROJAN-151.101.34.144
-  - TROJAN-84.234.30.16
-  - TROJAN-162.159.38.119
 - name: Auto
   type: url-test
   proxies:
@@ -532,8 +512,6 @@ proxy-groups:
   - TROJAN-185.137.157.138
   - TROJAN-141.193.213.21
   - TROJAN-151.101.34.144
-  - TROJAN-84.234.30.16
-  - TROJAN-162.159.38.119
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

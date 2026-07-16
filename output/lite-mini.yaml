@@ -69,92 +69,88 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: VLESS-104.16.72.50
+- name: VLESS-marzban-node-production-9e04.up.railway.app
   type: vless
-  server: 104.16.72.50
+  server: marzban-node-production-9e04.up.railway.app
   port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  uuid: 9e283964-8e37-4224-91f7-87456cb58371
   udp: true
   tls: true
   network: ws
-  ws-path: /fp
+  ws-path: /vless
   ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr#meliproxyy-13
-- name: VLESS-104.18.37.237
+    Host: marzban-node-production-9e04.up.railway.app
+  sni: marzban-node-production-9e04.up.railway.app#meliproxyy-13
+- name: VLESS-63.179.29.71
   type: vless
-  server: 104.18.37.237
+  server: 63.179.29.71
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#meliproxyy-14
+- name: VLESS-msk.24pitbullstore.ru
+  type: vless
+  server: msk.24pitbullstore.ru
+  port: 2087
+  uuid: 570779d8-b4cd-4b3c-a8bd-6127f51c4d48
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: J2RPvguvaBHlFDFOcZHs4sY9wSNIGNvvmDZud49A7i8
+    fingerprint: firefox
+  sni: msk.24pitbullstore.ru
+- name: VLESS-45.80.111.1
+  type: vless
+  server: 45.80.111.1
+  port: 8880
+  uuid: a4140ffb-49da-45c3-91cc-2c97e6021cbf
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-3.126.31.60
+  type: vless
+  server: 3.126.31.60
+  port: 443
+  uuid: fa12c1f5-24be-4119-8506-aad16f3bcd35
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-185.5.75.151
+  type: vless
+  server: 185.5.75.151
   port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  uuid: fce1e5b0-d154-4278-a291-5c79f5b1bb24
   udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr#meliproxyy-14
-- name: VLESS-172.64.151.158
-  type: vless
-  server: 172.64.151.158
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr#meliproxyy-15
-- name: VLESS-172.64.145.2
-  type: vless
-  server: 172.64.145.2
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr#meliproxyy-17
-- name: VLESS-91.107.179.255
-  type: vless
-  server: 91.107.179.255
-  port: 50567
-  uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f
-  udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs
-    fingerprint: qq
-  sni: play.google.com
-- name: VLESS-netherland.panelbaz.com
+- name: VLESS-198.41.208.252
   type: vless
-  server: netherland.panelbaz.com
-  port: 5000
-  uuid: 3f176170-afe0-4847-91f9-64e05d004eec
+  server: 198.41.208.252
+  port: 8880
+  uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
   udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
-    fingerprint: qq
-  sni: play.google.com#meliproxyy-19
-- name: VLESS-45.130.125.207
+- name: VLESS-173.245.59.1
   type: vless
-  server: 45.130.125.207
+  server: 173.245.59.1
   port: 443
-  uuid: 7968c546-02dc-4f8c-b791-934591a94cb2
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  udp: true
+  tls: false
+  network: tcp
+- name: TROJAN-188.213.131.90
+  type: trojan
+  server: 188.213.131.90
+  port: 59618
+  password: 7f5rouvmiqm83905
   udp: true
   tls: true
-  network: ws
-  ws-path: /cbasur
-  ws-headers:
-    Host: hhvl.hhapp.kdns.fr
-  sni: hhvl.hhapp.kdns.fr#meliproxyy-20
+  sni: google.com
+  skip-cert-verify: true
 - name: TROJAN-199.232.22.39
   type: trojan
   server: 199.232.22.39
@@ -182,15 +178,6 @@ proxies:
   tls: true
   sni: global.ssl.fastly.com
   skip-cert-verify: false
-- name: TROJAN-151.101.1.194
-  type: trojan
-  server: 151.101.1.194
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
@@ -201,17 +188,18 @@ proxy-groups:
   - VLESS-162.159.21.206
   - VLESS-162.159.25.12
   - VLESS-ov-canada1.09vpn.com
-  - VLESS-104.16.72.50
-  - VLESS-104.18.37.237
-  - VLESS-172.64.151.158
-  - VLESS-172.64.145.2
-  - VLESS-91.107.179.255
-  - VLESS-netherland.panelbaz.com
-  - VLESS-45.130.125.207
+  - VLESS-marzban-node-production-9e04.up.railway.app
+  - VLESS-63.179.29.71
+  - VLESS-msk.24pitbullstore.ru
+  - VLESS-45.80.111.1
+  - VLESS-3.126.31.60
+  - VLESS-185.5.75.151
+  - VLESS-198.41.208.252
+  - VLESS-173.245.59.1
+  - TROJAN-188.213.131.90
   - TROJAN-199.232.22.39
   - TROJAN-151.101.56.7
   - TROJAN-199.232.78.140
-  - TROJAN-151.101.1.194
 - name: Auto
   type: url-test
   proxies:
@@ -221,17 +209,18 @@ proxy-groups:
   - VLESS-162.159.21.206
   - VLESS-162.159.25.12
   - VLESS-ov-canada1.09vpn.com
-  - VLESS-104.16.72.50
-  - VLESS-104.18.37.237
-  - VLESS-172.64.151.158
-  - VLESS-172.64.145.2
-  - VLESS-91.107.179.255
-  - VLESS-netherland.panelbaz.com
-  - VLESS-45.130.125.207
+  - VLESS-marzban-node-production-9e04.up.railway.app
+  - VLESS-63.179.29.71
+  - VLESS-msk.24pitbullstore.ru
+  - VLESS-45.80.111.1
+  - VLESS-3.126.31.60
+  - VLESS-185.5.75.151
+  - VLESS-198.41.208.252
+  - VLESS-173.245.59.1
+  - TROJAN-188.213.131.90
   - TROJAN-199.232.22.39
   - TROJAN-151.101.56.7
   - TROJAN-199.232.78.140
-  - TROJAN-151.101.1.194
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

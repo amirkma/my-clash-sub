@@ -5,33 +5,59 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44340
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.170-aes-128-
-  type: ss
-  server: 156.146.38.170
-  port: 44359
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
 - name: SS-82.38.31.15-chacha20
   type: ss
   server: 82.38.31.15
-  port: 44398
+  port: 44317
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-173.244.56.6-aes-128-
+  type: ss
+  server: 173.244.56.6
+  port: 44341
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-173.244.56.9-aes-128-
+  type: ss
+  server: 173.244.56.9
+  port: 44342
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.22.95.183-aes-128-
+  type: ss
+  server: 149.22.95.183
+  port: 44345
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-switcher-nick-croquet.freesocks.work-chacha20
+  type: ss
+  server: switcher-nick-croquet.freesocks.work
+  port: 44399
+  cipher: chacha20-ietf-poly1305
+  password: 9tqhMdIrTkgQ46PvhyAtMH
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.170-aes-128-
   - SS-82.38.31.15-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-82.38.31.15-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

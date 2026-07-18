@@ -5,52 +5,24 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-141.98.101.178-aes-128-
+- name: SS-109.104.154.163-aes-256-
   type: ss
-  server: 141.98.101.178
-  port: 4437
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 109.104.154.163
+  port: 23754
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
   udp: true
-- name: SS-173.244.56.6-aes-128-
+- name: SS-switcher-nick-croquet.freesocks.work-chacha20
   type: ss
-  server: 173.244.56.6
-  port: 44311
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.243-aes-128-
-  type: ss
-  server: 37.19.198.243
-  port: 44314
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.9-aes-128-
-  type: ss
-  server: 173.244.56.9
-  port: 44323
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-82.38.31.15-chacha20
-  type: ss
-  server: 82.38.31.15
-  port: 44346
+  server: switcher-nick-croquet.freesocks.work
+  port: 44377
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: RFK38Cg7APneSB5cWDcpbm
   udp: true
-- name: SS-82.38.31.57-chacha20
+- name: SS-156.146.38.170-aes-128-
   type: ss
-  server: 82.38.31.57
-  port: 44361
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-149.22.95.183-aes-128-
-  type: ss
-  server: 149.22.95.183
-  port: 44391
+  server: 156.146.38.170
+  port: 44390
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -58,24 +30,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-141.98.101.178-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-82.38.31.15-chacha20
-  - SS-82.38.31.57-chacha20
-  - SS-149.22.95.183-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-141.98.101.178-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-82.38.31.15-chacha20
-  - SS-82.38.31.57-chacha20
-  - SS-149.22.95.183-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-109.104.154.163-aes-256-
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
+  - SS-156.146.38.170-aes-128-
 rules:
 - MATCH,PROXY

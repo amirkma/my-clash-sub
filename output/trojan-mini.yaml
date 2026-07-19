@@ -139,15 +139,6 @@ proxies:
   tls: true
   sni: stirring-dane.rooster465.autos#Farah_VPN-17
   skip-cert-verify: true
-- name: TROJAN-151.101.1.194
-  type: trojan
-  server: 151.101.1.194
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
@@ -167,7 +158,6 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-151.101.1.194
 - name: Auto
   type: url-test
   proxies:
@@ -186,7 +176,6 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-151.101.1.194
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

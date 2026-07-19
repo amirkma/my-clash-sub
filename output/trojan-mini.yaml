@@ -139,33 +139,15 @@ proxies:
   tls: true
   sni: stirring-dane.rooster465.autos#Farah_VPN-17
   skip-cert-verify: true
-- name: TROJAN-162.159.38.183
+- name: TROJAN-151.101.1.194
   type: trojan
-  server: 162.159.38.183
+  server: 151.101.1.194
   port: 443
-  password: VPNCUSTOMIZE
+  password: MiTiVPN
   udp: true
   tls: true
-  sni: ww.offers.de5.net#meliproxyy-18
-  skip-cert-verify: false
-- name: TROJAN-45.130.125.2
-  type: trojan
-  server: 45.130.125.2
-  port: 443
-  password: VPNCUSTOMIZE
-  udp: true
-  tls: true
-  sni: ww.offers.de5.net#meliproxyy-19
-  skip-cert-verify: false
-- name: TROJAN-188.114.97.6
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: VPNCUSTOMIZE
-  udp: true
-  tls: true
-  sni: ww.offers.de5.net#meliproxyy-20
-  skip-cert-verify: false
+  sni: ssl.fastly.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
@@ -185,9 +167,7 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-162.159.38.183
-  - TROJAN-45.130.125.2
-  - TROJAN-188.114.97.6
+  - TROJAN-151.101.1.194
 - name: Auto
   type: url-test
   proxies:
@@ -206,9 +186,7 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-162.159.38.183
-  - TROJAN-45.130.125.2
-  - TROJAN-188.114.97.6
+  - TROJAN-151.101.1.194
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

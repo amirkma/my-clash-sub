@@ -146,8 +146,17 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-20
+  sni: www.ignitelimit.com#meliproxyy-18
   skip-cert-verify: false
+- name: TROJAN-162.159.153.75
+  type: trojan
+  server: 162.159.153.75
+  port: 443
+  password: tg-dns68
+  udp: true
+  tls: true
+  sni: vip.putata.eu.org
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
@@ -168,6 +177,7 @@ proxy-groups:
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
   - TROJAN-104.17.111.8
+  - TROJAN-162.159.153.75
 - name: Auto
   type: url-test
   proxies:
@@ -187,6 +197,7 @@ proxy-groups:
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
   - TROJAN-104.17.111.8
+  - TROJAN-162.159.153.75
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

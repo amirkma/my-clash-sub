@@ -139,15 +139,6 @@ proxies:
   tls: true
   sni: stirring-dane.rooster465.autos#Farah_VPN-17
   skip-cert-verify: true
-- name: TROJAN-104.17.111.8
-  type: trojan
-  server: 104.17.111.8
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com#meliproxyy-18
-  skip-cert-verify: false
 - name: TROJAN-162.159.153.75
   type: trojan
   server: 162.159.153.75
@@ -157,6 +148,15 @@ proxies:
   tls: true
   sni: vip.putata.eu.org
   skip-cert-verify: true
+- name: TROJAN-45.130.125.112
+  type: trojan
+  server: 45.130.125.112
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#meliproxyy-20
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
@@ -176,8 +176,8 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-104.17.111.8
   - TROJAN-162.159.153.75
+  - TROJAN-45.130.125.112
 - name: Auto
   type: url-test
   proxies:
@@ -196,8 +196,8 @@ proxy-groups:
   - TROJAN-202.37.33.80
   - TROJAN-concise-buck.rooster465.autos
   - TROJAN-stirring-dane.rooster465.autos
-  - TROJAN-104.17.111.8
   - TROJAN-162.159.153.75
+  - TROJAN-45.130.125.112
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

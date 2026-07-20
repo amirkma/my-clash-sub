@@ -113,107 +113,48 @@ proxies:
   tls: true
   sni: vast-werewolf.rooster465.autos#Farah_VPN-11
   skip-cert-verify: true
-- name: VLESS-love.ns.cloudflare.com
+- name: '@meliproxy-13'
+  type: vmess
+  server: 192.0.63.246
+  port: 80
+  uuid: 70848317-88ef-4840-b839-16caa8b64d18
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /navigate?ed=800
+  ws-headers:
+    Host: 780a34f694d00545.780a34f694d00545.780a34f694d00545.780a34f694d00545.de-dargah.offDarsAD.IR.
+- name: VLESS-tr.koomeh.net
   type: vless
-  server: love.ns.cloudflare.com
+  server: tr.koomeh.net
+  port: 80
+  uuid: ce6ae434-7ace-4ce8-851a-9321a9e5a0a6
+  udp: true
+  tls: false
+  network: xhttp
+- name: VLESS-diyakoteam-production.up.railway.app
+  type: vless
+  server: diyakoteam-production.up.railway.app
   port: 443
-  uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3
+  uuid: 9843fb82-463b-075f-d2c0-86396daaa443
   udp: true
   tls: true
   network: ws
-  ws-path: /sea#meliproxyy-13
+  ws-path: /ws/9843fb82-463b-075f-d2c0-86396daaa443
   ws-headers:
-    Host: deicl.redstone-vex.sbs
-  sni: deicl.redstone-vex.sbs
-- name: VLESS-185.231.101.89
-  type: vless
-  server: 185.231.101.89
+    Host: diyakoteam-production.up.railway.app
+  sni: diyakoteam-production.up.railway.app
+- name: TROJAN-162.159.153.75
+  type: trojan
+  server: 162.159.153.75
   port: 443
-  uuid: ecad47b0-249e-4f6f-adff-e3c8f02b1897
+  password: tg-dns68
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-  sni: se.quattro-tech.ru
-- name: VLESS-bfu9e.pastilbastani.ir
-  type: vless
-  server: bfu9e.pastilbastani.ir
-  port: 443
-  uuid: 5966df7d-fd8a-4ec3-99d2-aa09864d77f2
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-Fr-namahdod.jorzel.ir
-  type: vless
-  server: Fr-namahdod.jorzel.ir
-  port: 2060
-  uuid: a8af12ec-6b03-4d04-af9f-3a64006cb2cf
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: G5_DckdgcTAbEubwJvlZDBwrncT1lOq6W5JRwINl1nE
-    fingerprint: chrome
-  sni: yahoo.com
-- name: VLESS-87.252.237.219
-  type: vless
-  server: 87.252.237.219
-  port: 8443
-  uuid: c50680f6-8dc9-44cc-a8fe-72cab1f7f51b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VE6aUAkSRew5ySZw80myEtL1LOWwDo7BuYyuIKaYPUI
-    fingerprint: firefox
-  sni: tradingview.com
-- name: VLESS-209.250.237.71
-  type: vless
-  server: 209.250.237.71
-  port: 59154
-  uuid: 399f7f1b-0f5e-43a1-b0b5-6f255367d778
-  udp: true
-  tls: false
-  network: tcp#proxy_kafee-23
-- name: VLESS-feed.onetimeok.com
-  type: vless
-  server: feed.onetimeok.com
-  port: 443
-  uuid: 86208db7-8bbc-42c2-9eb2-ffe5675502c3
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: app.v1.StreamService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nhw3l7ERW8NoAh5lBv3dxkF-mkNYifxsSxX_HNiOhAU
-    fingerprint: firefox
-  sni: feed.onetimeok.com
-- name: VLESS-82.115.16.211
-  type: vless
-  server: 82.115.16.211
-  port: 2082
-  uuid: 1c404fde-0aa5-482c-ab00-0b34db703ac8
-  udp: true
-  tls: false
-  network: ws#proxy_kafee-26
-- name: VLESS-2.26.82.237
-  type: vless
-  server: 2.26.82.237
-  port: 443
-  uuid: 906be882-7f16-47c3-8702-59db2ada9688
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VmBEjLUpiEnoNIaPNGDfVPIOzH_ktSDdsGGAvissxgI
-  sni: speed.cloudflare.com#proxy_kafee-27
+  sni: vip.putata.eu.org
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
@@ -228,15 +169,10 @@ proxy-groups:
   - VLESS-nexusmods.com
   - TROJAN-149.104.104.58
   - TROJAN-vast-werewolf.rooster465.autos
-  - VLESS-love.ns.cloudflare.com
-  - VLESS-185.231.101.89
-  - VLESS-bfu9e.pastilbastani.ir
-  - VLESS-Fr-namahdod.jorzel.ir
-  - VLESS-87.252.237.219
-  - VLESS-209.250.237.71
-  - VLESS-feed.onetimeok.com
-  - VLESS-82.115.16.211
-  - VLESS-2.26.82.237
+  - '@meliproxy-13'
+  - VLESS-tr.koomeh.net
+  - VLESS-diyakoteam-production.up.railway.app
+  - TROJAN-162.159.153.75
 - name: Auto
   type: url-test
   proxies:
@@ -250,15 +186,10 @@ proxy-groups:
   - VLESS-nexusmods.com
   - TROJAN-149.104.104.58
   - TROJAN-vast-werewolf.rooster465.autos
-  - VLESS-love.ns.cloudflare.com
-  - VLESS-185.231.101.89
-  - VLESS-bfu9e.pastilbastani.ir
-  - VLESS-Fr-namahdod.jorzel.ir
-  - VLESS-87.252.237.219
-  - VLESS-209.250.237.71
-  - VLESS-feed.onetimeok.com
-  - VLESS-82.115.16.211
-  - VLESS-2.26.82.237
+  - '@meliproxy-13'
+  - VLESS-tr.koomeh.net
+  - VLESS-diyakoteam-production.up.railway.app
+  - TROJAN-162.159.153.75
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,17 +5,10 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-switcher-nick-croquet.freesocks.work-chacha20
+- name: SS-156.146.38.167-aes-128-
   type: ss
-  server: switcher-nick-croquet.freesocks.work
-  port: 44315
-  cipher: chacha20-ietf-poly1305
-  password: RFK38Cg7APneSB5cWDcpbm
-  udp: true
-- name: SS-149.22.87.241-aes-128-
-  type: ss
-  server: 149.22.87.241
-  port: 44348
+  server: 156.146.38.167
+  port: 44353
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -23,7 +16,6 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-switcher-nick-croquet.freesocks.work-chacha20
-  - SS-149.22.87.241-aes-128-
+  - SS-156.146.38.167-aes-128-
 rules:
 - MATCH,PROXY

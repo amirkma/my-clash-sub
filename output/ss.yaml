@@ -5,67 +5,58 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-173.244.56.9-aes-128-
+- name: SS-172.245.235.84-aes-256-
   type: ss
-  server: 173.244.56.9
+  server: 172.245.235.84
+  port: 23759
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+  udp: true
+- name: SS-158.173.20.208-aes-128-
+  type: ss
+  server: 158.173.20.208
   port: 44310
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-173.244.56.6-aes-128-
+- name: SS-154.46.31.106-chacha20
   type: ss
-  server: 173.244.56.6
-  port: 44312
+  server: 154.46.31.106
+  port: 44321
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-156.146.38.167-aes-128-
+  type: ss
+  server: 156.146.38.167
+  port: 44348
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-8.210.171.48-aes-256-
   type: ss
   server: 8.210.171.48
-  port: 44329
+  port: 44375
   cipher: aes-256-gcm
   password: a172cf0d-ae89-42f3-8505-0c51dae293a1
-  udp: true
-- name: SS-158.173.20.171-aes-128-
-  type: ss
-  server: 158.173.20.171
-  port: 44353
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.24.73-aes-128-
-  type: ss
-  server: 158.173.24.73
-  port: 44363
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-141.98.101.178-aes-128-
-  type: ss
-  server: 141.98.101.178
-  port: 44396
-  cipher: aes-128-gcm
-  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-173.244.56.9-aes-128-
-  - SS-173.244.56.6-aes-128-
+  - SS-172.245.235.84-aes-256-
+  - SS-158.173.20.208-aes-128-
+  - SS-154.46.31.106-chacha20
+  - SS-156.146.38.167-aes-128-
   - SS-8.210.171.48-aes-256-
-  - SS-158.173.20.171-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-141.98.101.178-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-173.244.56.9-aes-128-
-  - SS-173.244.56.6-aes-128-
+  - SS-172.245.235.84-aes-256-
+  - SS-158.173.20.208-aes-128-
+  - SS-154.46.31.106-chacha20
+  - SS-156.146.38.167-aes-128-
   - SS-8.210.171.48-aes-256-
-  - SS-158.173.20.171-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-141.98.101.178-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

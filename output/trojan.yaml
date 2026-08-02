@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: TROJAN-Hkdcrtc-e.catcat321.com
+  type: trojan
+  server: Hkdcrtc-e.catcat321.com
+  port: 20041
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  udp: true
+  tls: true
+  sni: de.catxstar.com#Farah_VPN-1
+  skip-cert-verify: true
 - name: TROJAN-oplosgru-c.catcat321.com
   type: trojan
   server: oplosgru-c.catcat321.com
@@ -12,35 +21,8 @@ proxies:
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   udp: true
   tls: true
-  sni: hk.catxstar.com#Farah_VPN-1
+  sni: hk.catxstar.com#Farah_VPN-2
   skip-cert-verify: true
-- name: TROJAN-188.114.96.3
-  type: trojan
-  server: 188.114.96.3
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-- name: TROJAN-172.64.146.127
-  type: trojan
-  server: 172.64.146.127
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.multiplydose.com
-  skip-cert-verify: false
-- name: TROJAN-millionaire.levikogjgfdd.ir
-  type: trojan
-  server: millionaire.levikogjgfdd.ir
-  port: 443
-  password: '521314'
-  udp: true
-  tls: true
-  sni: tjplay.lxdxo.kdns.fr#meliproxyy-4
-  skip-cert-verify: false
 - name: TROJAN-104.16.174.12
   type: trojan
   server: 104.16.174.12
@@ -48,7 +30,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-5
+  sni: www.ignitelimit.com#meliproxyy-4
   skip-cert-verify: false
 - name: TROJAN-172.67.180.92
   type: trojan
@@ -57,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.multiplydose.com#meliproxyy-6
+  sni: www.multiplydose.com#meliproxyy-5
   skip-cert-verify: false
 - name: TROJAN-188.114.97.6
   type: trojan
@@ -66,7 +48,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmloud.com#meliproxyy-7
+  sni: www.calmloud.com#meliproxyy-6
   skip-cert-verify: true
 - name: TROJAN-www.speedtest.net
   type: trojan
@@ -75,7 +57,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.gossipglove.com#meliproxyy-8
+  sni: www.gossipglove.com#meliproxyy-7
   skip-cert-verify: false
 - name: TROJAN-167.150.100.133
   type: trojan
@@ -84,7 +66,7 @@ proxies:
   password: 0_Oms89nH82l_Ki813_Nxmw81_Rbt_Jq190Kl_m
   udp: true
   tls: true
-  sni: grape-power-sg.roxa.org#meliproxyy-9
+  sni: grape-power-sg.roxa.org#meliproxyy-8
   skip-cert-verify: false
 - name: TROJAN-www.ignitelimit.com
   type: trojan
@@ -113,6 +95,15 @@ proxies:
   tls: true
   sni: rd.autos.yahoo.com:40069
   skip-cert-verify: true
+- name: TROJAN-millionaire.levikogjgfdd.ir
+  type: trojan
+  server: millionaire.levikogjgfdd.ir
+  port: 443
+  password: '521314'
+  udp: true
+  tls: true
+  sni: tjplay.lxdxo.kdns.fr
+  skip-cert-verify: false
 - name: TROJAN-104.18.1.1
   type: trojan
   server: 104.18.1.1
@@ -129,7 +120,7 @@ proxies:
   password: '521314'
   udp: true
   tls: true
-  sni: tjplay.lxdxo.kdns.fr#meliproxyy-17
+  sni: tjplay.lxdxo.kdns.fr#meliproxyy-16
   skip-cert-verify: false
 - name: TROJAN-clean.bitzynet.ir
   type: trojan
@@ -138,7 +129,7 @@ proxies:
   password: 2mhmdxunwxxfsqf0
   udp: true
   tls: true
-  sni: trojan.bitzynet.ir#meliproxyy-20
+  sni: trojan.bitzynet.ir#meliproxyy-19
   skip-cert-verify: false
 - name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   type: trojan
@@ -165,7 +156,7 @@ proxies:
   password: '521314'
   udp: true
   tls: true
-  sni: tjplay.lxdxo.kdns.fr#meliproxyy-24
+  sni: tjplay.lxdxo.kdns.fr#meliproxyy-23
   skip-cert-verify: false
 - name: TROJAN-188.213.131.90
   type: trojan
@@ -189,10 +180,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-188.114.96.3
-  - TROJAN-172.64.146.127
-  - TROJAN-millionaire.levikogjgfdd.ir
   - TROJAN-104.16.174.12
   - TROJAN-172.67.180.92
   - TROJAN-188.114.97.6
@@ -201,6 +190,7 @@ proxy-groups:
   - TROJAN-www.ignitelimit.com
   - TROJAN-179.237.75.190
   - TROJAN-6r6e6e6ryrfyfyydur6r6f6r6r6r6d6d6e6s6d6s6d7d7d7e6s.poki-pakipon.ir
+  - TROJAN-millionaire.levikogjgfdd.ir
   - TROJAN-104.18.1.1
   - TROJAN-wangcai.yunzhongzhuan.com
   - TROJAN-clean.bitzynet.ir
@@ -212,10 +202,8 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-188.114.96.3
-  - TROJAN-172.64.146.127
-  - TROJAN-millionaire.levikogjgfdd.ir
   - TROJAN-104.16.174.12
   - TROJAN-172.67.180.92
   - TROJAN-188.114.97.6
@@ -224,6 +212,7 @@ proxy-groups:
   - TROJAN-www.ignitelimit.com
   - TROJAN-179.237.75.190
   - TROJAN-6r6e6e6ryrfyfyydur6r6f6r6r6r6d6d6e6s6d6s6d7d7d7e6s.poki-pakipon.ir
+  - TROJAN-millionaire.levikogjgfdd.ir
   - TROJAN-104.18.1.1
   - TROJAN-wangcai.yunzhongzhuan.com
   - TROJAN-clean.bitzynet.ir

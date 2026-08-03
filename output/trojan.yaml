@@ -5,24 +5,32 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-188.164.248.122
+- name: TROJAN-Hkdcrtc-e.catcat321.com
   type: trojan
-  server: 188.164.248.122
-  port: 443
-  password: c206d543-023d-46cc-9d5a-1f0f2fc16323
+  server: Hkdcrtc-e.catcat321.com
+  port: 20041
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   udp: true
   tls: true
-  sni: space.byu.id.yxls.eu.cc
+  sni: de.catxstar.com#Farah_VPN-1
   skip-cert-verify: true
-- name: TROJAN-149.104.104.58
+- name: TROJAN-oplosgru-c.catcat321.com
   type: trojan
-  server: 149.104.104.58
-  port: 443
-  password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix
+  server: oplosgru-c.catcat321.com
+  port: 20004
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   udp: true
   tls: true
-  sni: 149.104.104.58#Farah_VPN-2
+  sni: hk.catxstar.com
   skip-cert-verify: true
+- name: TROJAN-rr2.tube-cat.com
+  type: trojan
+  server: rr2.tube-cat.com
+  port: 9450
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  udp: true
+  tls: true
+  skip-cert-verify: false
 - name: TROJAN-16.162.91.50
   type: trojan
   server: 16.162.91.50
@@ -30,17 +38,8 @@ proxies:
   password: d1960ba9f0f6353353994fa844cf817b
   udp: true
   tls: true
-  sni: www.nintendogames.net#Farah_VPN-3
+  sni: www.nintendogames.net#Farah_VPN-4
   skip-cert-verify: true
-- name: TROJAN-163.245.196.68
-  type: trojan
-  server: 163.245.196.68
-  port: 49361
-  password: 0ebb269c9f2d4e8e46b0cd4105a55134
-  udp: true
-  tls: true
-  sni: 163.245.196.68.sslip.io#Farah_VPN-4
-  skip-cert-verify: false
 - name: TROJAN-millionaire.levikogjgfdd.ir
   type: trojan
   server: millionaire.levikogjgfdd.ir
@@ -49,15 +48,6 @@ proxies:
   udp: true
   tls: true
   sni: tjplay.lxdxo.kdns.fr#meliproxyy-5
-  skip-cert-verify: false
-- name: TROJAN-104.16.174.12
-  type: trojan
-  server: 104.16.174.12
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com#meliproxyy-6
   skip-cert-verify: false
 - name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   type: trojan
@@ -77,6 +67,42 @@ proxies:
   tls: true
   sni: www.icloud.com
   skip-cert-verify: true
+- name: TROJAN-104.16.174.12
+  type: trojan
+  server: 104.16.174.12
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: false
+- name: TROJAN-104.18.152.77
+  type: trojan
+  server: 104.18.152.77
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: false
+- name: TROJAN-www.speedtest.org
+  type: trojan
+  server: www.speedtest.org
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: false
+- name: TROJAN-104.18.152.97
+  type: trojan
+  server: 104.18.152.97
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: false
 - name: TROJAN-188.213.131.90
   type: trojan
   server: 188.213.131.90
@@ -99,27 +125,33 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-188.164.248.122
-  - TROJAN-149.104.104.58
+  - TROJAN-Hkdcrtc-e.catcat321.com
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-rr2.tube-cat.com
   - TROJAN-16.162.91.50
-  - TROJAN-163.245.196.68
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-104.16.174.12
   - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
+  - TROJAN-104.16.174.12
+  - TROJAN-104.18.152.77
+  - TROJAN-www.speedtest.org
+  - TROJAN-104.18.152.97
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-188.164.248.122
-  - TROJAN-149.104.104.58
+  - TROJAN-Hkdcrtc-e.catcat321.com
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-rr2.tube-cat.com
   - TROJAN-16.162.91.50
-  - TROJAN-163.245.196.68
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-104.16.174.12
   - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
+  - TROJAN-104.16.174.12
+  - TROJAN-104.18.152.77
+  - TROJAN-www.speedtest.org
+  - TROJAN-104.18.152.97
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144
   url: http://www.gstatic.com/generate_204

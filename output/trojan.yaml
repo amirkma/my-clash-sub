@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: TROJAN-Hkdcrtc-e.catcat321.com
+  type: trojan
+  server: Hkdcrtc-e.catcat321.com
+  port: 20041
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  udp: true
+  tls: true
+  sni: de.catxstar.com#Farah_VPN-1
+  skip-cert-verify: true
 - name: TROJAN-163.245.196.68
   type: trojan
   server: 163.245.196.68
@@ -12,34 +21,25 @@ proxies:
   password: 0ebb269c9f2d4e8e46b0cd4105a55134
   udp: true
   tls: true
-  sni: 163.245.196.68.sslip.io#Farah_VPN-1
+  sni: 163.245.196.68.sslip.io#Farah_VPN-2
   skip-cert-verify: false
-- name: TROJAN-16.162.91.50
+- name: TROJAN-oplosgru-c.catcat321.com
   type: trojan
-  server: 16.162.91.50
-  port: 6357
-  password: d1960ba9f0f6353353994fa844cf817b
-  udp: true
-  tls: true
-  sni: www.nintendogames.net#Farah_VPN-2
-  skip-cert-verify: true
-- name: TROJAN-83.143.112.140.cdn-one.org
-  type: trojan
-  server: 83.143.112.140.cdn-one.org
-  port: 443
-  password: 32b2m2w7hsdd93z7
-  udp: true
-  tls: true
-  sni: 83.143.112.140.cdn-one.org
-  skip-cert-verify: false
-- name: TROJAN-rr2.tube-cat.com
-  type: trojan
-  server: rr2.tube-cat.com
-  port: 9450
+  server: oplosgru-c.catcat321.com
+  port: 20004
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   udp: true
   tls: true
-  skip-cert-verify: false
+  sni: hk.catxstar.com#Farah_VPN-3
+  skip-cert-verify: true
+- name: TROJAN-64.94.95.118
+  type: trojan
+  server: 64.94.95.118
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  tls: true
+  skip-cert-verify: true
 - name: TROJAN-millionaire.levikogjgfdd.ir
   type: trojan
   server: millionaire.levikogjgfdd.ir
@@ -49,15 +49,6 @@ proxies:
   tls: true
   sni: tjplay.lxdxo.kdns.fr#meliproxyy-5
   skip-cert-verify: false
-- name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
-  type: trojan
-  server: 2----------------------------------------------------3.poki-pakipon.ir
-  port: 37588
-  password: oeaQHjIg021hag3UB1gHR60iA1iaNSs2
-  udp: true
-  tls: true
-  sni: www.icloud.com
-  skip-cert-verify: true
 - name: TROJAN-104.16.174.12
   type: trojan
   server: 104.16.174.12
@@ -65,8 +56,17 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-8
+  sni: www.ignitelimit.com#meliproxyy-6
   skip-cert-verify: false
+- name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
+  type: trojan
+  server: 2----------------------------------------------------3.poki-pakipon.ir
+  port: 34785
+  password: oeaQHjIg021hag3UB1gHR60iA1iaNSs2
+  udp: true
+  tls: true
+  sni: www.icloud.com
+  skip-cert-verify: true
 - name: TROJAN-1------------------------------------------------2.poki-pakipon.ir
   type: trojan
   server: 1------------------------------------------------2.poki-pakipon.ir
@@ -98,26 +98,26 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-163.245.196.68
-  - TROJAN-16.162.91.50
-  - TROJAN-83.143.112.140.cdn-one.org
-  - TROJAN-rr2.tube-cat.com
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-64.94.95.118
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-104.16.174.12
+  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144
 - name: Auto
   type: url-test
   proxies:
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-163.245.196.68
-  - TROJAN-16.162.91.50
-  - TROJAN-83.143.112.140.cdn-one.org
-  - TROJAN-rr2.tube-cat.com
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-64.94.95.118
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-104.16.174.12
+  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144

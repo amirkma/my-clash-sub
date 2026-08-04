@@ -5,14 +5,31 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-Hkdcrtc-e.catcat321.com
+- name: TROJAN-64.94.95.118
   type: trojan
-  server: Hkdcrtc-e.catcat321.com
-  port: 20041
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  server: 64.94.95.118
+  port: 57142
+  password: kkzh2prsyr2ik47as615
   udp: true
   tls: true
-  sni: de.catxstar.com#Farah_VPN-1
+  skip-cert-verify: true
+- name: TROJAN-163.245.196.68
+  type: trojan
+  server: 163.245.196.68
+  port: 49361
+  password: 0ebb269c9f2d4e8e46b0cd4105a55134
+  udp: true
+  tls: true
+  sni: 163.245.196.68.sslip.io#Farah_VPN-2
+  skip-cert-verify: false
+- name: TROJAN-16.162.91.50
+  type: trojan
+  server: 16.162.91.50
+  port: 6357
+  password: d1960ba9f0f6353353994fa844cf817b
+  udp: true
+  tls: true
+  sni: www.nintendogames.net#Farah_VPN-3
   skip-cert-verify: true
 - name: TROJAN-oplosgru-c.catcat321.com
   type: trojan
@@ -23,22 +40,14 @@ proxies:
   tls: true
   sni: hk.catxstar.com
   skip-cert-verify: true
-- name: TROJAN-rr2.tube-cat.com
+- name: TROJAN-Hkdcrtc-e.catcat321.com
   type: trojan
-  server: rr2.tube-cat.com
-  port: 9450
+  server: Hkdcrtc-e.catcat321.com
+  port: 20041
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   udp: true
   tls: true
-  skip-cert-verify: false
-- name: TROJAN-16.162.91.50
-  type: trojan
-  server: 16.162.91.50
-  port: 6357
-  password: d1960ba9f0f6353353994fa844cf817b
-  udp: true
-  tls: true
-  sni: www.nintendogames.net#Farah_VPN-4
+  sni: de.catxstar.com#Farah_VPN-5
   skip-cert-verify: true
 - name: TROJAN-millionaire.levikogjgfdd.ir
   type: trojan
@@ -47,17 +56,8 @@ proxies:
   password: '521314'
   udp: true
   tls: true
-  sni: tjplay.lxdxo.kdns.fr#meliproxyy-5
+  sni: tjplay.lxdxo.kdns.fr
   skip-cert-verify: false
-- name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
-  type: trojan
-  server: 2----------------------------------------------------3.poki-pakipon.ir
-  port: 34785
-  password: oeaQHjIg021hag3UB1gHR60iA1iaNSs2
-  udp: true
-  tls: true
-  sni: www.icloud.com
-  skip-cert-verify: true
 - name: TROJAN-1------------------------------------------------2.poki-pakipon.ir
   type: trojan
   server: 1------------------------------------------------2.poki-pakipon.ir
@@ -76,6 +76,15 @@ proxies:
   tls: true
   sni: www.ignitelimit.com
   skip-cert-verify: false
+- name: TROJAN-2----------------------------------------------------3.poki-pakipon.ir
+  type: trojan
+  server: 2----------------------------------------------------3.poki-pakipon.ir
+  port: 62181
+  password: oeaQHjIg021hag3UB1gHR60iA1iaNSs2
+  udp: true
+  tls: true
+  sni: www.icloud.com
+  skip-cert-verify: true
 - name: TROJAN-104.18.152.77
   type: trojan
   server: 104.18.152.77
@@ -103,6 +112,15 @@ proxies:
   tls: true
   sni: www.ignitelimit.com
   skip-cert-verify: false
+- name: TROJAN-104.16.239.120
+  type: trojan
+  server: 104.16.239.120
+  port: 443
+  password: MITIVPN
+  udp: true
+  tls: true
+  sni: Ussa1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.S88R.iR#meliproxyy-15
+  skip-cert-verify: false
 - name: TROJAN-188.213.131.90
   type: trojan
   server: 188.213.131.90
@@ -125,33 +143,37 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-Hkdcrtc-e.catcat321.com
-  - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-rr2.tube-cat.com
+  - TROJAN-64.94.95.118
+  - TROJAN-163.245.196.68
   - TROJAN-16.162.91.50
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
   - TROJAN-104.16.174.12
+  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-104.18.152.77
   - TROJAN-www.speedtest.org
   - TROJAN-104.18.152.97
+  - TROJAN-104.16.239.120
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-Hkdcrtc-e.catcat321.com
-  - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-rr2.tube-cat.com
+  - TROJAN-64.94.95.118
+  - TROJAN-163.245.196.68
   - TROJAN-16.162.91.50
+  - TROJAN-oplosgru-c.catcat321.com
+  - TROJAN-Hkdcrtc-e.catcat321.com
   - TROJAN-millionaire.levikogjgfdd.ir
-  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-1------------------------------------------------2.poki-pakipon.ir
   - TROJAN-104.16.174.12
+  - TROJAN-2----------------------------------------------------3.poki-pakipon.ir
   - TROJAN-104.18.152.77
   - TROJAN-www.speedtest.org
   - TROJAN-104.18.152.97
+  - TROJAN-104.16.239.120
   - TROJAN-188.213.131.90
   - TROJAN-151.101.34.144
   url: http://www.gstatic.com/generate_204

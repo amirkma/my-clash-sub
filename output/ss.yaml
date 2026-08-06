@@ -5,41 +5,77 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-37.19.198.236-aes-128-
+- name: SS-149.22.87.204-aes-128-
   type: ss
-  server: 37.19.198.236
-  port: 44334
+  server: 149.22.87.204
+  port: 44322
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-37.19.198.244-aes-128-
+- name: SS-149.22.87.241-aes-128-
   type: ss
-  server: 37.19.198.244
-  port: 44356
+  server: 149.22.87.241
+  port: 44323
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-37.19.198.243-aes-128-
   type: ss
   server: 37.19.198.243
-  port: 44369
+  port: 44334
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44336
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-37.19.198.160-aes-128-
   type: ss
   server: 37.19.198.160
-  port: 44373
+  port: 44337
   cipher: aes-128-gcm
   password: shadowsocks
+  udp: true
+- name: SS-37.19.198.244-aes-128-
+  type: ss
+  server: 37.19.198.244
+  port: 44341
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-198.98.53.130-chacha20
+  type: ss
+  server: 198.98.53.130
+  port: 44349
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-37.19.198.236-aes-128-
-  - SS-37.19.198.244-aes-128-
+  - SS-149.22.87.204-aes-128-
+  - SS-149.22.87.241-aes-128-
   - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.236-aes-128-
   - SS-37.19.198.160-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-198.98.53.130-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-149.22.87.204-aes-128-
+  - SS-149.22.87.241-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-37.19.198.160-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-198.98.53.130-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

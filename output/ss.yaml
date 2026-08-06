@@ -5,41 +5,41 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-149.22.87.204-aes-128-
+- name: SS-37.19.198.236-aes-128-
   type: ss
-  server: 149.22.87.204
-  port: 44325
+  server: 37.19.198.236
+  port: 44334
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.87.241-aes-128-
+- name: SS-37.19.198.244-aes-128-
   type: ss
-  server: 149.22.87.241
-  port: 44326
+  server: 37.19.198.244
+  port: 44356
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.87.240-aes-128-
+- name: SS-37.19.198.243-aes-128-
   type: ss
-  server: 149.22.87.240
-  port: 44327
+  server: 37.19.198.243
+  port: 44369
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-switcher-nick-croquet.freesocks.work-chacha20
+- name: SS-37.19.198.160-aes-128-
   type: ss
-  server: switcher-nick-croquet.freesocks.work
-  port: 44365
-  cipher: chacha20-ietf-poly1305
-  password: RFK38Cg7APneSB5cWDcpbm
+  server: 37.19.198.160
+  port: 44373
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.240-aes-128-
-  - SS-switcher-nick-croquet.freesocks.work-chacha20
+  - SS-37.19.198.236-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.160-aes-128-
 rules:
 - MATCH,PROXY

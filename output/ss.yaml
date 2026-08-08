@@ -8,35 +8,84 @@ proxies:
 - name: SS-switcher-nick-croquet.freesocks.work-chacha20
   type: ss
   server: switcher-nick-croquet.freesocks.work
-  port: 44323
+  port: 44335
   cipher: chacha20-ietf-poly1305
   password: RFK38Cg7APneSB5cWDcpbm
   udp: true
-- name: SS-82.38.31.162-chacha20
+- name: SS-37.19.198.244-aes-128-
   type: ss
-  server: 82.38.31.162
-  port: 44361
+  server: 37.19.198.244
+  port: 44351
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.160-aes-128-
+  type: ss
+  server: 37.19.198.160
+  port: 44354
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44355
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-82.38.31.57-chacha20
+  type: ss
+  server: 82.38.31.57
+  port: 44363
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-82.38.31.32-chacha20
+  type: ss
+  server: 82.38.31.32
+  port: 44365
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 - name: SS-149.22.87.204-aes-128-
   type: ss
   server: 149.22.87.204
-  port: 44376
+  port: 44384
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.241-aes-128-
   type: ss
   server: 149.22.87.241
-  port: 44377
+  port: 44385
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.240-aes-128-
   type: ss
   server: 149.22.87.240
-  port: 44380
+  port: 44387
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-82.38.31.15-chacha20
+  type: ss
+  server: 82.38.31.15
+  port: 44388
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-173.244.56.6-aes-128-
+  type: ss
+  server: 173.244.56.6
+  port: 44397
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-173.244.56.9-aes-128-
+  type: ss
+  server: 173.244.56.9
+  port: 44398
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -45,18 +94,32 @@ proxy-groups:
   type: select
   proxies:
   - SS-switcher-nick-croquet.freesocks.work-chacha20
-  - SS-82.38.31.162-chacha20
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-82.38.31.57-chacha20
+  - SS-82.38.31.32-chacha20
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
+  - SS-82.38.31.15-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
 - name: Auto
   type: url-test
   proxies:
   - SS-switcher-nick-croquet.freesocks.work-chacha20
-  - SS-82.38.31.162-chacha20
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-82.38.31.57-chacha20
+  - SS-82.38.31.32-chacha20
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
+  - SS-82.38.31.15-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

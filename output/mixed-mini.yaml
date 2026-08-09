@@ -5,107 +5,102 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-193.233.255.21
+- name: VLESS-69.46.46.40
   type: vless
-  server: 193.233.255.21
+  server: 69.46.46.40
   port: 443
-  uuid: 8fdf6dde-a1ca-456d-9b18-86b74d5768e6
+  uuid: 2414069a-a52c-7faa-4dae-f3206ce60e1a
   udp: true
   tls: true
-  network: tcp#GetXConfig-1
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  sni: sellflow.org
-- name: VLESS-tr.mrpgd.ir
+  network: ws
+  ws-path: /ws/2414069a-a52c-7faa-4dae-f3206ce60e1a
+  ws-headers:
+    Host: rvg-production-2ce5.up.railway.app
+  sni: rvg-production-2ce5.up.railway.app#GetXConfig-1
+- name: VLESS-69.46.46.20
   type: vless
-  server: tr.mrpgd.ir
-  port: 6009
-  uuid: 9a3cd028-8b85-463e-bb3b-e267f45ecd3a
+  server: 69.46.46.20
+  port: 443
+  uuid: 5f505e1f-3dd7-a1f1-94d2-c1bee24cb28d
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: JFSkIP3ey2MgTvbtr2JI08g61caz-cuNDV9IXcZFfnI
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-95.38.182.182
+  network: ws
+  ws-path: /ws/5f505e1f-3dd7-a1f1-94d2-c1bee24cb28d
+  ws-headers:
+    Host: rvg-production-7de5.up.railway.app
+  sni: rvg-production-7de5.up.railway.app#GetXConfig-3
+- name: VLESS-201.34.142.29
   type: vless
-  server: 95.38.182.182
-  port: 998
-  uuid: d0f52d7e-6e95-4b58-b100-da49b298bc96
+  server: 201.34.142.29
+  port: 901
+  uuid: e73e63ad-e22e-4a79-b565-25521ac22670
   udp: true
   tls: false
-  network: ws#GetXConfig-6
-- name: VLESS-158.94.216.232
+  network: tcp#GetXConfig-5
+- name: VLESS-201.24.114.29
   type: vless
-  server: 158.94.216.232
-  port: 9145
-  uuid: d0f52d7e-6e95-4b58-b100-da49b298bc96
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Fw1tpKBQ_bT_eSTbaCSYBthpXAQ76kujwfywvjgpUA0
-    fingerprint: chrome
-  sni: www.yahoo.com
-- name: VLESS-sswe.musichubmel.ir
-  type: vless
-  server: sswe.musichubmel.ir
-  port: 2082
-  uuid: 40f70e17-b71b-41fc-9335-06d3951ec4ab
+  server: 201.24.114.29
+  port: 88
+  uuid: 91748616-e778-464c-bbda-be0df3dbf166
   udp: true
   tls: false
-  network: httpupgrade#GetXConfig-10
-- name: VLESS-193.39.9.241
-  type: vless
-  server: 193.39.9.241
-  port: 2087
-  uuid: 47b3baf9-e1f7-4fc7-b720-fc96b570afd9
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-12
-- name: VLESS-104.253.18.250
-  type: vless
-  server: 104.253.18.250
-  port: 8088
-  uuid: d0f52d7e-6e95-4b58-b100-da49b298bc96
+  network: tcp#GetXConfig-7
+- name: TROJAN-104.21.5.155
+  type: trojan
+  server: 104.21.5.155
+  port: 443
+  password: MITIVPN
   udp: true
   tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: hYLvEGoxIMNpQkqxVJt298bBGE1Tz8dhtXGsPsLznj0
-    fingerprint: chrome
-  sni: www.yahoo.com
-- name: VLESS-134.98.135.155
-  type: vless
-  server: 134.98.135.155
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-46.8.229.223
-  type: vless
-  server: 46.8.229.223
-  port: 2053
-  uuid: e5d6e2f8-928b-4768-b60b-347223b8218c
+  sni: de1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe#GetXConfig-9
+  skip-cert-verify: false
+- name: TROJAN-104.17.0.30
+  type: trojan
+  server: 104.17.0.30
+  port: 443
+  password: MITIVPN
   udp: true
   tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: uucbl8LMEhB6dqDfxvHiYaGgsVhzE87kJNPGlVemMkk
-    fingerprint: chrome
-  sni: www.samsung.com
+  sni: us-ga-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe#GetXConfig-10
+  skip-cert-verify: false
+- name: VLESS-185.218.139.222
+  type: vless
+  server: 185.218.139.222
+  port: 2000
+  uuid: 450340b0-e455-4e4b-9325-64244338a795
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-11
+- name: VLESS-91.98.168.59
+  type: vless
+  server: 91.98.168.59
+  port: 8880
+  uuid: aefcf667-37b4-4983-b18d-ab4ba50bd8c2
+  udp: true
+  tls: false
+  network: ws#GetXConfig-15
+- name: TROJAN-104.17.0.67
+  type: trojan
+  server: 104.17.0.67
+  port: 443
+  password: MITIVPN
+  udp: true
+  tls: true
+  sni: us-ga-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe#GetXConfig-17
+  skip-cert-verify: false
+- name: VLESS-sadra.mobleamiri10.ir
+  type: vless
+  server: sadra.mobleamiri10.ir
+  port: 2086
+  uuid: 7c3e7eb3-289a-4664-b783-e459713aed4f
+  udp: true
+  tls: false
+  network: xhttp#GetXConfig-18
 - name: VLESS-5.75.196.249
   type: vless
   server: 5.75.196.249
   port: 8088
-  uuid: d0f52d7e-6e95-4b58-b100-da49b298bc96
+  uuid: eded557b-80ab-455d-be3c-8264404af9fb
   udp: true
   tls: true
   network: xhttp
@@ -113,86 +108,143 @@ proxies:
   reality-opts:
     public-key: hYLvEGoxIMNpQkqxVJt298bBGE1Tz8dhtXGsPsLznj0
     fingerprint: chrome
-  sni: www.yahoo.com
-- name: VLESS-77.110.101.107
+  sni: yahoo.com
+- name: VLESS-195.15.202.182
   type: vless
-  server: 77.110.101.107
-  port: 443
-  uuid: ac9f2eb3-b9d6-45f3-9f68-7b84df1d91a4
+  server: 195.15.202.182
+  port: 8088
+  uuid: eded557b-80ab-455d-be3c-8264404af9fb
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 9pVPjpnzx4wyhF0Fes5zDlwv5OKhLcTax4UbOQGYyDA
-    fingerprint: firefox
-  sni: www.tradingview.com
-- name: VLESS-uiv.taguenaby-backend.com
+    public-key: hYLvEGoxIMNpQkqxVJt298bBGE1Tz8dhtXGsPsLznj0
+    fingerprint: chrome
+  sni: yahoo.com
+- name: VLESS-158.94.216.232
   type: vless
-  server: uiv.taguenaby-backend.com
-  port: 443
-  uuid: 74ed8b25-5ff1-40bf-bcd7-3db03be19f53
+  server: 158.94.216.232
+  port: 8088
+  uuid: eded557b-80ab-455d-be3c-8264404af9fb
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: VHidBoU58xA5kEh8pmXf0gQYzvz-KVH9-XAuM4TrMUs
-    fingerprint: ios
-  sni: status.play.google.com
-- name: VLESS-15.237.145.128
+    public-key: hYLvEGoxIMNpQkqxVJt298bBGE1Tz8dhtXGsPsLznj0
+    fingerprint: chrome
+  sni: yahoo.com
+- name: VLESS-91.98.154.118
   type: vless
-  server: 15.237.145.128
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: 91.98.154.118
+  port: 57775
+  uuid: 25ee756f-e6ba-42bd-8bd5-465d064e9f30
   udp: true
   tls: false
-  network: tcp#GetXConfig-34
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
-  type: vmess
-  server: 216.106.185.141
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: null
+  network: ws#GetXConfig-26
+- name: VLESS-cdn.devmixa.ir
+  type: vless
+  server: cdn.devmixa.ir
+  port: 443
+  uuid: eb8c46f5-68ae-46dc-aea3-50c8cef41897
   udp: true
-  tls: false
+  tls: true
+  network: ws
+  ws-path: /?ed=2560
+  ws-headers:
+    Host: Australia.havray2025.ir
+  sni: Australia.havray2025.ir#GetXConfig-29
+- name: VLESS-ch-play.mobileemdad.top
+  type: vless
+  server: ch-play.mobileemdad.top
+  port: 443
+  uuid: a379c14c-20d0-4e87-a230-d5c971ecf404
+  udp: true
+  tls: true
   network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: qq
+  sni: play.google.com
+- name: VLESS-104.16.6.70
+  type: vless
+  server: 104.16.6.70
+  port: 2087
+  uuid: 06f99c33-f12e-4249-8da6-d0fb00609afd
+  udp: true
+  tls: true
+  network: xhttp
+  sni: ip-6.xn--fjqyexxidv2znoe9rk1n8ada0532g6usa.com#GetXConfig-33
+- name: VLESS-69.46.46.30
+  type: vless
+  server: 69.46.46.30
+  port: 443
+  uuid: 415863f4-efd8-62fd-8364-36570ecb936f
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/415863f4-efd8-62fd-8364-36570ecb936f
+  ws-headers:
+    Host: rvg-production-1ce5.up.railway.app
+  sni: rvg-production-1ce5.up.railway.app#GetXConfig-35
+- name: 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾-37
+  type: vmess
+  server: 47.250.45.234
+  port: 8613
+  uuid: 80039b4d-bac0-4f89-82c7-54fad3b0a1ea
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /arki?ed=2048
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-193.233.255.21
-  - VLESS-tr.mrpgd.ir
-  - VLESS-95.38.182.182
-  - VLESS-158.94.216.232
-  - VLESS-sswe.musichubmel.ir
-  - VLESS-193.39.9.241
-  - VLESS-104.253.18.250
-  - VLESS-134.98.135.155
-  - VLESS-46.8.229.223
+  - VLESS-69.46.46.40
+  - VLESS-69.46.46.20
+  - VLESS-201.34.142.29
+  - VLESS-201.24.114.29
+  - TROJAN-104.21.5.155
+  - TROJAN-104.17.0.30
+  - VLESS-185.218.139.222
+  - VLESS-91.98.168.59
+  - TROJAN-104.17.0.67
+  - VLESS-sadra.mobleamiri10.ir
   - VLESS-5.75.196.249
-  - VLESS-77.110.101.107
-  - VLESS-uiv.taguenaby-backend.com
-  - VLESS-15.237.145.128
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-195.15.202.182
+  - VLESS-158.94.216.232
+  - VLESS-91.98.154.118
+  - VLESS-cdn.devmixa.ir
+  - VLESS-ch-play.mobileemdad.top
+  - VLESS-104.16.6.70
+  - VLESS-69.46.46.30
+  - 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾-37
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-193.233.255.21
-  - VLESS-tr.mrpgd.ir
-  - VLESS-95.38.182.182
-  - VLESS-158.94.216.232
-  - VLESS-sswe.musichubmel.ir
-  - VLESS-193.39.9.241
-  - VLESS-104.253.18.250
-  - VLESS-134.98.135.155
-  - VLESS-46.8.229.223
+  - VLESS-69.46.46.40
+  - VLESS-69.46.46.20
+  - VLESS-201.34.142.29
+  - VLESS-201.24.114.29
+  - TROJAN-104.21.5.155
+  - TROJAN-104.17.0.30
+  - VLESS-185.218.139.222
+  - VLESS-91.98.168.59
+  - TROJAN-104.17.0.67
+  - VLESS-sadra.mobleamiri10.ir
   - VLESS-5.75.196.249
-  - VLESS-77.110.101.107
-  - VLESS-uiv.taguenaby-backend.com
-  - VLESS-15.237.145.128
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-195.15.202.182
+  - VLESS-158.94.216.232
+  - VLESS-91.98.154.118
+  - VLESS-cdn.devmixa.ir
+  - VLESS-ch-play.mobileemdad.top
+  - VLESS-104.16.6.70
+  - VLESS-69.46.46.30
+  - 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾-37
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

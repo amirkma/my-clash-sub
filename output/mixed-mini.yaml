@@ -212,32 +212,32 @@ proxies:
   ws-headers:
     Host: x4g-production-a530.up.railway.app
   sni: x4g-production-a530.up.railway.app#GetXConfig-36
-- name: VLESS-109.69.218.206
+- name: VLESS-81.208.170.142
   type: vless
-  server: 109.69.218.206
-  port: 443
-  uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
+  server: 81.208.170.142
+  port: 1500
+  uuid: e332f028-d343-5b44-8016-b3130f39e133
+  udp: true
+  tls: true
+  network: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE
+    fingerprint: chrome
+  sni: www.ebay.com
+- name: VLESS-netraidly.ru
+  type: vless
+  server: netraidly.ru
+  port: 40443
+  uuid: 4480161e-2c59-4d37-8736-675c9af32bf1
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 8hse7wRRL-F66rQ-aAeetKTw0MSeJC7Rr6EaDeLzdCU
-    fingerprint: random
-  sni: kind-wolf.cdn.cachefleet.com#Farah_VPN-38
-- name: VLESS-77.239.123.219
-  type: vless
-  server: 77.239.123.219
-  port: 443
-  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
-  udp: true
-  tls: true
-  network: tcp#Farah_VPN-39
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
-    fingerprint: firefox
-  sni: node19.mxvpn.dev
+    public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y
+    fingerprint: chrome
+  sni: deepl.com
 proxy-groups:
 - name: PROXY
   type: select
@@ -260,8 +260,8 @@ proxy-groups:
   - VLESS-147.45.47.37
   - VLESS-147.45.47.44
   - VLESS-69.46.46.53
-  - VLESS-109.69.218.206
-  - VLESS-77.239.123.219
+  - VLESS-81.208.170.142
+  - VLESS-netraidly.ru
 - name: Auto
   type: url-test
   proxies:
@@ -283,8 +283,8 @@ proxy-groups:
   - VLESS-147.45.47.37
   - VLESS-147.45.47.44
   - VLESS-69.46.46.53
-  - VLESS-109.69.218.206
-  - VLESS-77.239.123.219
+  - VLESS-81.208.170.142
+  - VLESS-netraidly.ru
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

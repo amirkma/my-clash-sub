@@ -5,225 +5,84 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 'کره جنوبی 🇰🇷 | @GetXConfig | #935-1'
-  type: vmess
-  server: 115.89.98.231
-  port: 10509
-  uuid: 4f1c1ca1-a422-4014-9423-04e39ed73b03
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /arki
-- name: VLESS-cl.ultrrasound.com
+- name: VLESS-193.233.133.152
   type: vless
-  server: cl.ultrrasound.com
-  port: 2053
-  uuid: 247396b2-12d9-4744-8203-9cd761a1117a
+  server: 193.233.133.152
+  port: 58237
+  uuid: 9abbf31d-42e8-4af5-a826-8cf3ed9dd3f8
   udp: true
   tls: true
-  network: httpupgrade
-  sni: fra2.musichubmel.ir#GetXConfig-3
-- name: VLESS-176.109.85.140
-  type: vless
-  server: 176.109.85.140
-  port: 9441
-  uuid: b251ec8f-47ec-4ab4-8bd2-13ac333a4100
-  udp: true
-  tls: true
-  network: grpc#GetXConfig-5
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY
+    public-key: eJ2SwmrlJonuU4jPEMkoEKZyvOrT2vKmBx35MwDyE2Y
+    short-id: fbc722
     fingerprint: chrome
-  sni: max.ru
-- name: VLESS-46.8.69.108
-  type: vless
-  server: 46.8.69.108
-  port: 8442
-  uuid: 2b77e20e-d530-432c-8a1d-72d78b829bb6
+  sni: www.intel.com
+- name: TROJAN-193.233.133.152
+  type: trojan
+  server: 193.233.133.152
+  port: 36765
+  password: Eu54dHwPuI
   udp: true
   tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Hf0qAoL89NVFN-JRc-TRh6SEjVL7fhdZ0SmcnTalcHs
-    short-id: 9b7c
-    fingerprint: chrome
-  sni: perf-prod.samsung.com
-- name: VLESS-172.67.204.84
+  sni: www.icloud.com
+  skip-cert-verify: true
+- name: VLESS-69.46.46.123
   type: vless
-  server: 172.67.204.84
-  port: 8443
-  uuid: 881e80dd-ddab-4ca6-ada0-8b8509378a8f
-  udp: true
-  tls: true
-  network: grpc
-  sni: it.sovemaitaly.shop
-- name: VLESS-45.131.210.191
-  type: vless
-  server: 45.131.210.191
+  server: 69.46.46.123
   port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  uuid: fe376027-5598-7ba2-a9ab-3577cbd232b3
   udp: true
   tls: true
   network: ws
-  ws-path: /GOrbEh
+  ws-path: /ws/fe376027-5598-7ba2-a9ab-3577cbd232b3
   ws-headers:
-    Host: rubifen.adaspoloandco.com
-  sni: rubifen.adaspoloandco.com#GetXConfig-13
-- name: VLESS-157.137.227.31
-  type: vless
-  server: 157.137.227.31
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-157.137.229.70
-  type: vless
-  server: 157.137.229.70
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-194.5.207.6
-  type: vless
-  server: 194.5.207.6
-  port: 443
-  uuid: eda6b321-aa59-4b1e-b823-3616af020b4a
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 8Cho6K3KB6Aoty9x_TCAbY3yv7m-ToCHqaKkZTxR3jM
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-it.feywebsite.ir
-  type: vless
-  server: it.feywebsite.ir
-  port: 8008
-  uuid: b91abe1a-80ca-417b-998b-2b542661c16f
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: yGB6HD9OYiD77YWTH1YxcG9yIYkyeEYOEcHL-WnwQn8
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-usa.feywebsite.ir
-  type: vless
-  server: usa.feywebsite.ir
-  port: 8008
-  uuid: b91abe1a-80ca-417b-998b-2b542661c16f
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: sEjb-hRI-D07VPWB5fwDym_vJZcV1MJNKP0pnUPUaSg
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-15.224.71.113
-  type: vless
-  server: 15.224.71.113
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-26
-- name: VLESS-91.228.227.231
-  type: vless
-  server: 91.228.227.231
-  port: 54034
-  uuid: 5c4e0882-cbab-4653-848e-2005d1e98ec5
-  udp: true
-  tls: false
-  network: ws#GetXConfig-32
-- name: VLESS-89.23.116.82
-  type: vless
-  server: 89.23.116.82
-  port: 1293
-  uuid: d2a8066a-1e0e-4098-8941-4acb50e9417a
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-34
-- name: 'آلمان 🇩🇪 | @GetXConfig | #953-36'
+    Host: x4g-production-41ac.up.railway.app
+  sni: x4g-production-41ac.up.railway.app#GetXConfig-31
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
   type: vmess
-  server: 140.233.177.28
-  port: 33506
-  uuid: 2b3e907a-88b8-497b-8ff7-e73d889c5c19
+  server: nycqg19zkwacpm1b.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  network: tcp
-- name: VLESS-31.15.16.154
-  type: vless
-  server: 31.15.16.154
-  port: 13423
-  uuid: 4a6013ef-36ed-4db7-9fde-f9a4f3171acf
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-38
-- name: VLESS-getsavesafe.net
-  type: vless
-  server: getsavesafe.net
+  tls: true
+  network: ws
+  ws-path: /ws-vmess
+  ws-headers:
+    Host: NYcQg19zkwaCPM1B.v.3dns.vip
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
+  type: vmess
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
   port: 443
-  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
-    fingerprint: qq
-  sni: getsavesafe.net
+  network: ws
+  ws-path: /ws-vmess
+  ws-headers:
+    Host: qTKDR8jXE3wEFxJM.v.3dns.vip
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - 'کره جنوبی 🇰🇷 | @GetXConfig | #935-1'
-  - VLESS-cl.ultrrasound.com
-  - VLESS-176.109.85.140
-  - VLESS-46.8.69.108
-  - VLESS-172.67.204.84
-  - VLESS-45.131.210.191
-  - VLESS-157.137.227.31
-  - VLESS-157.137.229.70
-  - VLESS-194.5.207.6
-  - VLESS-it.feywebsite.ir
-  - VLESS-usa.feywebsite.ir
-  - VLESS-15.224.71.113
-  - VLESS-91.228.227.231
-  - VLESS-89.23.116.82
-  - 'آلمان 🇩🇪 | @GetXConfig | #953-36'
-  - VLESS-31.15.16.154
-  - VLESS-getsavesafe.net
+  - VLESS-193.233.133.152
+  - TROJAN-193.233.133.152
+  - VLESS-69.46.46.123
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
 - name: Auto
   type: url-test
   proxies:
-  - 'کره جنوبی 🇰🇷 | @GetXConfig | #935-1'
-  - VLESS-cl.ultrrasound.com
-  - VLESS-176.109.85.140
-  - VLESS-46.8.69.108
-  - VLESS-172.67.204.84
-  - VLESS-45.131.210.191
-  - VLESS-157.137.227.31
-  - VLESS-157.137.229.70
-  - VLESS-194.5.207.6
-  - VLESS-it.feywebsite.ir
-  - VLESS-usa.feywebsite.ir
-  - VLESS-15.224.71.113
-  - VLESS-91.228.227.231
-  - VLESS-89.23.116.82
-  - 'آلمان 🇩🇪 | @GetXConfig | #953-36'
-  - VLESS-31.15.16.154
-  - VLESS-getsavesafe.net
+  - VLESS-193.233.133.152
+  - TROJAN-193.233.133.152
+  - VLESS-69.46.46.123
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

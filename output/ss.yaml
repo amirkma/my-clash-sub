@@ -5,86 +5,23 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-tt.hsrdnr.ir-chacha20
+- name: SS-141.98.101.182-aes-128-
   type: ss
-  server: tt.hsrdnr.ir
-  port: 20442
-  cipher: chacha20-ietf-poly1305
-  password: 3rfnj11q5xvg72y1
-  udp: true
-- name: SS-173.244.56.6-aes-128-
-  type: ss
-  server: 173.244.56.6
-  port: 44329
+  server: 141.98.101.182
+  port: 44361
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-82.38.31.32-chacha20
+- name: SS-82.38.31.29-chacha20
   type: ss
-  server: 82.38.31.32
-  port: 44344
+  server: 82.38.31.29
+  port: 44370
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-82.38.31.15-chacha20
-  type: ss
-  server: 82.38.31.15
-  port: 44349
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-149.22.95.183-aes-128-
-  type: ss
-  server: 149.22.95.183
-  port: 44354
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-82.38.31.57-chacha20
-  type: ss
-  server: 82.38.31.57
-  port: 44357
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-149.22.87.240-aes-128-
-  type: ss
-  server: 149.22.87.240
-  port: 44365
-  cipher: aes-128-gcm
-  password: shadowsocks
   udp: true
 - name: SS-149.22.87.241-aes-128-
   type: ss
   server: 149.22.87.241
-  port: 44369
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-switcher-nick-croquet.freesocks.work-chacha20
-  type: ss
-  server: switcher-nick-croquet.freesocks.work
-  port: 44371
-  cipher: chacha20-ietf-poly1305
-  password: RFK38Cg7APneSB5cWDcpbm
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44388
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-141.98.101.181-aes-128-
-  type: ss
-  server: 141.98.101.181
-  port: 44391
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-141.98.101.182-aes-128-
-  type: ss
-  server: 141.98.101.182
   port: 44396
   cipher: aes-128-gcm
   password: shadowsocks
@@ -93,34 +30,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-tt.hsrdnr.ir-chacha20
-  - SS-173.244.56.6-aes-128-
-  - SS-82.38.31.32-chacha20
-  - SS-82.38.31.15-chacha20
-  - SS-149.22.95.183-aes-128-
-  - SS-82.38.31.57-chacha20
-  - SS-149.22.87.240-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-switcher-nick-croquet.freesocks.work-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-141.98.101.181-aes-128-
   - SS-141.98.101.182-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-tt.hsrdnr.ir-chacha20
-  - SS-173.244.56.6-aes-128-
-  - SS-82.38.31.32-chacha20
-  - SS-82.38.31.15-chacha20
-  - SS-149.22.95.183-aes-128-
-  - SS-82.38.31.57-chacha20
-  - SS-149.22.87.240-aes-128-
+  - SS-82.38.31.29-chacha20
   - SS-149.22.87.241-aes-128-
-  - SS-switcher-nick-croquet.freesocks.work-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-141.98.101.181-aes-128-
-  - SS-141.98.101.182-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
 rules:
 - MATCH,PROXY

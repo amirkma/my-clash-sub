@@ -5,44 +5,63 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-193.233.133.152
-  type: vless
-  server: 193.233.133.152
-  port: 58237
-  uuid: 9abbf31d-42e8-4af5-a826-8cf3ed9dd3f8
+- name: 'آلمان 🇩🇪 | @GetXConfig | #1038-1'
+  type: vmess
+  server: 142.132.189.247
+  port: 443
+  uuid: b1211a37-ac2b-4cd0-9f3d-732028caa184
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 'لهستان 🇵🇱 | @GetXConfig | #1039-3'
+  type: vmess
+  server: 168.222.49.188
+  port: 80
+  uuid: 2571f762-03af-4c30-8eb9-6652102e7cd3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: TROJAN-95.163.176.238
+  type: trojan
+  server: 95.163.176.238
+  port: 27972
+  password: glsYVTidVX
   udp: true
   tls: true
-  network: tcp
+  sni: www.amazon.com
+  skip-cert-verify: true
+- name: VLESS-95.163.176.238
+  type: vless
+  server: 95.163.176.238
+  port: 55909
+  uuid: 190ad5f0-7122-49b8-aa15-54194f6f679d
+  udp: true
+  tls: true
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: eJ2SwmrlJonuU4jPEMkoEKZyvOrT2vKmBx35MwDyE2Y
-    short-id: fbc722
+    public-key: EdDOy1L2Jz-drJ97r1d57Bf4f0UyCZU9b3W06oEWtwA
+    short-id: d7
     fingerprint: chrome
-  sni: www.intel.com
-- name: TROJAN-193.233.133.152
-  type: trojan
-  server: 193.233.133.152
-  port: 36765
-  password: Eu54dHwPuI
+  sni: www.apple.com
+- name: 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-32
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  sni: www.icloud.com
-  skip-cert-verify: true
-- name: VLESS-69.46.46.123
-  type: vless
-  server: 69.46.46.123
-  port: 443
-  uuid: fe376027-5598-7ba2-a9ab-3577cbd232b3
-  udp: true
-  tls: true
+  tls: false
   network: ws
-  ws-path: /ws/fe376027-5598-7ba2-a9ab-3577cbd232b3
-  ws-headers:
-    Host: x4g-production-41ac.up.railway.app
-  sni: x4g-production-41ac.up.railway.app#GetXConfig-31
+  ws-path: /
 - name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
   type: vmess
-  server: nycqg19zkwacpm1b.v.3dns.vip
+  server: zudssgtmrqg9lpvi.v.3dns.vip
   port: 443
   uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
@@ -52,10 +71,21 @@ proxies:
   network: ws
   ws-path: /ws-vmess
   ws-headers:
-    Host: NYcQg19zkwaCPM1B.v.3dns.vip
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
+    Host: zUDssgTMRqg9LpvI.v.3dns.vip
+- name: 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-34
   type: vmess
-  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /cctv13.m3u8
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
+  type: vmess
+  server: vah4urdzl3jdx5r2.v.3dns.vip
   port: 443
   uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
@@ -65,24 +95,30 @@ proxies:
   network: ws
   ws-path: /ws-vmess
   ws-headers:
-    Host: qTKDR8jXE3wEFxJM.v.3dns.vip
+    Host: VAH4URdZL3jDX5r2.v.3dns.vip
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-193.233.133.152
-  - TROJAN-193.233.133.152
-  - VLESS-69.46.46.123
+  - 'آلمان 🇩🇪 | @GetXConfig | #1038-1'
+  - 'لهستان 🇵🇱 | @GetXConfig | #1039-3'
+  - TROJAN-95.163.176.238
+  - VLESS-95.163.176.238
+  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-32
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
+  - 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-34
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-193.233.133.152
-  - TROJAN-193.233.133.152
-  - VLESS-69.46.46.123
+  - 'آلمان 🇩🇪 | @GetXConfig | #1038-1'
+  - 'لهستان 🇵🇱 | @GetXConfig | #1039-3'
+  - TROJAN-95.163.176.238
+  - VLESS-95.163.176.238
+  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-32
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-33
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-34
+  - 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-34
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

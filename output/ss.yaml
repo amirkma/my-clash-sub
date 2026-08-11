@@ -8,55 +8,82 @@ proxies:
 - name: SS-82.38.31.32-chacha20
   type: ss
   server: 82.38.31.32
-  port: 44325
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-82.38.31.162-chacha20
-  type: ss
-  server: 82.38.31.162
-  port: 44347
+  port: 44329
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 - name: SS-82.38.31.57-chacha20
   type: ss
   server: 82.38.31.57
-  port: 44359
+  port: 44345
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: SS-141.98.101.181-aes-128-
+- name: SS-141.98.101.182-aes-128-
   type: ss
-  server: 141.98.101.181
-  port: 44362
+  server: 141.98.101.182
+  port: 44348
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-154.46.31.106-chacha20
+- name: SS-82.38.31.162-chacha20
   type: ss
-  server: 154.46.31.106
-  port: 44363
+  server: 82.38.31.162
+  port: 44350
   cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-82.38.31.29-chacha20
+  type: ss
+  server: 82.38.31.29
+  port: 44358
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-37.19.198.243-aes-128-
+  type: ss
+  server: 37.19.198.243
+  port: 44383
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.244-aes-128-
+  type: ss
+  server: 37.19.198.244
+  port: 44388
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.22.87.204-aes-128-
+  type: ss
+  server: 149.22.87.204
+  port: 44398
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-82.38.31.32-chacha20
-  - SS-82.38.31.162-chacha20
   - SS-82.38.31.57-chacha20
-  - SS-141.98.101.181-aes-128-
-  - SS-154.46.31.106-chacha20
+  - SS-141.98.101.182-aes-128-
+  - SS-82.38.31.162-chacha20
+  - SS-82.38.31.29-chacha20
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-149.22.87.204-aes-128-
 - name: Auto
   type: url-test
   proxies:
   - SS-82.38.31.32-chacha20
-  - SS-82.38.31.162-chacha20
   - SS-82.38.31.57-chacha20
-  - SS-141.98.101.181-aes-128-
-  - SS-154.46.31.106-chacha20
+  - SS-141.98.101.182-aes-128-
+  - SS-82.38.31.162-chacha20
+  - SS-82.38.31.29-chacha20
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-149.22.87.204-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

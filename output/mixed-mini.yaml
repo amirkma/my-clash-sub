@@ -5,83 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-down.amirmeti.ir
-  type: vless
-  server: down.amirmeti.ir
-  port: 443
-  uuid: 6fde6138-addb-4a90-801f-f1a1af01337e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 2tvZWqBqORlWWsIY4sb1wti3vgyCWVi9EFjqlXiIOwY
-    fingerprint: chrome
-  sni: www.samsung.com
-- name: VLESS-213.193.255.206
-  type: vless
-  server: 213.193.255.206
-  port: 443
-  uuid: 645710cd-317d-420b-bb07-db6620cc65d0
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-3
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: sBSNX3DhJSWOkqTmRHisayVLisCBQLb4JcpKzwCrvC0
-    fingerprint: random
-  sni: uk.cdn.cachefleet.com
-- name: VLESS-31.43.191.99
-  type: vless
-  server: 31.43.191.99
-  port: 443
-  uuid: f4dbc770-016d-4a0f-82f0-d83ee6f45da3
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SHDdd617KLHHb0qlQFOHepeHFl_Ch2i-K7o891uyo2M
-    fingerprint: random
-  sni: luminous-vortex.cdn.cachefleet.com#GetXConfig-5
-- name: VLESS-194.77.220.236
-  type: vless
-  server: 194.77.220.236
-  port: 443
-  uuid: 3638f7fa-2f5f-4853-ac23-e85fb4d2c2c1
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 2tvZWqBqORlWWsIY4sb1wti3vgyCWVi9EFjqlXiIOwY
-    fingerprint: chrome
-  sni: ru-images.shop.samsung.com
-- name: VLESS-69.46.46.123
-  type: vless
-  server: 69.46.46.123
-  port: 443
-  uuid: 23182cbe-e05a-80f3-8f8b-230d00c68b6e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/23182cbe-e05a-80f3-8f8b-230d00c68b6e
-  ws-headers:
-    Host: x4g-production-4b3e8.up.railway.app
-  sni: x4g-production-4b3e8.up.railway.app#GetXConfig-9
-- name: VLESS-jyvlryz.cvewfjg.shop
-  type: vless
-  server: jyvlryz.cvewfjg.shop
-  port: 443
-  uuid: 4e0f4e59-3613-4f0c-b824-7348413d20e6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: UE8hUjH1WYwemxIriq5lvtFCnHTdLF817okXr-u7MGs#GetXConfig-11
-    fingerprint: chrome
-  sni: www.cloudflare.com
 - name: VLESS-3.37.55.114
   type: vless
   server: 3.37.55.114
@@ -113,7 +36,7 @@ proxies:
   uuid: 442e1d8f-d2d3-422c-b03a-00b13098fb9a
   udp: true
   tls: false
-  network: tcp#GetXConfig-19
+  network: tcp#GetXConfig-7
 - name: VLESS-x4g-production-1039.up.railway.app
   type: vless
   server: x4g-production-1039.up.railway.app
@@ -122,7 +45,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /ws/05d90003-3769-27d7-b54d-3c875aa56cf6#GetXConfig-23
+  ws-path: /ws/05d90003-3769-27d7-b54d-3c875aa56cf6#GetXConfig-11
   ws-headers:
     Host: x4g-production-1039.up.railway.app
   sni: x4g-production-1039.up.railway.app
@@ -134,7 +57,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#GetXConfig-25
+  ws-path: /#GetXConfig-13
   ws-headers:
     Host: SvnTeamChannel.global.ssl.fastly.net
   sni: ssl.fastly.com
@@ -183,53 +106,76 @@ proxies:
     public-key: m8hOnhxPNmdXtfOky4MHI9FhArP3qqfH7lxcopcQfQA
     fingerprint: chrome
   sni: www.intel.com
-- name: 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-37
-  type: vmess
-  server: 152.67.8.205
-  port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
+- name: VLESS-158.247.125.162
+  type: vless
+  server: 158.247.125.162
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-admin.jikebet.com
+  type: vless
+  server: admin.jikebet.com
+  port: 443
+  uuid: c0f16ee2-a909-4890-ab1c-96489230658a
+  udp: true
+  tls: true
+  network: ws#GetXConfig-32
+  sni: admin.jikebet.com
+- name: TROJAN-45.80.111.7
+  type: trojan
+  server: 45.80.111.7
+  port: 443
+  password: MiTiVPN
+  udp: true
+  tls: true
+  sni: d-2-AA-ia-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe
+  skip-cert-verify: true
+- name: VLESS-api.kinomir.fun
+  type: vless
+  server: api.kinomir.fun
+  port: 40443
+  uuid: 598b823c-d3fc-4013-aae5-837f10080f7a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8
+    fingerprint: chrome
+  sni: deepl.com
+- name: VLESS-3.71.241.48
+  type: vless
+  server: 3.71.241.48
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#Farah_VPN-36
+- name: VLESS-168.222.140.204
+  type: vless
+  server: 168.222.140.204
+  port: 4100
+  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
   udp: true
   tls: false
   network: ws
-  ws-path: /
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-38
-  type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
+  ws-path: /v1#Farah_VPN-37
+- name: VLESS-168.222.140.233
+  type: vless
+  server: 168.222.140.233
+  port: 2200
+  uuid: d4aad26f-70b6-4411-8517-17f7b4281886
   udp: true
-  tls: true
+  tls: false
   network: ws
-  ws-path: /lMnsZUN4/
-  ws-headers:
-    Host: v2ray1.dozapp.xyz
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
-  type: vmess
-  server: m01c7b2z26dtqgee.v.3dns.vip
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws-vmess
-  ws-headers:
-    Host: M01c7B2z26DtQGEe.v.3dns.vip
+  ws-path: /v1
+  sni: tn.tmn141246.ru#Farah_VPN-38
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-down.amirmeti.ir
-  - VLESS-213.193.255.206
-  - VLESS-31.43.191.99
-  - VLESS-194.77.220.236
-  - VLESS-69.46.46.123
-  - VLESS-jyvlryz.cvewfjg.shop
   - VLESS-3.37.55.114
   - VLESS-3.1.27.183
   - VLESS-185.226.92.175
@@ -239,18 +185,16 @@ proxy-groups:
   - TROJAN-151.101.56.0
   - VLESS-45.192.2.42
   - VLESS-193.39.9.240
-  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-37
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-38
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
+  - VLESS-158.247.125.162
+  - VLESS-admin.jikebet.com
+  - TROJAN-45.80.111.7
+  - VLESS-api.kinomir.fun
+  - VLESS-3.71.241.48
+  - VLESS-168.222.140.204
+  - VLESS-168.222.140.233
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-down.amirmeti.ir
-  - VLESS-213.193.255.206
-  - VLESS-31.43.191.99
-  - VLESS-194.77.220.236
-  - VLESS-69.46.46.123
-  - VLESS-jyvlryz.cvewfjg.shop
   - VLESS-3.37.55.114
   - VLESS-3.1.27.183
   - VLESS-185.226.92.175
@@ -260,9 +204,13 @@ proxy-groups:
   - TROJAN-151.101.56.0
   - VLESS-45.192.2.42
   - VLESS-193.39.9.240
-  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-37
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-38
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
+  - VLESS-158.247.125.162
+  - VLESS-admin.jikebet.com
+  - TROJAN-45.80.111.7
+  - VLESS-api.kinomir.fun
+  - VLESS-3.71.241.48
+  - VLESS-168.222.140.204
+  - VLESS-168.222.140.233
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

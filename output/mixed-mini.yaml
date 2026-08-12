@@ -5,11 +5,30 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-3.37.55.114
+- name: VLESS-182.16.61.4
   type: vless
-  server: 3.37.55.114
+  server: 182.16.61.4
+  port: 456471
+  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-185.143.233.238
+  type: vless
+  server: 185.143.233.238
+  port: 2086
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: parsi.parsi.sbs
+- name: VLESS-43.201.21.170
+  type: vless
+  server: 43.201.21.170
   port: 8686
-  uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   udp: true
   tls: true
   network: tcp
@@ -17,200 +36,168 @@ proxies:
   reality-opts:
     public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
   sni: www.apple.com
-- name: VLESS-3.1.27.183
+- name: VLESS-169.40.138.65
   type: vless
-  server: 3.1.27.183
-  port: 8686
-  uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-  sni: www.apple.com
-- name: VLESS-185.226.92.175
-  type: vless
-  server: 185.226.92.175
-  port: 59230
-  uuid: 442e1d8f-d2d3-422c-b03a-00b13098fb9a
+  server: 169.40.138.65
+  port: 27254
+  uuid: 5109835e-f49b-4094-a069-3ad3ce240e9d
   udp: true
   tls: false
   network: tcp#GetXConfig-7
-- name: VLESS-x4g-production-1039.up.railway.app
+- name: VLESS-40.66.33.31
   type: vless
-  server: x4g-production-1039.up.railway.app
-  port: 443
-  uuid: 05d90003-3769-27d7-b54d-3c875aa56cf6
+  server: 40.66.33.31
+  port: 2053
+  uuid: 5c5f21f2-8527-4d45-95d0-0c72871d22e7
   udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/05d90003-3769-27d7-b54d-3c875aa56cf6#GetXConfig-11
-  ws-headers:
-    Host: x4g-production-1039.up.railway.app
-  sni: x4g-production-1039.up.railway.app
-- name: VLESS-199.232.78.159
+  tls: false
+  network: tcp#GetXConfig-9
+- name: VLESS-66.33.22.221
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 1c7fd652-42a0-4f77-85a3-dfb0dec40d97
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#GetXConfig-13
-  ws-headers:
-    Host: SvnTeamChannel.global.ssl.fastly.net
-  sni: ssl.fastly.com
-- name: VLESS-138.124.100.128
-  type: vless
-  server: 138.124.100.128
-  port: 443
-  uuid: '8033102198'
-  udp: true
-  tls: true
-  network: tcp
-  sni: ee4.fast-connect-service.site
-  flow: xtls-rprx-vision
-- name: TROJAN-151.101.56.0
-  type: trojan
-  server: 151.101.56.0
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  sni: default.fastly.com
-  skip-cert-verify: false
-- name: VLESS-45.192.2.42
-  type: vless
-  server: 45.192.2.42
-  port: 443
-  uuid: d2042070-c247-4226-a3ac-15337923e00d
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA
-    fingerprint: chrome
-  sni: storage.yandex.net
-- name: VLESS-193.39.9.240
-  type: vless
-  server: 193.39.9.240
-  port: 1200
-  uuid: 831a3894-ace5-4883-98d9-7a4ac24dc949
+  server: 66.33.22.221
+  port: 26734
+  uuid: 6b222876-01c4-4fcf-b8a3-68b522c83736
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: m8hOnhxPNmdXtfOky4MHI9FhArP3qqfH7lxcopcQfQA
-    fingerprint: chrome
-  sni: www.intel.com
-- name: VLESS-158.247.125.162
+    public-key: jQWpTMgcw5nTx0zzqXdibPripB7qNUQC5b8X7ghx_GY
+    fingerprint: randomized
+  sni: is1-ssl.mzstatic.com
+- name: VLESS-157.137.231.73
   type: vless
-  server: 158.247.125.162
+  server: 157.137.231.73
   port: 62145
   uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
   udp: true
   tls: false
   network: tcp
-- name: VLESS-admin.jikebet.com
+- name: VLESS-140.248.186.45
   type: vless
-  server: admin.jikebet.com
+  server: 140.248.186.45
   port: 443
-  uuid: c0f16ee2-a909-4890-ab1c-96489230658a
+  uuid: XpnTeam-30
   udp: true
   tls: true
-  network: ws#GetXConfig-32
-  sni: admin.jikebet.com
-- name: TROJAN-45.80.111.7
-  type: trojan
-  server: 45.80.111.7
-  port: 443
-  password: MiTiVPN
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-22
+- name: 'ژاپن 🇯🇵 | @GetXConfig | #1249-24'
+  type: vmess
+  server: 207.56.229.202
+  port: 2052
+  uuid: 9bb81a28-00d0-4dcc-bf81-369721d208c9
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  sni: d-2-AA-ia-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe
-  skip-cert-verify: true
-- name: VLESS-api.kinomir.fun
+  tls: false
+  network: ws
+  ws-path: 9bb81a28-00d0-4dcc-bf81-369721d208c9-vm
+  ws-headers:
+    Host: www.bing.com
+- name: VLESS-207.56.229.202
   type: vless
-  server: api.kinomir.fun
-  port: 40443
-  uuid: 598b823c-d3fc-4013-aae5-837f10080f7a
+  server: 207.56.229.202
+  port: 28194
+  uuid: 9bb81a28-00d0-4dcc-bf81-369721d208c9
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8
+    public-key: n2anijZfw3LrcKiltBET1nLOv0lVrxxvh_pSC5eu6U4
+    short-id: 493b786f
     fingerprint: chrome
-  sni: deepl.com
-- name: VLESS-3.71.241.48
+  sni: apple.com
+- name: VLESS-13.36.186.181
   type: vless
-  server: 3.71.241.48
+  server: 13.36.186.181
   port: 22222
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#Farah_VPN-36
-- name: VLESS-168.222.140.204
+  network: tcp#GetXConfig-29
+- name: 'لهستان 🇵🇱 | @GetXConfig | #1255-35'
+  type: vmess
+  server: 168.222.49.188
+  port: 80
+  uuid: 20e840a9-b3d6-4941-ab1f-d37cd958b0b8
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-31.56.205.47
   type: vless
-  server: 168.222.140.204
-  port: 4100
-  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
+  server: 31.56.205.47
+  port: 57705
+  uuid: 7b9a0c53-d488-4f2f-9035-816f2fe01fcd
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-37
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  type: vmess
+  server: 165.140.216.142
+  port: 443
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-40
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   network: ws
-  ws-path: /v1#Farah_VPN-37
-- name: VLESS-168.222.140.233
-  type: vless
-  server: 168.222.140.233
-  port: 2200
-  uuid: d4aad26f-70b6-4411-8517-17f7b4281886
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /v1
-  sni: tn.tmn141246.ru#Farah_VPN-38
+  ws-path: /cctv13.m3u8
+  ws-headers:
+    Host: None
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-3.37.55.114
-  - VLESS-3.1.27.183
-  - VLESS-185.226.92.175
-  - VLESS-x4g-production-1039.up.railway.app
-  - VLESS-199.232.78.159
-  - VLESS-138.124.100.128
-  - TROJAN-151.101.56.0
-  - VLESS-45.192.2.42
-  - VLESS-193.39.9.240
-  - VLESS-158.247.125.162
-  - VLESS-admin.jikebet.com
-  - TROJAN-45.80.111.7
-  - VLESS-api.kinomir.fun
-  - VLESS-3.71.241.48
-  - VLESS-168.222.140.204
-  - VLESS-168.222.140.233
+  - VLESS-182.16.61.4
+  - VLESS-185.143.233.238
+  - VLESS-43.201.21.170
+  - VLESS-169.40.138.65
+  - VLESS-40.66.33.31
+  - VLESS-66.33.22.221
+  - VLESS-157.137.231.73
+  - VLESS-140.248.186.45
+  - 'ژاپن 🇯🇵 | @GetXConfig | #1249-24'
+  - VLESS-207.56.229.202
+  - VLESS-13.36.186.181
+  - 'لهستان 🇵🇱 | @GetXConfig | #1255-35'
+  - VLESS-31.56.205.47
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-40
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-3.37.55.114
-  - VLESS-3.1.27.183
-  - VLESS-185.226.92.175
-  - VLESS-x4g-production-1039.up.railway.app
-  - VLESS-199.232.78.159
-  - VLESS-138.124.100.128
-  - TROJAN-151.101.56.0
-  - VLESS-45.192.2.42
-  - VLESS-193.39.9.240
-  - VLESS-158.247.125.162
-  - VLESS-admin.jikebet.com
-  - TROJAN-45.80.111.7
-  - VLESS-api.kinomir.fun
-  - VLESS-3.71.241.48
-  - VLESS-168.222.140.204
-  - VLESS-168.222.140.233
+  - VLESS-182.16.61.4
+  - VLESS-185.143.233.238
+  - VLESS-43.201.21.170
+  - VLESS-169.40.138.65
+  - VLESS-40.66.33.31
+  - VLESS-66.33.22.221
+  - VLESS-157.137.231.73
+  - VLESS-140.248.186.45
+  - 'ژاپن 🇯🇵 | @GetXConfig | #1249-24'
+  - VLESS-207.56.229.202
+  - VLESS-13.36.186.181
+  - 'لهستان 🇵🇱 | @GetXConfig | #1255-35'
+  - VLESS-31.56.205.47
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-40
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

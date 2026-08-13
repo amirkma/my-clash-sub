@@ -5,220 +5,211 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-13.37.153.184
+- name: VLESS-69.46.46.10
   type: vless
-  server: 13.37.153.184
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-69.46.46.25
-  type: vless
-  server: 69.46.46.25
+  server: 69.46.46.10
   port: 443
-  uuid: 7d60aeb0-6b9b-bbe6-8bf4-d305e5fc59b0
+  uuid: f87ac613-9f70-bcf2-8917-6bc56f7ce409
   udp: true
   tls: true
   network: ws
-  ws-path: /ws/7d60aeb0-6b9b-bbe6-8bf4-d305e5fc59b0
+  ws-path: /ws/f87ac613-9f70-bcf2-8917-6bc56f7ce409
   ws-headers:
-    Host: rvg-production-3966.up.railway.app
-  sni: rvg-production-3966.up.railway.app#GetXConfig-7
-- name: VLESS-69.46.46.21
+    Host: rvg-production-faa0.up.railway.app
+  sni: rvg-production-faa0.up.railway.app#GetXConfig-1
+- name: VLESS-193.39.9.240
   type: vless
-  server: 69.46.46.21
-  port: 443
-  uuid: 8e4315b2-0262-e49f-f5a0-a7b8d5c6d747
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/8e4315b2-0262-e49f-f5a0-a7b8d5c6d747
-  ws-headers:
-    Host: rvg-production-9008.up.railway.app
-  sni: rvg-production-9008.up.railway.app#GetXConfig-9
-- name: VLESS-69.46.46.22
-  type: vless
-  server: 69.46.46.22
-  port: 443
-  uuid: fd8a1e9b-fcab-a423-caea-8ba11ca40407
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/fd8a1e9b-fcab-a423-caea-8ba11ca40407
-  ws-headers:
-    Host: rvg-production-c16b.up.railway.app
-  sni: rvg-production-c16b.up.railway.app#GetXConfig-11
-- name: VLESS-69.46.46.20
-  type: vless
-  server: 69.46.46.20
-  port: 443
-  uuid: 4d120fbe-9c31-3f93-3367-65f1f556cf1a
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/4d120fbe-9c31-3f93-3367-65f1f556cf1a
-  ws-headers:
-    Host: x4g-production-b0e3.up.railway.app
-  sni: x4g-production-b0e3.up.railway.app#GetXConfig-13
-- name: 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #1382-15'
-  type: vmess
-  server: 142.93.176.61
-  port: 15422
-  uuid: 40ec6644-4c68-4825-be1e-cf71c16942c7
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: Play.google.com
-- name: VLESS-220.130.75.247
-  type: vless
-  server: 220.130.75.247
-  port: 10000
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  udp: true
-  tls: false
-  network: tcp
-- name: 'چین 🇨🇳 | @GetXConfig | #1384-19'
-  type: vmess
-  server: 117.27.228.29
-  port: 10000
-  uuid: 2c90af15-bac7-f850-4c7c-120c5a420636
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /
-- name: VLESS-31.56.222.59
-  type: vless
-  server: 31.56.222.59
-  port: 19869
-  uuid: 02ecbb81-7e6b-485d-be68-d1f78f864210
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-21
-- name: VLESS-199.232.78.159
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: faad22d0-be18-41e4-b1c0-592e2a56f3e8
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: lsjaoijji.global.ssl.fastly.neT
-  sni: ssl.fastly.com#GetXConfig-23
-- name: VLESS-69.46.46.30
-  type: vless
-  server: 69.46.46.30
-  port: 443
-  uuid: b78b8723-fe80-9888-7d37-910b8a529c25
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/b78b8723-fe80-9888-7d37-910b8a529c25
-  ws-headers:
-    Host: rvg-production-82b4.up.railway.app
-  sni: rvg-production-82b4.up.railway.app#GetXConfig-25
-- name: VLESS-168.144.187.159
-  type: vless
-  server: 168.144.187.159
-  port: 9090
-  uuid: a459daa5-97c5-47e7-ad0d-a7b212d4fae7
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fYFdU2bf6hh04Rt7ZlrTmzPTeVux4hVj5XzTB38oxm0
-    fingerprint: qq
-  sni: search.google.com
-- name: VLESS-13.36.189.189
-  type: vless
-  server: 13.36.189.189
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-30
-- name: VLESS-31.56.222.83
-  type: vless
-  server: 31.56.222.83
-  port: 2053
-  uuid: 7bad2320-38f5-4178-adfb-51f126af12fb
+  server: 193.39.9.240
+  port: 1200
+  uuid: 1aee491c-47c2-4228-9b3d-9c2a3f18c383
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6Xk_Me1M8N4zqLZmXJVm4hsKj2KlR9PAEUMqHWNJdX0
-    short-id: 6720c0d4
+    public-key: m8hOnhxPNmdXtfOky4MHI9FhArP3qqfH7lxcopcQfQA
     fingerprint: chrome
-  sni: timeline.www.cloudflare.com
-- name: 'نامشخص 🏳️ | @GetXConfig | #1394-38'
+  sni: www.intel.com
+- name: SS-77.90.10.176-chacha20
+  type: ss
+  server: 77.90.10.176
+  port: 10857
+  cipher: chacha20-ietf-poly1305
+  password: XqokkvjW0g0asxzbSDLGTw
+  udp: true
+- name: 'لتونی 🇱🇻 | @GetXConfig | #1447-10'
   type: vmess
-  server: ar.paydar.site
-  port: 80
-  uuid: 8771ea7e-8f59-4537-bc48-d92a78089776
+  server: 31.57.26.186
+  port: 47919
+  uuid: 8104ae40-996f-4d4d-a17d-2a271479b635
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: tcp
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+- name: 'لتونی 🇱🇻 | @GetXConfig | #1448-12'
   type: vmess
-  server: 216.106.185.141
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  server: 31.57.26.186
+  port: 38105
+  uuid: 8104ae40-996f-4d4d-a17d-2a271479b635
   alterId: 0
-  cipher: null
+  cipher: auto
   udp: true
   tls: false
   network: tcp
+- name: VLESS-31.57.26.186
+  type: vless
+  server: 31.57.26.186
+  port: 10205
+  uuid: 8104ae40-996f-4d4d-a17d-2a271479b635
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-14
+- name: VLESS-199.232.78.150
+  type: vless
+  server: 199.232.78.150
+  port: 443
+  uuid: 98d5730d-ea53-4c90-9fa5-c48e0fc95413
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: SvnTeamChannel.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-16
+- name: VLESS-188.212.96.126
+  type: vless
+  server: 188.212.96.126
+  port: 2443
+  uuid: 75ddbcc7-ba82-4c74-a333-908dd65fe100
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-18
+- name: VLESS-104.21.80.209
+  type: vless
+  server: 104.21.80.209
+  port: 443
+  uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /cf63446e-vl
+  ws-headers:
+    Host: vps.181110.xyz
+  sni: vps.181110.xyz#GetXConfig-22
+- name: VLESS-162.159.160.22
+  type: vless
+  server: 162.159.160.22
+  port: 443
+  uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /cf63446e-vl
+  ws-headers:
+    Host: vps.181110.xyz
+  sni: vps.181110.xyz#GetXConfig-24
+- name: VLESS-13.38.209.231
+  type: vless
+  server: 13.38.209.231
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-26
+- name: TROJAN-185.246.131.155
+  type: trojan
+  server: 185.246.131.155
+  port: 443
+  password: dc0ebcb2-c103-466a-bd30-be492c477379
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: VLESS-31.77.203.95
+  type: vless
+  server: 31.77.203.95
+  port: 443
+  uuid: 4e7eb9d5-022a-4b0a-ba37-2d1be458947b
+  udp: true
+  tls: false
+  network: ws#GetXConfig-33
+- name: VLESS-69.46.46.30
+  type: vless
+  server: 69.46.46.30
+  port: 443
+  uuid: 5d2da74f-d323-4338-0959-2a50d7c9bdec
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/5d2da74f-d323-4338-0959-2a50d7c9bdec
+  ws-headers:
+    Host: rvg-production-c16b.up.railway.app
+  sni: rvg-production-c16b.up.railway.app#GetXConfig-35
+- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-37
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /cctv13.m3u8
+  ws-headers:
+    Host: None
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
+  type: vmess
+  server: nycqg19zkwacpm1b.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws-vmess
+  ws-headers:
+    Host: NYcQg19zkwaCPM1B.v.3dns.vip
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-13.37.153.184
-  - VLESS-69.46.46.25
-  - VLESS-69.46.46.21
-  - VLESS-69.46.46.22
-  - VLESS-69.46.46.20
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #1382-15'
-  - VLESS-220.130.75.247
-  - 'چین 🇨🇳 | @GetXConfig | #1384-19'
-  - VLESS-31.56.222.59
-  - VLESS-199.232.78.159
+  - VLESS-69.46.46.10
+  - VLESS-193.39.9.240
+  - SS-77.90.10.176-chacha20
+  - 'لتونی 🇱🇻 | @GetXConfig | #1447-10'
+  - 'لتونی 🇱🇻 | @GetXConfig | #1448-12'
+  - VLESS-31.57.26.186
+  - VLESS-199.232.78.150
+  - VLESS-188.212.96.126
+  - VLESS-104.21.80.209
+  - VLESS-162.159.160.22
+  - VLESS-13.38.209.231
+  - TROJAN-185.246.131.155
+  - VLESS-31.77.203.95
   - VLESS-69.46.46.30
-  - VLESS-168.144.187.159
-  - VLESS-13.36.189.189
-  - VLESS-31.56.222.83
-  - 'نامشخص 🏳️ | @GetXConfig | #1394-38'
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-37
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-13.37.153.184
-  - VLESS-69.46.46.25
-  - VLESS-69.46.46.21
-  - VLESS-69.46.46.22
-  - VLESS-69.46.46.20
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #1382-15'
-  - VLESS-220.130.75.247
-  - 'چین 🇨🇳 | @GetXConfig | #1384-19'
-  - VLESS-31.56.222.59
-  - VLESS-199.232.78.159
+  - VLESS-69.46.46.10
+  - VLESS-193.39.9.240
+  - SS-77.90.10.176-chacha20
+  - 'لتونی 🇱🇻 | @GetXConfig | #1447-10'
+  - 'لتونی 🇱🇻 | @GetXConfig | #1448-12'
+  - VLESS-31.57.26.186
+  - VLESS-199.232.78.150
+  - VLESS-188.212.96.126
+  - VLESS-104.21.80.209
+  - VLESS-162.159.160.22
+  - VLESS-13.38.209.231
+  - TROJAN-185.246.131.155
+  - VLESS-31.77.203.95
   - VLESS-69.46.46.30
-  - VLESS-168.144.187.159
-  - VLESS-13.36.189.189
-  - VLESS-31.56.222.83
-  - 'نامشخص 🏳️ | @GetXConfig | #1394-38'
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-37
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

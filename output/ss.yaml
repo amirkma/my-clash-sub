@@ -5,67 +5,58 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-102.37.156.224-chacha20
+- name: SS-77.90.10.176-chacha20
   type: ss
-  server: 102.37.156.224
-  port: 44345
+  server: 77.90.10.176
+  port: 10854
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: XqokkvjW0g0asxzbSDLGTw
   udp: true
-- name: SS-158.173.20.208-aes-128-
+- name: SS-156.146.38.169-aes-128-
   type: ss
-  server: 158.173.20.208
-  port: 44360
+  server: 156.146.38.169
+  port: 44344
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-141.98.101.182-aes-128-
+- name: SS-156.146.38.170-aes-128-
   type: ss
-  server: 141.98.101.182
-  port: 44364
+  server: 156.146.38.170
+  port: 44348
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-158.173.24.73-aes-128-
+- name: SS-156.146.38.167-aes-128-
   type: ss
-  server: 158.173.24.73
-  port: 44367
+  server: 156.146.38.167
+  port: 44355
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-141.98.101.181-aes-128-
+- name: SS-156.146.38.168-aes-128-
   type: ss
-  server: 141.98.101.181
-  port: 44374
+  server: 156.146.38.168
+  port: 44359
   cipher: aes-128-gcm
   password: shadowsocks
-  udp: true
-- name: SS-82.38.31.29-chacha20
-  type: ss
-  server: 82.38.31.29
-  port: 44390
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-102.37.156.224-chacha20
-  - SS-158.173.20.208-aes-128-
-  - SS-141.98.101.182-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-141.98.101.181-aes-128-
-  - SS-82.38.31.29-chacha20
+  - SS-77.90.10.176-chacha20
+  - SS-156.146.38.169-aes-128-
+  - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.168-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-102.37.156.224-chacha20
-  - SS-158.173.20.208-aes-128-
-  - SS-141.98.101.182-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-141.98.101.181-aes-128-
-  - SS-82.38.31.29-chacha20
+  - SS-77.90.10.176-chacha20
+  - SS-156.146.38.169-aes-128-
+  - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.168-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

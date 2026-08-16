@@ -5,148 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-49.13.18.224
-  type: vless
-  server: 49.13.18.224
-  port: 2005
-  uuid: 26bf95c1-b78c-40eb-b11e-b38b8962ddb2
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: l4usGn2Cy_FQPUIqX3pJnkqA7HDa6gCTl85alaEIylk
-    fingerprint: chrome
-  sni: updates.cdn-apple.com
-- name: VLESS-64.188.77.13
-  type: vless
-  server: 64.188.77.13
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  tls: false
-  network: tcp
-  sni: eu-west.cendora.ru
-  flow: xtls-rprx-vision
-- name: VLESS-31.76.66.5
-  type: vless
-  server: 31.76.66.5
-  port: 443
-  uuid: 7a3fa6b9-e862-4b3f-b742-a9168c4fa3b6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6rrQ09njNw0wrfGg_S48ySsl4v17Q6uTAIMnECMWbyU
-    fingerprint: firefox#GetXConfig-4
-  sni: fi.velajio.com
-- name: VLESS-8telegram.com.zapas.iran.janebicall.ir
-  type: vless
-  server: 8telegram.com.zapas.iran.janebicall.ir
-  port: 2087
-  uuid: 725a4f7d-a997-4bc9-9cdf-e6a88de05a5d
-  udp: true
-  tls: true
-  network: ws#GetXConfig-5
-  sni: sexy.blaackgame.ir
-- name: VLESS-19telegram.com.zapas.iran.janebicall.ir
-  type: vless
-  server: 19telegram.com.zapas.iran.janebicall.ir
-  port: 2087
-  uuid: 725a4f7d-a997-4bc9-9cdf-e6a88de05a5d
-  udp: true
-  tls: true
-  network: ws#GetXConfig-6
-  sni: sexy.blaackgame.ir
-- name: VLESS-14telegram.com.zapas.iran.janebicall.ir
-  type: vless
-  server: 14telegram.com.zapas.iran.janebicall.ir
-  port: 2087
-  uuid: 725a4f7d-a997-4bc9-9cdf-e6a88de05a5d
-  udp: true
-  tls: true
-  network: ws#GetXConfig-7
-  sni: sexy.blaackgame.ir
-- name: VLESS-15telegram.com.zapas.iran.janebicall.ir
-  type: vless
-  server: 15telegram.com.zapas.iran.janebicall.ir
-  port: 2087
-  uuid: 725a4f7d-a997-4bc9-9cdf-e6a88de05a5d
-  udp: true
-  tls: true
-  network: ws#GetXConfig-8
-  sni: sexy.blaackgame.ir
-- name: VLESS-16telegram.com.zapas.iran.janebicall.ir
-  type: vless
-  server: 16telegram.com.zapas.iran.janebicall.ir
-  port: 2087
-  uuid: 725a4f7d-a997-4bc9-9cdf-e6a88de05a5d
-  udp: true
-  tls: true
-  network: ws#GetXConfig-9
-  sni: sexy.blaackgame.ir
-- name: VLESS-deconverter.teddylink.com
-  type: vless
-  server: deconverter.teddylink.com
-  port: 443
-  uuid: 7a3fa6b9-e862-4b3f-b742-a9168c4fa3b6
-  udp: true
-  tls: false
-  network: tcp
-  sni: deconverter.teddylink.com
-  flow: xtls-rprx-vision
-- name: VLESS-res.soundfiy.ir
-  type: vless
-  server: res.soundfiy.ir
-  port: 2762
-  uuid: 5de3e55f-dff4-4934-8cfe-91b8b67b1892
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: BJwrnuzrcHkSCFR43-QGcbsuZuoPj13IMdFL3BrWSG0
-    short-id: c9ecf11
-    fingerprint: chrome
-  sni: yahoo.com
-- name: VLESS-lake.app20.ir
-  type: vless
-  server: lake.app20.ir
-  port: 2084
-  uuid: ede43ede-85b5-4a0e-8bd6-57409bc2b2c9
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EqiJy6-MJ8mVohF61a0Wu7V5BeV3KQbi5AdGwcHWCg0
-    fingerprint: firefox
-  sni: srvuk.letsgoandapplereach.network.picumin.net
-- name: VLESS-usa.phoneshop98.ir
-  type: vless
-  server: usa.phoneshop98.ir
-  port: 2084
-  uuid: ede43ede-85b5-4a0e-8bd6-57409bc2b2c9
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EqiJy6-MJ8mVohF61a0Wu7V5BeV3KQbi5AdGwcHWCg0
-    fingerprint: firefox
-  sni: deiwork.community.picumin.net
-- name: VLESS-185.247.16.117
-  type: vless
-  server: 185.247.16.117
-  port: 2200
-  uuid: 2a88091e-e3f8-4478-9751-6ce0557a7f2e
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /v1#GetXConfig-14
-  ws-headers:
-    Host: rzd.ru
 - name: VLESS-tr.novatunel.site
   type: vless
   server: tr.novatunel.site
@@ -167,100 +25,245 @@ proxies:
   uuid: e1e26ef7-3291-45ac-b821-a11dcdbfdb4d
   udp: true
   tls: false
-  network: ws#GetXConfig-16
-- name: VLESS-172.64.35.37
+  network: ws#GetXConfig-2
+- name: VLESS-de.lion-lion.ir
   type: vless
-  server: 172.64.35.37
+  server: de.lion-lion.ir
+  port: 8383
+  uuid: b10a6e5e-3743-43ab-b32f-cd4a9643567f
+  udp: true
+  tls: true
+  network: xhttp
+  sni: de.lion-lion.ir#GetXConfig-3
+- name: VLESS-test.tehran-game.ir
+  type: vless
+  server: test.tehran-game.ir
+  port: 8392
+  uuid: b10a6e5e-3743-43ab-b32f-cd4a9643567f
+  udp: true
+  tls: true
+  network: xhttp
+  sni: test.tehran-game.ir#GetXConfig-4
+- name: VLESS-91.228.186.215
+  type: vless
+  server: 91.228.186.215
+  port: 8787
+  uuid: b10a6e5e-3743-43ab-b32f-cd4a9643567f
+  udp: true
+  tls: true
+  network: xhttp
+  sni: 91.228.186.215#GetXConfig-5
+- name: VLESS-130.185.122.175
+  type: vless
+  server: 130.185.122.175
+  port: 8888
+  uuid: b10a6e5e-3743-43ab-b32f-cd4a9643567f
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  sni: 130.185.122.175#GetXConfig-6
+- name: VLESS-rvg-production-8c74.up.railway.app
+  type: vless
+  server: rvg-production-8c74.up.railway.app
+  port: 443
+  uuid: 19f13499-842e-e495-73cf-f52b10816e6e
+  udp: true
+  tls: true
+  network: xhttp
+  sni: rvg-production-8c74.up.railway.app
+- name: VLESS-45.130.125.114
+  type: vless
+  server: 45.130.125.114
   port: 8443
+  uuid: f47ac10b-58cc-4372-a567-0e02b2c3d479
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: free-hzr113-cdn.soren-app.com.
+  sni: ssl.soren-app.com.#GetXConfig-8
+- name: VLESS-104.17.108.69
+  type: vless
+  server: 104.17.108.69
+  port: 8443
+  uuid: f47ac10b-58cc-4372-a567-0e02b2c3d479
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: ovh04-cdn.soren-app.com.
+  sni: ssl.soren-app.com.#GetXConfig-9
+- name: VLESS-dash.zeneco.ir
+  type: vless
+  server: dash.zeneco.ir
+  port: 8443
+  uuid: fdf4a9b1-3471-41a4-9a18-c1986917fe57
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#GetXConfig-10
+- name: VLESS-rvg-production-9909.up.railway.app
+  type: vless
+  server: rvg-production-9909.up.railway.app
+  port: 443
+  uuid: 6c224657-54aa-0b69-1c1e-d715103a5aed
+  udp: true
+  tls: true
+  network: xhttp
+  sni: rvg-production-9909.up.railway.app
+- name: VLESS-144.124.238.87
+  type: vless
+  server: 144.124.238.87
+  port: 443
+  uuid: ee71862e-816b-4d26-97d2-f200898e385d
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: RczU3DRITvFHE2I8iPI2aWMtiZpVrd21lFTNE1Mmwz8
+    fingerprint: firefox
+  sni: www.cisco.com
+- name: VLESS-67.159.42.154
+  type: vless
+  server: 67.159.42.154
+  port: 443
+  uuid: ca599ed4-f7a0-4ddf-a45d-3cb6276d6cd7
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /api/connect
+  sni: cli-q.bosx.net#GetXConfig-13
+- name: VLESS-47.253.226.114
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    fingerprint: chrome
+  sni: www.cloudflare.com#Farah_VPN-14
+- name: VLESS-162.19.228.119
+  type: vless
+  server: 162.19.228.119
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
+  udp: true
+  tls: false
+  network: ws#Farah_VPN-15
+- name: VLESS-104.16.75.251
+  type: vless
+  server: 104.16.75.251
+  port: 443
+  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-16
+  ws-headers:
+    Host: germany-2.ariyuz.org
+  sni: germany-2.ariyuz.org
+- name: VLESS-172.67.170.11
+  type: vless
+  server: 172.67.170.11
+  port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-17
+  ws-path: /
   ws-headers:
     Host: t1s1.rittbo.kdns.fr
   sni: t1s1.rittbo.kdns.fr
-- name: VLESS-188.164.248.190
+- name: VLESS-email.swiftraci.org
   type: vless
-  server: 188.164.248.190
-  port: 2096
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  server: email.swiftraci.org
+  port: 443
+  uuid: e1df69ad-2351-4725-adc0-601bd7d8b8e7
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Cs45TZ-4YKa8fWZ72YJcIcQCKipWsoYNZHEqFvs-PTE
+    fingerprint: chrome
+  sni: www.microsoft.com
+- name: VLESS-51.158.206.29
+  type: vless
+  server: 51.158.206.29
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: 01faa19
+    fingerprint: chrome
+  sni: fuck.rkn
+- name: VLESS-france3.spaidan.ir
+  type: vless
+  server: france3.spaidan.ir
+  port: 35974
+  uuid: c7333a4e-b8c9-44d4-aee6-f73bfe203902
   udp: true
   tls: false
-  network: ws
-  ws-path: /fp=chrome
-  ws-headers:
-    Host: vp40.cc.cd
-  sni: vp40.cc.cd
-- name: VLESS-104.17.184.125
-  type: vless
-  server: 104.17.184.125
-  port: 443
-  uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: gddy.hhlfy.de5.net
-  sni: gddy.hhlfy.de5.net
-- name: VLESS-172.64.145.186
-  type: vless
-  server: 172.64.145.186
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr#Farah_VPN-20
+  network: ws#Farah_VPN-20
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-49.13.18.224
-  - VLESS-64.188.77.13
-  - VLESS-31.76.66.5
-  - VLESS-8telegram.com.zapas.iran.janebicall.ir
-  - VLESS-19telegram.com.zapas.iran.janebicall.ir
-  - VLESS-14telegram.com.zapas.iran.janebicall.ir
-  - VLESS-15telegram.com.zapas.iran.janebicall.ir
-  - VLESS-16telegram.com.zapas.iran.janebicall.ir
-  - VLESS-deconverter.teddylink.com
-  - VLESS-res.soundfiy.ir
-  - VLESS-lake.app20.ir
-  - VLESS-usa.phoneshop98.ir
-  - VLESS-185.247.16.117
   - VLESS-tr.novatunel.site
   - VLESS-109.73.193.169
-  - VLESS-172.64.35.37
-  - VLESS-188.164.248.190
-  - VLESS-104.17.184.125
-  - VLESS-172.64.145.186
+  - VLESS-de.lion-lion.ir
+  - VLESS-test.tehran-game.ir
+  - VLESS-91.228.186.215
+  - VLESS-130.185.122.175
+  - VLESS-rvg-production-8c74.up.railway.app
+  - VLESS-45.130.125.114
+  - VLESS-104.17.108.69
+  - VLESS-dash.zeneco.ir
+  - VLESS-rvg-production-9909.up.railway.app
+  - VLESS-144.124.238.87
+  - VLESS-67.159.42.154
+  - VLESS-47.253.226.114
+  - VLESS-162.19.228.119
+  - VLESS-104.16.75.251
+  - VLESS-172.67.170.11
+  - VLESS-email.swiftraci.org
+  - VLESS-51.158.206.29
+  - VLESS-france3.spaidan.ir
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-49.13.18.224
-  - VLESS-64.188.77.13
-  - VLESS-31.76.66.5
-  - VLESS-8telegram.com.zapas.iran.janebicall.ir
-  - VLESS-19telegram.com.zapas.iran.janebicall.ir
-  - VLESS-14telegram.com.zapas.iran.janebicall.ir
-  - VLESS-15telegram.com.zapas.iran.janebicall.ir
-  - VLESS-16telegram.com.zapas.iran.janebicall.ir
-  - VLESS-deconverter.teddylink.com
-  - VLESS-res.soundfiy.ir
-  - VLESS-lake.app20.ir
-  - VLESS-usa.phoneshop98.ir
-  - VLESS-185.247.16.117
   - VLESS-tr.novatunel.site
   - VLESS-109.73.193.169
-  - VLESS-172.64.35.37
-  - VLESS-188.164.248.190
-  - VLESS-104.17.184.125
-  - VLESS-172.64.145.186
+  - VLESS-de.lion-lion.ir
+  - VLESS-test.tehran-game.ir
+  - VLESS-91.228.186.215
+  - VLESS-130.185.122.175
+  - VLESS-rvg-production-8c74.up.railway.app
+  - VLESS-45.130.125.114
+  - VLESS-104.17.108.69
+  - VLESS-dash.zeneco.ir
+  - VLESS-rvg-production-9909.up.railway.app
+  - VLESS-144.124.238.87
+  - VLESS-67.159.42.154
+  - VLESS-47.253.226.114
+  - VLESS-162.19.228.119
+  - VLESS-104.16.75.251
+  - VLESS-172.67.170.11
+  - VLESS-email.swiftraci.org
+  - VLESS-51.158.206.29
+  - VLESS-france3.spaidan.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

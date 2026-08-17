@@ -5,216 +5,306 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-144.31.76.198
+- name: VLESS-31.184.246.242
   type: vless
-  server: 144.31.76.198
-  port: 13443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  server: 31.184.246.242
+  port: 2053
+  uuid: 633c112c-11dd-48d3-8595-e151dd589ef4
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: grpc#GetXConfig-1
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-    fingerprint: firefox
-  sni: auto.cendora.ru
-- name: VLESS-63.180.97.199
-  type: vless
-  server: 63.180.97.199
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-2
-- name: VLESS-65.109.186.63
-  type: vless
-  server: 65.109.186.63
-  port: 80
-  uuid: c0c56b74-d656-4479-a4cb-99a8dd84703b
-  udp: true
-  tls: false
-  network: ws#GetXConfig-5
-- name: VLESS-63.185.140.9
-  type: vless
-  server: 63.185.140.9
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-6
-- name: VLESS-netherland.zelnora.ir
-  type: vless
-  server: netherland.zelnora.ir
-  port: 64584
-  uuid: a19bdc9c-042f-4ee6-a1a7-3dedd2ef337b
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-custom.zelnora.ir
-  type: vless
-  server: custom.zelnora.ir
-  port: 64584
-  uuid: a19bdc9c-042f-4ee6-a1a7-3dedd2ef337b
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-69.46.46.22
-  type: vless
-  server: 69.46.46.22
-  port: 443
-  uuid: 299392f7-927b-29b3-4bb7-d56dd6b75c4d
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/299392f7-927b-29b3-4bb7-d56dd6b75c4d
-  ws-headers:
-    Host: rvg-production-66db.up.railway.app
-  sni: rvg-production-66db.up.railway.app#GetXConfig-11
-- name: VLESS-69.46.46.21
-  type: vless
-  server: 69.46.46.21
-  port: 443
-  uuid: e0edb8b0-2ad8-282e-0e0a-a95339856694
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/e0edb8b0-2ad8-282e-0e0a-a95339856694
-  ws-headers:
-    Host: rvg-production-e85f.up.railway.app
-  sni: rvg-production-e85f.up.railway.app#GetXConfig-12
-- name: VLESS-trone.soundfiy.ir
-  type: vless
-  server: trone.soundfiy.ir
-  port: 57367
-  uuid: 7b3f2b09-11e2-4bdd-9e42-946c0a41447f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: DN5-6pEo8XE3S7MzxzNFVCPPRk87KirDt8yUybpdmWE
-    fingerprint: firefox
-  sni: play-fe.googleapis.com
-- name: VLESS-em1.apismanager.ir
-  type: vless
-  server: em1.apismanager.ir
-  port: 57367
-  uuid: 7b3f2b09-11e2-4bdd-9e42-946c0a41447f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: DN5-6pEo8XE3S7MzxzNFVCPPRk87KirDt8yUybpdmWE
-    fingerprint: ios
-  sni: play-fe.googleapis.com
-- name: VLESS-tur2.orangesms.ir
-  type: vless
-  server: tur2.orangesms.ir
-  port: 57367
-  uuid: 7b3f2b09-11e2-4bdd-9e42-946c0a41447f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: DN5-6pEo8XE3S7MzxzNFVCPPRk87KirDt8yUybpdmWE
+    public-key: XrNOGI1TNjL2rcq65LBsjw8ouZ9PQMOZt466XeJt8XE
     fingerprint: chrome
-  sni: play-fe.googleapis.com
-- name: VLESS-shop.jarorobo.ir
+  sni: www.google.com
+- name: VLESS-serv7.granitvpn.ru
   type: vless
-  server: shop.jarorobo.ir
+  server: serv7.granitvpn.ru
+  port: 7771
+  uuid: 707db87b-9cbf-438f-b4c7-9d984c8e944a
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: 5post-gate.x5.ru#GetXConfig-2
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28
+    fingerprint: firefox
+  sni: 5post-gate.x5.ru
+- name: VLESS-dash.sinafc.ir
+  type: vless
+  server: dash.sinafc.ir
   port: 443
-  uuid: 8e7feb36-3ef5-4e70-a306-4362edd37854
+  uuid: '21371'
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
     public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
+    short-id: da51ecf3
     fingerprint: chrome
-  sni: www.samsungebiz.com
-- name: VLESS-x4g-production-6e92.up.railway.app
+  sni: qa.semiconductor.samsung.com
+- name: VLESS-213.178.155.239
   type: vless
-  server: x4g-production-6e92.up.railway.app
+  server: 213.178.155.239
   port: 443
-  uuid: 6884c8bd-c31b-a859-5f8a-194e2d805912
+  uuid: 1b6a7ff9-dcf8-462c-b73a-041fefdf3feb
   udp: true
   tls: true
-  network: ws
-  ws-path: /ws/6884c8bd-c31b-a859-5f8a-194e2d805912
-  ws-headers:
-    Host: x4g-production-6e92.up.railway.app
-  sni: x4g-production-6e92.up.railway.app
-- name: VLESS-94.237.124.107
+  network: grpc
+  grpc-service-name: bridge-akenai-grpc-max#GetXConfig-4
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: dg-XAKwtCTyYz0HN94sbNCM8xLwY4lBHkUa883nTFn8
+    fingerprint: firefox
+  sni: max.ru
+- name: VLESS-95.163.232.183
   type: vless
-  server: 94.237.124.107
-  port: 3389
-  uuid: d024662a-397e-4fac-9643-8b7939e6bf33
+  server: 95.163.232.183
+  port: 443
+  uuid: 62abf96b-585e-43cc-8ce3-d96d79331f29
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: 5post.gate.v1#GetXConfig-5
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
+    short-id: abcd
+    fingerprint: safari
+  sni: 5post-gate.x5.ru
+- name: VLESS-176.108.243.192
+  type: vless
+  server: 176.108.243.192
+  port: 9880
+  uuid: 14777bd9-56a5-46f6-a94f-826b4800dc05
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-tunnel#GetXConfig-6
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aa
+    fingerprint: qq
+  sni: dl.google.com
+- name: VLESS-104.24.69.9
+  type: vless
+  server: 104.24.69.9
+  port: 8443
+  uuid: 56b0f827-bebb-4fe4-9ad0-1b2207b45d70
+  udp: true
+  tls: true
+  network: ws#GetXConfig-7
+  sni: hhmj5cmzyljqehqdvn1k5vmeyjy46x0r.matlikepro.ir
+- name: VLESS-87.58.206.59
+  type: vless
+  server: 87.58.206.59
+  port: 443
+  uuid: 62a08ea5-0564-47b4-a92c-25be07ad6358
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ne8wv6o6AYcQoVvz30PiTjSxviGa3_Kw5ClIEDdg-3A
+    fingerprint: firefox
+  sni: 360.yandex.ru
+- name: VLESS-me3.echo-license.gr
+  type: vless
+  server: me3.echo-license.gr
+  port: 443
+  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-9
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    fingerprint: firefox
+  sni: matrix-client.matrix.org
+- name: VLESS-me1.echo-license.gr
+  type: vless
+  server: me1.echo-license.gr
+  port: 443
+  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-10
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    fingerprint: firefox
+  sni: matrix-client.matrix.org
+- name: VLESS-me10.echo-license.gr
+  type: vless
+  server: me10.echo-license.gr
+  port: 443
+  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-11
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    fingerprint: firefox
+  sni: matrix-client.matrix.org
+- name: VLESS-me8.echo-license.gr
+  type: vless
+  server: me8.echo-license.gr
+  port: 443
+  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-12
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    fingerprint: firefox
+  sni: matrix-client.matrix.org
+- name: VLESS-me2.echo-license.gr
+  type: vless
+  server: me2.echo-license.gr
+  port: 443
+  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-13
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    fingerprint: firefox
+  sni: matrix-client.matrix.org
+- name: VLESS-151.101.192.223
+  type: vless
+  server: 151.101.192.223
+  port: 80
+  uuid: 1486d86f-4676-4786-b9de-72fa8ee5f376
   udp: true
   tls: false
-  network: tcp
-- name: VLESS-testtt.botdegeris.ir
+  network: ws#GetXConfig-14
+- name: VLESS-140.248.186.45
   type: vless
-  server: testtt.botdegeris.ir
-  port: 58752
-  uuid: 55aa1535-f121-4cab-9f6f-ef95fff90196
+  server: 140.248.186.45
+  port: 80
+  uuid: 1486d86f-4676-4786-b9de-72fa8ee5f376
   udp: true
   tls: false
-  network: tcp#GetXConfig-19
-- name: VLESS-51.158.206.26
+  network: ws#GetXConfig-15
+- name: VLESS-91.132.161.245
   type: vless
-  server: 51.158.206.26
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 91.132.161.245
+  port: 18456
+  uuid: 042a4a95-68f5-4179-89b3-69475a5d4908
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: 01faa20
-    fingerprint: chrome
-  sni: fuck.rkn
+    public-key: XmOcGjsWDWRVvRTF7rV77kRp63qwIYbQ_s-YK3U7FkM
+    short-id: 09ecf16
+    fingerprint: firefox
+  sni: shop-eu-de.amd.com
+- name: VLESS-144.31.171.143
+  type: vless
+  server: 144.31.171.143
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    fingerprint: qq
+  sni: eu-central.cendora.ru
+- name: VLESS-69.46.46.123
+  type: vless
+  server: 69.46.46.123
+  port: 443
+  uuid: 1596f601-b9c8-6a13-e78f-538a871b0c2b
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/1596f601-b9c8-6a13-e78f-538a871b0c2b
+  ws-headers:
+    Host: x4g-production-fb14.up.railway.app
+  sni: x4g-production-fb14.up.railway.app#GetXConfig-18
+- name: VLESS-175.41.179.37
+  type: vless
+  server: 175.41.179.37
+  port: 51262
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /@Marisa_kristi#GetXConfig-19
+  ws-headers:
+    Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  sni: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+- name: VLESS-104.27.66.214
+  type: vless
+  server: 104.27.66.214
+  port: 2087
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /download.php
+  ws-headers:
+    Host: amphetamine.adaspoloandco.com
+  sni: amphetamine.adaspoloandco.com#GetXConfig-20
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-144.31.76.198
-  - VLESS-63.180.97.199
-  - VLESS-65.109.186.63
-  - VLESS-63.185.140.9
-  - VLESS-netherland.zelnora.ir
-  - VLESS-custom.zelnora.ir
-  - VLESS-69.46.46.22
-  - VLESS-69.46.46.21
-  - VLESS-trone.soundfiy.ir
-  - VLESS-em1.apismanager.ir
-  - VLESS-tur2.orangesms.ir
-  - VLESS-shop.jarorobo.ir
-  - VLESS-x4g-production-6e92.up.railway.app
-  - VLESS-94.237.124.107
-  - VLESS-testtt.botdegeris.ir
-  - VLESS-51.158.206.26
+  - VLESS-31.184.246.242
+  - VLESS-serv7.granitvpn.ru
+  - VLESS-dash.sinafc.ir
+  - VLESS-213.178.155.239
+  - VLESS-95.163.232.183
+  - VLESS-176.108.243.192
+  - VLESS-104.24.69.9
+  - VLESS-87.58.206.59
+  - VLESS-me3.echo-license.gr
+  - VLESS-me1.echo-license.gr
+  - VLESS-me10.echo-license.gr
+  - VLESS-me8.echo-license.gr
+  - VLESS-me2.echo-license.gr
+  - VLESS-151.101.192.223
+  - VLESS-140.248.186.45
+  - VLESS-91.132.161.245
+  - VLESS-144.31.171.143
+  - VLESS-69.46.46.123
+  - VLESS-175.41.179.37
+  - VLESS-104.27.66.214
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-144.31.76.198
-  - VLESS-63.180.97.199
-  - VLESS-65.109.186.63
-  - VLESS-63.185.140.9
-  - VLESS-netherland.zelnora.ir
-  - VLESS-custom.zelnora.ir
-  - VLESS-69.46.46.22
-  - VLESS-69.46.46.21
-  - VLESS-trone.soundfiy.ir
-  - VLESS-em1.apismanager.ir
-  - VLESS-tur2.orangesms.ir
-  - VLESS-shop.jarorobo.ir
-  - VLESS-x4g-production-6e92.up.railway.app
-  - VLESS-94.237.124.107
-  - VLESS-testtt.botdegeris.ir
-  - VLESS-51.158.206.26
+  - VLESS-31.184.246.242
+  - VLESS-serv7.granitvpn.ru
+  - VLESS-dash.sinafc.ir
+  - VLESS-213.178.155.239
+  - VLESS-95.163.232.183
+  - VLESS-176.108.243.192
+  - VLESS-104.24.69.9
+  - VLESS-87.58.206.59
+  - VLESS-me3.echo-license.gr
+  - VLESS-me1.echo-license.gr
+  - VLESS-me10.echo-license.gr
+  - VLESS-me8.echo-license.gr
+  - VLESS-me2.echo-license.gr
+  - VLESS-151.101.192.223
+  - VLESS-140.248.186.45
+  - VLESS-91.132.161.245
+  - VLESS-144.31.171.143
+  - VLESS-69.46.46.123
+  - VLESS-175.41.179.37
+  - VLESS-104.27.66.214
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,104 +5,166 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-31.184.246.242
+- name: VLESS-69.46.46.32
   type: vless
-  server: 31.184.246.242
-  port: 2053
-  uuid: 633c112c-11dd-48d3-8595-e151dd589ef4
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc#GetXConfig-1
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: XrNOGI1TNjL2rcq65LBsjw8ouZ9PQMOZt466XeJt8XE
-    fingerprint: chrome
-  sni: www.google.com
-- name: VLESS-serv7.granitvpn.ru
-  type: vless
-  server: serv7.granitvpn.ru
-  port: 7771
-  uuid: 707db87b-9cbf-438f-b4c7-9d984c8e944a
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: 5post-gate.x5.ru#GetXConfig-3
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28
-    fingerprint: firefox
-  sni: 5post-gate.x5.ru
-- name: VLESS-dash.sinafc.ir
-  type: vless
-  server: dash.sinafc.ir
+  server: 69.46.46.32
   port: 443
-  uuid: '21371'
+  uuid: 338dfec6-68bb-d132-9fa4-e679786c5a62
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/338dfec6-68bb-d132-9fa4-e679786c5a62
+  ws-headers:
+    Host: rvg-production-2199.up.railway.app
+  sni: rvg-production-2199.up.railway.app#GetXConfig-1
+- name: VLESS-78.159.131.235
+  type: vless
+  server: 78.159.131.235
+  port: 443
+  uuid: 1da18def-6804-44c8-bb6d-83cff995f567
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
-    short-id: da51ecf5
-    fingerprint: chrome
-  sni: qa.semiconductor.samsung.com
-- name: VLESS-213.178.155.239
-  type: vless
-  server: 213.178.155.239
-  port: 443
-  uuid: 1b6a7ff9-dcf8-462c-b73a-041fefdf3feb
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: bridge-akenai-grpc-max#GetXConfig-7
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: dg-XAKwtCTyYz0HN94sbNCM8xLwY4lBHkUa883nTFn8
+    public-key: XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo
+    short-id: 7bcfc0bc
     fingerprint: firefox
-  sni: max.ru
-- name: VLESS-95.163.232.183
+  sni: yahoo.com
+- name: VLESS-31.133.0.103
   type: vless
-  server: 95.163.232.183
+  server: 31.133.0.103
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: forfreeuse.rtqa.ru
+  sni: forfreeuse.rtqa.ru#GetXConfig-5
+- name: VLESS-193.124.45.154
+  type: vless
+  server: 193.124.45.154
   port: 443
-  uuid: 62abf96b-585e-43cc-8ce3-d96d79331f29
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    fingerprint: chrome
+  sni: eu-central.cendora.ru
+- name: VLESS-104.17.101.26
+  type: vless
+  server: 104.17.101.26
+  port: 443
+  uuid: ac502822-5b7a-40cd-8d79-a786b4c0f629
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /?u=TAiTANiCVPN
+  ws-headers:
+    Host: coral-grove-8a62.golden-robin-b352.workers.dev
+  sni: coral-grove-8a62.golden-robin-b352.workers.dev#GetXConfig-9
+- name: VLESS-coral-grove-8a62.golden-robin-b352.workers.dev
+  type: vless
+  server: coral-grove-8a62.golden-robin-b352.workers.dev
+  port: 443
+  uuid: ac502822-5b7a-40cd-8d79-a786b4c0f629
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /?u=TAiTANiCVPN
+  ws-headers:
+    Host: coral-grove-8a62.golden-robin-b352.workers.dev
+  sni: coral-grove-8a62.golden-robin-b352.workers.dev#GetXConfig-11
+- name: TROJAN-18.181.213.219
+  type: trojan
+  server: 18.181.213.219
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: lasting-jaguar.rooster465.autos#GetXConfig-13
+  skip-cert-verify: false
+- name: VLESS-144.124.236.188
+  type: vless
+  server: 144.124.236.188
+  port: 443
+  uuid: 1da18def-6804-44c8-bb6d-83cff995f567
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo
+    fingerprint: firefox
+  sni: yahoo.com
+- name: VLESS-spider-panel-production-e564.up.railway.app
+  type: vless
+  server: spider-panel-production-e564.up.railway.app
+  port: 443
+  uuid: 060306e8-3373-45fc-a195-52caa701010e
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/060306e8-3373-45fc-a195-52caa701010e
+  ws-headers:
+    Host: spider-panel-production-e564.up.railway.app
+  sni: spider-panel-production-e564.up.railway.app
+- name: VLESS-37.252.20.41
+  type: vless
+  server: 37.252.20.41
+  port: 204
+  uuid: 7c49a866-4f78-4dd0-bb4a-430e75d4ee70
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-31.76.119.117
+  type: vless
+  server: 31.76.119.117
+  port: 443
+  uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
+    fingerprint: firefox
+  sni: de.orpheous.ru
+- name: VLESS-95.169.201.169
+  type: vless
+  server: 95.169.201.169
+  port: 13868
+  uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XxzDVidmyjuPnBKrFDwCpowaIdLth4-kJsqrDvdPPx8
+    fingerprint: firefox
+  sni: amd.com
+- name: VLESS-93.152.223.214
+  type: vless
+  server: 93.152.223.214
+  port: 443
+  uuid: 62a08ea5-0564-47b4-a92c-25be07ad6358
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: 5post.gate.v1#GetXConfig-9
+  grpc-service-name: grpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
-    short-id: abcd
-    fingerprint: safari
-  sni: 5post-gate.x5.ru
-- name: VLESS-176.108.243.192
+    public-key: ne8wv6o6AYcQoVvz30PiTjSxviGa3_Kw5ClIEDdg-3A
+    fingerprint: chrome
+  sni: 360.yandex.ru
+- name: VLESS-138.124.33.169
   type: vless
-  server: 176.108.243.192
-  port: 9880
-  uuid: 14777bd9-56a5-46f6-a94f-826b4800dc05
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc-tunnel#GetXConfig-11
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aa
-    fingerprint: qq
-  sni: dl.google.com
-- name: VLESS-104.24.69.9
-  type: vless
-  server: 104.24.69.9
-  port: 8443
-  uuid: 56b0f827-bebb-4fe4-9ad0-1b2207b45d70
-  udp: true
-  tls: true
-  network: ws#GetXConfig-13
-  sni: hhmj5cmzyljqehqdvn1k5vmeyjy46x0r.matlikepro.ir
-- name: VLESS-87.58.206.59
-  type: vless
-  server: 87.58.206.59
+  server: 138.124.33.169
   port: 443
   uuid: 62a08ea5-0564-47b4-a92c-25be07ad6358
   udp: true
@@ -114,197 +176,93 @@ proxies:
     public-key: ne8wv6o6AYcQoVvz30PiTjSxviGa3_Kw5ClIEDdg-3A
     fingerprint: firefox
   sni: 360.yandex.ru
-- name: VLESS-me3.echo-license.gr
+- name: VLESS-138.124.37.164
   type: vless
-  server: me3.echo-license.gr
+  server: 138.124.37.164
   port: 443
-  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  uuid: 62a08ea5-0564-47b4-a92c-25be07ad6358
   udp: true
   tls: true
-  network: tcp#GetXConfig-17
+  network: grpc
+  grpc-service-name: grpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    public-key: ne8wv6o6AYcQoVvz30PiTjSxviGa3_Kw5ClIEDdg-3A
     fingerprint: firefox
-  sni: matrix-client.matrix.org
-- name: VLESS-me1.echo-license.gr
+  sni: 360.yandex.ru
+- name: VLESS-213.219.212.146
   type: vless
-  server: me1.echo-license.gr
-  port: 443
-  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
+  server: 213.219.212.146
+  port: 8443
+  uuid: a98f627f-99ff-44fc-89fc-b5aed8db49f9
   udp: true
   tls: true
-  network: tcp#GetXConfig-19
+  network: grpc#GetXConfig-30
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    public-key: Qf5kMbpi0sUGV4ZB_2wVGdi-iACSFv47quZT-z-ymEo
+    short-id: a1b2c3d4
     fingerprint: firefox
-  sni: matrix-client.matrix.org
-- name: VLESS-me10.echo-license.gr
+  sni: max.ru
+- name: VLESS-nl-ydlod.doratbonn.fun
   type: vless
-  server: me10.echo-license.gr
+  server: nl-ydlod.doratbonn.fun
   port: 443
-  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-21
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
-    fingerprint: firefox
-  sni: matrix-client.matrix.org
-- name: VLESS-me8.echo-license.gr
-  type: vless
-  server: me8.echo-license.gr
-  port: 443
-  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-23
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
-    fingerprint: firefox
-  sni: matrix-client.matrix.org
-- name: VLESS-me2.echo-license.gr
-  type: vless
-  server: me2.echo-license.gr
-  port: 443
-  uuid: 7754078c-37c9-4f3e-9e06-3f98fc0c8684
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-25
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
-    fingerprint: firefox
-  sni: matrix-client.matrix.org
-- name: VLESS-151.101.192.223
-  type: vless
-  server: 151.101.192.223
-  port: 80
-  uuid: 1486d86f-4676-4786-b9de-72fa8ee5f376
+  uuid: 7d92ab01-d719-40b0-b954-420edfb61582
   udp: true
   tls: false
-  network: ws#GetXConfig-27
-- name: VLESS-140.248.186.45
+  network: xhttp
+- name: VLESS-18.199.26.134
   type: vless
-  server: 140.248.186.45
-  port: 80
-  uuid: 1486d86f-4676-4786-b9de-72fa8ee5f376
+  server: 18.199.26.134
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: ws#GetXConfig-29
-- name: VLESS-91.132.161.245
-  type: vless
-  server: 91.132.161.245
-  port: 18456
-  uuid: 042a4a95-68f5-4179-89b3-69475a5d4908
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: XmOcGjsWDWRVvRTF7rV77kRp63qwIYbQ_s-YK3U7FkM
-    short-id: 09ecf31
-    fingerprint: firefox
-  sni: shop-eu-de.amd.com
-- name: VLESS-144.31.171.143
-  type: vless
-  server: 144.31.171.143
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    fingerprint: qq
-  sni: eu-central.cendora.ru
-- name: VLESS-69.46.46.123
-  type: vless
-  server: 69.46.46.123
-  port: 443
-  uuid: 1596f601-b9c8-6a13-e78f-538a871b0c2b
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/1596f601-b9c8-6a13-e78f-538a871b0c2b
-  ws-headers:
-    Host: x4g-production-fb14.up.railway.app
-  sni: x4g-production-fb14.up.railway.app#GetXConfig-35
-- name: VLESS-175.41.179.37
-  type: vless
-  server: 175.41.179.37
-  port: 51262
-  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /@Marisa_kristi#GetXConfig-37
-  ws-headers:
-    Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  sni: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-- name: VLESS-104.27.66.214
-  type: vless
-  server: 104.27.66.214
-  port: 2087
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /download.php
-  ws-headers:
-    Host: amphetamine.adaspoloandco.com
-  sni: amphetamine.adaspoloandco.com#GetXConfig-39
+  network: tcp#GetXConfig-34
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-31.184.246.242
-  - VLESS-serv7.granitvpn.ru
-  - VLESS-dash.sinafc.ir
-  - VLESS-213.178.155.239
-  - VLESS-95.163.232.183
-  - VLESS-176.108.243.192
-  - VLESS-104.24.69.9
-  - VLESS-87.58.206.59
-  - VLESS-me3.echo-license.gr
-  - VLESS-me1.echo-license.gr
-  - VLESS-me10.echo-license.gr
-  - VLESS-me8.echo-license.gr
-  - VLESS-me2.echo-license.gr
-  - VLESS-151.101.192.223
-  - VLESS-140.248.186.45
-  - VLESS-91.132.161.245
-  - VLESS-144.31.171.143
-  - VLESS-69.46.46.123
-  - VLESS-175.41.179.37
-  - VLESS-104.27.66.214
+  - VLESS-69.46.46.32
+  - VLESS-78.159.131.235
+  - VLESS-31.133.0.103
+  - VLESS-193.124.45.154
+  - VLESS-104.17.101.26
+  - VLESS-coral-grove-8a62.golden-robin-b352.workers.dev
+  - TROJAN-18.181.213.219
+  - VLESS-144.124.236.188
+  - VLESS-spider-panel-production-e564.up.railway.app
+  - VLESS-37.252.20.41
+  - VLESS-31.76.119.117
+  - VLESS-95.169.201.169
+  - VLESS-93.152.223.214
+  - VLESS-138.124.33.169
+  - VLESS-138.124.37.164
+  - VLESS-213.219.212.146
+  - VLESS-nl-ydlod.doratbonn.fun
+  - VLESS-18.199.26.134
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-31.184.246.242
-  - VLESS-serv7.granitvpn.ru
-  - VLESS-dash.sinafc.ir
-  - VLESS-213.178.155.239
-  - VLESS-95.163.232.183
-  - VLESS-176.108.243.192
-  - VLESS-104.24.69.9
-  - VLESS-87.58.206.59
-  - VLESS-me3.echo-license.gr
-  - VLESS-me1.echo-license.gr
-  - VLESS-me10.echo-license.gr
-  - VLESS-me8.echo-license.gr
-  - VLESS-me2.echo-license.gr
-  - VLESS-151.101.192.223
-  - VLESS-140.248.186.45
-  - VLESS-91.132.161.245
-  - VLESS-144.31.171.143
-  - VLESS-69.46.46.123
-  - VLESS-175.41.179.37
-  - VLESS-104.27.66.214
+  - VLESS-69.46.46.32
+  - VLESS-78.159.131.235
+  - VLESS-31.133.0.103
+  - VLESS-193.124.45.154
+  - VLESS-104.17.101.26
+  - VLESS-coral-grove-8a62.golden-robin-b352.workers.dev
+  - TROJAN-18.181.213.219
+  - VLESS-144.124.236.188
+  - VLESS-spider-panel-production-e564.up.railway.app
+  - VLESS-37.252.20.41
+  - VLESS-31.76.119.117
+  - VLESS-95.169.201.169
+  - VLESS-93.152.223.214
+  - VLESS-138.124.33.169
+  - VLESS-138.124.37.164
+  - VLESS-213.219.212.146
+  - VLESS-nl-ydlod.doratbonn.fun
+  - VLESS-18.199.26.134
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

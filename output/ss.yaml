@@ -5,129 +5,80 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-20.166.49.191-chacha20
+- name: SS-82.38.31.162-chacha20
   type: ss
-  server: 20.166.49.191
-  port: 44311
-  cipher: chacha20-ietf-poly1305
-  password: n4lfLGpalfuK0Uxh
-  udp: true
-- name: SS-tun1.naxinshooping.ir-chacha20
-  type: ss
-  server: tun1.naxinshooping.ir
-  port: 1018
-  cipher: chacha20-ietf-poly1305
-  password: YVdTdZoWVyRvSUuF8_hhuA
-  udp: true
-- name: SS-turkishclouding.naxinshooping.ir-chacha20
-  type: ss
-  server: turkishclouding.naxinshooping.ir
-  port: 1020
-  cipher: chacha20-ietf-poly1305
-  password: YVdTdZoWVyRvSUuF8_hhuA
-  udp: true
-- name: SS-82.38.31.57-chacha20
-  type: ss
-  server: 82.38.31.57
-  port: 44326
+  server: 82.38.31.162
+  port: 44322
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
-  port: 44337
-  cipher: aes-128-gcm
-  password: shadowsocks
   udp: true
 - name: SS-pl140.vpnbook.com-chacha20
   type: ss
   server: pl140.vpnbook.com
-  port: 44338
+  port: 44349
   cipher: chacha20-ietf-poly1305
   password: ytw2awn
   udp: true
-- name: SS-156.146.38.168-aes-128-
+- name: SS-pl134.vpnbook.com-chacha20
   type: ss
-  server: 156.146.38.168
-  port: 44339
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: pl134.vpnbook.com
+  port: 44353
+  cipher: chacha20-ietf-poly1305
+  password: ytw2awn
   udp: true
-- name: SS-156.146.38.167-aes-128-
+- name: SS-149.22.87.240-aes-128-
   type: ss
-  server: 156.146.38.167
-  port: 44343
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.170-aes-128-
-  type: ss
-  server: 156.146.38.170
-  port: 44344
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.204-aes-128-
-  type: ss
-  server: 149.22.87.204
-  port: 44345
+  server: 149.22.87.240
+  port: 44359
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.241-aes-128-
   type: ss
   server: 149.22.87.241
-  port: 44346
+  port: 44360
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.87.240-aes-128-
+- name: SS-149.22.87.204-aes-128-
   type: ss
-  server: 149.22.87.240
-  port: 44349
+  server: 149.22.87.204
+  port: 44363
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-173.244.56.9-aes-128-
+- name: SS-37.19.198.243-aes-128-
   type: ss
-  server: 173.244.56.9
-  port: 44351
+  server: 37.19.198.243
+  port: 44373
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-173.244.56.6-aes-128-
+- name: SS-37.19.198.244-aes-128-
   type: ss
-  server: 173.244.56.6
-  port: 44352
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.95.183-aes-128-
-  type: ss
-  server: 149.22.95.183
-  port: 44353
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-216.105.168.18-chacha20
-  type: ss
-  server: 216.105.168.18
-  port: 44356
-  cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-  udp: true
-- name: SS-37.19.198.160-aes-128-
-  type: ss
-  server: 37.19.198.160
-  port: 44380
+  server: 37.19.198.244
+  port: 44377
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-37.19.198.236-aes-128-
   type: ss
   server: 37.19.198.236
-  port: 44389
+  port: 44383
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-82.38.31.57-chacha20
+  type: ss
+  server: 82.38.31.57
+  port: 44384
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-156.146.38.168-aes-128-
+  type: ss
+  server: 156.146.38.168
+  port: 44399
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -135,45 +86,31 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-20.166.49.191-chacha20
-  - SS-tun1.naxinshooping.ir-chacha20
-  - SS-turkishclouding.naxinshooping.ir-chacha20
-  - SS-82.38.31.57-chacha20
-  - SS-156.146.38.169-aes-128-
+  - SS-82.38.31.162-chacha20
   - SS-pl140.vpnbook.com-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.170-aes-128-
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
+  - SS-pl134.vpnbook.com-chacha20
   - SS-149.22.87.240-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-149.22.95.183-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-37.19.198.160-aes-128-
+  - SS-149.22.87.241-aes-128-
+  - SS-149.22.87.204-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.244-aes-128-
   - SS-37.19.198.236-aes-128-
+  - SS-82.38.31.57-chacha20
+  - SS-156.146.38.168-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-20.166.49.191-chacha20
-  - SS-tun1.naxinshooping.ir-chacha20
-  - SS-turkishclouding.naxinshooping.ir-chacha20
-  - SS-82.38.31.57-chacha20
-  - SS-156.146.38.169-aes-128-
+  - SS-82.38.31.162-chacha20
   - SS-pl140.vpnbook.com-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.170-aes-128-
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
+  - SS-pl134.vpnbook.com-chacha20
   - SS-149.22.87.240-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-149.22.95.183-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-37.19.198.160-aes-128-
+  - SS-149.22.87.241-aes-128-
+  - SS-149.22.87.204-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-37.19.198.244-aes-128-
   - SS-37.19.198.236-aes-128-
+  - SS-82.38.31.57-chacha20
+  - SS-156.146.38.168-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

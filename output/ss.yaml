@@ -5,80 +5,66 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-82.38.31.162-chacha20
+- name: SS-3.75.179.86-chacha20
   type: ss
-  server: 82.38.31.162
-  port: 44322
+  server: 3.75.179.86
+  port: 44315
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: 8af226b7726f4d4cb5c72fe3b57050f0
   udp: true
-- name: SS-pl140.vpnbook.com-chacha20
+- name: SS-84.247.155.196-aes-256-
   type: ss
-  server: pl140.vpnbook.com
-  port: 44349
+  server: 84.247.155.196
+  port: 8017
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  udp: true
+- name: SS-66.112.211.35-aes-128-
+  type: ss
+  server: 66.112.211.35
+  port: 44318
+  cipher: aes-128-gcm
+  password: synlgmm
+  udp: true
+- name: SS-102.37.156.224-chacha20
+  type: ss
+  server: 102.37.156.224
+  port: 44328
   cipher: chacha20-ietf-poly1305
-  password: ytw2awn
+  password: aduB9HGxQHjA2SBMRjkHX6
   udp: true
-- name: SS-pl134.vpnbook.com-chacha20
+- name: SS-156.146.38.167-aes-128-
   type: ss
-  server: pl134.vpnbook.com
-  port: 44353
+  server: 156.146.38.167
+  port: 44338
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.170-aes-128-
+  type: ss
+  server: 156.146.38.170
+  port: 44340
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44343
   cipher: chacha20-ietf-poly1305
-  password: ytw2awn
-  udp: true
-- name: SS-149.22.87.240-aes-128-
-  type: ss
-  server: 149.22.87.240
-  port: 44359
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.241-aes-128-
-  type: ss
-  server: 149.22.87.241
-  port: 44360
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.204-aes-128-
-  type: ss
-  server: 149.22.87.204
-  port: 44363
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.243-aes-128-
-  type: ss
-  server: 37.19.198.243
-  port: 44373
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.244-aes-128-
-  type: ss
-  server: 37.19.198.244
-  port: 44377
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.236-aes-128-
-  type: ss
-  server: 37.19.198.236
-  port: 44383
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-82.38.31.57-chacha20
-  type: ss
-  server: 82.38.31.57
-  port: 44384
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: hCCWOcIsK5wrFz4OX70rWf
   udp: true
 - name: SS-156.146.38.168-aes-128-
   type: ss
   server: 156.146.38.168
-  port: 44399
+  port: 44344
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.169-aes-128-
+  type: ss
+  server: 156.146.38.169
+  port: 44352
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -86,31 +72,27 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-82.38.31.162-chacha20
-  - SS-pl140.vpnbook.com-chacha20
-  - SS-pl134.vpnbook.com-chacha20
-  - SS-149.22.87.240-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.204-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-37.19.198.236-aes-128-
-  - SS-82.38.31.57-chacha20
+  - SS-3.75.179.86-chacha20
+  - SS-84.247.155.196-aes-256-
+  - SS-66.112.211.35-aes-128-
+  - SS-102.37.156.224-chacha20
+  - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.170-aes-128-
+  - SS-216.105.168.18-chacha20
   - SS-156.146.38.168-aes-128-
+  - SS-156.146.38.169-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-82.38.31.162-chacha20
-  - SS-pl140.vpnbook.com-chacha20
-  - SS-pl134.vpnbook.com-chacha20
-  - SS-149.22.87.240-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.204-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-37.19.198.236-aes-128-
-  - SS-82.38.31.57-chacha20
+  - SS-3.75.179.86-chacha20
+  - SS-84.247.155.196-aes-256-
+  - SS-66.112.211.35-aes-128-
+  - SS-102.37.156.224-chacha20
+  - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.170-aes-128-
+  - SS-216.105.168.18-chacha20
   - SS-156.146.38.168-aes-128-
+  - SS-156.146.38.169-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

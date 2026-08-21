@@ -5,112 +5,94 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-82.38.31.162-chacha20
+- name: SS-102.37.156.224-chacha20
   type: ss
-  server: 82.38.31.162
-  port: 44327
+  server: 102.37.156.224
+  port: 44326
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44331
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
   udp: true
 - name: SS-149.22.87.204-aes-128-
   type: ss
   server: 149.22.87.204
-  port: 44336
+  port: 44334
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-pl140.vpnbook.com-chacha20
+- name: SS-51.222.12.127-aes-256-
   type: ss
-  server: pl140.vpnbook.com
-  port: 44339
-  cipher: chacha20-ietf-poly1305
-  password: ytw2awn
+  server: 51.222.12.127
+  port: 44539
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
+- name: SS-149.22.87.241-aes-128-
+  type: ss
+  server: 149.22.87.241
+  port: 44345
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 - name: SS-pl134.vpnbook.com-chacha20
   type: ss
   server: pl134.vpnbook.com
-  port: 44350
+  port: 44349
   cipher: chacha20-ietf-poly1305
   password: ytw2awn
   udp: true
-- name: SS-102.37.156.224-chacha20
+- name: SS-switcher-nick-croquet.freesocks.work-chacha20
   type: ss
-  server: 102.37.156.224
-  port: 44359
+  server: switcher-nick-croquet.freesocks.work
+  port: 44353
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: RFK38Cg7APneSB5cWDcpbm
   udp: true
-- name: SS-139.180.133.90-aes-256-
+- name: SS-154.46.31.106-chacha20
   type: ss
-  server: 139.180.133.90
-  port: 8063
+  server: 154.46.31.106
+  port: 44362
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-167.99.103.190-aes-256-
+  type: ss
+  server: 167.99.103.190
+  port: 44385
   cipher: aes-256-gcm
-  password: jSU7bGKupQ96YFvf
-  udp: true
-- name: SS-156.146.38.170-aes-128-
-  type: ss
-  server: 156.146.38.170
-  port: 44378
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
-  port: 44380
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44383
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44391
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-194.233.94.119-aes-256-
-  type: ss
-  server: 194.233.94.119
-  port: 8097
-  cipher: aes-256-gcm
-  password: 5QCeIKUZUEp4mR9Z
+  password: P569MXUDpk9G0cQj
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-82.38.31.162-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-pl140.vpnbook.com-chacha20
-  - SS-pl134.vpnbook.com-chacha20
   - SS-102.37.156.224-chacha20
-  - SS-139.180.133.90-aes-256-
-  - SS-156.146.38.170-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-194.233.94.119-aes-256-
+  - SS-216.105.168.18-chacha20
+  - SS-149.22.87.204-aes-128-
+  - SS-51.222.12.127-aes-256-
+  - SS-149.22.87.241-aes-128-
+  - SS-pl134.vpnbook.com-chacha20
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
+  - SS-154.46.31.106-chacha20
+  - SS-167.99.103.190-aes-256-
 - name: Auto
   type: url-test
   proxies:
-  - SS-82.38.31.162-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-pl140.vpnbook.com-chacha20
-  - SS-pl134.vpnbook.com-chacha20
   - SS-102.37.156.224-chacha20
-  - SS-139.180.133.90-aes-256-
-  - SS-156.146.38.170-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-194.233.94.119-aes-256-
+  - SS-216.105.168.18-chacha20
+  - SS-149.22.87.204-aes-128-
+  - SS-51.222.12.127-aes-256-
+  - SS-149.22.87.241-aes-128-
+  - SS-pl134.vpnbook.com-chacha20
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
+  - SS-154.46.31.106-chacha20
+  - SS-167.99.103.190-aes-256-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

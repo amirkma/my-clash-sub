@@ -5,95 +5,182 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-moharez-production.up.railway.app
+- name: VLESS-185.237.14.36
   type: vless
-  server: moharez-production.up.railway.app
+  server: 185.237.14.36
+  port: 80
+  uuid: b6769264-5812-4a04-832e-59d6903cf87d
+  udp: true
+  tls: false
+  network: xhttp#GetXConfig-1
+- name: VLESS-35.157.103.248
+  type: vless
+  server: 35.157.103.248
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-3
+- name: VLESS-158.94.216.232
+  type: vless
+  server: 158.94.216.232
+  port: 9145
+  uuid: 2ef9a86d-2fc8-4edd-82f4-10727f529f7c
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Fw1tpKBQ_bT_eSTbaCSYBthpXAQ76kujwfywvjgpUA0
+    fingerprint: qq
+  sni: www.python.org
+- name: VLESS-ultrapl.scalenot.com
+  type: vless
+  server: ultrapl.scalenot.com
   port: 443
-  uuid: 087994dd-39fa-c1e0-81fc-751b0171fb8a
+  uuid: 9e27f64b-7ae9-461b-b4c4-99696276633b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: UR-ELTbCCTAAvg_y8vIznWFkGkCKFFaEAVgTtPYNCCk
+    fingerprint: firefox
+  sni: storage.yandexcloud.net
+- name: VLESS-91.193.58.201
+  type: vless
+  server: 91.193.58.201
+  port: 2087
+  uuid: 2ed4d629-09a2-44b5-b231-d8cc4b318bdb
   udp: true
   tls: true
   network: xhttp
-  sni: moharez-production.up.railway.app#GetXConfig-1
-- name: VLESS-69.46.46.5
+  sni: ip-1.xn--fjqyexxidv2znoe9rk1n8ada0532g6usa.com#GetXConfig-13
+- name: VLESS-de.lobbytech.ru
   type: vless
-  server: 69.46.46.5
+  server: de.lobbytech.ru
   port: 443
-  uuid: f5507df1-ba48-4dea-aba1-d3770aac4e1d
+  uuid: d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70
   udp: true
   tls: true
-  network: ws
-  ws-path: /ws/vless/f5507df1-ba48-4dea-aba1-d3770aac4e1d?ed=2048
-  ws-headers:
-    Host: web-production-7bd3d.up.railway.app
-  sni: web-production-7bd3d.up.railway.app#GetXConfig-3
-- name: VLESS-69.46.46.4
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: j4Ny4oGjMLcq2mxWMxt2S2VDFk_YHyvR2_2ZIoAa8Hs
+    fingerprint: firefox
+  sni: www.samsung.com
+- name: VLESS-69.46.46.123
   type: vless
-  server: 69.46.46.4
+  server: 69.46.46.123
   port: 443
-  uuid: 869a7792-7f60-43fb-bfaf-1510ec7bb719
+  uuid: 1667f049-f3c4-4c42-85f0-0f243467736e
   udp: true
   tls: true
   network: ws
-  ws-path: /ws/vless/869a7792-7f60-43fb-bfaf-1510ec7bb719?ed=2048
+  ws-path: /ws/1667f049-f3c4-4c42-85f0-0f243467736e
   ws-headers:
-    Host: hphphphph-production.up.railway.app
-  sni: hphphphph-production.up.railway.app#GetXConfig-5
-- name: VLESS-hphphphph-production.up.railway.app
+    Host: spiderpanel-production-d448.up.railway.app
+  sni: spiderpanel-production-d448.up.railway.app#GetXConfig-17
+- name: VLESS-51.44.58.64
   type: vless
-  server: hphphphph-production.up.railway.app
-  port: 443
-  uuid: 869a7792-7f60-43fb-bfaf-1510ec7bb719
+  server: 51.44.58.64
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/vless/869a7792-7f60-43fb-bfaf-1510ec7bb719?ed=2048
-  ws-headers:
-    Host: hphphphph-production.up.railway.app
-  sni: hphphphph-production.up.railway.app#GetXConfig-7
-- name: VLESS-web-production-7bd3d.up.railway.app
+  tls: false
+  network: tcp#GetXConfig-19
+- name: VLESS-bin.fastervip.ir
   type: vless
-  server: web-production-7bd3d.up.railway.app
-  port: 443
-  uuid: f5507df1-ba48-4dea-aba1-d3770aac4e1d
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/vless/f5507df1-ba48-4dea-aba1-d3770aac4e1d?ed=2048
-  ws-headers:
-    Host: web-production-7bd3d.up.railway.app
-  sni: web-production-7bd3d.up.railway.app#GetXConfig-9
-- name: VLESS-193.68.89.220
-  type: vless
-  server: 193.68.89.220
-  port: 443
-  uuid: 7ad0fc66-f8e2-1450-2471-4a5800000003
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /sync
-  ws-headers:
-    Host: nahan-corehos.hosin987.workers.dev
-  sni: nahan-corehos.hosin987.workers.dev#GetXConfig-11
-- name: VLESS-chatgpt.com
-  type: vless
-  server: chatgpt.com
-  port: 2053
-  uuid: 7cf1c6ae-bfd6-4910-9678-a214f31ed7bf
-  udp: true
-  tls: true
-  network: ws
-  ws-headers:
-    Host: za12kl3.bingnet.online
-  sni: za12kl3.bingnet.online#GetXConfig-15
-- name: VLESS-157.238.208.110
-  type: vless
-  server: 157.238.208.110
-  port: 41834
-  uuid: 5adeccb9-dfca-41de-cdf7-4d901f2e70f5
+  server: bin.fastervip.ir
+  port: 2052
+  uuid: 3a5771db-f779-47f6-9423-173cd4f952dd
   udp: true
   tls: false
   network: ws
-  ws-path: /5adeccb9#GetXConfig-17
+  ws-path: /
+- name: VLESS-199.232.78.160
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnTeam-21
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-28
+- name: VLESS-best3.daltoon-server.ir
+  type: vless
+  server: best3.daltoon-server.ir
+  port: 2083
+  uuid: 2626527c-ba9a-4b96-a96e-bfa26e16c0bf
+  udp: true
+  tls: false
+  network: ws#GetXConfig-30
+- name: VLESS-157.137.218.222
+  type: vless
+  server: 157.137.218.222
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-shoameni7-production.up.railway.app
+  type: vless
+  server: shoameni7-production.up.railway.app
+  port: 443
+  uuid: e5d2e17f-5751-8ef7-88af-3471573929e1
+  udp: true
+  tls: true
+  network: xhttp
+  sni: shoameni7-production.up.railway.app
+- name: VLESS-tunel.blueheartz.ir
+  type: vless
+  server: tunel.blueheartz.ir
+  port: 27195
+  uuid: c45460b9-3224-446e-b823-587fe215bf5d
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-37
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: h2IZ2DHQ-ibHC8NzuO7TVo3wS7G8DBV1hoCCR5cbRko
+    fingerprint: chrome
+  sni: play.google.com
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  type: vmess
+  server: 74.211.102.179
+  port: 20001
+  uuid: 7f5f0705-3dfb-4f56-9657-c95cade2ba83
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-150.241.73.137
+  type: vless
+  server: 150.241.73.137
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    fingerprint: chrome
+  sni: eu-central.cendora.ru
 - name: VLESS-u234-6njjdk.startora.top
   type: vless
   server: u234-6njjdk.startora.top
@@ -101,362 +188,21 @@ proxies:
   uuid: c396fa08-e07a-459b-b894-389456fd6a82
   udp: true
   tls: true
-  network: tcp#GetXConfig-19
+  network: tcp#Farah_VPN-42
   flow: xtls-rprx-vision
   reality-opts:
     public-key: m89wjPa2LxODyi8U5pRVI4E1fwVawIaftC3fLY0ZLw4
     fingerprint: chrome
   sni: www.amazon.com
-- name: VLESS-2.27.27.33
+- name: VLESS-185.39.204.155
   type: vless
-  server: 2.27.27.33
-  port: 443
-  uuid: 43948542-5c01-4fc3-bf42-e339e9ca3fbe
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: B4NK8UZflXK2SI7P6wvCbfSw0wspQRO0ElZM30gc_1E
-    fingerprint: random
-  sni: pimg.mycdn.me#GetXConfig-24
-- name: VLESS-14.137.244.44
-  type: vless
-  server: 14.137.244.44
-  port: 18233
-  uuid: 93cc16ff-60bd-4a48-8b4b-0ca1ce5f22ba
+  server: 185.39.204.155
+  port: 8443
+  uuid: 1f29762d-3f23-4207-9e39-f774de5d49ba
   udp: true
   tls: false
-  network: tcp
-  flow: '#GetXConfig-26'
-- name: VLESS-87.249.54.103
-  type: vless
-  server: 87.249.54.103
-  port: 4100
-  uuid: db7de26b-96d8-452c-8b9d-4a6bf55a7da7
-  udp: true
-  tls: false
-  network: ws#GetXConfig-28
-- name: VLESS-Secturk.chipsomast.ir
-  type: vless
-  server: Secturk.chipsomast.ir
-  port: 7007
-  uuid: 29b24e2d-a4b6-4785-ac90-e384b6c0b0b6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 7wBuF3nDHbcxPy3nr9Rmf6vDLB-gu7XQZqVvkiPlnh0
-    fingerprint: ios
-  sni: amp-api-edge.apps.apple.com#GetXConfig-31
-- name: VLESS-169.40.42.179
-  type: vless
-  server: 169.40.42.179
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    fingerprint: ios
-  sni: yahoo.com
-- name: VLESS-169.40.42.173
-  type: vless
-  server: 169.40.42.173
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    fingerprint: chrome
-  sni: yahoo.com
-- name: VLESS-64.226.117.146
-  type: vless
-  server: 64.226.117.146
-  port: 8880
-  uuid: 603819a3-dd65-408a-abab-15d8dc49887f
-  udp: true
-  tls: false
-  network: tcp#Farah_VPN-36
-- name: TROJAN-ready-monarch.rooster465.autos
-  type: trojan
-  server: ready-monarch.rooster465.autos
-  port: 443
-  password: PQ05174892
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-upright-impala.rooster465.autos
-  type: trojan
-  server: upright-impala.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: upright-impala.rooster465.autos#Farah_VPN-38
-  skip-cert-verify: true
-- name: TROJAN-open-octopus.rooster465.autos
-  type: trojan
-  server: open-octopus.rooster465.autos
-  port: 443
-  password: EQ30679154
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-central-jawfish.rooster465.autos
-  type: trojan
-  server: central-jawfish.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-bright-quagga.rooster465.autos
-  type: trojan
-  server: bright-quagga.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-known-albacore.rooster465.autos
-  type: trojan
-  server: known-albacore.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: VLESS-169.40.42.184
-  type: vless
-  server: 169.40.42.184
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    fingerprint: ios
-  sni: yahoo.com
-- name: VLESS-78.159.131.235
-  type: vless
-  server: 78.159.131.235
-  port: 443
-  uuid: 1da18def-6804-44c8-bb6d-83cff995f567
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo
-    fingerprint: firefox
-  sni: yahoo.com
-- name: VLESS-vpn.renshengxuanze.ccwu.cc
-  type: vless
-  server: vpn.renshengxuanze.ccwu.cc
-  port: 443
-  uuid: 9a3de3e0-2a6e-4bb2-81bd-1a4e51dfa110
-  udp: true
-  tls: true
-  network: ws#Farah_VPN-49
-  sni: vpn.renshengxuanze.ccwu.cc
-- name: TROJAN-healthy-louse.rooster465.autos
-  type: trojan
-  server: healthy-louse.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: healthy-louse.rooster465.autos#Farah_VPN-50
-  skip-cert-verify: true
-- name: TROJAN-pretty-adder.rooster465.autos
-  type: trojan
-  server: pretty-adder.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: pretty-adder.rooster465.autos#Farah_VPN-51
-  skip-cert-verify: false
-- name: TROJAN-ethical-raccoon.rooster465.autos
-  type: trojan
-  server: ethical-raccoon.rooster465.autos
-  port: 443
-  password: PQ05174892
-  udp: true
-  tls: true
-  sni: ethical-raccoon.rooster465.autos#Farah_VPN-52
-  skip-cert-verify: false
-- name: TROJAN-legible-ocelot.rooster465.autos
-  type: trojan
-  server: legible-ocelot.rooster465.autos
-  port: 443
-  password: HC04361579
-  udp: true
-  tls: true
-  sni: legible-ocelot.rooster465.autos#Farah_VPN-53
-  skip-cert-verify: true
-- name: TROJAN-literate-cow.rooster465.autos
-  type: trojan
-  server: literate-cow.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-champion-panther.rooster465.autos
-  type: trojan
-  server: champion-panther.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: SS-82.38.31.162-chacha20
-  type: ss
-  server: 82.38.31.162
-  port: 44358
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-60
-  type: vmess
-  server: drbkg16egf3fzlm3.v.3dns.vip
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws-vmess
-  ws-headers:
-    Host: DrBKg16eGf3FZlM3.v.3dns.vip
-- name: VLESS-162.159.12.210
-  type: vless
-  server: 162.159.12.210
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  tls: true
-  network: ws#Farah_VPN-61
-  sni: t1s1.rittbo.kdns.fr
-- name: VLESS-164.68.127.108
-  type: vless
-  server: 164.68.127.108
-  port: 24144
-  uuid: 7e85ed3f-3829-45b1-8b1c-6a2e45ebc967
-  udp: true
-  tls: false
-  network: tcp#Farah_VPN-62
-- name: TROJAN-polished-imp.rooster465.autos
-  type: trojan
-  server: polished-imp.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  sni: polished-imp.rooster465.autos#Farah_VPN-63
-  skip-cert-verify: true
-- name: TROJAN-social-mutt.rooster465.autos
-  type: trojan
-  server: social-mutt.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: social-mutt.rooster465.autos#Farah_VPN-64
-  skip-cert-verify: true
-- name: TROJAN-definite-gazelle.rooster465.autos
-  type: trojan
-  server: definite-gazelle.rooster465.autos
-  port: 443
-  password: EQ30679154
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-flying-swift.rooster465.autos
-  type: trojan
-  server: flying-swift.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: flying-swift.rooster465.autos#Farah_VPN-66
-  skip-cert-verify: false
-- name: TROJAN-18.183.182.132
-  type: trojan
-  server: 18.183.182.132
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  sni: exciting-grizzly.rooster465.autos#Farah_VPN-67
-  skip-cert-verify: true
-- name: TROJAN-welcome-owl.rooster465.autos
-  type: trojan
-  server: welcome-owl.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: welcome-owl.rooster465.autos#Farah_VPN-68
-  skip-cert-verify: true
-- name: VLESS-89.208.113.16
-  type: vless
-  server: 89.208.113.16
-  port: 443
-  uuid: adce7c2a-3191-49ae-b61c-9b8258ea1b0e
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-173.245.58.75
-  type: vless
-  server: 173.245.58.75
-  port: 443
-  uuid: b2f6aa3a-2550-4a1c-b2c0-1c94b1207217
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /hdgrbws#Farah_VPN-74
-  ws-headers:
-    Host: terazhediii.info
-  sni: terazhediii.info
-- name: TROJAN-exact-sawfish.rooster465.autos
-  type: trojan
-  server: exact-sawfish.rooster465.autos
-  port: 443
-  password: HC04361579
-  udp: true
-  tls: true
-  sni: exact-sawfish.rooster465.autos#Farah_VPN-75
-  skip-cert-verify: false
-- name: TROJAN-perfect-slug.rooster465.autos
-  type: trojan
-  server: perfect-slug.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: perfect-slug.rooster465.autos#Farah_VPN-76
-  skip-cert-verify: true
-- name: TROJAN-driven-doberman.rooster465.autos
-  type: trojan
-  server: driven-doberman.rooster465.autos
-  port: 443
-  password: HC04361579
-  udp: true
-  tls: true
-  sni: driven-doberman.rooster465.autos#Farah_VPN-77
-  skip-cert-verify: false
+  network: grpc
+  grpc-service-name: grpc#Farah_VPN-43
 - name: TROJAN-wealthy-gobbler.rooster465.autos
   type: trojan
   server: wealthy-gobbler.rooster465.autos
@@ -464,208 +210,17 @@ proxies:
   password: EQ30679154
   udp: true
   tls: true
-  sni: wealthy-gobbler.rooster465.autos#Farah_VPN-78
+  sni: wealthy-gobbler.rooster465.autos#Farah_VPN-44
   skip-cert-verify: true
-- name: TROJAN-54.95.128.248
+- name: TROJAN-casual-stallion.rooster465.autos
   type: trojan
-  server: 54.95.128.248
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  sni: engaged-ram.rooster465.autos#Farah_VPN-79
-  skip-cert-verify: true
-- name: TROJAN-adapted-quetzal.rooster465.autos
-  type: trojan
-  server: adapted-quetzal.rooster465.autos
+  server: casual-stallion.rooster465.autos
   port: 443
   password: FH72359861
   udp: true
   tls: true
-  sni: adapted-quetzal.rooster465.autos#Farah_VPN-80
+  sni: casual-stallion.rooster465.autos#Farah_VPN-45
   skip-cert-verify: false
-- name: TROJAN-internal-mongoose.rooster465.autos
-  type: trojan
-  server: internal-mongoose.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: internal-mongoose.rooster465.autos#Farah_VPN-81
-  skip-cert-verify: false
-- name: TROJAN-awaited-lark.rooster465.autos
-  type: trojan
-  server: awaited-lark.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-communal-troll.rooster465.autos
-  type: trojan
-  server: communal-troll.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: communal-troll.rooster465.autos#Farah_VPN-86
-  skip-cert-verify: true
-- name: TROJAN-magical-airedale.rooster465.autos
-  type: trojan
-  server: magical-airedale.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: magical-airedale.rooster465.autos#Farah_VPN-87
-  skip-cert-verify: false
-- name: TROJAN-settling-shad.rooster465.autos
-  type: trojan
-  server: settling-shad.rooster465.autos
-  port: 443
-  password: HC04361579
-  udp: true
-  tls: true
-  sni: settling-shad.rooster465.autos#Farah_VPN-88
-  skip-cert-verify: true
-- name: TROJAN-internal-sunbird.rooster465.autos
-  type: trojan
-  server: internal-sunbird.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: internal-sunbird.rooster465.autos#Farah_VPN-89
-  skip-cert-verify: true
-- name: TROJAN-stunning-mite.rooster465.autos
-  type: trojan
-  server: stunning-mite.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: stunning-mite.rooster465.autos#Farah_VPN-90
-  skip-cert-verify: true
-- name: TROJAN-thankful-mustang.rooster465.autos
-  type: trojan
-  server: thankful-mustang.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: thankful-mustang.rooster465.autos#Farah_VPN-91
-  skip-cert-verify: true
-- name: SS-149.22.87.204-aes-128-
-  type: ss
-  server: 149.22.87.204
-  port: 44392
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: VLESS-198.41.208.53
-  type: vless
-  server: 198.41.208.53
-  port: 2083
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: vp27.cc.cd
-  sni: vp27.cc.cd
-- name: TROJAN-108.128.201.154
-  type: trojan
-  server: 108.128.201.154
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: touching-turtle.rooster465.autos#Farah_VPN-96
-  skip-cert-verify: false
-- name: TROJAN-grateful-crawdad.rooster465.autos
-  type: trojan
-  server: grateful-crawdad.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-52.194.223.176
-  type: trojan
-  server: 52.194.223.176
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  sni: clear-heron.rooster465.autos#Farah_VPN-98
-  skip-cert-verify: true
-- name: TROJAN-eager-camel.rooster465.autos
-  type: trojan
-  server: eager-camel.rooster465.autos
-  port: 443
-  password: AE62539071
-  udp: true
-  tls: true
-  sni: eager-camel.rooster465.autos#Farah_VPN-99
-  skip-cert-verify: true
-- name: TROJAN-pet-albacore.rooster465.autos
-  type: trojan
-  server: pet-albacore.rooster465.autos
-  port: 443
-  password: HC04361579
-  udp: true
-  tls: true
-  sni: pet-albacore.rooster465.autos#Farah_VPN-100
-  skip-cert-verify: true
-- name: TROJAN-right-seahorse.rooster465.autos
-  type: trojan
-  server: right-seahorse.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: right-seahorse.rooster465.autos#Farah_VPN-101
-  skip-cert-verify: true
-- name: TROJAN-casual-bee.rooster465.autos
-  type: trojan
-  server: casual-bee.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: casual-bee.rooster465.autos#Farah_VPN-102
-  skip-cert-verify: true
-- name: TROJAN-trusting-elf.rooster465.autos
-  type: trojan
-  server: trusting-elf.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: trusting-elf.rooster465.autos#Farah_VPN-103
-  skip-cert-verify: false
-- name: VLESS-172.67.170.11
-  type: vless
-  server: 172.67.170.11
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: t1s1.rittbo.kdns.fr
-  sni: t1s1.rittbo.kdns.fr
-- name: TROJAN-nearby-egret.rooster465.autos
-  type: trojan
-  server: nearby-egret.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: nearby-egret.rooster465.autos#Farah_VPN-107
-  skip-cert-verify: true
 - name: TROJAN-noted-cougar.rooster465.autos
   type: trojan
   server: noted-cougar.rooster465.autos
@@ -673,7 +228,7 @@ proxies:
   password: FH72359861
   udp: true
   tls: true
-  sni: noted-cougar.rooster465.autos#Farah_VPN-108
+  sni: noted-cougar.rooster465.autos#Farah_VPN-46
   skip-cert-verify: false
 - name: TROJAN-together-amoeba.rooster465.autos
   type: trojan
@@ -683,6 +238,57 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
+- name: TROJAN-upward-yak.rooster465.autos
+  type: trojan
+  server: upward-yak.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-54
+  type: vmess
+  server: 82.198.246.233
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-55
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-56
+  type: vmess
+  server: 165.140.216.142
+  port: 443
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-savesafe.co
+  type: vless
+  server: savesafe.co
+  port: 443
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI
+    fingerprint: chrome
+  sni: savesafe.co
 - name: TROJAN-sacred-shepherd.rooster465.autos
   type: trojan
   server: sacred-shepherd.rooster465.autos
@@ -692,63 +298,24 @@ proxies:
   tls: true
   sni: sacred-shepherd.rooster465.autos
   skip-cert-verify: true
-- name: TROJAN-emerging-porpoise.rooster465.autos
+- name: TROJAN-internal-sunbird.rooster465.autos
   type: trojan
-  server: emerging-porpoise.rooster465.autos
+  server: internal-sunbird.rooster465.autos
   port: 443
-  password: FH72359861
+  password: ND91608427
   udp: true
   tls: true
-  sni: emerging-porpoise.rooster465.autos#Farah_VPN-111
-  skip-cert-verify: false
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-117
-  type: vmess
-  server: 165.140.216.142
-  port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-118
-  type: vmess
-  server: 165.140.216.142
-  port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-93.119.168.215
-  type: vless
-  server: 93.119.168.215
-  port: 60771
-  uuid: 060a5db6-7ff9-4a64-87c1-8a27be4f11ab
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-103.54.16.230
-  type: vless
-  server: 103.54.16.230
-  port: 2053
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#Farah_VPN-120
-  ws-headers:
-    Host: forfreeuse.sub-flow.online
-  sni: forfreeuse.sub-flow.online
-- name: TROJAN-premium-weevil.rooster465.autos
+  sni: internal-sunbird.rooster465.autos#Farah_VPN-59
+  skip-cert-verify: true
+- name: TROJAN-legible-ocelot.rooster465.autos
   type: trojan
-  server: premium-weevil.rooster465.autos
+  server: legible-ocelot.rooster465.autos
   port: 443
-  password: AE62539071
+  password: HC04361579
   udp: true
   tls: true
-  skip-cert-verify: false
+  sni: legible-ocelot.rooster465.autos#Farah_VPN-60
+  skip-cert-verify: true
 - name: TROJAN-settled-camel.rooster465.autos
   type: trojan
   server: settled-camel.rooster465.autos
@@ -757,111 +324,91 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: TROJAN-wanted-marmoset.rooster465.autos
+- name: TROJAN-ideal-phoenix.rooster465.autos
   type: trojan
-  server: wanted-marmoset.rooster465.autos
+  server: ideal-phoenix.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  sni: ideal-phoenix.rooster465.autos#Farah_VPN-62
+  skip-cert-verify: false
+- name: SS-102.37.156.224-chacha20
+  type: ss
+  server: 102.37.156.224
+  port: 44363
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-68
+  type: vmess
+  server: 82.198.246.37
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: TROJAN-premium-weevil.rooster465.autos
+  type: trojan
+  server: premium-weevil.rooster465.autos
   port: 443
   password: AE62539071
   udp: true
   tls: true
-  sni: wanted-marmoset.rooster465.autos#Farah_VPN-123
   skip-cert-verify: false
-- name: TROJAN-great-wasp.rooster465.autos
+- name: TROJAN-perfect-slug.rooster465.autos
   type: trojan
-  server: great-wasp.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-picked-guinea.rooster465.autos
-  type: trojan
-  server: picked-guinea.rooster465.autos
+  server: perfect-slug.rooster465.autos
   port: 443
   password: ND91608427
   udp: true
   tls: true
-  sni: picked-guinea.rooster465.autos#Farah_VPN-125
+  sni: perfect-slug.rooster465.autos#Farah_VPN-70
   skip-cert-verify: true
-- name: TROJAN-helping-shark.rooster465.autos
+- name: TROJAN-champion-panther.rooster465.autos
   type: trojan
-  server: helping-shark.rooster465.autos
+  server: champion-panther.rooster465.autos
   port: 443
   password: FH72359861
   udp: true
   tls: true
   skip-cert-verify: false
-- name: TROJAN-engaged-lionfish.rooster465.autos
+- name: TROJAN-upright-impala.rooster465.autos
   type: trojan
-  server: engaged-lionfish.rooster465.autos
+  server: upright-impala.rooster465.autos
   port: 443
-  password: FH72359861
+  password: ND91608427
   udp: true
   tls: true
-  sni: engaged-lionfish.rooster465.autos#Farah_VPN-132
+  sni: upright-impala.rooster465.autos#Farah_VPN-72
   skip-cert-verify: true
-- name: TROJAN-adapting-giraffe.rooster465.autos
+- name: TROJAN-internal-mongoose.rooster465.autos
   type: trojan
-  server: adapting-giraffe.rooster465.autos
+  server: internal-mongoose.rooster465.autos
   port: 443
   password: FH72359861
   udp: true
   tls: true
-  sni: adapting-giraffe.rooster465.autos#Farah_VPN-133
+  sni: internal-mongoose.rooster465.autos#Farah_VPN-73
   skip-cert-verify: false
-- name: TROJAN-108.130.49.217
+- name: TROJAN-evolving-kangaroo.rooster465.autos
   type: trojan
-  server: 108.130.49.217
+  server: evolving-kangaroo.rooster465.autos
   port: 443
   password: PQ05174892
   udp: true
   tls: true
-  sni: concise-bass.rooster465.autos#Farah_VPN-134
+  skip-cert-verify: true
+- name: TROJAN-enough-basilisk.rooster465.autos
+  type: trojan
+  server: enough-basilisk.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
   skip-cert-verify: false
-- name: TROJAN-mighty-lemming.rooster465.autos
-  type: trojan
-  server: mighty-lemming.rooster465.autos
-  port: 443
-  password: PQ05174892
-  udp: true
-  tls: true
-  sni: mighty-lemming.rooster465.autos#Farah_VPN-135
-  skip-cert-verify: true
-- name: TROJAN-moral-buzzard.rooster465.autos
-  type: trojan
-  server: moral-buzzard.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: moral-buzzard.rooster465.autos#Farah_VPN-136
-  skip-cert-verify: true
-- name: TROJAN-sure-humpback.rooster465.autos
-  type: trojan
-  server: sure-humpback.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: sure-humpback.rooster465.autos#Farah_VPN-137
-  skip-cert-verify: true
-- name: TROJAN-touching-ostrich.rooster465.autos
-  type: trojan
-  server: touching-ostrich.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: touching-ostrich.rooster465.autos#Farah_VPN-138
-  skip-cert-verify: false
-- name: VLESS-220.130.75.247
-  type: vless
-  server: 220.130.75.247
-  port: 10000
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  udp: true
-  tls: false
-  network: tcp
 - name: TROJAN-many-pangolin.rooster465.autos
   type: trojan
   server: many-pangolin.rooster465.autos
@@ -870,14 +417,30 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: false
-- name: TROJAN-18.201.28.146
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44377
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
+  udp: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-79
+  type: vmess
+  server: 82.198.246.97
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: TROJAN-literate-cow.rooster465.autos
   type: trojan
-  server: 18.201.28.146
+  server: literate-cow.rooster465.autos
   port: 443
   password: AE62539071
   udp: true
   tls: true
-  sni: helped-haddock.rooster465.autos#Farah_VPN-143
   skip-cert-verify: false
 - name: TROJAN-devoted-heron.rooster465.autos
   type: trojan
@@ -886,43 +449,127 @@ proxies:
   password: ND91608427
   udp: true
   tls: true
-  sni: devoted-heron.rooster465.autos#Farah_VPN-144
+  sni: devoted-heron.rooster465.autos#Farah_VPN-81
   skip-cert-verify: true
-- name: TROJAN-casual-stallion.rooster465.autos
+- name: TROJAN-mighty-lemming.rooster465.autos
   type: trojan
-  server: casual-stallion.rooster465.autos
+  server: mighty-lemming.rooster465.autos
   port: 443
-  password: FH72359861
+  password: PQ05174892
   udp: true
   tls: true
-  sni: casual-stallion.rooster465.autos#Farah_VPN-145
-  skip-cert-verify: false
-- name: TROJAN-needed-gelding.rooster465.autos
-  type: trojan
-  server: needed-gelding.rooster465.autos
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: needed-gelding.rooster465.autos#Farah_VPN-146
-  skip-cert-verify: false
-- name: TROJAN-better-molly.rooster465.autos
-  type: trojan
-  server: better-molly.rooster465.autos
-  port: 443
-  password: ND91608427
-  udp: true
-  tls: true
-  sni: better-molly.rooster465.autos#Farah_VPN-147
+  sni: mighty-lemming.rooster465.autos#Farah_VPN-82
   skip-cert-verify: true
-- name: TROJAN-humorous-llama.rooster465.autos
+- name: TROJAN-52.68.175.30
   type: trojan
-  server: humorous-llama.rooster465.autos
+  server: 52.68.175.30
   port: 443
   password: AE62539071
   udp: true
   tls: true
-  sni: humorous-llama.rooster465.autos#Farah_VPN-148
+  sni: on-roughy.rooster465.autos#Farah_VPN-83
+  skip-cert-verify: true
+- name: TROJAN-52.194.223.176
+  type: trojan
+  server: 52.194.223.176
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: clear-heron.rooster465.autos#Farah_VPN-84
+  skip-cert-verify: true
+- name: TROJAN-tough-hermit.rooster465.autos
+  type: trojan
+  server: tough-hermit.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: TROJAN-right-seahorse.rooster465.autos
+  type: trojan
+  server: right-seahorse.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: right-seahorse.rooster465.autos#Farah_VPN-86
+  skip-cert-verify: true
+- name: TROJAN-frank-frog.rooster465.autos
+  type: trojan
+  server: frank-frog.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: frank-frog.rooster465.autos
+  skip-cert-verify: true
+- name: SS-149.22.87.204-aes-128-
+  type: ss
+  server: 149.22.87.204
+  port: 44389
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: TROJAN-known-albacore.rooster465.autos
+  type: trojan
+  server: known-albacore.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: TROJAN-magical-airedale.rooster465.autos
+  type: trojan
+  server: magical-airedale.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: magical-airedale.rooster465.autos#Farah_VPN-91
+  skip-cert-verify: false
+- name: TROJAN-trusting-elf.rooster465.autos
+  type: trojan
+  server: trusting-elf.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: trusting-elf.rooster465.autos#Farah_VPN-92
+  skip-cert-verify: false
+- name: TROJAN-usable-dogfish.rooster465.autos
+  type: trojan
+  server: usable-dogfish.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: TROJAN-maximum-elk.rooster465.autos
+  type: trojan
+  server: maximum-elk.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: maximum-elk.rooster465.autos#Farah_VPN-94
+  skip-cert-verify: true
+- name: TROJAN-central-jawfish.rooster465.autos
+  type: trojan
+  server: central-jawfish.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: TROJAN-picked-guinea.rooster465.autos
+  type: trojan
+  server: picked-guinea.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: picked-guinea.rooster465.autos#Farah_VPN-96
   skip-cert-verify: true
 - name: TROJAN-13.231.237.228
   type: trojan
@@ -931,225 +578,590 @@ proxies:
   password: FH72359861
   udp: true
   tls: true
-  sni: classic-pug.rooster465.autos#Farah_VPN-149
+  sni: classic-pug.rooster465.autos#Farah_VPN-97
   skip-cert-verify: false
-- name: 🇹🇼 Join+Telegram:@Farah_VPN 🇹🇼-152
+- name: TROJAN-settling-shad.rooster465.autos
+  type: trojan
+  server: settling-shad.rooster465.autos
+  port: 443
+  password: HC04361579
+  udp: true
+  tls: true
+  sni: settling-shad.rooster465.autos#Farah_VPN-98
+  skip-cert-verify: true
+- name: TROJAN-balanced-goat.rooster465.autos
+  type: trojan
+  server: balanced-goat.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: VLESS-150.241.86.150
+  type: vless
+  server: 150.241.86.150
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision#Farah_VPN-100
+  reality-opts:
+    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
+    fingerprint: chrome
+  sni: nordic.cendora.ru
+- name: VLESS-195.184.247.222
+  type: vless
+  server: 195.184.247.222
+  port: 443
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI
+    fingerprint: chrome
+  sni: savesafe.co
+- name: VLESS-141.193.213.20
+  type: vless
+  server: 141.193.213.20
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /dula#Farah_VPN-102
+  ws-headers:
+    Host: speed.dulacloud.store
+  sni: speed.dulacloud.store
+- name: TROJAN-119.246.1.143
+  type: trojan
+  server: 119.246.1.143
+  port: 443
+  password: BxceQaOe
+  udp: true
+  tls: true
+  sni: t.me/ripaojiedian#Farah_VPN-103
+  skip-cert-verify: true
+- name: TROJAN-humorous-hawk.rooster465.autos
+  type: trojan
+  server: humorous-hawk.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: humorous-hawk.rooster465.autos#Farah_VPN-104
+  skip-cert-verify: true
+- name: TROJAN-flying-swift.rooster465.autos
+  type: trojan
+  server: flying-swift.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: flying-swift.rooster465.autos#Farah_VPN-105
+  skip-cert-verify: false
+- name: TROJAN-18.201.47.180
+  type: trojan
+  server: 18.201.47.180
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: healthy-panda.rooster465.autos#Farah_VPN-106
+  skip-cert-verify: false
+- name: TROJAN-together-dingo.rooster465.autos
+  type: trojan
+  server: together-dingo.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: TROJAN-awaited-lark.rooster465.autos
+  type: trojan
+  server: awaited-lark.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: TROJAN-social-mutt.rooster465.autos
+  type: trojan
+  server: social-mutt.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: social-mutt.rooster465.autos#Farah_VPN-109
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-113
   type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
-  cipher: auto
+  cipher: null
   udp: true
   tls: false
   network: tcp
+- name: VLESS-169.40.42.212
+  type: vless
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    fingerprint: chrome
+  sni: yahoo.com
+- name: VLESS-178.128.112.70
+  type: vless
+  server: 178.128.112.70
+  port: 443
+  uuid: 9206ae06-88ee-49b1-a558-531ade80fcaa
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY
+    fingerprint: chrome
+  sni: www.amazon.com
+- name: VLESS-144.31.131.241
+  type: vless
+  server: 144.31.131.241
+  port: 8443
+  uuid: b406bc51-9002-474c-beae-b194b02c91da
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+    fingerprint: chrome
+  sni: mold.speedload.online
+- name: TROJAN-18.183.178.158
+  type: trojan
+  server: 18.183.178.158
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: inviting-burro.rooster465.autos
+  skip-cert-verify: true
+- name: TROJAN-healthy-louse.rooster465.autos
+  type: trojan
+  server: healthy-louse.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: healthy-louse.rooster465.autos#Farah_VPN-118
+  skip-cert-verify: true
+- name: TROJAN-engaged-lionfish.rooster465.autos
+  type: trojan
+  server: engaged-lionfish.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: engaged-lionfish.rooster465.autos#Farah_VPN-119
+  skip-cert-verify: true
+- name: TROJAN-ethical-raccoon.rooster465.autos
+  type: trojan
+  server: ethical-raccoon.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  sni: ethical-raccoon.rooster465.autos#Farah_VPN-120
+  skip-cert-verify: false
+- name: TROJAN-helping-shark.rooster465.autos
+  type: trojan
+  server: helping-shark.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: 🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱-127
+  type: vmess
+  server: apjhdggyx.com
+  port: 443
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /5f72f180-b21b-4b7a-8484-240759096785
+  ws-headers:
+    Host: apjhdggyx.com
+- name: VLESS-103.54.16.230
+  type: vless
+  server: 103.54.16.230
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-128
+  ws-headers:
+    Host: forfreeuse.sub-flow.online
+  sni: forfreeuse.sub-flow.online
+- name: TROJAN-dynamic-grubworm.rooster465.autos
+  type: trojan
+  server: dynamic-grubworm.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: dynamic-grubworm.rooster465.autos#Farah_VPN-129
+  skip-cert-verify: true
+- name: TROJAN-strong-haddock.rooster465.autos
+  type: trojan
+  server: strong-haddock.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: strong-haddock.rooster465.autos#Farah_VPN-130
+  skip-cert-verify: true
+- name: TROJAN-accepted-starling.rooster465.autos
+  type: trojan
+  server: accepted-starling.rooster465.autos
+  port: 443
+  password: HC04361579
+  udp: true
+  tls: true
+  sni: accepted-starling.rooster465.autos#Farah_VPN-131
+  skip-cert-verify: true
+- name: TROJAN-emerging-porpoise.rooster465.autos
+  type: trojan
+  server: emerging-porpoise.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: emerging-porpoise.rooster465.autos#Farah_VPN-132
+  skip-cert-verify: false
+- name: TROJAN-ace-starling.rooster465.autos
+  type: trojan
+  server: ace-starling.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: ace-starling.rooster465.autos#Farah_VPN-133
+  skip-cert-verify: true
+- name: TROJAN-upright-bedbug.rooster465.autos
+  type: trojan
+  server: upright-bedbug.rooster465.autos
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: TROJAN-stunning-mite.rooster465.autos
+  type: trojan
+  server: stunning-mite.rooster465.autos
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: stunning-mite.rooster465.autos#Farah_VPN-135
+  skip-cert-verify: true
+- name: VLESS-connecto1.kolman.com.de
+  type: vless
+  server: connecto1.kolman.com.de
+  port: 8080
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2fb
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /eQ7EK5s88mh1QkQrKDwYqh6Dbhd#Farah_VPN-139
+  ws-headers:
+    Host: 1.sidin.com.de
+- name: VLESS-132.243.212.205
+  type: vless
+  server: 132.243.212.205
+  port: 41503
+  uuid: 58984fe1-5f01-486b-bb68-c2f8352d7a92
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: RIGmegmuEpwjJWkWnJF_woRYpLH5h8d_3uZQrcqgeRs
+    fingerprint: chrome
+  sni: github.com
+- name: TROJAN-communal-troll.rooster465.autos
+  type: trojan
+  server: communal-troll.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: communal-troll.rooster465.autos#Farah_VPN-141
+  skip-cert-verify: true
+- name: TROJAN-merry-falcon.rooster465.autos
+  type: trojan
+  server: merry-falcon.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  skip-cert-verify: false
+- name: TROJAN-modern-bedbug.rooster465.autos
+  type: trojan
+  server: modern-bedbug.rooster465.autos
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: modern-bedbug.rooster465.autos#Farah_VPN-143
+  skip-cert-verify: true
+- name: TROJAN-13.231.24.177
+  type: trojan
+  server: 13.231.24.177
+  port: 443
+  password: AE62539071
+  udp: true
+  tls: true
+  sni: easy-barnacle.rooster465.autos#Farah_VPN-144
+  skip-cert-verify: true
+- name: TROJAN-aware-puma.rooster465.autos
+  type: trojan
+  server: aware-puma.rooster465.autos
+  port: 443
+  password: PQ05174892
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: VLESS-129.121.95.159
+  type: vless
+  server: 129.121.95.159
+  port: 443
+  uuid: f6190ff2-864c-46cf-ac16-93908c069b75
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /connect#Farah_VPN-151
+  ws-headers:
+    Host: 129.121.95.159
+  sni: 129.121.95.159
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-moharez-production.up.railway.app
-  - VLESS-69.46.46.5
-  - VLESS-69.46.46.4
-  - VLESS-hphphphph-production.up.railway.app
-  - VLESS-web-production-7bd3d.up.railway.app
-  - VLESS-193.68.89.220
-  - VLESS-chatgpt.com
-  - VLESS-157.238.208.110
+  - VLESS-185.237.14.36
+  - VLESS-35.157.103.248
+  - VLESS-158.94.216.232
+  - VLESS-ultrapl.scalenot.com
+  - VLESS-91.193.58.201
+  - VLESS-de.lobbytech.ru
+  - VLESS-69.46.46.123
+  - VLESS-51.44.58.64
+  - VLESS-bin.fastervip.ir
+  - VLESS-199.232.78.160
+  - VLESS-best3.daltoon-server.ir
+  - VLESS-157.137.218.222
+  - VLESS-shoameni7-production.up.railway.app
+  - VLESS-tunel.blueheartz.ir
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-150.241.73.137
   - VLESS-u234-6njjdk.startora.top
-  - VLESS-2.27.27.33
-  - VLESS-14.137.244.44
-  - VLESS-87.249.54.103
-  - VLESS-Secturk.chipsomast.ir
-  - VLESS-169.40.42.179
-  - VLESS-169.40.42.173
-  - VLESS-64.226.117.146
-  - TROJAN-ready-monarch.rooster465.autos
-  - TROJAN-upright-impala.rooster465.autos
-  - TROJAN-open-octopus.rooster465.autos
-  - TROJAN-central-jawfish.rooster465.autos
-  - TROJAN-bright-quagga.rooster465.autos
-  - TROJAN-known-albacore.rooster465.autos
-  - VLESS-169.40.42.184
-  - VLESS-78.159.131.235
-  - VLESS-vpn.renshengxuanze.ccwu.cc
-  - TROJAN-healthy-louse.rooster465.autos
-  - TROJAN-pretty-adder.rooster465.autos
-  - TROJAN-ethical-raccoon.rooster465.autos
-  - TROJAN-legible-ocelot.rooster465.autos
-  - TROJAN-literate-cow.rooster465.autos
-  - TROJAN-champion-panther.rooster465.autos
-  - SS-82.38.31.162-chacha20
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-60
-  - VLESS-162.159.12.210
-  - VLESS-164.68.127.108
-  - TROJAN-polished-imp.rooster465.autos
-  - TROJAN-social-mutt.rooster465.autos
-  - TROJAN-definite-gazelle.rooster465.autos
-  - TROJAN-flying-swift.rooster465.autos
-  - TROJAN-18.183.182.132
-  - TROJAN-welcome-owl.rooster465.autos
-  - VLESS-89.208.113.16
-  - VLESS-173.245.58.75
-  - TROJAN-exact-sawfish.rooster465.autos
-  - TROJAN-perfect-slug.rooster465.autos
-  - TROJAN-driven-doberman.rooster465.autos
+  - VLESS-185.39.204.155
   - TROJAN-wealthy-gobbler.rooster465.autos
-  - TROJAN-54.95.128.248
-  - TROJAN-adapted-quetzal.rooster465.autos
-  - TROJAN-internal-mongoose.rooster465.autos
-  - TROJAN-awaited-lark.rooster465.autos
-  - TROJAN-communal-troll.rooster465.autos
-  - TROJAN-magical-airedale.rooster465.autos
-  - TROJAN-settling-shad.rooster465.autos
-  - TROJAN-internal-sunbird.rooster465.autos
-  - TROJAN-stunning-mite.rooster465.autos
-  - TROJAN-thankful-mustang.rooster465.autos
-  - SS-149.22.87.204-aes-128-
-  - VLESS-198.41.208.53
-  - TROJAN-108.128.201.154
-  - TROJAN-grateful-crawdad.rooster465.autos
-  - TROJAN-52.194.223.176
-  - TROJAN-eager-camel.rooster465.autos
-  - TROJAN-pet-albacore.rooster465.autos
-  - TROJAN-right-seahorse.rooster465.autos
-  - TROJAN-casual-bee.rooster465.autos
-  - TROJAN-trusting-elf.rooster465.autos
-  - VLESS-172.67.170.11
-  - TROJAN-nearby-egret.rooster465.autos
+  - TROJAN-casual-stallion.rooster465.autos
   - TROJAN-noted-cougar.rooster465.autos
   - TROJAN-together-amoeba.rooster465.autos
+  - TROJAN-upward-yak.rooster465.autos
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-54
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-55
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-56
+  - VLESS-savesafe.co
   - TROJAN-sacred-shepherd.rooster465.autos
-  - TROJAN-emerging-porpoise.rooster465.autos
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-117
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-118
-  - VLESS-93.119.168.215
-  - VLESS-103.54.16.230
-  - TROJAN-premium-weevil.rooster465.autos
+  - TROJAN-internal-sunbird.rooster465.autos
+  - TROJAN-legible-ocelot.rooster465.autos
   - TROJAN-settled-camel.rooster465.autos
-  - TROJAN-wanted-marmoset.rooster465.autos
-  - TROJAN-great-wasp.rooster465.autos
-  - TROJAN-picked-guinea.rooster465.autos
-  - TROJAN-helping-shark.rooster465.autos
-  - TROJAN-engaged-lionfish.rooster465.autos
-  - TROJAN-adapting-giraffe.rooster465.autos
-  - TROJAN-108.130.49.217
-  - TROJAN-mighty-lemming.rooster465.autos
-  - TROJAN-moral-buzzard.rooster465.autos
-  - TROJAN-sure-humpback.rooster465.autos
-  - TROJAN-touching-ostrich.rooster465.autos
-  - VLESS-220.130.75.247
+  - TROJAN-ideal-phoenix.rooster465.autos
+  - SS-102.37.156.224-chacha20
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-68
+  - TROJAN-premium-weevil.rooster465.autos
+  - TROJAN-perfect-slug.rooster465.autos
+  - TROJAN-champion-panther.rooster465.autos
+  - TROJAN-upright-impala.rooster465.autos
+  - TROJAN-internal-mongoose.rooster465.autos
+  - TROJAN-evolving-kangaroo.rooster465.autos
+  - TROJAN-enough-basilisk.rooster465.autos
   - TROJAN-many-pangolin.rooster465.autos
-  - TROJAN-18.201.28.146
+  - SS-216.105.168.18-chacha20
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-79
+  - TROJAN-literate-cow.rooster465.autos
   - TROJAN-devoted-heron.rooster465.autos
-  - TROJAN-casual-stallion.rooster465.autos
-  - TROJAN-needed-gelding.rooster465.autos
-  - TROJAN-better-molly.rooster465.autos
-  - TROJAN-humorous-llama.rooster465.autos
+  - TROJAN-mighty-lemming.rooster465.autos
+  - TROJAN-52.68.175.30
+  - TROJAN-52.194.223.176
+  - TROJAN-tough-hermit.rooster465.autos
+  - TROJAN-right-seahorse.rooster465.autos
+  - TROJAN-frank-frog.rooster465.autos
+  - SS-149.22.87.204-aes-128-
+  - TROJAN-known-albacore.rooster465.autos
+  - TROJAN-magical-airedale.rooster465.autos
+  - TROJAN-trusting-elf.rooster465.autos
+  - TROJAN-usable-dogfish.rooster465.autos
+  - TROJAN-maximum-elk.rooster465.autos
+  - TROJAN-central-jawfish.rooster465.autos
+  - TROJAN-picked-guinea.rooster465.autos
   - TROJAN-13.231.237.228
-  - 🇹🇼 Join+Telegram:@Farah_VPN 🇹🇼-152
+  - TROJAN-settling-shad.rooster465.autos
+  - TROJAN-balanced-goat.rooster465.autos
+  - VLESS-150.241.86.150
+  - VLESS-195.184.247.222
+  - VLESS-141.193.213.20
+  - TROJAN-119.246.1.143
+  - TROJAN-humorous-hawk.rooster465.autos
+  - TROJAN-flying-swift.rooster465.autos
+  - TROJAN-18.201.47.180
+  - TROJAN-together-dingo.rooster465.autos
+  - TROJAN-awaited-lark.rooster465.autos
+  - TROJAN-social-mutt.rooster465.autos
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-113
+  - VLESS-169.40.42.212
+  - VLESS-178.128.112.70
+  - VLESS-144.31.131.241
+  - TROJAN-18.183.178.158
+  - TROJAN-healthy-louse.rooster465.autos
+  - TROJAN-engaged-lionfish.rooster465.autos
+  - TROJAN-ethical-raccoon.rooster465.autos
+  - TROJAN-helping-shark.rooster465.autos
+  - 🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱-127
+  - VLESS-103.54.16.230
+  - TROJAN-dynamic-grubworm.rooster465.autos
+  - TROJAN-strong-haddock.rooster465.autos
+  - TROJAN-accepted-starling.rooster465.autos
+  - TROJAN-emerging-porpoise.rooster465.autos
+  - TROJAN-ace-starling.rooster465.autos
+  - TROJAN-upright-bedbug.rooster465.autos
+  - TROJAN-stunning-mite.rooster465.autos
+  - VLESS-connecto1.kolman.com.de
+  - VLESS-132.243.212.205
+  - TROJAN-communal-troll.rooster465.autos
+  - TROJAN-merry-falcon.rooster465.autos
+  - TROJAN-modern-bedbug.rooster465.autos
+  - TROJAN-13.231.24.177
+  - TROJAN-aware-puma.rooster465.autos
+  - VLESS-129.121.95.159
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-moharez-production.up.railway.app
-  - VLESS-69.46.46.5
-  - VLESS-69.46.46.4
-  - VLESS-hphphphph-production.up.railway.app
-  - VLESS-web-production-7bd3d.up.railway.app
-  - VLESS-193.68.89.220
-  - VLESS-chatgpt.com
-  - VLESS-157.238.208.110
+  - VLESS-185.237.14.36
+  - VLESS-35.157.103.248
+  - VLESS-158.94.216.232
+  - VLESS-ultrapl.scalenot.com
+  - VLESS-91.193.58.201
+  - VLESS-de.lobbytech.ru
+  - VLESS-69.46.46.123
+  - VLESS-51.44.58.64
+  - VLESS-bin.fastervip.ir
+  - VLESS-199.232.78.160
+  - VLESS-best3.daltoon-server.ir
+  - VLESS-157.137.218.222
+  - VLESS-shoameni7-production.up.railway.app
+  - VLESS-tunel.blueheartz.ir
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-150.241.73.137
   - VLESS-u234-6njjdk.startora.top
-  - VLESS-2.27.27.33
-  - VLESS-14.137.244.44
-  - VLESS-87.249.54.103
-  - VLESS-Secturk.chipsomast.ir
-  - VLESS-169.40.42.179
-  - VLESS-169.40.42.173
-  - VLESS-64.226.117.146
-  - TROJAN-ready-monarch.rooster465.autos
-  - TROJAN-upright-impala.rooster465.autos
-  - TROJAN-open-octopus.rooster465.autos
-  - TROJAN-central-jawfish.rooster465.autos
-  - TROJAN-bright-quagga.rooster465.autos
-  - TROJAN-known-albacore.rooster465.autos
-  - VLESS-169.40.42.184
-  - VLESS-78.159.131.235
-  - VLESS-vpn.renshengxuanze.ccwu.cc
-  - TROJAN-healthy-louse.rooster465.autos
-  - TROJAN-pretty-adder.rooster465.autos
-  - TROJAN-ethical-raccoon.rooster465.autos
-  - TROJAN-legible-ocelot.rooster465.autos
-  - TROJAN-literate-cow.rooster465.autos
-  - TROJAN-champion-panther.rooster465.autos
-  - SS-82.38.31.162-chacha20
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-60
-  - VLESS-162.159.12.210
-  - VLESS-164.68.127.108
-  - TROJAN-polished-imp.rooster465.autos
-  - TROJAN-social-mutt.rooster465.autos
-  - TROJAN-definite-gazelle.rooster465.autos
-  - TROJAN-flying-swift.rooster465.autos
-  - TROJAN-18.183.182.132
-  - TROJAN-welcome-owl.rooster465.autos
-  - VLESS-89.208.113.16
-  - VLESS-173.245.58.75
-  - TROJAN-exact-sawfish.rooster465.autos
-  - TROJAN-perfect-slug.rooster465.autos
-  - TROJAN-driven-doberman.rooster465.autos
+  - VLESS-185.39.204.155
   - TROJAN-wealthy-gobbler.rooster465.autos
-  - TROJAN-54.95.128.248
-  - TROJAN-adapted-quetzal.rooster465.autos
-  - TROJAN-internal-mongoose.rooster465.autos
-  - TROJAN-awaited-lark.rooster465.autos
-  - TROJAN-communal-troll.rooster465.autos
-  - TROJAN-magical-airedale.rooster465.autos
-  - TROJAN-settling-shad.rooster465.autos
-  - TROJAN-internal-sunbird.rooster465.autos
-  - TROJAN-stunning-mite.rooster465.autos
-  - TROJAN-thankful-mustang.rooster465.autos
-  - SS-149.22.87.204-aes-128-
-  - VLESS-198.41.208.53
-  - TROJAN-108.128.201.154
-  - TROJAN-grateful-crawdad.rooster465.autos
-  - TROJAN-52.194.223.176
-  - TROJAN-eager-camel.rooster465.autos
-  - TROJAN-pet-albacore.rooster465.autos
-  - TROJAN-right-seahorse.rooster465.autos
-  - TROJAN-casual-bee.rooster465.autos
-  - TROJAN-trusting-elf.rooster465.autos
-  - VLESS-172.67.170.11
-  - TROJAN-nearby-egret.rooster465.autos
+  - TROJAN-casual-stallion.rooster465.autos
   - TROJAN-noted-cougar.rooster465.autos
   - TROJAN-together-amoeba.rooster465.autos
+  - TROJAN-upward-yak.rooster465.autos
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-54
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-55
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-56
+  - VLESS-savesafe.co
   - TROJAN-sacred-shepherd.rooster465.autos
-  - TROJAN-emerging-porpoise.rooster465.autos
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-117
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-118
-  - VLESS-93.119.168.215
-  - VLESS-103.54.16.230
-  - TROJAN-premium-weevil.rooster465.autos
+  - TROJAN-internal-sunbird.rooster465.autos
+  - TROJAN-legible-ocelot.rooster465.autos
   - TROJAN-settled-camel.rooster465.autos
-  - TROJAN-wanted-marmoset.rooster465.autos
-  - TROJAN-great-wasp.rooster465.autos
-  - TROJAN-picked-guinea.rooster465.autos
-  - TROJAN-helping-shark.rooster465.autos
-  - TROJAN-engaged-lionfish.rooster465.autos
-  - TROJAN-adapting-giraffe.rooster465.autos
-  - TROJAN-108.130.49.217
-  - TROJAN-mighty-lemming.rooster465.autos
-  - TROJAN-moral-buzzard.rooster465.autos
-  - TROJAN-sure-humpback.rooster465.autos
-  - TROJAN-touching-ostrich.rooster465.autos
-  - VLESS-220.130.75.247
+  - TROJAN-ideal-phoenix.rooster465.autos
+  - SS-102.37.156.224-chacha20
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-68
+  - TROJAN-premium-weevil.rooster465.autos
+  - TROJAN-perfect-slug.rooster465.autos
+  - TROJAN-champion-panther.rooster465.autos
+  - TROJAN-upright-impala.rooster465.autos
+  - TROJAN-internal-mongoose.rooster465.autos
+  - TROJAN-evolving-kangaroo.rooster465.autos
+  - TROJAN-enough-basilisk.rooster465.autos
   - TROJAN-many-pangolin.rooster465.autos
-  - TROJAN-18.201.28.146
+  - SS-216.105.168.18-chacha20
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-79
+  - TROJAN-literate-cow.rooster465.autos
   - TROJAN-devoted-heron.rooster465.autos
-  - TROJAN-casual-stallion.rooster465.autos
-  - TROJAN-needed-gelding.rooster465.autos
-  - TROJAN-better-molly.rooster465.autos
-  - TROJAN-humorous-llama.rooster465.autos
+  - TROJAN-mighty-lemming.rooster465.autos
+  - TROJAN-52.68.175.30
+  - TROJAN-52.194.223.176
+  - TROJAN-tough-hermit.rooster465.autos
+  - TROJAN-right-seahorse.rooster465.autos
+  - TROJAN-frank-frog.rooster465.autos
+  - SS-149.22.87.204-aes-128-
+  - TROJAN-known-albacore.rooster465.autos
+  - TROJAN-magical-airedale.rooster465.autos
+  - TROJAN-trusting-elf.rooster465.autos
+  - TROJAN-usable-dogfish.rooster465.autos
+  - TROJAN-maximum-elk.rooster465.autos
+  - TROJAN-central-jawfish.rooster465.autos
+  - TROJAN-picked-guinea.rooster465.autos
   - TROJAN-13.231.237.228
-  - 🇹🇼 Join+Telegram:@Farah_VPN 🇹🇼-152
+  - TROJAN-settling-shad.rooster465.autos
+  - TROJAN-balanced-goat.rooster465.autos
+  - VLESS-150.241.86.150
+  - VLESS-195.184.247.222
+  - VLESS-141.193.213.20
+  - TROJAN-119.246.1.143
+  - TROJAN-humorous-hawk.rooster465.autos
+  - TROJAN-flying-swift.rooster465.autos
+  - TROJAN-18.201.47.180
+  - TROJAN-together-dingo.rooster465.autos
+  - TROJAN-awaited-lark.rooster465.autos
+  - TROJAN-social-mutt.rooster465.autos
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-113
+  - VLESS-169.40.42.212
+  - VLESS-178.128.112.70
+  - VLESS-144.31.131.241
+  - TROJAN-18.183.178.158
+  - TROJAN-healthy-louse.rooster465.autos
+  - TROJAN-engaged-lionfish.rooster465.autos
+  - TROJAN-ethical-raccoon.rooster465.autos
+  - TROJAN-helping-shark.rooster465.autos
+  - 🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱-127
+  - VLESS-103.54.16.230
+  - TROJAN-dynamic-grubworm.rooster465.autos
+  - TROJAN-strong-haddock.rooster465.autos
+  - TROJAN-accepted-starling.rooster465.autos
+  - TROJAN-emerging-porpoise.rooster465.autos
+  - TROJAN-ace-starling.rooster465.autos
+  - TROJAN-upright-bedbug.rooster465.autos
+  - TROJAN-stunning-mite.rooster465.autos
+  - VLESS-connecto1.kolman.com.de
+  - VLESS-132.243.212.205
+  - TROJAN-communal-troll.rooster465.autos
+  - TROJAN-merry-falcon.rooster465.autos
+  - TROJAN-modern-bedbug.rooster465.autos
+  - TROJAN-13.231.24.177
+  - TROJAN-aware-puma.rooster465.autos
+  - VLESS-129.121.95.159
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

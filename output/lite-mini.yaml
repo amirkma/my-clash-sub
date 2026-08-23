@@ -5,131 +5,137 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-farancenew.mamadhpbot.ir
+- name: VLESS-31.76.91.72
   type: vless
-  server: farancenew.mamadhpbot.ir
-  port: 50118
-  uuid: 93ee032f-b67f-4cac-a239-da1295aec528
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-nl-grpc.letsconnectpoint.com
-  type: vless
-  server: nl-grpc.letsconnectpoint.com
-  port: 443
-  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  server: 31.76.91.72
+  port: 2087
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: grpc-nl-stream
+  grpc-service-name: grpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: WJrP73M7px11xkHKhmEMKnaqUR-DPZnKbR2m_N3TwEE
-    fingerprint: firefox
-  sni: nl-grpc.letsconnectpoint.com
-- name: VLESS-usnodenew.mamadhpbot.ir
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    fingerprint: chrome#GetXConfig-1
+  sni: ads.x5.ru
+- name: VLESS-107.161.174.99
   type: vless
-  server: usnodenew.mamadhpbot.ir
-  port: 50118
-  uuid: 93ee032f-b67f-4cac-a239-da1295aec528
+  server: 107.161.174.99
+  port: 443
+  uuid: 12198fda-9d9b-fb57-98ee-a99e00000000
   udp: true
-  tls: false
+  tls: true
+  network: ws
+  ws-path: /sync
+  ws-headers:
+    Host: nahan-core.sadhghisina.workers.dev
+  sni: nahan-core.sadhghisina.workers.dev#GetXConfig-3
+- name: VLESS-update.georkup.ir
+  type: vless
+  server: update.georkup.ir
+  port: 2050
+  uuid: 51b7b320-fe34-422c-93fd-feea4f102c25
+  udp: true
+  tls: true
   network: tcp
-- name: VLESS-germanndnew.mamadhpbot.ir
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 87HZewEoPUrnq4LxNZjPDArFr7IyfX74eGkisGBwQH8
+    fingerprint: edge
+  sni: perplexity.ai
+- name: VLESS-151.101.56.7
   type: vless
-  server: germanndnew.mamadhpbot.ir
-  port: 50118
-  uuid: 93ee032f-b67f-4cac-a239-da1295aec528
+  server: 151.101.56.7
+  port: 443
+  uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: 7wwwspeedtestnet.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-7
+- name: VLESS-38.107.237.101
+  type: vless
+  server: 38.107.237.101
+  port: 33635
+  uuid: 3a2be404-958b-418f-a4ea-a5098a888495
   udp: true
   tls: false
-  network: tcp
-- name: VLESS-135.106.176.132
-  type: vless
-  server: 135.106.176.132
-  port: 667
-  uuid: c81d5e39-0626-443c-8ce8-4f10273032c1
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-9
+  network: ws#GetXConfig-9
 - name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   type: vmess
-  server: 165.140.216.142
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-95.154.196.61
+  type: vless
+  server: 95.154.196.61
   port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-  alterId: 0
-  cipher: auto
+  uuid: e5d917f5-fc78-455e-bbb5-81d08715f3d6
   udp: true
-  tls: false
-  network: tcp
-- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-12
-  type: vmess
-  server: 57.129.132.223
-  port: 80
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
-  alterId: 0
-  cipher: auto
+  tls: true
+  network: tcp#Farah_VPN-12
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 2ATxqiR22wlo3yXOHc43LFHM5NzWCdSGZLdBay_vJgM
+    fingerprint: firefox
+  sni: strapi.io
+- name: VLESS-172.67.66.177
+  type: vless
+  server: 172.67.66.177
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   tls: false
   network: ws
-  ws-path: /vmess/
+  ws-path: /#Farah_VPN-13
   ws-headers:
-    Host: google.com
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-13
-  type: vmess
-  server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
+    Host: cnmfangbinxingnmsl.cnm-fangbinxingnmsl-250.workers.dev
+- name: VLESS-meshbuzz.bond
+  type: vless
+  server: meshbuzz.bond
+  port: 443
+  uuid: 9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d
   udp: true
-  tls: false
+  tls: true
   network: ws
-  ws-path: /arki?ed=2048
-- name: VLESS-182.16.61.2
+  ws-path: /ws-at
+  ws-headers:
+    Host: 4fspx0q.uploodmusicmelody.ir
+  sni: 4fspx0q.uploodmusicmelody.ir#Farah_VPN-14
+- name: VLESS-158.69.112.254
   type: vless
-  server: 182.16.61.2
-  port: 45647
-  uuid: caec0d8d-ab2f-4247-b97d-7fb1a34ab195
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-220.130.75.247
-  type: vless
-  server: 220.130.75.247
-  port: 10000
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-51.158.206.34
-  type: vless
-  server: 51.158.206.34
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 158.69.112.254
+  port: 443
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
     fingerprint: chrome
-  sni: fuck.rkn
-- name: TROJAN-109.206.241.10
-  type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  udp: true
-  tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-17
-  skip-cert-verify: false
-- name: SS-2.58.81.221-aes-256-
+  sni: www.speedtest.net
+- name: SS-158.173.20.208-aes-128-
   type: ss
-  server: 2.58.81.221
-  port: 44319
+  server: 158.173.20.208
+  port: 44316
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.102.132.180-aes-256-
+  type: ss
+  server: 149.102.132.180
+  port: 44317
   cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
+  password: CzDWICt1DOi8F5jq
   udp: true
 - name: VLESS-104.27.67.3
   type: vless
@@ -208,23 +214,34 @@ proxies:
   ws-headers:
     Host: hhlfy.twiladaphne.ndjp.net
   sni: hhlfy.twiladaphne.ndjp.net#meliproxyy-27
+- name: VLESS-134.209.205.250
+  type: vless
+  server: 134.209.205.250
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: forfreeuse.rtqa.ru
+  sni: forfreeuse.rtqa.ru#meliproxyy-28
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-farancenew.mamadhpbot.ir
-  - VLESS-nl-grpc.letsconnectpoint.com
-  - VLESS-usnodenew.mamadhpbot.ir
-  - VLESS-germanndnew.mamadhpbot.ir
-  - VLESS-135.106.176.132
+  - VLESS-31.76.91.72
+  - VLESS-107.161.174.99
+  - VLESS-update.georkup.ir
+  - VLESS-151.101.56.7
+  - VLESS-38.107.237.101
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
-  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-12
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-13
-  - VLESS-182.16.61.2
-  - VLESS-220.130.75.247
-  - VLESS-51.158.206.34
-  - TROJAN-109.206.241.10
-  - SS-2.58.81.221-aes-256-
+  - VLESS-95.154.196.61
+  - VLESS-172.67.66.177
+  - VLESS-meshbuzz.bond
+  - VLESS-158.69.112.254
+  - SS-158.173.20.208-aes-128-
+  - SS-149.102.132.180-aes-256-
   - VLESS-104.27.67.3
   - VLESS-188.114.99.0
   - VLESS-164.90.171.176
@@ -232,22 +249,22 @@ proxy-groups:
   - VLESS-moharez-fast-production-7ce5.up.railway.app
   - VLESS-104.16.6.70
   - VLESS-172.64.150.28
+  - VLESS-134.209.205.250
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-farancenew.mamadhpbot.ir
-  - VLESS-nl-grpc.letsconnectpoint.com
-  - VLESS-usnodenew.mamadhpbot.ir
-  - VLESS-germanndnew.mamadhpbot.ir
-  - VLESS-135.106.176.132
+  - VLESS-31.76.91.72
+  - VLESS-107.161.174.99
+  - VLESS-update.georkup.ir
+  - VLESS-151.101.56.7
+  - VLESS-38.107.237.101
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
-  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-12
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-13
-  - VLESS-182.16.61.2
-  - VLESS-220.130.75.247
-  - VLESS-51.158.206.34
-  - TROJAN-109.206.241.10
-  - SS-2.58.81.221-aes-256-
+  - VLESS-95.154.196.61
+  - VLESS-172.67.66.177
+  - VLESS-meshbuzz.bond
+  - VLESS-158.69.112.254
+  - SS-158.173.20.208-aes-128-
+  - SS-149.102.132.180-aes-256-
   - VLESS-104.27.67.3
   - VLESS-188.114.99.0
   - VLESS-164.90.171.176
@@ -255,6 +272,7 @@ proxy-groups:
   - VLESS-moharez-fast-production-7ce5.up.railway.app
   - VLESS-104.16.6.70
   - VLESS-172.64.150.28
+  - VLESS-134.209.205.250
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

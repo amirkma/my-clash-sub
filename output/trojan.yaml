@@ -5,77 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-45.82.14.144
+- name: TROJAN-119.246.1.143
   type: trojan
-  server: 45.82.14.144
-  port: 2025
-  password: vpn
-  udp: true
-  tls: true
-  sni: dns.google.com
-  skip-cert-verify: true
-- name: TROJAN-64.94.95.118
-  type: trojan
-  server: 64.94.95.118
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-172.64.152.23
-  type: trojan
-  server: 172.64.152.23
+  server: 119.246.1.143
   port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com¬e=@FreeOnlineVPN#Farah_VPN-3
-  skip-cert-verify: false
-- name: TROJAN-95.40.61.23
-  type: trojan
-  server: 95.40.61.23
-  port: 11035
   password: BxceQaOe
   udp: true
   tls: true
-  sni: t.me/ripaojiedian#Farah_VPN-4
+  sni: t.me/ripaojiedian#Farah_VPN-1
   skip-cert-verify: true
-- name: TROJAN-109.206.241.10
-  type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  udp: true
-  tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-5
-  skip-cert-verify: false
-- name: TROJAN-londhtc.southbyte.xyz
-  type: trojan
-  server: londhtc.southbyte.xyz
-  port: 5448
-  password: fg20mtCFHy
-  udp: true
-  tls: true
-  sni: londhtc.southbyte.xyz#Farah_VPN-6
-  skip-cert-verify: false
-- name: TROJAN-44.251.158.80
-  type: trojan
-  server: 44.251.158.80
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: obliging-louse.rooster465.autos#Farah_VPN-7
-  skip-cert-verify: false
-- name: TROJAN-104.19.229.21
-  type: trojan
-  server: 104.19.229.21
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: false
 - name: TROJAN-89.39.70.238
   type: trojan
   server: 89.39.70.238
@@ -100,7 +38,7 @@ proxies:
   password: FH72359861
   udp: true
   tls: true
-  sni: pro-crane.rooster465.autos#meliproxyy-11
+  sni: pro-crane.rooster465.autos#meliproxyy-4
   skip-cert-verify: false
 - name: TROJAN-89.39.70.64
   type: trojan
@@ -111,37 +49,56 @@ proxies:
   tls: true
   sni: actual-aardvark.rooster465.autos
   skip-cert-verify: true
+- name: TROJAN-44.246.163.102
+  type: trojan
+  server: 44.246.163.102
+  port: 443
+  password: ND91608427
+  udp: true
+  tls: true
+  sni: fleet-bonefish.rooster465.autos#meliproxyy-6
+  skip-cert-verify: false
+- name: TROJAN-212.183.88.136
+  type: trojan
+  server: 212.183.88.136
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+- name: TROJAN-104.16.72.41
+  type: trojan
+  server: 104.16.72.41
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-45.82.14.144
-  - TROJAN-64.94.95.118
-  - TROJAN-172.64.152.23
-  - TROJAN-95.40.61.23
-  - TROJAN-109.206.241.10
-  - TROJAN-londhtc.southbyte.xyz
-  - TROJAN-44.251.158.80
-  - TROJAN-104.19.229.21
+  - TROJAN-119.246.1.143
   - TROJAN-89.39.70.238
   - TROJAN-www.speedtest.net
   - TROJAN-89.39.70.120
   - TROJAN-89.39.70.64
+  - TROJAN-44.246.163.102
+  - TROJAN-212.183.88.136
+  - TROJAN-104.16.72.41
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-45.82.14.144
-  - TROJAN-64.94.95.118
-  - TROJAN-172.64.152.23
-  - TROJAN-95.40.61.23
-  - TROJAN-109.206.241.10
-  - TROJAN-londhtc.southbyte.xyz
-  - TROJAN-44.251.158.80
-  - TROJAN-104.19.229.21
+  - TROJAN-119.246.1.143
   - TROJAN-89.39.70.238
   - TROJAN-www.speedtest.net
   - TROJAN-89.39.70.120
   - TROJAN-89.39.70.64
+  - TROJAN-44.246.163.102
+  - TROJAN-212.183.88.136
+  - TROJAN-104.16.72.41
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

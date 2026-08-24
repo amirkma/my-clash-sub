@@ -5,41 +5,13 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-109.206.241.10
+- name: TROJAN-64.94.95.118
   type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  server: 64.94.95.118
+  port: 57142
+  password: kkzh2prsyr2ik47as615
   udp: true
   tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-1
-  skip-cert-verify: false
-- name: TROJAN-oplosgru-c.catcat321.com
-  type: trojan
-  server: oplosgru-c.catcat321.com
-  port: 20006
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  udp: true
-  tls: true
-  sni: hk.catxstar.com#Farah_VPN-2
-  skip-cert-verify: true
-- name: TROJAN-185.18.250.252
-  type: trojan
-  server: 185.18.250.252
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-- name: TROJAN-45.82.14.144
-  type: trojan
-  server: 45.82.14.144
-  port: 2025
-  password: vpn
-  udp: true
-  tls: true
-  sni: dns.google.com
   skip-cert-verify: true
 - name: TROJAN-89.39.70.238
   type: trojan
@@ -65,7 +37,7 @@ proxies:
   password: FH72359861
   udp: true
   tls: true
-  sni: pro-crane.rooster465.autos#meliproxyy-7
+  sni: pro-crane.rooster465.autos#meliproxyy-4
   skip-cert-verify: false
 - name: TROJAN-89.39.70.64
   type: trojan
@@ -83,7 +55,7 @@ proxies:
   password: ND91608427
   udp: true
   tls: true
-  sni: fleet-bonefish.rooster465.autos#meliproxyy-9
+  sni: fleet-bonefish.rooster465.autos#meliproxyy-6
   skip-cert-verify: false
 - name: TROJAN-212.183.88.136
   type: trojan
@@ -107,10 +79,7 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-109.206.241.10
-  - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-185.18.250.252
-  - TROJAN-45.82.14.144
+  - TROJAN-64.94.95.118
   - TROJAN-89.39.70.238
   - TROJAN-www.speedtest.net
   - TROJAN-89.39.70.120
@@ -121,10 +90,7 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-109.206.241.10
-  - TROJAN-oplosgru-c.catcat321.com
-  - TROJAN-185.18.250.252
-  - TROJAN-45.82.14.144
+  - TROJAN-64.94.95.118
   - TROJAN-89.39.70.238
   - TROJAN-www.speedtest.net
   - TROJAN-89.39.70.120

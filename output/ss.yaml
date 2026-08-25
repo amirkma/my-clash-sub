@@ -5,33 +5,59 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-139.180.133.90-aes-256-
+- name: SS-138.124.123.127-chacha20
   type: ss
-  server: 139.180.133.90
-  port: 8037
-  cipher: aes-256-gcm
-  password: jSU7bGKupQ96YFvf
+  server: 138.124.123.127
+  port: 10806
+  cipher: chacha20-ietf-poly1305
+  password: KS0Svfofhu5wxO8e8yIzEwnvav0Y4gTM
+  udp: true
+- name: SS-154.46.31.106-chacha20
+  type: ss
+  server: 154.46.31.106
+  port: 44326
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
 - name: SS-84.247.155.196-aes-256-
   type: ss
   server: 84.247.155.196
-  port: 8038
+  port: 8041
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
   udp: true
-- name: SS-194.233.94.119-aes-256-
+- name: SS-102.37.156.224-chacha20
   type: ss
-  server: 194.233.94.119
-  port: 8041
-  cipher: aes-256-gcm
-  password: 5QCeIKUZUEp4mR9Z
+  server: 102.37.156.224
+  port: 44345
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: SS-ca225.vpnbook.com-chacha20
+  type: ss
+  server: ca225.vpnbook.com
+  port: 44399
+  cipher: chacha20-ietf-poly1305
+  password: ytw2awn
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-139.180.133.90-aes-256-
+  - SS-138.124.123.127-chacha20
+  - SS-154.46.31.106-chacha20
   - SS-84.247.155.196-aes-256-
-  - SS-194.233.94.119-aes-256-
+  - SS-102.37.156.224-chacha20
+  - SS-ca225.vpnbook.com-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-138.124.123.127-chacha20
+  - SS-154.46.31.106-chacha20
+  - SS-84.247.155.196-aes-256-
+  - SS-102.37.156.224-chacha20
+  - SS-ca225.vpnbook.com-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

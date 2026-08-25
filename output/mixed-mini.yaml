@@ -5,163 +5,165 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-67.159.43.202
+- name: VLESS-63.185.153.183
   type: vless
-  server: 67.159.43.202
+  server: 63.185.153.183
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-2
+- name: VLESS-217.149.30.225
+  type: vless
+  server: 217.149.30.225
   port: 443
-  uuid: 023bde30-574f-424e-9b8a-937b9dca924e
+  uuid: 42a6ff62-1d4e-4065-8e44-bab910e19e3b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MFVPHZoccZWr4YZLcIaVedY07BhRfdT4y1XWpp2IWnA
+    fingerprint: firefox
+  sni: www.rumedia-cdn.com
+- name: VLESS-194.110.207.75
+  type: vless
+  server: 194.110.207.75
+  port: 443
+  uuid: 3aaf6f5a-bebe-42c9-a2da-0c5500146451
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: wHf1nSF3byWgtI0aprUDgbEBrgtE6Y8bpqnNxl9lhhg
+    fingerprint: firefox
+  sni: fernandfoxgloveinteriors.co.uk
+- name: VLESS-193.233.246.85
+  type: vless
+  server: 193.233.246.85
+  port: 8443
+  uuid: 41da9cd0-b02c-427a-b74e-7e402c610ae4
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-yandex
+  flow: ''
+  reality-opts:
+    public-key: sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg
+    fingerprint: firefox
+  sni: ads.x5.ru
+- name: VLESS-185.103.100.209
+  type: vless
+  server: 185.103.100.209
+  port: 9443
+  uuid: 20c72888-b83e-4309-82a4-aab4a2dda778
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+    fingerprint: firefox
+  sni: api.vkimages.io
+- name: VLESS-91.99.81.222
+  type: vless
+  server: 91.99.81.222
+  port: 8443
+  uuid: 8b7e1a51-0577-44f3-8d3f-0adefae7f82f
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-16
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: dYsy51W78tzZf26ql7Fh0Db65VlRSjGp6EH9nsAIRgo
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-45.140.36.118
+  type: vless
+  server: 45.140.36.118
+  port: 1054
+  uuid: d8b42cd5-b149-4356-9e61-222222222222
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-18
+- name: 'ترکیه 🇹🇷 | @GetXConfig | #3314-20'
+  type: vmess
+  server: 213.156.152.63
+  port: 8080
+  uuid: d9681916-5a85-44c8-86a2-9fcae87cf850
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-2.27.244.96
+  type: vless
+  server: 2.27.244.96
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    fingerprint: chrome
+  sni: eu-central.cendora.ru
+- name: VLESS-77.110.108.231
+  type: vless
+  server: 77.110.108.231
+  port: 8898
+  uuid: b91abe1a-80ca-417b-998b-2b542661c16f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: y2ciDMmaLyu1U7wEG7Wi9buO91wWHnRtWfPLGjSZHC8
+    fingerprint: firefox
+  sni: play.googleapis.com
+- name: VLESS-fi.alertyagency.com
+  type: vless
+  server: fi.alertyagency.com
+  port: 443
+  uuid: a704443d-655e-4d9f-8ce6-12eeb17a9a08
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: vLb66rBLZnMI1VPKxp90Dcuc0p2fyHdL3HwaxvNHzTA
+    fingerprint: chrome
+  sni: api-maps.yandex.ru
+- name: VLESS-157.137.210.33
+  type: vless
+  server: 157.137.210.33
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-30
+- name: VLESS-157.137.235.154
+  type: vless
+  server: 157.137.235.154
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-32
+- name: VLESS-151.101.56.6
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: 70d94f75-064c-4e34-d2cf-0b6ef4d49ef7
   udp: true
   tls: true
   network: ws
-  ws-path: /api/connect
-  sni: cli-q.bosx.net#GetXConfig-1
-- name: VLESS-151.236.24.67
-  type: vless
-  server: 151.236.24.67
-  port: 8443
-  uuid: 85cc845e-644c-0045-8288-f0c03c83c1ec
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-    fingerprint: chrome
-  sni: auto.quattro-tech.ru
-- name: VLESS-35.180.185.170
-  type: vless
-  server: 35.180.185.170
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-5
-- name: VLESS-104.26.2.57
-  type: vless
-  server: 104.26.2.57
-  port: 80
-  uuid: 01c1c687-3bb8-4e71-bf4b-ade0570b00e7
-  udp: true
-  tls: false
-  network: ws#GetXConfig-12
-- name: VLESS-8.39.125.130
-  type: vless
-  server: 8.39.125.130
-  port: 2095
-  uuid: 01c1c687-3bb8-4e71-bf4b-ade0570b00e7
-  udp: true
-  tls: false
-  network: ws#GetXConfig-14
-- name: VLESS-melia.meliadrenalin.alireza.casa
-  type: vless
-  server: melia.meliadrenalin.alireza.casa
-  port: 43979
-  uuid: 5bac325e-5fe5-48c0-b882-efdebb92b79d
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-16
-- name: VLESS-ger.mobileemdad.top
-  type: vless
-  server: ger.mobileemdad.top
-  port: 443
-  uuid: 14e80d82-a5d3-489e-a20e-2524a87cedb4
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: edge
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-150.40.126.22
-  type: vless
-  server: 150.40.126.22
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: media.v1.StreamService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
-    fingerprint: firefox
-  sni: rs4.univesalsrv.com
-- name: VLESS-sw.crsmaps.com
-  type: vless
-  server: sw.crsmaps.com
-  port: 2053
-  uuid: 2f14c4d7-5d16-4914-918c-3a6a54576ccb
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: sw.crsmaps.com
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -jcUzfOTPLc80yQX1ft1liPFOTsTYvzS6IG0QENc9yg
-    fingerprint: firefox
-  sni: sw.crsmaps.com
-- name: VLESS-5.255.126.104
-  type: vless
-  server: 5.255.126.104
-  port: 46142
-  uuid: 255386a8-aec5-4425-bfe7-ca49b7448deb
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: l-OE7EwER1Z_jAifGE_UZ3FqHDMGzaR0jQHFYj5RNAk
-    fingerprint: firefox
-  sni: www.yahoo.com
-- name: VLESS-15.237.2.124
-  type: vless
-  server: 15.237.2.124
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-26
-- name: VLESS-rs1.univesalsrv.com
-  type: vless
-  server: rs1.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc#GetXConfig-33
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY
-    fingerprint: firefox
-  sni: rs1.univesalsrv.com
-- name: VLESS-rs2.univesalsrv.com
-  type: vless
-  server: rs2.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: media.v1.ObjectService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
-    fingerprint: firefox
-  sni: rs2.univesalsrv.com
-- name: VLESS-109.169.84.94
-  type: vless
-  server: 109.169.84.94
-  port: 443
-  uuid: 3bcb31ef-840e-415d-abb3-28628add98d0
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: vvpu_ljhBuTWmM9w5Hl6jj8ZTiE_JYq29S77zNDeCjQ#GetXConfig-37
-    fingerprint: firefox
-  sni: strapi.io
+  ws-path: /?TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+  ws-headers:
+    Host: c12.com
+  sni: ssl.fastly.com#GetXConfig-34
 - name: VLESS-169.40.42.15
   type: vless
   server: 169.40.42.15
@@ -175,58 +177,76 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     fingerprint: chrome
   sni: yahoo.com
-- name: VLESS-89.105.208.126
+- name: VLESS-217.60.24.57
   type: vless
-  server: 89.105.208.126
-  port: 443
-  uuid: 91d0fa43-e557-43e7-a731-f0c3d1fb306a
+  server: 217.60.24.57
+  port: 8443
+  uuid: 658f7138-93c2-414d-a6c2-f332c94d4034
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision#Farah_VPN-40
+  network: grpc
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
+    public-key: NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU
     fingerprint: firefox
-  sni: n1.cloudgaming.one
+  sni: cdn.shopify.com
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44340
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.160-aes-128-
+  type: ss
+  server: 37.19.198.160
+  port: 44342
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-67.159.43.202
-  - VLESS-151.236.24.67
-  - VLESS-35.180.185.170
-  - VLESS-104.26.2.57
-  - VLESS-8.39.125.130
-  - VLESS-melia.meliadrenalin.alireza.casa
-  - VLESS-ger.mobileemdad.top
-  - VLESS-150.40.126.22
-  - VLESS-sw.crsmaps.com
-  - VLESS-5.255.126.104
-  - VLESS-15.237.2.124
-  - VLESS-rs1.univesalsrv.com
-  - VLESS-rs2.univesalsrv.com
-  - VLESS-109.169.84.94
+  - VLESS-63.185.153.183
+  - VLESS-217.149.30.225
+  - VLESS-194.110.207.75
+  - VLESS-193.233.246.85
+  - VLESS-185.103.100.209
+  - VLESS-91.99.81.222
+  - VLESS-45.140.36.118
+  - 'ترکیه 🇹🇷 | @GetXConfig | #3314-20'
+  - VLESS-2.27.244.96
+  - VLESS-77.110.108.231
+  - VLESS-fi.alertyagency.com
+  - VLESS-157.137.210.33
+  - VLESS-157.137.235.154
+  - VLESS-151.101.56.6
   - VLESS-169.40.42.15
-  - VLESS-89.105.208.126
+  - VLESS-217.60.24.57
+  - SS-37.19.198.236-aes-128-
+  - SS-37.19.198.160-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-67.159.43.202
-  - VLESS-151.236.24.67
-  - VLESS-35.180.185.170
-  - VLESS-104.26.2.57
-  - VLESS-8.39.125.130
-  - VLESS-melia.meliadrenalin.alireza.casa
-  - VLESS-ger.mobileemdad.top
-  - VLESS-150.40.126.22
-  - VLESS-sw.crsmaps.com
-  - VLESS-5.255.126.104
-  - VLESS-15.237.2.124
-  - VLESS-rs1.univesalsrv.com
-  - VLESS-rs2.univesalsrv.com
-  - VLESS-109.169.84.94
+  - VLESS-63.185.153.183
+  - VLESS-217.149.30.225
+  - VLESS-194.110.207.75
+  - VLESS-193.233.246.85
+  - VLESS-185.103.100.209
+  - VLESS-91.99.81.222
+  - VLESS-45.140.36.118
+  - 'ترکیه 🇹🇷 | @GetXConfig | #3314-20'
+  - VLESS-2.27.244.96
+  - VLESS-77.110.108.231
+  - VLESS-fi.alertyagency.com
+  - VLESS-157.137.210.33
+  - VLESS-157.137.235.154
+  - VLESS-151.101.56.6
   - VLESS-169.40.42.15
-  - VLESS-89.105.208.126
+  - VLESS-217.60.24.57
+  - SS-37.19.198.236-aes-128-
+  - SS-37.19.198.160-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

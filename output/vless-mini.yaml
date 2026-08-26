@@ -5,247 +5,235 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-15.237.3.165
+- name: VLESS-upload.arshia-nova.ir
   type: vless
-  server: 15.237.3.165
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: upload.arshia-nova.ir
+  port: 8443
+  uuid: 5e1c10ac-2524-42fe-8ace-699128095eff
   udp: true
-  tls: false
+  tls: true
   network: tcp#GetXConfig-1
-- name: VLESS-151.101.56.7
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    short-id: 358dad31
+    fingerprint: random
+  sni: www.github.com
+- name: VLESS-69.46.46.25
   type: vless
-  server: 151.101.56.7
+  server: 69.46.46.25
   port: 443
-  uuid: 363c62f2-3f2e-4b20-87eb-78765a67df25
+  uuid: 8b84af39-2910-5506-238b-e9492ebe141a
   udp: true
   tls: true
   network: ws
-  ws-path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
+  ws-path: /ws/8b84af39-2910-5506-238b-e9492ebe141a
   ws-headers:
-    Host: pane2.global.ssl.fastly.net
-  sni: ssl.fastly.com#GetXConfig-3
-- name: VLESS-195.133.35.63
+    Host: quartz-meadow-2cc8-production.up.railway.app
+  sni: quartz-meadow-2cc8-production.up.railway.app#GetXConfig-2
+- name: VLESS-69.46.46.21
   type: vless
-  server: 195.133.35.63
-  port: 2096
-  uuid: b477bc51-1f68-41b1-9216-6f8350d7c5b7
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e0fJ7c7cOw0IHd6YdCUoQFkjJQwjzL_H0__QfsDLhkE
-    fingerprint: chrome
-  sni: udemy.com
-- name: VLESS-153.52.117.170
-  type: vless
-  server: 153.52.117.170
-  port: 2096
-  uuid: b477bc51-1f68-41b1-9216-6f8350d7c5b7
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e0fJ7c7cOw0IHd6YdCUoQFkjJQwjzL_H0__QfsDLhkE
-    fingerprint: chrome
-  sni: udemy.com
-- name: VLESS-147.45.173.79
-  type: vless
-  server: 147.45.173.79
+  server: 69.46.46.21
   port: 443
-  uuid: 2d533930-577c-46b6-b53d-4dd4cdc0b458
+  uuid: ba24b870-1c35-f680-0d23-35f7da6f43e2
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/ba24b870-1c35-f680-0d23-35f7da6f43e2
+  ws-headers:
+    Host: marble-horizon-c095-production.up.railway.app
+  sni: marble-horizon-c095-production.up.railway.app#GetXConfig-3
+- name: VLESS-shop.jarorobo.ir
+  type: vless
+  server: shop.jarorobo.ir
+  port: 8443
+  uuid: 5e1c10ac-2524-42fe-8ace-699128095eff
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-4
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    short-id: 358dad31
+    fingerprint: random
+  sni: www.github.com
+- name: VLESS-cpanel.arshia-nova.ir
+  type: vless
+  server: cpanel.arshia-nova.ir
+  port: 443
+  uuid: 5e1c10ac-2524-42fe-8ace-699128095eff
   udp: true
   tls: true
   network: tcp#GetXConfig-6
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-  sni: app.restorium.su
-- name: VLESS-65.109.181.160
+    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
+    fingerprint: chrome
+  sni: stg-mena-images.shop.samsung.com
+- name: VLESS-69.46.46.20
   type: vless
-  server: 65.109.181.160
-  port: 32855
-  uuid: c8ad63c2-ad18-4655-a8e7-f67dd3a41c2a
+  server: 69.46.46.20
+  port: 443
+  uuid: 3f20e648-9e98-40e0-723c-51a9596459c6
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/3f20e648-9e98-40e0-723c-51a9596459c6
+  ws-headers:
+    Host: maple-compass-1e5e-production.up.railway.app
+  sni: maple-compass-1e5e-production.up.railway.app#GetXConfig-7
+- name: VLESS-82.40.62.183
+  type: vless
+  server: 82.40.62.183
+  port: 443
+  uuid: d5fc533b-c4dc-40d3-8134-f078847b6e5e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-8
+- name: VLESS-75.119.151.16
+  type: vless
+  server: 75.119.151.16
+  port: 80
+  uuid: 6c9f957d-be4f-46f8-bd33-83e4ac19f2d1
+  udp: true
+  tls: false
+  network: xhttp
+- name: VLESS-46.8.225.71
+  type: vless
+  server: 46.8.225.71
+  port: 30311
+  uuid: 33053d0a-eb3a-458b-b943-dd447a077523
+  udp: true
+  tls: false
+  network: ws#GetXConfig-10
+- name: VLESS-83.168.111.66
+  type: vless
+  server: 83.168.111.66
+  port: 443
+  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: fRtTW1zQqje-Yh1DqPAHA8nWOMsX983pZUxy58FaY10
-    fingerprint: edge
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-46.243.235.64
+    public-key: QdGXMBWibJZdfDmDk3YcCMxNPd0yd_CkHAOt2yDYJCE
+    fingerprint: chrome
+  sni: www.cloudflare.com
+- name: VLESS-130.185.122.106
   type: vless
-  server: 46.243.235.64
+  server: 130.185.122.106
+  port: 442
+  uuid: 61fef26e-b6d3-4082-8d1d-69f3d285dafd
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-12
+- name: VLESS-69.46.46.38
+  type: vless
+  server: 69.46.46.38
   port: 443
-  uuid: 765bcd22-0092-4e0d-aea4-850a74cf70cf
+  uuid: 6116d3a1-2d3d-3ac7-1a3a-0861a0d5843d
   udp: true
   tls: true
-  network: grpc
-  grpc-service-name: api.v2.SyncService/StreamUpdates
+  network: ws
+  ws-path: /ws/6116d3a1-2d3d-3ac7-1a3a-0861a0d5843d
+  ws-headers:
+    Host: hidden-otter-e75c-production.up.railway.app
+  sni: hidden-otter-e75c-production.up.railway.app#GetXConfig-13
+- name: VLESS-198.105.123.25
+  type: vless
+  server: 198.105.123.25
+  port: 5544
+  uuid: 34ffcf80-2f74-4474-a863-c57be1f6906e
+  udp: true
+  tls: true
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: na4liMQYlI_sUt5fxfVoty37p2jNVlG2zUIzpPC95XU
-    fingerprint: firefox
-  sni: ads.x5.ru
-- name: VLESS-199.232.78.159
+    public-key: Uu5xyo5kfxaG3En7tBmeTQiJykIcOdzQOT_VyAPjEwI
+    fingerprint: chrome
+  sni: amd.com
+- name: VLESS-82.40.62.214
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: a35bf6ee-9ace-40a0-a7c2-bd488d61f9f9
+  server: 82.40.62.214
+  port: 37430
+  uuid: 04dd8897-835e-43e1-a39f-1536be6d7cd5
   udp: true
   tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: towndtime.global.ssl.fastly.neT.
-  sni: ssl.fastly.com#GetXConfig-9
-- name: VLESS-199.232.78.140
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fXtxHQ2cUKG5POzfZWKgnadT6NVBcS2lUBr9I7cifTI
+    fingerprint: ios
+  sni: amp-api-edge.apps.apple.com#GetXConfig-15
+- name: VLESS-51.44.89.128
   type: vless
-  server: 199.232.78.140
-  port: 443
-  uuid: 75a24f38-6942-41fe-a42b-ff1dd873c40f
-  udp: true
-  tls: true
-  network: xhttp
-  sni: global.fastly.com#GetXConfig-10
-- name: VLESS-69.46.46.103
-  type: vless
-  server: 69.46.46.103
-  port: 443
-  uuid: d7e34f7f-0545-5a18-6901-0603cfde8614
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/d7e34f7f-0545-5a18-6901-0603cfde8614
-  ws-headers:
-    Host: kar-production-4a48-hfgd.up.railway.app
-  sni: kar-production-4a48-hfgd.up.railway.app#GetXConfig-11
-- name: VLESS-69.46.46.105
-  type: vless
-  server: 69.46.46.105
-  port: 443
-  uuid: 955580cc-fb8a-2ea2-91f3-ccf187fb8297
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/955580cc-fb8a-2ea2-91f3-ccf187fb8297
-  ws-headers:
-    Host: silent-falcon-1f31-production.up.railway.app
-  sni: silent-falcon-1f31-production.up.railway.app#GetXConfig-12
-- name: VLESS-69.46.46.102
-  type: vless
-  server: 69.46.46.102
-  port: 443
-  uuid: 3501f229-7cc1-bc11-278f-cfb12cf5579f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/3501f229-7cc1-bc11-278f-cfb12cf5579f
-  ws-headers:
-    Host: esken-production.up.railway.app
-  sni: esken-production.up.railway.app#GetXConfig-13
-- name: VLESS-69.46.46.104
-  type: vless
-  server: 69.46.46.104
-  port: 443
-  uuid: ef55e3c5-ff9f-dee0-77a7-6936e82f461b
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/ef55e3c5-ff9f-dee0-77a7-6936e82f461b
-  ws-headers:
-    Host: eshgh-production.up.railway.app
-  sni: eshgh-production.up.railway.app#GetXConfig-14
-- name: VLESS-69.46.46.106
-  type: vless
-  server: 69.46.46.106
-  port: 443
-  uuid: a706a230-eca0-04da-ca19-42d8cd10129a
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/a706a230-eca0-04da-ca19-42d8cd10129a
-  ws-headers:
-    Host: ivory-horizon-976d-production.up.railway.app
-  sni: ivory-horizon-976d-production.up.railway.app#GetXConfig-15
-- name: VLESS-13.36.9.166
-  type: vless
-  server: 13.36.9.166
-  port: 22222
+  server: 51.44.89.128
+  port: 22224
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   network: tcp#GetXConfig-16
-- name: VLESS-69.46.46.100
+- name: VLESS-45.77.65.13
   type: vless
-  server: 69.46.46.100
-  port: 443
-  uuid: 3e593551-ebc4-5697-bbbc-cee730cc2dae
+  server: 45.77.65.13
+  port: 35656
+  uuid: 84655916-5e00-4d90-9512-672716b2cda6
   udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/3e593551-ebc4-5697-bbbc-cee730cc2dae
-  ws-headers:
-    Host: quiet-reef-7561-production.up.railway.app
-  sni: quiet-reef-7561-production.up.railway.app#GetXConfig-19
-- name: VLESS-15.204.97.216
-  type: vless
-  server: 15.204.97.216
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-    fingerprint: chrome
-  sni: fuck.rkn
+- name: VLESS-57.128.177.198
+  type: vless
+  server: 57.128.177.198
+  port: 443
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /Telegram#Farah_VPN-20
+  ws-headers:
+    Host: vp58.cc.cd
+  sni: vp58.cc.cd
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-15.237.3.165
-  - VLESS-151.101.56.7
-  - VLESS-195.133.35.63
-  - VLESS-153.52.117.170
-  - VLESS-147.45.173.79
-  - VLESS-65.109.181.160
-  - VLESS-46.243.235.64
-  - VLESS-199.232.78.159
-  - VLESS-199.232.78.140
-  - VLESS-69.46.46.103
-  - VLESS-69.46.46.105
-  - VLESS-69.46.46.102
-  - VLESS-69.46.46.104
-  - VLESS-69.46.46.106
-  - VLESS-13.36.9.166
-  - VLESS-69.46.46.100
-  - VLESS-15.204.97.216
+  - VLESS-upload.arshia-nova.ir
+  - VLESS-69.46.46.25
+  - VLESS-69.46.46.21
+  - VLESS-shop.jarorobo.ir
+  - VLESS-cpanel.arshia-nova.ir
+  - VLESS-69.46.46.20
+  - VLESS-82.40.62.183
+  - VLESS-75.119.151.16
+  - VLESS-46.8.225.71
+  - VLESS-83.168.111.66
+  - VLESS-130.185.122.106
+  - VLESS-69.46.46.38
+  - VLESS-198.105.123.25
+  - VLESS-82.40.62.214
+  - VLESS-51.44.89.128
+  - VLESS-45.77.65.13
+  - VLESS-57.128.177.198
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-15.237.3.165
-  - VLESS-151.101.56.7
-  - VLESS-195.133.35.63
-  - VLESS-153.52.117.170
-  - VLESS-147.45.173.79
-  - VLESS-65.109.181.160
-  - VLESS-46.243.235.64
-  - VLESS-199.232.78.159
-  - VLESS-199.232.78.140
-  - VLESS-69.46.46.103
-  - VLESS-69.46.46.105
-  - VLESS-69.46.46.102
-  - VLESS-69.46.46.104
-  - VLESS-69.46.46.106
-  - VLESS-13.36.9.166
-  - VLESS-69.46.46.100
-  - VLESS-15.204.97.216
+  - VLESS-upload.arshia-nova.ir
+  - VLESS-69.46.46.25
+  - VLESS-69.46.46.21
+  - VLESS-shop.jarorobo.ir
+  - VLESS-cpanel.arshia-nova.ir
+  - VLESS-69.46.46.20
+  - VLESS-82.40.62.183
+  - VLESS-75.119.151.16
+  - VLESS-46.8.225.71
+  - VLESS-83.168.111.66
+  - VLESS-130.185.122.106
+  - VLESS-69.46.46.38
+  - VLESS-198.105.123.25
+  - VLESS-82.40.62.214
+  - VLESS-51.44.89.128
+  - VLESS-45.77.65.13
+  - VLESS-57.128.177.198
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

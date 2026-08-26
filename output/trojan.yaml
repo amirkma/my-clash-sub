@@ -5,50 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-104.19.64.105
+- name: TROJAN-104.17.121.71
   type: trojan
-  server: 104.19.64.105
+  server: 104.17.121.71
   port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-- name: TROJAN-44.251.158.80
-  type: trojan
-  server: 44.251.158.80
-  port: 443
-  password: FH72359861
-  udp: true
-  tls: true
-  sni: obliging-louse.rooster465.autos#Farah_VPN-2
+  sni: www.calmlunch.com#Farah_VPN-1
   skip-cert-verify: false
-- name: TROJAN-64.94.95.118
-  type: trojan
-  server: 64.94.95.118
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: TROJAN-109.206.241.10
-  type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  udp: true
-  tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-4
-  skip-cert-verify: false
-- name: TROJAN-us01.duotg.top
-  type: trojan
-  server: us01.duotg.top
-  port: 46292
-  password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
-  udp: true
-  tls: true
-  sni: www.microsoft.com#Farah_VPN-5
-  skip-cert-verify: true
 - name: TROJAN-140.248.185.253
   type: trojan
   server: 140.248.185.253
@@ -56,7 +21,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-6
+  sni: ssl.fastly.com#meliproxyy-2
   skip-cert-verify: false
 - name: TROJAN-212.183.88.136
   type: trojan
@@ -65,7 +30,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#meliproxyy-7
+  sni: www.calmlunch.com#meliproxyy-3
   skip-cert-verify: false
 - name: TROJAN-104.16.72.41
   type: trojan
@@ -74,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#meliproxyy-8
+  sni: www.calmlunch.com#meliproxyy-4
   skip-cert-verify: false
 - name: TROJAN-188.114.98.0
   type: trojan
@@ -89,11 +54,7 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-104.19.64.105
-  - TROJAN-44.251.158.80
-  - TROJAN-64.94.95.118
-  - TROJAN-109.206.241.10
-  - TROJAN-us01.duotg.top
+  - TROJAN-104.17.121.71
   - TROJAN-140.248.185.253
   - TROJAN-212.183.88.136
   - TROJAN-104.16.72.41
@@ -101,11 +62,7 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-104.19.64.105
-  - TROJAN-44.251.158.80
-  - TROJAN-64.94.95.118
-  - TROJAN-109.206.241.10
-  - TROJAN-us01.duotg.top
+  - TROJAN-104.17.121.71
   - TROJAN-140.248.185.253
   - TROJAN-212.183.88.136
   - TROJAN-104.16.72.41

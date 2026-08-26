@@ -5,14 +5,23 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-109.206.241.10
+- name: TROJAN-104.19.64.105
   type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  server: 104.19.64.105
+  port: 443
+  password: humanity
   udp: true
   tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-1
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+- name: TROJAN-44.251.158.80
+  type: trojan
+  server: 44.251.158.80
+  port: 443
+  password: FH72359861
+  udp: true
+  tls: true
+  sni: obliging-louse.rooster465.autos#Farah_VPN-2
   skip-cert-verify: false
 - name: TROJAN-64.94.95.118
   type: trojan
@@ -22,32 +31,23 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: TROJAN-tr-latvia1.unlimited-access.ru
+- name: TROJAN-109.206.241.10
   type: trojan
-  server: tr-latvia1.unlimited-access.ru
-  port: 443
-  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
+  server: 109.206.241.10
+  port: 449
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   udp: true
   tls: true
-  sni: tr-latvia1.unlimited-access.ru#Farah_VPN-3
-  skip-cert-verify: true
-- name: TROJAN-45.82.14.144
+  sni: russiapower.accesscam.org#Farah_VPN-4
+  skip-cert-verify: false
+- name: TROJAN-us01.duotg.top
   type: trojan
-  server: 45.82.14.144
-  port: 2025
-  password: vpn
+  server: us01.duotg.top
+  port: 46292
+  password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
   udp: true
   tls: true
-  sni: dns.google.com
-  skip-cert-verify: true
-- name: TROJAN-119.246.1.143
-  type: trojan
-  server: 119.246.1.143
-  port: 443
-  password: BxceQaOe
-  udp: true
-  tls: true
-  sni: t.me/ripaojiedian#Farah_VPN-5
+  sni: www.microsoft.com#Farah_VPN-5
   skip-cert-verify: true
 - name: TROJAN-140.248.185.253
   type: trojan
@@ -89,11 +89,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-109.206.241.10
+  - TROJAN-104.19.64.105
+  - TROJAN-44.251.158.80
   - TROJAN-64.94.95.118
-  - TROJAN-tr-latvia1.unlimited-access.ru
-  - TROJAN-45.82.14.144
-  - TROJAN-119.246.1.143
+  - TROJAN-109.206.241.10
+  - TROJAN-us01.duotg.top
   - TROJAN-140.248.185.253
   - TROJAN-212.183.88.136
   - TROJAN-104.16.72.41
@@ -101,11 +101,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-109.206.241.10
+  - TROJAN-104.19.64.105
+  - TROJAN-44.251.158.80
   - TROJAN-64.94.95.118
-  - TROJAN-tr-latvia1.unlimited-access.ru
-  - TROJAN-45.82.14.144
-  - TROJAN-119.246.1.143
+  - TROJAN-109.206.241.10
+  - TROJAN-us01.duotg.top
   - TROJAN-140.248.185.253
   - TROJAN-212.183.88.136
   - TROJAN-104.16.72.41

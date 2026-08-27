@@ -8,118 +8,64 @@ proxies:
 - name: SS-156.146.38.170-aes-128-
   type: ss
   server: 156.146.38.170
-  port: 44352
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.6-aes-128-
-  type: ss
-  server: 173.244.56.6
-  port: 44356
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.9-aes-128-
-  type: ss
-  server: 173.244.56.9
-  port: 44357
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44361
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
   port: 44363
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44367
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-94.72.127.58-aes-256-
-  type: ss
-  server: 94.72.127.58
-  port: 44375
-  cipher: aes-256-gcm
-  password: goRz8CTFE6zPZXIA
-  udp: true
-- name: SS-ca225.vpnbook.com-chacha20
-  type: ss
-  server: ca225.vpnbook.com
-  port: 44391
-  cipher: chacha20-ietf-poly1305
-  password: ytw2awn
-  udp: true
-- name: SS-149.22.95.183-aes-128-
-  type: ss
-  server: 149.22.95.183
-  port: 44394
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.204-aes-128-
   type: ss
   server: 149.22.87.204
-  port: 44396
+  port: 44368
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.241-aes-128-
   type: ss
   server: 149.22.87.241
-  port: 44397
+  port: 44370
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.240-aes-128-
   type: ss
   server: 149.22.87.240
-  port: 44398
+  port: 44371
   cipher: aes-128-gcm
   password: shadowsocks
+  udp: true
+- name: SS-158.173.20.171-aes-128-
+  type: ss
+  server: 158.173.20.171
+  port: 44383
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.102.149.207-aes-256-
+  type: ss
+  server: 149.102.149.207
+  port: 44399
+  cipher: aes-256-gcm
+  password: LXchLsIwtCeUAUgu
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-156.146.38.170-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-94.72.127.58-aes-256-
-  - SS-ca225.vpnbook.com-chacha20
-  - SS-149.22.95.183-aes-128-
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
+  - SS-158.173.20.171-aes-128-
+  - SS-149.102.149.207-aes-256-
 - name: Auto
   type: url-test
   proxies:
   - SS-156.146.38.170-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-94.72.127.58-aes-256-
-  - SS-ca225.vpnbook.com-chacha20
-  - SS-149.22.95.183-aes-128-
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
+  - SS-158.173.20.171-aes-128-
+  - SS-149.102.149.207-aes-256-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,227 +5,247 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-45.93.83.1
+- name: VLESS-download.mehdi-cpp.ir
   type: vless
-  server: 45.93.83.1
-  port: 2083
-  uuid: 4f8efa61-96db-1391-b134-9ce844e31228
+  server: download.mehdi-cpp.ir
+  port: 8443
+  uuid: 29b551ed-0721-41b3-9d88-341f1d2c073f
   udp: true
   tls: true
   network: tcp#GetXConfig-1
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA
-    short-id: b4
-    fingerprint: firefox
-  sni: www.booking.com
-- name: SS-135.106.194.88-chacha20
-  type: ss
-  server: 135.106.194.88
-  port: 1403
-  cipher: chacha20-ietf-poly1305
-  password: iibqDfY-xDEyF0J8ntYH28gLob2ycGgy
-  udp: true
-- name: VLESS-199.232.78.159
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 04f6b5c5-48ba-42a4-ad52-b5362eb422d2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: lsjaoijji.global.ssl.fastly.neT
-  sni: ssl.fastly.com#GetXConfig-4
-- name: VLESS-stanngv2-production-d89d.up.railway.app
-  type: vless
-  server: stanngv2-production-d89d.up.railway.app
-  port: 443
-  uuid: 87a53dc8-dbca-47b9-b851-66b99bea8e25
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /vl-ws#GetXConfig-6
-  ws-headers:
-    Host: stanngv2-production-d89d.up.railway.app
-  sni: stanngv2-production-d89d.up.railway.app
-- name: VLESS-104.19.178.91
-  type: vless
-  server: 104.19.178.91
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/6cb928e8df1e
-  ws-headers:
-    Host: sazxlkeeuo9s.8264291.workers.dev
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-10
-- name: VLESS-104.24.218.28
-  type: vless
-  server: 104.24.218.28
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/6cb928e8df1e/loc-0
-  ws-headers:
-    Host: sazxlkeeuo9s.8264291.workers.dev
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-12
-- name: TROJAN-104.25.155.67
-  type: trojan
-  server: 104.25.155.67
-  port: 443
-  password: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-14
-  skip-cert-verify: false
-- name: TROJAN-104.25.68.13
-  type: trojan
-  server: 104.25.68.13
-  port: 443
-  password: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-15
-  skip-cert-verify: false
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    fingerprint: random
+  sni: github.com
 - name: VLESS-shop.jarorobo.ir
   type: vless
   server: shop.jarorobo.ir
-  port: 8443
-  uuid: 4e4ecd92-6572-43a6-a3ab-a1a7812a4b98
+  port: 443
+  uuid: 29b551ed-0721-41b3-9d88-341f1d2c073f
   udp: true
   tls: true
-  network: tcp#GetXConfig-16
+  network: tcp#GetXConfig-3
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
+    fingerprint: chrome
+  sni: au-images.shop.samsung.com
+- name: VLESS-176.97.218.225
+  type: vless
+  server: 176.97.218.225
+  port: 2020
+  uuid: 069b1bad-bfc8-426c-9152-8bb40e0009e3
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-5
+- name: VLESS-store.mehdi-cpp.ir
+  type: vless
+  server: store.mehdi-cpp.ir
+  port: 8443
+  uuid: 29b551ed-0721-41b3-9d88-341f1d2c073f
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-7
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
     fingerprint: random
   sni: github.com
-- name: TROJAN-166.1.36.83
-  type: trojan
-  server: 166.1.36.83
-  port: 443
-  password: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-18
-  skip-cert-verify: false
-- name: TROJAN-104.19.88.194
-  type: trojan
-  server: 104.19.88.194
-  port: 443
-  password: 50414e45-4c5f-5a45-5553-6cb928e8df1e
-  udp: true
-  tls: true
-  sni: sazxlkeeuo9s.8264291.workers.dev#GetXConfig-19
-  skip-cert-verify: false
-- name: VLESS-download.mehdi-cpp.ir
+- name: VLESS-pl2.ginnaro.ir
   type: vless
-  server: download.mehdi-cpp.ir
-  port: 443
-  uuid: 4e4ecd92-6572-43a6-a3ab-a1a7812a4b98
+  server: pl2.ginnaro.ir
+  port: 2690
+  uuid: 29205dd0-b89d-49a3-b663-dbdebcdcece2
   udp: true
   tls: true
-  network: tcp#GetXConfig-20
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
-    fingerprint: chrome
-  sni: ap-author.semiconductor.samsung.com
-- name: VLESS-store.mehdi-cpp.ir
+    public-key: FPEhibdIEG8mWtAAKN2Gyx-PQBTAt66fGhHfKoO3rW4
+    fingerprint: firefox
+  sni: updates.cdn-apple.com
+- name: VLESS-52.47.166.121
   type: vless
-  server: store.mehdi-cpp.ir
-  port: 443
-  uuid: 4e4ecd92-6572-43a6-a3ab-a1a7812a4b98
+  server: 52.47.166.121
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-16
+- name: VLESS-168.222.194.138
+  type: vless
+  server: 168.222.194.138
+  port: 9880
+  uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
   udp: true
   tls: true
-  network: tcp#GetXConfig-22
+  network: grpc
+  grpc-service-name: grpc-tunnel#GetXConfig-22
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabbccdd
     fingerprint: chrome
-  sni: ap-author.semiconductor.samsung.com
-- name: VLESS-172.64.84.228
+  sni: dl.google.com
+- name: VLESS-gsv1.montago-shop.ir
   type: vless
-  server: 172.64.84.228
+  server: gsv1.montago-shop.ir
   port: 443
-  uuid: 50414e45-4c5f-5a45-5553-b45978f6d773
+  uuid: 84cda974-7d27-4d27-b7ff-85194ff76093
   udp: true
   tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/b45978f6d773/loc-1
-  ws-headers:
-    Host: ljz5fuexub6s.nova-705deb.workers.dev
-  sni: ljz5fuexub6s.nova-705deb.workers.dev#GetXConfig-32
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-34
-  type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /lMnsZUN4/
-  ws-headers:
-    Host: v2ray1.dozapp.xyz
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
-  type: vmess
-  server: m01c7b2z26dtqgee.v.3dns.vip
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    short-id: 08ecf24
+    fingerprint: edge
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-itl.montago-shop.ir
+  type: vless
+  server: itl.montago-shop.ir
   port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  uuid: 61d291c2-4149-4d9b-8540-a83bf1dcf9f2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: edge
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-ukm.mobileemdad.top
+  type: vless
+  server: ukm.mobileemdad.top
+  port: 443
+  uuid: 61d291c2-4149-4d9b-8540-a83bf1dcf9f2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: qq
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-ugb.mobileemdad.top
+  type: vless
+  server: ugb.mobileemdad.top
+  port: 443
+  uuid: 61d291c2-4149-4d9b-8540-a83bf1dcf9f2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: ios
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-89.35.14.33
+  type: vless
+  server: 89.35.14.33
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: hub.v1.ApiService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
+    fingerprint: firefox
+  sni: md4.univesalsrv.com
+- name: VLESS-pk-play.mobileemdad.top
+  type: vless
+  server: pk-play.mobileemdad.top
+  port: 443
+  uuid: 61d291c2-4149-4d9b-8540-a83bf1dcf9f2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: qq
+  sni: delivery.mp.microsoft.com
+- name: VLESS-89.35.14.32
+  type: vless
+  server: 89.35.14.32
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: stats.v2.PushService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q38CddDj2g-XNDc0uW1m6S6b8iGY_Bne2RwX7C_FYCQ
+    fingerprint: firefox
+  sni: md3.univesalsrv.com
+- name: VLESS-pt-play.mobileemdad.top
+  type: vless
+  server: pt-play.mobileemdad.top
+  port: 443
+  uuid: 61d291c2-4149-4d9b-8540-a83bf1dcf9f2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: qq
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-172.64.53.215
+  type: vless
+  server: 172.64.53.215
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   tls: true
   network: ws
-  ws-path: /ws-vmess
+  ws-path: /
   ws-headers:
-    Host: M01c7B2z26DtQGEe.v.3dns.vip
+    Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-45.93.83.1
-  - SS-135.106.194.88-chacha20
-  - VLESS-199.232.78.159
-  - VLESS-stanngv2-production-d89d.up.railway.app
-  - VLESS-104.19.178.91
-  - VLESS-104.24.218.28
-  - TROJAN-104.25.155.67
-  - TROJAN-104.25.68.13
-  - VLESS-shop.jarorobo.ir
-  - TROJAN-166.1.36.83
-  - TROJAN-104.19.88.194
   - VLESS-download.mehdi-cpp.ir
+  - VLESS-shop.jarorobo.ir
+  - VLESS-176.97.218.225
   - VLESS-store.mehdi-cpp.ir
-  - VLESS-172.64.84.228
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-34
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
+  - VLESS-pl2.ginnaro.ir
+  - VLESS-52.47.166.121
+  - VLESS-168.222.194.138
+  - VLESS-gsv1.montago-shop.ir
+  - VLESS-itl.montago-shop.ir
+  - VLESS-ukm.mobileemdad.top
+  - VLESS-ugb.mobileemdad.top
+  - VLESS-89.35.14.33
+  - VLESS-pk-play.mobileemdad.top
+  - VLESS-89.35.14.32
+  - VLESS-pt-play.mobileemdad.top
+  - VLESS-172.64.53.215
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-45.93.83.1
-  - SS-135.106.194.88-chacha20
-  - VLESS-199.232.78.159
-  - VLESS-stanngv2-production-d89d.up.railway.app
-  - VLESS-104.19.178.91
-  - VLESS-104.24.218.28
-  - TROJAN-104.25.155.67
-  - TROJAN-104.25.68.13
-  - VLESS-shop.jarorobo.ir
-  - TROJAN-166.1.36.83
-  - TROJAN-104.19.88.194
   - VLESS-download.mehdi-cpp.ir
+  - VLESS-shop.jarorobo.ir
+  - VLESS-176.97.218.225
   - VLESS-store.mehdi-cpp.ir
-  - VLESS-172.64.84.228
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-34
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
+  - VLESS-pl2.ginnaro.ir
+  - VLESS-52.47.166.121
+  - VLESS-168.222.194.138
+  - VLESS-gsv1.montago-shop.ir
+  - VLESS-itl.montago-shop.ir
+  - VLESS-ukm.mobileemdad.top
+  - VLESS-ugb.mobileemdad.top
+  - VLESS-89.35.14.33
+  - VLESS-pk-play.mobileemdad.top
+  - VLESS-89.35.14.32
+  - VLESS-pt-play.mobileemdad.top
+  - VLESS-172.64.53.215
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

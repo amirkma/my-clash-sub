@@ -5,200 +5,227 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-13.41.57.97
+- name: VLESS-spiderpanel-production-8c3b.up.railway.app
   type: vless
-  server: 13.41.57.97
+  server: spiderpanel-production-8c3b.up.railway.app
+  port: 443
+  uuid: b03d4269-2e0d-4da9-8cd0-e2547922644d
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/b03d4269-2e0d-4da9-8cd0-e2547922644d
+  ws-headers:
+    Host: spiderpanel-production-8c3b.up.railway.app
+  sni: spiderpanel-production-8c3b.up.railway.app#GetXConfig-1
+- name: VLESS-69.46.46.26
+  type: vless
+  server: 69.46.46.26
+  port: 443
+  uuid: f78ecba6-f0dd-2a9b-f4ff-8c7cc610138e
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/f78ecba6-f0dd-2a9b-f4ff-8c7cc610138e
+  ws-headers:
+    Host: willow-voyager-5a0a-production.up.railway.app
+  sni: willow-voyager-5a0a-production.up.railway.app#GetXConfig-2
+- name: VLESS-78.129.184.117
+  type: vless
+  server: 78.129.184.117
+  port: 443
+  uuid: 2dc50eec-e028-4097-9f1c-9a1bbb37a49f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: _8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw
+    fingerprint: firefox
+  sni: strapi.io
+- name: VLESS-91.99.81.222
+  type: vless
+  server: 91.99.81.222
+  port: 443
+  uuid: 6f3c7f54-6b9f-4706-82b2-83bb79706794
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-4
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: dYsy51W78tzZf26ql7Fh0Db65VlRSjGp6EH9nsAIRgo
+    short-id: 0b
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-13.43.176.25
+  type: vless
+  server: 13.43.176.25
   port: 22223
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-104.25.0.3
+  network: tcp#GetXConfig-5
+- name: VLESS-store.mehdi-cpp.ir
   type: vless
-  server: 104.25.0.3
+  server: store.mehdi-cpp.ir
   port: 443
-  uuid: 50414e45-4c5f-5a45-5553-cfbfcf505b1f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/cfbfcf505b1f
-  ws-headers:
-    Host: h8zdhue9un2s.mhmdmargyr0.workers.dev
-  sni: h8zdhue9un2s.mhmdmargyr0.workers.dev
-- name: VLESS-kqqek942gsj34r7.p30download.lat
-  type: vless
-  server: kqqek942gsj34r7.p30download.lat
-  port: 11057
-  uuid: 7a93e9d5-2965-4d87-a75f-6111dd7c0b99
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZhVKFKhRnGC6T3wuKFL6CO4DOdmobMHpBUe222zv9kw
-    fingerprint: random
-  sni: www.clashofclans.com
-- name: VLESS-marzban-node-production-kurdnodes.up.railway.app
-  type: vless
-  server: marzban-node-production-kurdnodes.up.railway.app
-  port: 443
-  uuid: 1a2d5b51-e185-41d3-ab61-5586c1e1e987
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /vless
-  ws-headers:
-    Host: marzban-node-production-kurdnodes.up.railway.app
-  sni: marzban-node-production-kurdnodes.up.railway.app#GetXConfig-6
-- name: VLESS-13.143.215.2
-  type: vless
-  server: 13.143.215.2
-  port: 443
-  uuid: c10f24d6-90ca-4acc-87c9-86aa398bf704
+  uuid: c7cc1527-4f0c-4677-a122-635e361a4c77
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: G2i-nsQgWiVf52tdCUV-G_VeuCJ3hggwDnTaEAgvg0Y
-    fingerprint: firefox
-  sni: cloudrynth.com#GetXConfig-7
-- name: VLESS-185.194.177.120
+    public-key: uSoNVrVIdQ5Y0YOpDCRkaYK5VAzYG6tCPtTc4cim7Tw
+    fingerprint: chrome
+  sni: images.samsung.com
+- name: VLESS-15.224.35.185
   type: vless
-  server: 185.194.177.120
-  port: 2096
-  uuid: 60e2a548-96aa-4850-a279-1edab743c39b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: pVUUDlLKPprJgV_ZcehzuhOFmw44Gk1DlRsny1zyxCI
-    fingerprint: firefox
-  sni: conrad.de
-- name: VLESS-144.31.216.40
-  type: vless
-  server: 144.31.216.40
-  port: 443
-  uuid: dbb5075f-2ff4-4aad-a952-bcc82e4a6355
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
-    fingerprint: firefox
-  sni: ch1.hat.onl
-- name: VLESS-150.40.126.21
-  type: vless
-  server: 150.40.126.21
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: edge.v2.FeedService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: gHDoSWGWMVZKWNKONWHw-Cpl0-bdI6GaKusgJIQ-vWQ
-    fingerprint: firefox
-  sni: rs3.univesalsrv.com
-- name: VLESS-144.172.119.9
-  type: vless
-  server: 144.172.119.9
-  port: 110
-  uuid: 101b5fea-8201-4ff9-84b3-12bf49ce6645
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-11
-- name: VLESS-91.107.179.8
-  type: vless
-  server: 91.107.179.8
-  port: 15001
-  uuid: 69d8dc73-20ff-4241-bdd8-a9d6d07553b6
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-12
-- name: VLESS-185.96.80.147
-  type: vless
-  server: 185.96.80.147
-  port: 443
-  uuid: bec4b96c-0328-4abd-be5e-437ac9f65bcd
-  udp: true
-  tls: true
-  network: ws
-  ws-path: cfbot
-  ws-headers:
-    Host: seksi-lady.ru
-  sni: seksi-lady.ru#GetXConfig-14
-- name: VLESS-15.224.146.182
-  type: vless
-  server: 15.224.146.182
-  port: 22224
+  server: 15.224.35.185
+  port: 22222
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#GetXConfig-16
-- name: VLESS-199.232.78.159
+  network: tcp#GetXConfig-9
+- name: VLESS-dee.im-soon.com
   type: vless
-  server: 199.232.78.159
+  server: dee.im-soon.com
   port: 443
-  uuid: ec1ab85d-26e5-45b1-9278-226c41cf926c
+  uuid: SoonTeam
   udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: lsjaoijji.global.ssl.fastly.neT
-  sni: ssl.fastly.com#GetXConfig-19
-- name: VLESS-178.128.112.70
+  tls: false
+  network: ws#GetXConfig-12
+- name: VLESS-DE1.ZAG-FA.SOLVIANX.IR
   type: vless
-  server: 178.128.112.70
-  port: 443
-  uuid: 9206ae06-88ee-49b1-a558-531ade80fcaa
+  server: DE1.ZAG-FA.SOLVIANX.IR
+  port: 22701
+  uuid: 158c3880-955a-403e-93ed-7bd7b7bca27a
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: -O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY
+    public-key: _lzvoPj7x47M_0OHdUEy4VmkvfgAOdSTgj6m-LAXl1M
+    fingerprint: ios
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-45.131.4.246
+  type: vless
+  server: 45.131.4.246
+  port: 443
+  uuid: 158c3880-955a-403e-93ed-7bd7b7bca27a
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /edgesuite
+  ws-headers:
+    Host: edge08.darvixa.ir
+  sni: edge08.darvixa.ir#GetXConfig-14
+- name: VLESS-alman2.pythonsaz.ir
+  type: vless
+  server: alman2.pythonsaz.ir
+  port: 1824
+  uuid: c4ee7a89-eb01-462c-84d2-67e3fcdd5812
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: JIv_D-Lpo1cosiCUgu-qzGSJwOCGciyXSZ8ucNn6aBo
     fingerprint: chrome
-  sni: www.amazon.com
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-france.selqora.ir
+  type: vless
+  server: france.selqora.ir
+  port: 31663
+  uuid: 4cdedbb5-20f6-4036-9e72-22ce1dfc0d4b
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-ger3.danqela.ir
+  type: vless
+  server: ger3.danqela.ir
+  port: 50303
+  uuid: 4cdedbb5-20f6-4036-9e72-22ce1dfc0d4b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XhfHr5VYPbNs6BrrsYc7Wd6-D2nJAO8QrixRuJarFkU
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-178.255.222.10
+  type: vless
+  server: 178.255.222.10
+  port: 443
+  uuid: d1ffbeae-7583-4555-a811-276554b04cef
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: gRPC
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 98WwtwT_X5HCtop046M27kTYVBx9KJXN8oseZd8i4Gg
+    fingerprint: chrome
+  sni: delivery.mp.microsoft.com
+- name: VLESS-tre12.danqela.ir
+  type: vless
+  server: tre12.danqela.ir
+  port: 50303
+  uuid: 4cdedbb5-20f6-4036-9e72-22ce1dfc0d4b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XhfHr5VYPbNs6BrrsYc7Wd6-D2nJAO8QrixRuJarFkU
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-it.selqora.ir
+  type: vless
+  server: it.selqora.ir
+  port: 22211
+  uuid: 4cdedbb5-20f6-4036-9e72-22ce1dfc0d4b
+  udp: true
+  tls: false
+  network: tcp
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-13.41.57.97
-  - VLESS-104.25.0.3
-  - VLESS-kqqek942gsj34r7.p30download.lat
-  - VLESS-marzban-node-production-kurdnodes.up.railway.app
-  - VLESS-13.143.215.2
-  - VLESS-185.194.177.120
-  - VLESS-144.31.216.40
-  - VLESS-150.40.126.21
-  - VLESS-144.172.119.9
-  - VLESS-91.107.179.8
-  - VLESS-185.96.80.147
-  - VLESS-15.224.146.182
-  - VLESS-199.232.78.159
-  - VLESS-178.128.112.70
+  - VLESS-spiderpanel-production-8c3b.up.railway.app
+  - VLESS-69.46.46.26
+  - VLESS-78.129.184.117
+  - VLESS-91.99.81.222
+  - VLESS-13.43.176.25
+  - VLESS-store.mehdi-cpp.ir
+  - VLESS-15.224.35.185
+  - VLESS-dee.im-soon.com
+  - VLESS-DE1.ZAG-FA.SOLVIANX.IR
+  - VLESS-45.131.4.246
+  - VLESS-alman2.pythonsaz.ir
+  - VLESS-france.selqora.ir
+  - VLESS-ger3.danqela.ir
+  - VLESS-178.255.222.10
+  - VLESS-tre12.danqela.ir
+  - VLESS-it.selqora.ir
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-13.41.57.97
-  - VLESS-104.25.0.3
-  - VLESS-kqqek942gsj34r7.p30download.lat
-  - VLESS-marzban-node-production-kurdnodes.up.railway.app
-  - VLESS-13.143.215.2
-  - VLESS-185.194.177.120
-  - VLESS-144.31.216.40
-  - VLESS-150.40.126.21
-  - VLESS-144.172.119.9
-  - VLESS-91.107.179.8
-  - VLESS-185.96.80.147
-  - VLESS-15.224.146.182
-  - VLESS-199.232.78.159
-  - VLESS-178.128.112.70
+  - VLESS-spiderpanel-production-8c3b.up.railway.app
+  - VLESS-69.46.46.26
+  - VLESS-78.129.184.117
+  - VLESS-91.99.81.222
+  - VLESS-13.43.176.25
+  - VLESS-store.mehdi-cpp.ir
+  - VLESS-15.224.35.185
+  - VLESS-dee.im-soon.com
+  - VLESS-DE1.ZAG-FA.SOLVIANX.IR
+  - VLESS-45.131.4.246
+  - VLESS-alman2.pythonsaz.ir
+  - VLESS-france.selqora.ir
+  - VLESS-ger3.danqela.ir
+  - VLESS-178.255.222.10
+  - VLESS-tre12.danqela.ir
+  - VLESS-it.selqora.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

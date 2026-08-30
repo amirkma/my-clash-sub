@@ -5,86 +5,33 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-158.173.20.171-aes-128-
+- name: SS-84.247.155.196-aes-256-
   type: ss
-  server: 158.173.20.171
-  port: 44321
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.20.208-aes-128-
-  type: ss
-  server: 158.173.20.208
-  port: 44323
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-2.58.81.221-aes-256-
-  type: ss
-  server: 2.58.81.221
-  port: 44359
+  server: 84.247.155.196
+  port: 8030
   cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
+  password: 3eOFeNssde7PYYMv
   udp: true
-- name: SS-173.244.56.9-aes-128-
+- name: SS-54.36.174.134-chacha20
   type: ss
-  server: 173.244.56.9
-  port: 44365
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 54.36.174.134
+  port: 44341
+  cipher: chacha20-ietf-poly1305
+  password: ytw2awn
   udp: true
-- name: SS-149.22.95.183-aes-128-
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   type: ss
-  server: 149.22.95.183
-  port: 44370
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.102.149.207-aes-256-
-  type: ss
-  server: 149.102.149.207
-  port: 8079
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: SS-149.102.132.184-aes-256-
-  type: ss
-  server: 149.102.132.184
-  port: 44382
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
-- name: SS-158.173.24.73-aes-128-
-  type: ss
-  server: 158.173.24.73
-  port: 44384
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44398
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-158.173.20.171-aes-128-
-  - SS-158.173.20.208-aes-128-
-  - SS-2.58.81.221-aes-256-
-  - SS-173.244.56.9-aes-128-
-  - SS-149.22.95.183-aes-128-
-  - SS-149.102.149.207-aes-256-
-  - SS-149.102.132.184-aes-256-
-  - SS-158.173.24.73-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-158.173.20.171-aes-128-
-  - SS-158.173.20.208-aes-128-
-  - SS-2.58.81.221-aes-256-
-  - SS-173.244.56.9-aes-128-
-  - SS-149.22.95.183-aes-128-
-  - SS-149.102.149.207-aes-256-
-  - SS-149.102.132.184-aes-256-
-  - SS-158.173.24.73-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-84.247.155.196-aes-256-
+  - SS-54.36.174.134-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
 rules:
 - MATCH,PROXY

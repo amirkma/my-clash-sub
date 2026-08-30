@@ -5,33 +5,25 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-84.247.155.196-aes-256-
-  type: ss
-  server: 84.247.155.196
-  port: 8030
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  udp: true
-- name: SS-54.36.174.134-chacha20
-  type: ss
-  server: 54.36.174.134
-  port: 44341
-  cipher: chacha20-ietf-poly1305
-  password: ytw2awn
-  udp: true
 - name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   type: ss
   server: bogging-eyeteeth-fly.freesocks.work
-  port: 44398
+  port: 44343
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-94.72.127.58-aes-256-
+  type: ss
+  server: 94.72.127.58
+  port: 8097
+  cipher: aes-256-gcm
+  password: goRz8CTFE6zPZXIA
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-84.247.155.196-aes-256-
-  - SS-54.36.174.134-chacha20
   - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-94.72.127.58-aes-256-
 rules:
 - MATCH,PROXY

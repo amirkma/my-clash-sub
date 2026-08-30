@@ -5,90 +5,19 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-172.67.187.87
+- name: TROJAN-119.246.1.143
   type: trojan
-  server: 172.67.187.87
+  server: 119.246.1.143
   port: 443
-  password: Telegram_healer_config
+  password: BxceQaOe
   udp: true
   tls: true
-  sni: bKtF381b04NcHTXkN8TidEzQgF.TCNTH9s31mg1j4TNxLAD62O1s2o.wOrKErS.DEV#GetXConfig-1
-  skip-cert-verify: false
-- name: TROJAN-104.21.56.172
-  type: trojan
-  server: 104.21.56.172
-  port: 443
-  password: Telegram_healer_config
-  udp: true
-  tls: true
-  sni: bktF381B04NcHTXKN8TideZQGF.TcNtH9S31mG1j4TNxLAD62o1s2o.wOrKeRs.dEV#GetXConfig-2
-  skip-cert-verify: false
-- name: TROJAN-64.94.95.118
-  type: trojan
-  server: 64.94.95.118
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  tls: true
-  sni: 64.94.95.118#Farah_VPN-3
-  skip-cert-verify: true
-- name: TROJAN-ru.techdatacloud.org
-  type: trojan
-  server: ru.techdatacloud.org
-  port: 8443
-  password: 5e19b3c8-c1dc-4163-95e2-895319c15d6c
-  udp: true
-  tls: true
-  sni: cloud.mail.ru
-  skip-cert-verify: true
-- name: TROJAN-14.1.28.76
-  type: trojan
-  server: 14.1.28.76
-  port: 50740
-  password: r49gssuondznyu2eex83
-  udp: true
-  tls: true
-  skip-cert-verify: false
-- name: TROJAN-109.206.241.10
-  type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  udp: true
-  tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-6
-  skip-cert-verify: true
-- name: TROJAN-www.calmlunch.com
-  type: trojan
-  server: www.calmlunch.com
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
+  sni: t.me/ripaojiedian#Farah_VPN-1
   skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-172.67.187.87
-  - TROJAN-104.21.56.172
-  - TROJAN-64.94.95.118
-  - TROJAN-ru.techdatacloud.org
-  - TROJAN-14.1.28.76
-  - TROJAN-109.206.241.10
-  - TROJAN-www.calmlunch.com
-- name: Auto
-  type: url-test
-  proxies:
-  - TROJAN-172.67.187.87
-  - TROJAN-104.21.56.172
-  - TROJAN-64.94.95.118
-  - TROJAN-ru.techdatacloud.org
-  - TROJAN-14.1.28.76
-  - TROJAN-109.206.241.10
-  - TROJAN-www.calmlunch.com
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - TROJAN-119.246.1.143
 rules:
 - MATCH,PROXY

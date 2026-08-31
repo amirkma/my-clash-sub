@@ -5,19 +5,39 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-119.246.1.143
+- name: TROJAN-65.109.216.227
   type: trojan
-  server: 119.246.1.143
-  port: 443
-  password: BxceQaOe
+  server: 65.109.216.227
+  port: 10521
+  password: 8MAmkCERLW
   udp: true
   tls: true
-  sni: t.me/ripaojiedian#Farah_VPN-1
+  sni: play.google.com
+  skip-cert-verify: true
+- name: TROJAN-109.206.241.10
+  type: trojan
+  server: 109.206.241.10
+  port: 449
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  udp: true
+  tls: true
+  sni: russiapower.accesscam.org#Farah_VPN-2
+  skip-cert-verify: true
+- name: TROJAN-5.180.21.146
+  type: trojan
+  server: 5.180.21.146
+  port: 4443
+  password: owefv0_92Z540k2F_nx83245_J9130oS_tY
+  udp: true
+  tls: true
+  sni: borat-hopp.bumbleshrimp.com#Farah_VPN-3
   skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-119.246.1.143
+  - TROJAN-65.109.216.227
+  - TROJAN-109.206.241.10
+  - TROJAN-5.180.21.146
 rules:
 - MATCH,PROXY

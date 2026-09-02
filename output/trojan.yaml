@@ -5,24 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-5.180.21.146
-  type: trojan
-  server: 5.180.21.146
-  port: 4443
-  password: owefv0_92Z540k2F_nx83245_J9130oS_tY
-  udp: true
-  tls: true
-  sni: borat-hopp.bumbleshrimp.com#Farah_VPN-1
-  skip-cert-verify: true
-- name: TROJAN-188.42.145.180
-  type: trojan
-  server: 188.42.145.180
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.volumeroot.com#Farah_VPN-2
-  skip-cert-verify: true
 - name: TROJAN-us01.duotg.top
   type: trojan
   server: us01.duotg.top
@@ -30,53 +12,26 @@ proxies:
   password: 02cd3bac-2a78-4dbb-82b9-6b64084ddd8e
   udp: true
   tls: true
-  sni: www.microsoft.com#Farah_VPN-3
+  sni: www.microsoft.com#Farah_VPN-1
   skip-cert-verify: true
-- name: TROJAN-104.19.229.21
+- name: TROJAN-5.180.21.146
   type: trojan
-  server: 104.19.229.21
-  port: 443
-  password: humanity
+  server: 5.180.21.146
+  port: 4443
+  password: owefv0_92Z540k2F_nx83245_J9130oS_tY
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-5
-  skip-cert-verify: false
-- name: TROJAN-www.calmlunch.com
-  type: trojan
-  server: www.calmlunch.com
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
+  sni: borat-hopp.bumbleshrimp.com#Farah_VPN-2
   skip-cert-verify: true
-- name: TROJAN-185.255.179.166
+- name: TROJAN-109.206.241.10
   type: trojan
-  server: 185.255.179.166
-  port: 443
-  password: humanity
+  server: 109.206.241.10
+  port: 449
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-7
-  skip-cert-verify: false
-- name: TROJAN-212.183.88.136
-  type: trojan
-  server: 212.183.88.136
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
+  sni: russiapower.accesscam.org#Farah_VPN-3
   skip-cert-verify: true
-- name: TROJAN-104.21.4.176
-  type: trojan
-  server: 104.21.4.176
-  port: 443
-  password: Telegram_healer_config
-  udp: true
-  tls: true
-  sni: 5Er0m2i2eNS2uLpg7SJd45UGqS.87fcvT2k11501YnO2TXm6yw-miPJ2Kr.worKerS.deV#Farah_VPN-9
-  skip-cert-verify: false
 - name: TROJAN-185.18.250.252
   type: trojan
   server: 185.18.250.252
@@ -84,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#meliproxyy-10
+  sni: www.calmlunch.com#meliproxyy-4
   skip-cert-verify: false
 - name: TROJAN-c6zorwebux8s.mosinp777.workers.dev
   type: trojan
@@ -110,7 +65,16 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-13
+  sni: www.ignitelimit.com#meliproxyy-7
+  skip-cert-verify: false
+- name: TROJAN-www.calmlunch.com
+  type: trojan
+  server: www.calmlunch.com
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#meliproxyy-8
   skip-cert-verify: false
 - name: TROJAN-172.67.149.60
   type: trojan
@@ -119,7 +83,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-15
+  sni: www.ignitelimit.com#meliproxyy-9
   skip-cert-verify: false
 - name: TROJAN-151.101.56.7
   type: trojan
@@ -130,6 +94,15 @@ proxies:
   tls: true
   sni: ssl.fastly.com
   skip-cert-verify: true
+- name: TROJAN-188.42.145.180
+  type: trojan
+  server: 188.42.145.180
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com#meliproxyy-11
+  skip-cert-verify: false
 - name: TROJAN-199.232.78.160
   type: trojan
   server: 199.232.78.160
@@ -143,38 +116,32 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-5.180.21.146
-  - TROJAN-188.42.145.180
   - TROJAN-us01.duotg.top
-  - TROJAN-104.19.229.21
-  - TROJAN-www.calmlunch.com
-  - TROJAN-185.255.179.166
-  - TROJAN-212.183.88.136
-  - TROJAN-104.21.4.176
+  - TROJAN-5.180.21.146
+  - TROJAN-109.206.241.10
   - TROJAN-185.18.250.252
   - TROJAN-c6zorwebux8s.mosinp777.workers.dev
   - TROJAN-ww12.levikogjgfdd.ir
   - TROJAN-www.ignitelimit.com
+  - TROJAN-www.calmlunch.com
   - TROJAN-172.67.149.60
   - TROJAN-151.101.56.7
+  - TROJAN-188.42.145.180
   - TROJAN-199.232.78.160
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-5.180.21.146
-  - TROJAN-188.42.145.180
   - TROJAN-us01.duotg.top
-  - TROJAN-104.19.229.21
-  - TROJAN-www.calmlunch.com
-  - TROJAN-185.255.179.166
-  - TROJAN-212.183.88.136
-  - TROJAN-104.21.4.176
+  - TROJAN-5.180.21.146
+  - TROJAN-109.206.241.10
   - TROJAN-185.18.250.252
   - TROJAN-c6zorwebux8s.mosinp777.workers.dev
   - TROJAN-ww12.levikogjgfdd.ir
   - TROJAN-www.ignitelimit.com
+  - TROJAN-www.calmlunch.com
   - TROJAN-172.67.149.60
   - TROJAN-151.101.56.7
+  - TROJAN-188.42.145.180
   - TROJAN-199.232.78.160
   url: http://www.gstatic.com/generate_204
   interval: 300

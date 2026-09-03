@@ -5,86 +5,33 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-20.107.193.38-chacha20
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   type: ss
-  server: 20.107.193.38
-  port: 44316
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44355
   cipher: chacha20-ietf-poly1305
-  password: imq0vLikbOx4THZP
+  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
-- name: SS-54.36.174.140-chacha20
+- name: SS-142.4.216.225-chacha20
   type: ss
-  server: 54.36.174.140
-  port: 44353
+  server: 142.4.216.225
+  port: 44370
   cipher: chacha20-ietf-poly1305
   password: ytw2awn
   udp: true
-- name: SS-37.19.198.236-aes-128-
+- name: SS-switcher-nick-croquet.freesocks.work-chacha20
   type: ss
-  server: 37.19.198.236
-  port: 44370
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.160-aes-128-
-  type: ss
-  server: 37.19.198.160
-  port: 44376
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.6-aes-128-
-  type: ss
-  server: 173.244.56.6
-  port: 44378
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.20.171-aes-128-
-  type: ss
-  server: 158.173.20.171
-  port: 44386
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.102.149.207-aes-256-
-  type: ss
-  server: 149.102.149.207
-  port: 8087
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: SS-193.29.139.129-chacha20
-  type: ss
-  server: 193.29.139.129
-  port: 44390
+  server: switcher-nick-croquet.freesocks.work
+  port: 44375
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: 9tqhMdIrTkgQ46PvhyAtMH
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-20.107.193.38-chacha20
-  - SS-54.36.174.140-chacha20
-  - SS-37.19.198.236-aes-128-
-  - SS-37.19.198.160-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-158.173.20.171-aes-128-
-  - SS-149.102.149.207-aes-256-
-  - SS-193.29.139.129-chacha20
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-20.107.193.38-chacha20
-  - SS-54.36.174.140-chacha20
-  - SS-37.19.198.236-aes-128-
-  - SS-37.19.198.160-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-158.173.20.171-aes-128-
-  - SS-149.102.149.207-aes-256-
-  - SS-193.29.139.129-chacha20
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-142.4.216.225-chacha20
+  - SS-switcher-nick-croquet.freesocks.work-chacha20
 rules:
 - MATCH,PROXY

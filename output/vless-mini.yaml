@@ -220,26 +220,6 @@ proxies:
     public-key: JIv_D-Lpo1cosiCUgu-qzGSJwOCGciyXSZ8ucNn6aBo
     fingerprint: chrome
   sni: amp-api-edge.apps.apple.com
-- name: VLESS-139.28.241.77
-  type: vless
-  server: 139.28.241.77
-  port: 443
-  uuid: 5d5c40b1-102c-4343-94cc-d5b794dbd0c6
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-singapore.com
-  type: vless
-  server: singapore.com
-  port: 8443
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: c7dabe95.proxy-978.pages.dev
-  sni: c7dabe95.proxy-978.pages.dev
 - name: VLESS-134.122.202.244
   type: vless
   server: 134.122.202.244
@@ -247,7 +227,31 @@ proxies:
   uuid: 0ca45842-71e2-47fe-889f-9e75f93ea459
   udp: true
   tls: false
-  network: tcp#Farah_VPN-20
+  network: tcp#Farah_VPN-18
+- name: VLESS-185.123.100.56
+  type: vless
+  server: 185.123.100.56
+  port: 8443
+  uuid: 78eb4455-0d07-4bc2-93e3-7c8654f11d74
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    fingerprint: firefox
+  sni: www.apple.com#Farah_VPN-19
+- name: VLESS-201.24.124.99
+  type: vless
+  server: 201.24.124.99
+  port: 4100
+  uuid: d46b4fca-2352-4557-a6d5-e8c45b27618c
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /v1
+  ws-headers:
+    Host: live.ok.ru
 proxy-groups:
 - name: PROXY
   type: select
@@ -269,9 +273,9 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - VLESS-139.28.241.77
-  - VLESS-singapore.com
   - VLESS-134.122.202.244
+  - VLESS-185.123.100.56
+  - VLESS-201.24.124.99
 - name: Auto
   type: url-test
   proxies:
@@ -292,9 +296,9 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - VLESS-139.28.241.77
-  - VLESS-singapore.com
   - VLESS-134.122.202.244
+  - VLESS-185.123.100.56
+  - VLESS-201.24.124.99
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -233,26 +233,27 @@ proxies:
     public-key: JIv_D-Lpo1cosiCUgu-qzGSJwOCGciyXSZ8ucNn6aBo
     fingerprint: chrome
   sni: amp-api-edge.apps.apple.com
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
-  type: vmess
-  server: 165.140.216.142
-  port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-  alterId: 0
-  cipher: auto
+- name: VLESS-134.122.202.244
+  type: vless
+  server: 134.122.202.244
+  port: 44915
+  uuid: 0ca45842-71e2-47fe-889f-9e75f93ea459
   udp: true
   tls: false
-  network: tcp
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
+  network: tcp#Farah_VPN-39
+- name: VLESS-185.123.100.56
+  type: vless
+  server: 185.123.100.56
+  port: 8443
+  uuid: 78eb4455-0d07-4bc2-93e3-7c8654f11d74
   udp: true
-  tls: false
+  tls: true
   network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    fingerprint: firefox
+  sni: www.apple.com#Farah_VPN-40
 proxy-groups:
 - name: PROXY
   type: select
@@ -275,8 +276,8 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-134.122.202.244
+  - VLESS-185.123.100.56
 - name: Auto
   type: url-test
   proxies:
@@ -298,8 +299,8 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  - VLESS-134.122.202.244
+  - VLESS-185.123.100.56
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

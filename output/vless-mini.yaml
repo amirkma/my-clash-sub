@@ -220,30 +220,40 @@ proxies:
     public-key: JIv_D-Lpo1cosiCUgu-qzGSJwOCGciyXSZ8ucNn6aBo
     fingerprint: chrome
   sni: amp-api-edge.apps.apple.com
-- name: VLESS-207.174.133.163
+- name: VLESS-108.162.198.178
   type: vless
-  server: 207.174.133.163
-  port: 10000
-  uuid: caec0d8d-ab2f-4247-b97d-7fb1a34ab195
+  server: 108.162.198.178
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
+  network: ws#Farah_VPN-18
+- name: VLESS-148.113.5.44
+  type: vless
+  server: 148.113.5.44
+  port: 443
+  uuid: 72ea5a91-ffcc-43d2-9297-5993c3abf186
+  udp: true
+  tls: true
   network: tcp
-- name: VLESS-84.235.170.145
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI
+    fingerprint: chrome
+  sni: www.cloudflare.com#Farah_VPN-19
+- name: VLESS-78.129.150.216
   type: vless
-  server: 84.235.170.145
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  server: 78.129.150.216
+  port: 443
+  uuid: 7ec31525-7ac3-4597-8f39-a2d4edc46342
   udp: true
-  tls: false
+  tls: true
   network: tcp
-- name: VLESS-172.64.150.28
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  network: ws#Farah_VPN-20
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    fingerprint: chrome
+  sni: strapi.io
 proxy-groups:
 - name: PROXY
   type: select
@@ -265,9 +275,9 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - VLESS-207.174.133.163
-  - VLESS-84.235.170.145
-  - VLESS-172.64.150.28
+  - VLESS-108.162.198.178
+  - VLESS-148.113.5.44
+  - VLESS-78.129.150.216
 - name: Auto
   type: url-test
   proxies:
@@ -288,9 +298,9 @@ proxy-groups:
   - VLESS-letnew.blueheartz.ir
   - VLESS-usa1.orangesms.ir
   - VLESS-neter.orangesms.ir
-  - VLESS-207.174.133.163
-  - VLESS-84.235.170.145
-  - VLESS-172.64.150.28
+  - VLESS-108.162.198.178
+  - VLESS-148.113.5.44
+  - VLESS-78.129.150.216
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

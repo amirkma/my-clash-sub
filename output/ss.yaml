@@ -5,25 +5,25 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-156.146.38.167-aes-128-
+- name: SS-82.152.132.103-chacha20
   type: ss
-  server: 156.146.38.167
-  port: 44347
+  server: 82.152.132.103
+  port: 10805
+  cipher: chacha20-ietf-poly1305
+  password: 9FQFbgD0NCg68qIZbnFH46MlwQPbzl84
+  udp: true
+- name: SS-156.146.38.170-aes-128-
+  type: ss
+  server: 156.146.38.170
+  port: 44379
   cipher: aes-128-gcm
   password: shadowsocks
-  udp: true
-- name: SS-82.38.31.11-chacha20
-  type: ss
-  server: 82.38.31.11
-  port: 44367
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-156.146.38.167-aes-128-
-  - SS-82.38.31.11-chacha20
+  - SS-82.152.132.103-chacha20
+  - SS-156.146.38.170-aes-128-
 rules:
 - MATCH,PROXY

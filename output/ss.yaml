@@ -5,68 +5,33 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-45.207.207.25-aes-256-
+- name: SS-54.36.174.134-chacha20
   type: ss
-  server: 45.207.207.25
-  port: 44352
-  cipher: aes-256-gcm
-  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
-  udp: true
-- name: SS-158.173.20.171-aes-128-
-  type: ss
-  server: 158.173.20.171
-  port: 44354
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
-  port: 44386
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44387
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44390
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-142.4.216.225-chacha20
-  type: ss
-  server: 142.4.216.225
-  port: 44399
+  server: 54.36.174.134
+  port: 44328
   cipher: chacha20-ietf-poly1305
   password: ytw2awn
+  udp: true
+- name: SS-149.22.87.241-aes-128-
+  type: ss
+  server: 149.22.87.241
+  port: 44346
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-84.247.155.196-aes-256-
+  type: ss
+  server: 84.247.155.196
+  port: 8063
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-45.207.207.25-aes-256-
-  - SS-158.173.20.171-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-142.4.216.225-chacha20
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-45.207.207.25-aes-256-
-  - SS-158.173.20.171-aes-128-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-142.4.216.225-chacha20
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-54.36.174.134-chacha20
+  - SS-149.22.87.241-aes-128-
+  - SS-84.247.155.196-aes-256-
 rules:
 - MATCH,PROXY

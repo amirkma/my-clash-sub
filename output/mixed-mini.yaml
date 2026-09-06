@@ -5,211 +5,252 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-german.onrovela.com
-  type: vless
-  server: german.onrovela.com
+- name: TROJAN-199.232.78.160
+  type: trojan
+  server: 199.232.78.160
   port: 443
-  uuid: 79b873af-74e9-4eb2-8f26-04b765052014
+  password: k2se1acbwb2t1o0e
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#GetXConfig-1
+  skip-cert-verify: false
+- name: VLESS-69.46.46.35
+  type: vless
+  server: 69.46.46.35
+  port: 443
+  uuid: 052d8d73-4552-545e-5505-7c544f47de7a
+  udp: true
+  tls: true
+  network: xhttp
+  sni: cobalt-beacon-a070-production.up.railway.app#GetXConfig-2
+- name: VLESS-104.18.31.171
+  type: vless
+  server: 104.18.31.171
+  port: 443
+  uuid: 79baac2b-e5c7-4378-90a8-73f871764e2c
+  udp: true
+  tls: true
+  network: xhttp
+  sni: config.hikinoservices.ir
+- name: VLESS-front.onlydreams.ir
+  type: vless
+  server: front.onlydreams.ir
+  port: 8443
+  uuid: 2279f738-e427-467f-9cd6-501943cf583c
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EOnpM7BpDK3Qhiz09EO2ufj89p7hx_zYWvT7VbYBxmo
+    fingerprint: firefox
+  sni: yahoo.com
+- name: VLESS-69.46.46.31
+  type: vless
+  server: 69.46.46.31
+  port: 443
+  uuid: 03b90c94-0617-aa8a-9779-5fe432239d73
+  udp: true
+  tls: true
+  network: xhttp
+  sni: polar-prairie-432a-production.up.railway.app
+- name: VLESS-69.46.46.34
+  type: vless
+  server: 69.46.46.34
+  port: 443
+  uuid: f1c63399-f3b9-9a7b-4ec4-2e2d1b9e09fc
+  udp: true
+  tls: true
+  network: xhttp
+  sni: sunny-reef-cd7f-production.up.railway.app
+- name: VLESS-15.188.177.61
+  type: vless
+  server: 15.188.177.61
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-12
+- name: VLESS-u8mr7pbu34jf.gorvexo.ir
+  type: vless
+  server: u8mr7pbu34jf.gorvexo.ir
+  port: 443
+  uuid: 451e66db-b18f-4e29-a670-1431353f9b28
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: m1jP1LJWkuKNcMslaZQ6_JWiz5IM9sGCCRlHilposxY
-    short-id: ce1c92ff
-    fingerprint: edge
-  sni: amp-api.ent.apple.com
-- name: VLESS-69.46.46.28
+    public-key: bdtDRp63jl4nMZRPN2wNlKJ6Yt77SF1uSrfkQ8NBKks
+    fingerprint: firefox
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-gcfme16k8pt1tk14vm5g.novexgroup.ir
   type: vless
-  server: 69.46.46.28
+  server: gcfme16k8pt1tk14vm5g.novexgroup.ir
   port: 443
-  uuid: c82da0d0-dc75-ebe8-dfd9-49a2ca315a4f
+  uuid: 451e66db-b18f-4e29-a670-1431353f9b28
   udp: true
   tls: true
-  network: xhttp
-  sni: hidden-harbor-a921-production.up.railway.app#GetXConfig-3
-- name: VLESS-69.46.46.99
-  type: vless
-  server: 69.46.46.99
-  port: 443
-  uuid: 0a653b7f-6076-f0f9-42cb-eb7b62e0a616
-  udp: true
-  tls: true
-  network: xhttp
-  sni: cedar-canyon-dbe7-production.up.railway.app#GetXConfig-5
-- name: VLESS-69.46.46.29
-  type: vless
-  server: 69.46.46.29
-  port: 443
-  uuid: 2262f6f6-0da7-d013-1310-92d33c398292
-  udp: true
-  tls: true
-  network: xhttp
-  sni: amber-voyager-e8ca-production.up.railway.app#GetXConfig-7
-- name: VLESS-69.46.46.27
-  type: vless
-  server: 69.46.46.27
-  port: 443
-  uuid: 7ed01884-801a-1b50-76d7-ec13ca9d8af3
-  udp: true
-  tls: true
-  network: xhttp
-  sni: arctic-reef-a537-production.up.railway.app#GetXConfig-9
-- name: VLESS-3.9.167.151
-  type: vless
-  server: 3.9.167.151
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-11
-- name: TROJAN-xn--memeshupshop-vl56koa410enom.rekmiva.ir
-  type: trojan
-  server: xn--memeshupshop-vl56koa410enom.rekmiva.ir
-  port: 1080
-  password: BbNnpOgc1j9WOaWoslbSyeob1r47IRHV
-  udp: true
-  tls: true
-  sni: updates.cdn-apple.com
-  skip-cert-verify: true
-- name: VLESS-69.46.46.51
-  type: vless
-  server: 69.46.46.51
-  port: 443
-  uuid: 53583673-519b-c3e5-a4c2-07c09322effb
-  udp: true
-  tls: true
-  network: xhttp
-  sni: gentle-prairie-06a7-production.up.railway.app#GetXConfig-18
-- name: VLESS-104.19.100.252
-  type: vless
-  server: 104.19.100.252
-  port: 443
-  uuid: bfa85457-2210-4242-9f96-5f2113edddf2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/ws
-  ws-headers:
-    Host: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-  sni: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-- name: VLESS-162.159.244.197
-  type: vless
-  server: 162.159.244.197
-  port: 443
-  uuid: bfa85457-2210-4242-9f96-5f2113edddf2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/ws
-  ws-headers:
-    Host: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-  sni: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-- name: VLESS-172.67.186.163
-  type: vless
-  server: 172.67.186.163
-  port: 443
-  uuid: bfa85457-2210-4242-9f96-5f2113edddf2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/ws
-  ws-headers:
-    Host: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-  sni: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-- name: VLESS-catalog.1com.ir
-  type: vless
-  server: catalog.1com.ir
-  port: 443
-  uuid: bfa85457-2210-4242-9f96-5f2113edddf2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/ws
-  ws-headers:
-    Host: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-  sni: webapp-trexbridge-2igmf.app-uovbiw.workers.dev
-- name: VLESS-69.46.46.119
-  type: vless
-  server: 69.46.46.119
-  port: 443
-  uuid: Default
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/Default
-  ws-headers:
-    Host: app-630c35-f71a77-production.up.railway.app
-  sni: app-630c35-f71a77-production.up.railway.app#GetXConfig-28
-- name: VLESS-45.61.176.211
-  type: vless
-  server: 45.61.176.211
-  port: 443
-  uuid: 0bdf78cd-b7db-4aad-85e1-b9596ee78e7c
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-30
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: eKp8llX1-wp8zKjVE9TVWMLSFQZRF3rvdTq9Lm9LSgk
-    fingerprint: chrome
-  sni: www.sony.com
-- name: VLESS-69.46.46.38
+    public-key: bdtDRp63jl4nMZRPN2wNlKJ6Yt77SF1uSrfkQ8NBKks
+    fingerprint: firefox
+  sni: play.google.com
+- name: VLESS-kxj925316ild.gorvexo.ir
   type: vless
-  server: 69.46.46.38
+  server: kxj925316ild.gorvexo.ir
   port: 443
-  uuid: 58cbee45-911e-2ea5-68dc-1d6d4b969476
+  uuid: 451e66db-b18f-4e29-a670-1431353f9b28
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: bdtDRp63jl4nMZRPN2wNlKJ6Yt77SF1uSrfkQ8NBKks
+    fingerprint: firefox
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-h5ndv6k7pfb5.gorvexo.ir
+  type: vless
+  server: h5ndv6k7pfb5.gorvexo.ir
+  port: 443
+  uuid: 451e66db-b18f-4e29-a670-1431353f9b28
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: bdtDRp63jl4nMZRPN2wNlKJ6Yt77SF1uSrfkQ8NBKks
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-gr.edge-cache.onevanet.ir
+  type: vless
+  server: gr.edge-cache.onevanet.ir
+  port: 8876
+  uuid: 73094d19-ace3-4b3f-95f7-224f9feaeaaf
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: B0q7cY2yDjgCheCSdnydRAimkLbNwZAX28yFTXWOVgk
+    fingerprint: firefox
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-151.101.56.9
+  type: vless
+  server: 151.101.56.9
+  port: 80
+  uuid: df1ecf1d-ebc4-424c-9cef-b10930604d19
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /ws#GetXConfig-28
+  ws-headers:
+    Host: freekabotar1.global.ssl.fastly.net
+- name: VLESS-151.101.192.223
+  type: vless
+  server: 151.101.192.223
+  port: 80
+  uuid: 3ec8b30f-9779-44e1-88c6-6612b786df5f
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /ws#GetXConfig-30
+  ws-headers:
+    Host: freekabotar4.global.ssl.fastly.net
+- name: VLESS-95.182.115.63
+  type: vless
+  server: 95.182.115.63
+  port: 443
+  uuid: 0560982d-52d5-4768-a82a-d2388ced61ba
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: _SpFMEnBhEhtCkmZRAX3qNopOq97lvQ8I3w1NLK-ek8
+    fingerprint: chrome
+  sni: play.google.com
+- name: VLESS-5.160.163.14
+  type: vless
+  server: 5.160.163.14
+  port: 8553
+  uuid: 711e1b5a-1b7d-54ee-95c7-6eefd40c6599
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xTfed4tQM3nHG75OnEWl-pPCRQGngTq5JkEvxmyjZzA
+    fingerprint: chrome
+  sni: www.apple.com
+- name: VLESS-94.237.4.82
+  type: vless
+  server: 94.237.4.82
+  port: 443
+  uuid: a11d5668-63f7-4fe2-9b77-7f8336ae883d
   udp: true
   tls: true
   network: xhttp
-  sni: golden-falcon-bebf-production.up.railway.app#GetXConfig-32
-- name: VLESS-15.224.126.219
-  type: vless
-  server: 15.224.126.219
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: S2V0SCkn720uXFS2bC5iH-vyt3GBA22nXoypHyDWQzE
+    short-id: ed
+    fingerprint: chrome
+  sni: gitlab.io
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+  type: vmess
+  server: 165.140.216.142
+  port: 443
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
-  network: tcp#GetXConfig-34
+  network: tcp
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-german.onrovela.com
-  - VLESS-69.46.46.28
-  - VLESS-69.46.46.99
-  - VLESS-69.46.46.29
-  - VLESS-69.46.46.27
-  - VLESS-3.9.167.151
-  - TROJAN-xn--memeshupshop-vl56koa410enom.rekmiva.ir
-  - VLESS-69.46.46.51
-  - VLESS-104.19.100.252
-  - VLESS-162.159.244.197
-  - VLESS-172.67.186.163
-  - VLESS-catalog.1com.ir
-  - VLESS-69.46.46.119
-  - VLESS-45.61.176.211
-  - VLESS-69.46.46.38
-  - VLESS-15.224.126.219
+  - TROJAN-199.232.78.160
+  - VLESS-69.46.46.35
+  - VLESS-104.18.31.171
+  - VLESS-front.onlydreams.ir
+  - VLESS-69.46.46.31
+  - VLESS-69.46.46.34
+  - VLESS-15.188.177.61
+  - VLESS-u8mr7pbu34jf.gorvexo.ir
+  - VLESS-gcfme16k8pt1tk14vm5g.novexgroup.ir
+  - VLESS-kxj925316ild.gorvexo.ir
+  - VLESS-h5ndv6k7pfb5.gorvexo.ir
+  - VLESS-gr.edge-cache.onevanet.ir
+  - VLESS-151.101.56.9
+  - VLESS-151.101.192.223
+  - VLESS-95.182.115.63
+  - VLESS-5.160.163.14
+  - VLESS-94.237.4.82
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-german.onrovela.com
-  - VLESS-69.46.46.28
-  - VLESS-69.46.46.99
-  - VLESS-69.46.46.29
-  - VLESS-69.46.46.27
-  - VLESS-3.9.167.151
-  - TROJAN-xn--memeshupshop-vl56koa410enom.rekmiva.ir
-  - VLESS-69.46.46.51
-  - VLESS-104.19.100.252
-  - VLESS-162.159.244.197
-  - VLESS-172.67.186.163
-  - VLESS-catalog.1com.ir
-  - VLESS-69.46.46.119
-  - VLESS-45.61.176.211
-  - VLESS-69.46.46.38
-  - VLESS-15.224.126.219
+  - TROJAN-199.232.78.160
+  - VLESS-69.46.46.35
+  - VLESS-104.18.31.171
+  - VLESS-front.onlydreams.ir
+  - VLESS-69.46.46.31
+  - VLESS-69.46.46.34
+  - VLESS-15.188.177.61
+  - VLESS-u8mr7pbu34jf.gorvexo.ir
+  - VLESS-gcfme16k8pt1tk14vm5g.novexgroup.ir
+  - VLESS-kxj925316ild.gorvexo.ir
+  - VLESS-h5ndv6k7pfb5.gorvexo.ir
+  - VLESS-gr.edge-cache.onevanet.ir
+  - VLESS-151.101.56.9
+  - VLESS-151.101.192.223
+  - VLESS-95.182.115.63
+  - VLESS-5.160.163.14
+  - VLESS-94.237.4.82
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

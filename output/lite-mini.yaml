@@ -5,126 +5,145 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-13.36.74.87
+- name: VLESS-k2.cloud--vpn.site
   type: vless
-  server: 13.36.74.87
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: k2.cloud--vpn.site
+  port: 443
+  uuid: f25b9e19-7e16-4bc3-808a-f57eee8f8aee
   udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-836reljl.danqela.ir
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: c12.com
+  sni: ssl.fastly.com#GetXConfig-1
+- name: VLESS-132.243.228.209
   type: vless
-  server: 836reljl.danqela.ir
-  port: 50303
-  uuid: 8cc08028-07e1-4ec6-a836-eee68fab6c10
+  server: 132.243.228.209
+  port: 7443
+  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: vvfBLh_F_at9_JVe1dkfmCfNH-ibLwJhLta-6PHsOBE
+    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
+    fingerprint: firefox
+  sni: de.routeliora.ru
+- name: VLESS-163.128.99.165
+  type: vless
+  server: 163.128.99.165
+  port: 443
+  uuid: 66d0024b-307a-4714-86f7-07d141a244bf
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: l_AILVmgCSrYUlKhoiFc6NYY-zjXE6FTGEDaG1MECQY
+    fingerprint: safari
+  sni: www.apple.com
+- name: VLESS-206.71.158.125
+  type: vless
+  server: 206.71.158.125
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  udp: true
+  tls: true
+  network: xhttp
+  sni: dey.lnmarketplace.net
+- name: VLESS-mira2.godp.ir
+  type: vless
+  server: mira2.godp.ir
+  port: 24389
+  uuid: a133cbd4-2ce4-47e5-9728-937b6cfaa6af
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ycMlS5YNiwLCKZ-BweLLSBAhTS40WViwft4z5oDBM0Y
     fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-de.hardvezoo.ir
-  type: vless
-  server: de.hardvezoo.ir
-  port: 8080
-  uuid: 94dc2042-ee0c-10fe-64e6-2c387a35c962
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /#GetXConfig-10
-  ws-headers:
-    Host: play.google.com
-- name: VLESS-172.67.212.195
-  type: vless
-  server: 172.67.212.195
+  sni: goo.gl
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  type: vmess
+  server: mtckundigepwu3up.v.3dns.vip
   port: 443
-  uuid: a1a6a3be-2bf9-46a2-bc24-328306e49ab7
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   network: ws
-  ws-path: /fVs1qv0xm8dxmnwuaPwokxgY4XlP#Farah_VPN-11
+  ws-path: /ws-vmess
   ws-headers:
-    Host: 2-m17.KuwAIT-aiRliNE.KDns.Fr
-  sni: 2-m17.KUWAIT-AIrLInE.kDNS.Fr
-- name: VLESS-188.114.98.215
+    Host: mTCKUNDiGePwU3uP.v.3dns.vip
+- name: VLESS-189.74.97.47
   type: vless
-  server: 188.114.98.215
-  port: 2086
-  uuid: d028eaf5-c5ef-49a0-85c6-4f4816af8053
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /eyJqdW5rIjoiZUJZR2pXVFByVyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjEwOS4xMjAuMTU4LjE0OSJdfQ==?ed=2560
-  ws-headers:
-    Host: misty-bread-fd96.salehinezhadali.workers.dev#Farah_VPN-12
-- name: VLESS-104.21.96.56
-  type: vless
-  server: 104.21.96.56
-  port: 80
-  uuid: 923e051a-f598-4ea5-9c6c-f7e37c438a60
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /vl/D2pryqVs9LAgCYdTK76lsafWY?ed=2560#Farah_VPN-14
-  ws-headers:
-    Host: vkvd8bpskvxgjwdvcidxgoccr.javanbaghe.workers.dev
-- name: VLESS-store.epicgames.com
-  type: vless
-  server: store.epicgames.com
-  port: 443
-  uuid: a30a3f37-1ab2-46bd-8c6b-a26d7c775f2a
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /?ed=2560#Farah_VPN-15
-  ws-headers:
-    Host: grc.ccwu.cc
-  sni: grc.ccwu.cc
-- name: VLESS-172.64.146.211
-  type: vless
-  server: 172.64.146.211
+  server: 189.74.97.47
   port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  uuid: 894fe9f0-b998-49c0-8003-a5007de921e1
+  udp: true
+  tls: false
+  network: ws#Farah_VPN-12
+- name: VLESS-201.34.137.15
+  type: vless
+  server: 201.34.137.15
+  port: 4100
+  uuid: 716903b1-e6bf-4420-9e27-65e4451692e9
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /v1#Farah_VPN-13
+  ws-headers:
+    Host: live.ok.ru
+- name: VLESS-217.60.24.23
+  type: vless
+  server: 217.60.24.23
+  port: 8443
+  uuid: 758f49d3-5f5f-47e7-bfa4-4ce96faf800d
   udp: true
   tls: true
-  network: ws
-  ws-path: /#Farah_VPN-16
-  ws-headers:
-    Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: VLESS-188.114.97.6
+  network: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU
+    fingerprint: firefox
+  sni: cdn.shopify.com
+- name: VLESS-150.251.113.34
   type: vless
-  server: 188.114.97.6
-  port: 8080
-  uuid: 50414e45-4c5f-5a45-5553-9568000eed47
+  server: 150.251.113.34
+  port: 443
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
   udp: true
-  tls: false
-  network: ws#Farah_VPN-17
-- name: VLESS-188.114.98.0
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8
+    fingerprint: chrome
+  sni: www.cloudflare.com
+- name: VLESS-162.159.38.127
   type: vless
-  server: 188.114.98.0
-  port: 80
-  uuid: 67e40783-6546-4fda-90f6-9ee3c5b2efff
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /CkgzR7qmHg0TxS4D#Farah_VPN-18
-  ws-headers:
-    Host: worker3.ragiki7564.workers.dev
-- name: VLESS-162.159.48.32
-  type: vless
-  server: 162.159.48.32
-  port: 8880
+  server: 162.159.38.127
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   network: ws
-  ws-path: /?ed=2560security=tls
+  ws-path: /?ed=2560security=tls#Farah_VPN-16
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: TROJAN-vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
+  type: trojan
+  server: vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
+  port: 2052
+  password: 73796e63-0000-4000-8000-000000000000
+  udp: true
+  tls: true
+  sni: vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev#Farah_VPN-17
+  skip-cert-verify: true
 - name: VLESS-dedirr.shoppiz.ir
   type: vless
   server: dedirr.shoppiz.ir
@@ -184,47 +203,63 @@ proxies:
   tls: true
   sni: ssl.fastly.com#meliproxyy-26
   skip-cert-verify: false
+- name: VLESS-149.118.55.234
+  type: vless
+  server: 149.118.55.234
+  port: 443
+  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /xlordgrim/sg#proxy_kafee-31
+  ws-headers:
+    Host: edge.xlordgrim.com
+  sni: www.zoom.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-13.36.74.87
-  - VLESS-836reljl.danqela.ir
-  - VLESS-de.hardvezoo.ir
-  - VLESS-172.67.212.195
-  - VLESS-188.114.98.215
-  - VLESS-104.21.96.56
-  - VLESS-store.epicgames.com
-  - VLESS-172.64.146.211
-  - VLESS-188.114.97.6
-  - VLESS-188.114.98.0
-  - VLESS-162.159.48.32
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-132.243.228.209
+  - VLESS-163.128.99.165
+  - VLESS-206.71.158.125
+  - VLESS-mira2.godp.ir
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-189.74.97.47
+  - VLESS-201.34.137.15
+  - VLESS-217.60.24.23
+  - VLESS-150.251.113.34
+  - VLESS-162.159.38.127
+  - TROJAN-vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
   - VLESS-dedirr.shoppiz.ir
   - VLESS-199.232.78.159
   - VLESS-sv14.betust.net
   - VLESS-de11.bexait.ir
   - VLESS-172.64.150.28
   - TROJAN-199.232.78.160
+  - VLESS-149.118.55.234
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-13.36.74.87
-  - VLESS-836reljl.danqela.ir
-  - VLESS-de.hardvezoo.ir
-  - VLESS-172.67.212.195
-  - VLESS-188.114.98.215
-  - VLESS-104.21.96.56
-  - VLESS-store.epicgames.com
-  - VLESS-172.64.146.211
-  - VLESS-188.114.97.6
-  - VLESS-188.114.98.0
-  - VLESS-162.159.48.32
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-132.243.228.209
+  - VLESS-163.128.99.165
+  - VLESS-206.71.158.125
+  - VLESS-mira2.godp.ir
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-189.74.97.47
+  - VLESS-201.34.137.15
+  - VLESS-217.60.24.23
+  - VLESS-150.251.113.34
+  - VLESS-162.159.38.127
+  - TROJAN-vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
   - VLESS-dedirr.shoppiz.ir
   - VLESS-199.232.78.159
   - VLESS-sv14.betust.net
   - VLESS-de11.bexait.ir
   - VLESS-172.64.150.28
   - TROJAN-199.232.78.160
+  - VLESS-149.118.55.234
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

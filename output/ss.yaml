@@ -5,41 +5,59 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-86.38.182.226-chacha20
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   type: ss
-  server: 86.38.182.226
-  port: 9743
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44327
   cipher: chacha20-ietf-poly1305
-  password: T6IcUpcVx0Y85DxSTgXe4A
+  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
-- name: SS-193.29.139.230-chacha20
+- name: SS-158.173.20.208-aes-128-
   type: ss
-  server: 193.29.139.230
-  port: 44358
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  server: 158.173.20.208
+  port: 44357
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 - name: SS-193.29.139.129-chacha20
   type: ss
   server: 193.29.139.129
-  port: 44364
+  port: 44382
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: SS-158.173.24.73-aes-128-
+- name: SS-193.29.139.230-chacha20
   type: ss
-  server: 158.173.24.73
-  port: 44365
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 193.29.139.230
+  port: 44386
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: SS-198.98.53.130-chacha20
+  type: ss
+  server: 198.98.53.130
+  port: 44388
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-86.38.182.226-chacha20
-  - SS-193.29.139.230-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-158.173.20.208-aes-128-
   - SS-193.29.139.129-chacha20
-  - SS-158.173.24.73-aes-128-
+  - SS-193.29.139.230-chacha20
+  - SS-198.98.53.130-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-158.173.20.208-aes-128-
+  - SS-193.29.139.129-chacha20
+  - SS-193.29.139.230-chacha20
+  - SS-198.98.53.130-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

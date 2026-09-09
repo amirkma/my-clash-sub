@@ -8,14 +8,22 @@ proxies:
 - name: SS-185.203.4.204-chacha20
   type: ss
   server: 185.203.4.204
-  port: 39
+  port: 367
   cipher: chacha20-ietf-poly1305
   password: 816Efx8yiCSDDpvvpxXL8Q
+  udp: true
+- name: SS-37.19.198.243-aes-128-
+  type: ss
+  server: 37.19.198.243
+  port: 44391
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-185.203.4.204-chacha20
+  - SS-37.19.198.243-aes-128-
 rules:
 - MATCH,PROXY

@@ -5,65 +5,45 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-217.25.90.102-chacha20
-  type: ss
-  server: 217.25.90.102
-  port: 31
-  cipher: chacha20-ietf-poly1305
-  password: 816Efx8yiCSDDpvvpxXL8Q
-  udp: true
-- name: VLESS-ugb.mobileemdad.top
+- name: VLESS-15.236.253.20
   type: vless
-  server: ugb.mobileemdad.top
+  server: 15.236.253.20
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-1
+- name: 'نامشخص 🏳️ | @GetXConfig | #5544-5'
+  type: vmess
+  server: fast.jahancloud.space
   port: 443
-  uuid: f10b3ea9-bd7d-47f9-bdeb-6a32f075b657
+  uuid: 3ff37565-366c-40d5-9162-501fa14bfe4b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-2.26.178.138
+  type: vless
+  server: 2.26.178.138
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: ios
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-gsv5.mobileemdad.top
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I#GetXConfig-7
+    fingerprint: chrome
+  sni: localhost
+- name: VLESS-13.37.59.160
   type: vless
-  server: gsv5.mobileemdad.top
-  port: 443
-  uuid: f10b3ea9-bd7d-47f9-bdeb-6a32f075b657
+  server: 13.37.59.160
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-tr5.mobileemdad.top
-  type: vless
-  server: tr5.mobileemdad.top
-  port: 443
-  uuid: f10b3ea9-bd7d-47f9-bdeb-6a32f075b657
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-159.195.150.69
-  type: vless
-  server: 159.195.150.69
-  port: 443
-  uuid: 6fb79584-30b8-4888-b358-98f7ef6b8697
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: RR_T91yZY_QUPN53wQNakGmCN3mq0i_Ozom7etyh4RI
-    fingerprint: firefox
-  sni: www.adac.de#GetXConfig-9
+  tls: false
+  network: tcp#GetXConfig-9
 - name: VLESS-13.230.66.70
   type: vless
   server: 13.230.66.70
@@ -140,54 +120,70 @@ proxies:
   tls: true
   sni: www.calmlunch.com#Farah_VPN-17
   skip-cert-verify: false
-- name: VLESS-65.109.238.140
+- name: VLESS-104.17.147.22
   type: vless
-  server: 65.109.238.140
+  server: 104.17.147.22
   port: 443
-  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000003
   udp: true
   tls: true
-  network: xhttp
-  sni: hel1.nordlinkcloud.com#meliproxyy-21
-- name: VLESS-tgfree.rush-server.com
+  network: ws
+  ws-path: /lunetnetwork
+  ws-headers:
+    Host: relay.lunetcloud.ir
+  sni: relay.lunetcloud.ir#meliproxyy-21
+- name: VLESS-172.66.0.236
   type: vless
-  server: tgfree.rush-server.com
-  port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  server: 172.66.0.236
+  port: 2083
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
   udp: true
   tls: true
-  network: tcp
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: cfvvv-ev1.pages.dev
+  sni: cfvvv-ev1.pages.dev#meliproxyy-24
+- name: VLESS-www.star8.cn
+  type: vless
+  server: www.star8.cn
+  port: 443
+  uuid: 00f8cbcc-bf10-418b-a842-35519f460c7f
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /15753/socket
+  ws-headers:
+    Host: dews.irandoc.info
+  sni: dews.irandoc.info#meliproxyy-25
+- name: VLESS-45.9.156.42
+  type: vless
+  server: 45.9.156.42
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: gw.v2.RelayService
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    fingerprint: chrome
-  sni: anyfile2file.com
-- name: VLESS-51.38.70.192
+    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
+    fingerprint: firefox
+  sni: bg5.univesalsrv.com
+- name: VLESS-89.35.14.32
   type: vless
-  server: 51.38.70.192
+  server: 89.35.14.32
   port: 443
-  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: stats.v2.PushService
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-    fingerprint: random
-  sni: play.google.com
-- name: VLESS-95.85.241.209
-  type: vless
-  server: 95.85.241.209
-  port: 443
-  uuid: 14f4be39-cb89-4f2b-8200-704666b6fa4e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0
-    fingerprint: chrome
-  sni: google.com#meliproxyy-24
+    public-key: q38CddDj2g-XNDc0uW1m6S6b8iGY_Bne2RwX7C_FYCQ
+    fingerprint: firefox
+  sni: md3.univesalsrv.com
 - name: TROJAN-8.47.69.0
   type: trojan
   server: 8.47.69.0
@@ -195,37 +191,16 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org#meliproxyy-25
+  sni: www.pleadcourt.org#meliproxyy-28
   skip-cert-verify: false
-- name: TROJAN-188.42.145.180
-  type: trojan
-  server: 188.42.145.180
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.volumeroot.com#meliproxyy-26
-  skip-cert-verify: false
-- name: VLESS-104.21.33.59
-  type: vless
-  server: 104.21.33.59
-  port: 443
-  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
-  udp: true
-  tls: true
-  network: ws
-  ws-headers:
-    Host: web-socket.tgdaosheng.ggff.net
-  sni: web-socket.tgdaosheng.ggff.net#proxy_kafee-31
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-217.25.90.102-chacha20
-  - VLESS-ugb.mobileemdad.top
-  - VLESS-gsv5.mobileemdad.top
-  - VLESS-tr5.mobileemdad.top
-  - VLESS-159.195.150.69
+  - VLESS-15.236.253.20
+  - 'نامشخص 🏳️ | @GetXConfig | #5544-5'
+  - VLESS-2.26.178.138
+  - VLESS-13.37.59.160
   - VLESS-13.230.66.70
   - VLESS-188.114.97.6
   - VLESS-163.172.213.174
@@ -233,21 +208,19 @@ proxy-groups:
   - VLESS-162.159.152.205
   - VLESS-172.238.232.239
   - TROJAN-185.255.179.166
-  - VLESS-65.109.238.140
-  - VLESS-tgfree.rush-server.com
-  - VLESS-51.38.70.192
-  - VLESS-95.85.241.209
+  - VLESS-104.17.147.22
+  - VLESS-172.66.0.236
+  - VLESS-www.star8.cn
+  - VLESS-45.9.156.42
+  - VLESS-89.35.14.32
   - TROJAN-8.47.69.0
-  - TROJAN-188.42.145.180
-  - VLESS-104.21.33.59
 - name: Auto
   type: url-test
   proxies:
-  - SS-217.25.90.102-chacha20
-  - VLESS-ugb.mobileemdad.top
-  - VLESS-gsv5.mobileemdad.top
-  - VLESS-tr5.mobileemdad.top
-  - VLESS-159.195.150.69
+  - VLESS-15.236.253.20
+  - 'نامشخص 🏳️ | @GetXConfig | #5544-5'
+  - VLESS-2.26.178.138
+  - VLESS-13.37.59.160
   - VLESS-13.230.66.70
   - VLESS-188.114.97.6
   - VLESS-163.172.213.174
@@ -255,13 +228,12 @@ proxy-groups:
   - VLESS-162.159.152.205
   - VLESS-172.238.232.239
   - TROJAN-185.255.179.166
-  - VLESS-65.109.238.140
-  - VLESS-tgfree.rush-server.com
-  - VLESS-51.38.70.192
-  - VLESS-95.85.241.209
+  - VLESS-104.17.147.22
+  - VLESS-172.66.0.236
+  - VLESS-www.star8.cn
+  - VLESS-45.9.156.42
+  - VLESS-89.35.14.32
   - TROJAN-8.47.69.0
-  - TROJAN-188.42.145.180
-  - VLESS-104.21.33.59
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-20.234.82.250-chacha20
+  type: ss
+  server: 20.234.82.250
+  port: 44317
+  cipher: chacha20-ietf-poly1305
+  password: kYhF4RWqohTpbVau
+  udp: true
 - name: SS-82.38.31.162-chacha20
   type: ss
   server: 82.38.31.162
@@ -37,9 +44,20 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-20.234.82.250-chacha20
   - SS-82.38.31.162-chacha20
   - SS-37.19.198.160-aes-128-
   - SS-37.19.198.236-aes-128-
   - SS-37.19.198.244-aes-128-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-20.234.82.250-chacha20
+  - SS-82.38.31.162-chacha20
+  - SS-37.19.198.160-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-37.19.198.244-aes-128-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

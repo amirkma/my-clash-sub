@@ -5,63 +5,70 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-194.87.59.7
+- name: SS-81.12.32.102-chacha20
+  type: ss
+  server: 81.12.32.102
+  port: 4431
+  cipher: chacha20-ietf-poly1305
+  password: HBOiTdsDp38imSsBPf0i2GQVDNMCkUi3
+  udp: true
+- name: VLESS-37.221.110.4
   type: vless
-  server: 194.87.59.7
+  server: 37.221.110.4
   port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
   udp: true
   tls: false
   network: grpc
-  grpc-service-name: vless#GetXConfig-1
-- name: VLESS-85.90.197.120
+  grpc-service-name: vless#GetXConfig-2
+- name: VLESS-37.221.110.3
   type: vless
-  server: 85.90.197.120
+  server: 37.221.110.3
+  port: 2085
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless#GetXConfig-4
+- name: VLESS-179.254.115.225
+  type: vless
+  server: 179.254.115.225
   port: 443
-  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
+  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    public-key: BjBzyn84HIjjpV94XxyY9pcvYtEhD-aGnOI7mnzgpD4
+    fingerprint: edge
+  sni: de-astra.grani-gaming.shop
+- name: VLESS-45.135.128.5
+  type: vless
+  server: 45.135.128.5
+  port: 443
+  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
+    fingerprint: firefox#GetXConfig-8
+  sni: upload.tbotapi.ru
+- name: VLESS-93.123.101.235
+  type: vless
+  server: 93.123.101.235
+  port: 443
+  uuid: 7e083480-e6f2-44ef-bc3b-c254a7f8bb83
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 660bDah5b-PtCfAbQ3g2tJySO41zsfaXCPb7L3nQCQc
     fingerprint: firefox
-  sni: gr1.hat.onl
-- name: VLESS-104.143.223.66
-  type: vless
-  server: 104.143.223.66
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-5
-- name: VLESS-204.168.195.30
-  type: vless
-  server: 204.168.195.30
-  port: 51185
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VFDbAJQdqzKl7hL6SmUrhHHEORtILSsJHYWF67an1HU
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-45.74.159.233
-  type: vless
-  server: 45.74.159.233
-  port: 56659
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qLggZ7qospn6X7UEO1zSoohNXK4Y1EX7Hx2sJeWfvw0
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
+  sni: marrow.medic-ml.ru
 - name: 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   type: vmess
   server: 62.238.46.61
@@ -166,166 +173,165 @@ proxies:
   ws-headers:
     Host: whitecreeper.pages.dev
   sni: whitecreeper.pages.dev
-- name: VLESS-31.76.39.163
+- name: VLESS-5.75.195.136
   type: vless
-  server: 31.76.39.163
-  port: 443
-  uuid: b691d443-3d5b-47d3-9c6f-9b84beda2b13
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: UzVp3x9LEOVeF_j_X2XzJrumdyfLEiFS0d6qDGVB_3M
-  sni: uk1.kramiliantha.sbs
-- name: VLESS-185.154.193.137
-  type: vless
-  server: 185.154.193.137
-  port: 443
-  uuid: 238e492b-bc20-4380-92b6-135d39112ca4
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Nb9IwEEhUHEbHSc6e5uYTjxDgN4ZExhDckM3OgYhj2o
-    fingerprint: qq
-  sni: api8.eaglors.com
-- name: VLESS-31.76.119.63
-  type: vless
-  server: 31.76.119.63
-  port: 47010
-  uuid: 5ba7b2fe-8738-4dd9-b2f4-c3450b6f32fe
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo
-    fingerprint: firefox
-  sni: akamai.com#meliproxyy-23
-- name: VLESS-84.252.100.49
-  type: vless
-  server: 84.252.100.49
-  port: 443
-  uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
-  sni: flarora.ferreo.sbs
-- name: TROJAN-8.47.69.0
-  type: trojan
-  server: 8.47.69.0
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org#meliproxyy-25
-  skip-cert-verify: false
-- name: SS-20.234.82.250-chacha20
-  type: ss
-  server: 20.234.82.250
-  port: 44330
-  cipher: chacha20-ietf-poly1305
-  password: kYhF4RWqohTpbVau
-  udp: true
-- name: VLESS-8.34.70.30
-  type: vless
-  server: 8.34.70.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 5.75.195.136
+  port: 56539
+  uuid: 61bf1e79-a2fc-44ee-a576-e4b9ef0d3b16
   udp: true
   tls: false
-  network: ws
-  ws-path: /#proxy_kafee-31
-  ws-headers:
-    Host: vms.lifetime09.workers.dev
-- name: VLESS-bg3.univesalsrv.com
+  network: tcp#meliproxyy-21
+- name: VLESS-38.128.251.24
   type: vless
-  server: bg3.univesalsrv.com
+  server: 38.128.251.24
+  port: 56539
+  uuid: 61bf1e79-a2fc-44ee-a576-e4b9ef0d3b16
+  udp: true
+  tls: false
+  network: tcp#meliproxyy-22
+- name: VLESS-trn4.mobileemdad.top
+  type: vless
+  server: trn4.mobileemdad.top
   port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  uuid: bff5e463-1fe4-439c-8003-7594520ae43a
   udp: true
   tls: true
-  network: grpc
-  grpc-service-name: home.v1.ApiService
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
-    fingerprint: firefox
-  sni: bg3.univesalsrv.com
-- name: VLESS-md1.univesalsrv.com
-  type: vless
-  server: md1.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: hub.v1.RelayService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY
-    fingerprint: firefox
-  sni: md1.univesalsrv.com
-- name: VLESS-147.78.182.3
-  type: vless
-  server: 147.78.182.3
-  port: 443
-  uuid: 8bf3e040-8ac9-5d0e-304f-9b735e145de8
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
-    fingerprint: chrome
-  sni: www.epson.com
-- name: VLESS-k2.cloud--vpn.site
-  type: vless
-  server: k2.cloud--vpn.site
-  port: 443
-  uuid: cc4a473a-2e15-4fc6-ec54-47c3aa5cec09
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#proxy_kafee-35
-  ws-headers:
-    Host: c12.com
-  sni: ssl.fastly.com
-- name: VLESS-08e8eb18f73305f9.drwsh.org
-  type: vless
-  server: 08e8eb18f73305f9.drwsh.org
-  port: 56460
-  uuid: 8687e743-c354-4d58-ac62-a6c2795e1f7e
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9KepeuHMqhTZ1JIGAee8Jenw6ow9DUVhI0hyXcZHZSI
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    short-id: f88610dd
     fingerprint: edge
-  sni: blog.jetbrains.com
-- name: TROJAN-172.67.149.60
+  sni: delivery.mp.microsoft.com
+- name: VLESS-tgfree.rush-server.com
+  type: vless
+  server: tgfree.rush-server.com
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    fingerprint: chrome
+  sni: anyfile2file.com
+- name: VLESS-pereslavl.gosgenarchive.com
+  type: vless
+  server: pereslavl.gosgenarchive.com
+  port: 443
+  uuid: 7c1edf38-3a67-4fba-be28-c31907d41ba8
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc
+    fingerprint: firefox
+  sni: pereslavl.gosgenarchive.com#meliproxyy-25
+- name: VLESS-uhta.gosgenarchive.com
+  type: vless
+  server: uhta.gosgenarchive.com
+  port: 443
+  uuid: 7c1edf38-3a67-4fba-be28-c31907d41ba8
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc
+    fingerprint: firefox
+  sni: uhta.gosgenarchive.com#meliproxyy-26
+- name: VLESS-trn7.mobileemdad.top
+  type: vless
+  server: trn7.mobileemdad.top
+  port: 443
+  uuid: ce89ab18-c812-4467-8cb2-122804cd51d8
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: edge
+  sni: delivery.mp.microsoft.com
+- name: VLESS-93.94.52.23
+  type: vless
+  server: 93.94.52.23
+  port: 40443
+  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
+  sni: deepl.com
+- name: VLESS-199.232.78.160
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnTeam-19
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com#proxy_kafee-33
+- name: VLESS-de-1.starsping.com
+  type: vless
+  server: de-1.starsping.com
+  port: 443
+  uuid: 1577b744-8004-4eef-862c-8cae0cd27ab9
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ZBv1jOEHziWtQQoThg63_1gm4zIPyk_cfVmNJ1SOZSk
+    fingerprint: edge
+  sni: play.google.com
+- name: VLESS-45.9.156.24
+  type: vless
+  server: 45.9.156.24
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: api.v2.PushService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
+    fingerprint: chrome
+  sni: bg2.univesalsrv.com
+- name: VLESS-shop.neexbyte.ir
+  type: vless
+  server: shop.neexbyte.ir
+  port: 8443
+  uuid: 464bc502-f963-45b6-81e3-e33d18427506
+  udp: true
+  tls: true
+  network: ws
+- name: TROJAN-www.speedtest.net
   type: trojan
-  server: 172.67.149.60
+  server: www.speedtest.net
   port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-- name: TROJAN-render.com
-  type: trojan
-  server: render.com
+  sni: www.ignitelimit.com#proxy_kafee-38
+  skip-cert-verify: false
+- name: VLESS-206.71.158.125
+  type: vless
+  server: 206.71.158.125
   port: 443
-  password: humanity
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
   udp: true
   tls: true
-  skip-cert-verify: true
+  network: xhttp
+  sni: dey.lnmarketplace.net
 - name: VLESS-38.58.180.136
   type: vless
   server: 38.58.180.136
@@ -334,124 +340,118 @@ proxies:
   udp: true
   tls: false
   network: ws
-  ws-path: /@s5gydl#anotherme_night-41
-- name: VLESS-nl1.cnyvpn.com
+  ws-path: /@s5gydl#anotherme_night-42
+- name: VLESS-89.35.14.33
   type: vless
-  server: nl1.cnyvpn.com
-  port: 2096
-  uuid: 60e2a548-96aa-4850-a279-1edab743c39b
+  server: 89.35.14.33
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: hub.v1.ApiService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
+    fingerprint: firefox
+  sni: md4.univesalsrv.com
+- name: VLESS-md3.univesalsrv.com
+  type: vless
+  server: md3.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: stats.v2.PushService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q38CddDj2g-XNDc0uW1m6S6b8iGY_Bne2RwX7C_FYCQ
+    fingerprint: firefox
+  sni: md3.univesalsrv.com
+- name: VLESS-89.35.14.31
+  type: vless
+  server: 89.35.14.31
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: hub.v1.SyncService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o
+    fingerprint: firefox
+  sni: md2.univesalsrv.com
+- name: VLESS-md4.univesalsrv.com
+  type: vless
+  server: md4.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: hub.v1.ApiService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
+    fingerprint: firefox
+  sni: md4.univesalsrv.com
+- name: VLESS-2.27.132.119
+  type: vless
+  server: 2.27.132.119
+  port: 8881
+  uuid: fcbbc0e9-bbc3-4f9b-adba-7641318f872b
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 0XSgK4OAEjNPsjYdhNBV5xl5mCCRRzYucSQ9LIO0Gkg
+    public-key: pgdZI2R_VfdbedBJyFKxzSvYUa7oFbiApSTKBooSqCk
     fingerprint: firefox
-  sni: dhlparcel.nl
-- name: VLESS-150.40.126.22
+  sni: addons.mozilla.org
+- name: VLESS-bg4.univesalsrv.com
   type: vless
-  server: 150.40.126.22
+  server: bg4.univesalsrv.com
   port: 443
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: media.v1.StreamService
+  grpc-service-name: cloud.v1.RelayService
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
+    public-key: k-vH6pkyAv26L1_dXKOFhp0Kesur9-FCUDoj-IIpVhc
     fingerprint: firefox
-  sni: rs4.univesalsrv.com
-- name: VLESS-dey.lnmarketplace.net
-  type: vless
-  server: dey.lnmarketplace.net
+  sni: bg4.univesalsrv.com
+- name: TROJAN-104.21.64.165
+  type: trojan
+  server: 104.21.64.165
   port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  password: Telegram_healer_config
   udp: true
   tls: true
-  network: xhttp
-  sni: dey.lnmarketplace.net
-- name: VLESS-150.40.126.19
-  type: vless
-  server: 150.40.126.19
+  sni: 3w2hk6Zj92orJcJedMI77HzC.Ny49NuZ6g33rYkoWaZQUNl-B9GuN5T.wOrkERs.DEv
+  skip-cert-verify: false
+- name: TROJAN-172.67.152.243
+  type: trojan
+  server: 172.67.152.243
   port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  password: Telegram_healer_config
   udp: true
   tls: true
-  network: grpc
-  grpc-service-name: media.v1.ObjectService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
-    fingerprint: firefox
-  sni: rs2.univesalsrv.com
-- name: VLESS-rs2.univesalsrv.com
-  type: vless
-  server: rs2.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: media.v1.ObjectService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tL16MVY08r-7YDXb1_gxuBBWInpSFp97ZLJ_ax3R2iE
-    fingerprint: firefox
-  sni: rs2.univesalsrv.com
-- name: VLESS-150.40.126.21
-  type: vless
-  server: 150.40.126.21
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: edge.v2.FeedService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: gHDoSWGWMVZKWNKONWHw-Cpl0-bdI6GaKusgJIQ-vWQ
-    fingerprint: firefox
-  sni: rs3.univesalsrv.com
-- name: VLESS-144.31.183.177
-  type: vless
-  server: 144.31.183.177
-  port: 443
-  uuid: 06a70256-5acc-4a79-bd73-cc8e3c4c204b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: _VeT5AgFK65VebuF3KC-yYJtFw_fnJCLYGK1Ap2NfWI
-    short-id: e9a7
-    fingerprint: firefox
-  sni: yt.be
-- name: VLESS-31.76.106.36
-  type: vless
-  server: 31.76.106.36
-  port: 10443
-  uuid: f77fdea5-e50f-4766-89b1-d0cd6ada7dae
-  udp: true
-  tls: false
-  network: xhttp
-- name: VLESS-v5p.sabermusic.ir
-  type: vless
-  server: v5p.sabermusic.ir
-  port: 443
-  uuid: eaeb9077-b90c-45e3-a52c-da847f5f86d7
-  udp: true
-  tls: true
-  network: tcp
+  sni: 3W2hk6ZJ92orjcjEdmI77hzC.Ny49nUZ6G33RYkoWAZquNl-b9GuN5T.WoRKERs.dEv
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-194.87.59.7
-  - VLESS-85.90.197.120
-  - VLESS-104.143.223.66
-  - VLESS-204.168.195.30
-  - VLESS-45.74.159.233
+  - SS-81.12.32.102-chacha20
+  - VLESS-37.221.110.4
+  - VLESS-37.221.110.3
+  - VLESS-179.254.115.225
+  - VLESS-45.135.128.5
+  - VLESS-93.123.101.235
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -461,38 +461,38 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-31.76.39.163
-  - VLESS-185.154.193.137
-  - VLESS-31.76.119.63
-  - VLESS-84.252.100.49
-  - TROJAN-8.47.69.0
-  - SS-20.234.82.250-chacha20
-  - VLESS-8.34.70.30
-  - VLESS-bg3.univesalsrv.com
-  - VLESS-md1.univesalsrv.com
-  - VLESS-147.78.182.3
-  - VLESS-k2.cloud--vpn.site
-  - VLESS-08e8eb18f73305f9.drwsh.org
-  - TROJAN-172.67.149.60
-  - TROJAN-render.com
+  - VLESS-5.75.195.136
+  - VLESS-38.128.251.24
+  - VLESS-trn4.mobileemdad.top
+  - VLESS-tgfree.rush-server.com
+  - VLESS-pereslavl.gosgenarchive.com
+  - VLESS-uhta.gosgenarchive.com
+  - VLESS-trn7.mobileemdad.top
+  - VLESS-93.94.52.23
+  - VLESS-199.232.78.160
+  - VLESS-de-1.starsping.com
+  - VLESS-45.9.156.24
+  - VLESS-shop.neexbyte.ir
+  - TROJAN-www.speedtest.net
+  - VLESS-206.71.158.125
   - VLESS-38.58.180.136
-  - VLESS-nl1.cnyvpn.com
-  - VLESS-150.40.126.22
-  - VLESS-dey.lnmarketplace.net
-  - VLESS-150.40.126.19
-  - VLESS-rs2.univesalsrv.com
-  - VLESS-150.40.126.21
-  - VLESS-144.31.183.177
-  - VLESS-31.76.106.36
-  - VLESS-v5p.sabermusic.ir
+  - VLESS-89.35.14.33
+  - VLESS-md3.univesalsrv.com
+  - VLESS-89.35.14.31
+  - VLESS-md4.univesalsrv.com
+  - VLESS-2.27.132.119
+  - VLESS-bg4.univesalsrv.com
+  - TROJAN-104.21.64.165
+  - TROJAN-172.67.152.243
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-194.87.59.7
-  - VLESS-85.90.197.120
-  - VLESS-104.143.223.66
-  - VLESS-204.168.195.30
-  - VLESS-45.74.159.233
+  - SS-81.12.32.102-chacha20
+  - VLESS-37.221.110.4
+  - VLESS-37.221.110.3
+  - VLESS-179.254.115.225
+  - VLESS-45.135.128.5
+  - VLESS-93.123.101.235
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -502,30 +502,29 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-31.76.39.163
-  - VLESS-185.154.193.137
-  - VLESS-31.76.119.63
-  - VLESS-84.252.100.49
-  - TROJAN-8.47.69.0
-  - SS-20.234.82.250-chacha20
-  - VLESS-8.34.70.30
-  - VLESS-bg3.univesalsrv.com
-  - VLESS-md1.univesalsrv.com
-  - VLESS-147.78.182.3
-  - VLESS-k2.cloud--vpn.site
-  - VLESS-08e8eb18f73305f9.drwsh.org
-  - TROJAN-172.67.149.60
-  - TROJAN-render.com
+  - VLESS-5.75.195.136
+  - VLESS-38.128.251.24
+  - VLESS-trn4.mobileemdad.top
+  - VLESS-tgfree.rush-server.com
+  - VLESS-pereslavl.gosgenarchive.com
+  - VLESS-uhta.gosgenarchive.com
+  - VLESS-trn7.mobileemdad.top
+  - VLESS-93.94.52.23
+  - VLESS-199.232.78.160
+  - VLESS-de-1.starsping.com
+  - VLESS-45.9.156.24
+  - VLESS-shop.neexbyte.ir
+  - TROJAN-www.speedtest.net
+  - VLESS-206.71.158.125
   - VLESS-38.58.180.136
-  - VLESS-nl1.cnyvpn.com
-  - VLESS-150.40.126.22
-  - VLESS-dey.lnmarketplace.net
-  - VLESS-150.40.126.19
-  - VLESS-rs2.univesalsrv.com
-  - VLESS-150.40.126.21
-  - VLESS-144.31.183.177
-  - VLESS-31.76.106.36
-  - VLESS-v5p.sabermusic.ir
+  - VLESS-89.35.14.33
+  - VLESS-md3.univesalsrv.com
+  - VLESS-89.35.14.31
+  - VLESS-md4.univesalsrv.com
+  - VLESS-2.27.132.119
+  - VLESS-bg4.univesalsrv.com
+  - TROJAN-104.21.64.165
+  - TROJAN-172.67.152.243
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

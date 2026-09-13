@@ -5,173 +5,152 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-194.87.59.7
+- name: VLESS-37.221.110.4
   type: vless
-  server: 194.87.59.7
+  server: 37.221.110.4
   port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
   udp: true
   tls: false
   network: grpc
   grpc-service-name: vless#GetXConfig-1
-- name: VLESS-85.90.197.120
+- name: VLESS-37.221.110.3
   type: vless
-  server: 85.90.197.120
+  server: 37.221.110.3
+  port: 2085
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless#GetXConfig-2
+- name: VLESS-179.254.115.225
+  type: vless
+  server: 179.254.115.225
   port: 443
-  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
+  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    public-key: BjBzyn84HIjjpV94XxyY9pcvYtEhD-aGnOI7mnzgpD4
+    fingerprint: edge
+  sni: de-astra.grani-gaming.shop
+- name: VLESS-45.135.128.5
+  type: vless
+  server: 45.135.128.5
+  port: 443
+  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
+    fingerprint: firefox#GetXConfig-4
+  sni: upload.tbotapi.ru
+- name: VLESS-93.123.101.235
+  type: vless
+  server: 93.123.101.235
+  port: 443
+  uuid: 7e083480-e6f2-44ef-bc3b-c254a7f8bb83
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 660bDah5b-PtCfAbQ3g2tJySO41zsfaXCPb7L3nQCQc
     fingerprint: firefox
-  sni: gr1.hat.onl
-- name: VLESS-104.143.223.66
+  sni: marrow.medic-ml.ru
+- name: VLESS-185.236.8.83
   type: vless
-  server: 104.143.223.66
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-3
-- name: VLESS-204.168.195.30
-  type: vless
-  server: 204.168.195.30
-  port: 51185
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VFDbAJQdqzKl7hL6SmUrhHHEORtILSsJHYWF67an1HU
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-45.74.159.233
-  type: vless
-  server: 45.74.159.233
-  port: 56659
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qLggZ7qospn6X7UEO1zSoohNXK4Y1EX7Hx2sJeWfvw0
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-132.243.162.30
-  type: vless
-  server: 132.243.162.30
-  port: 46280
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 3xEvhIbjIvO9bJSqHEF3D91YZEYaA3fWzb2JpxW0XmQ
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-104.143.223.69
-  type: vless
-  server: 104.143.223.69
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-7
-- name: VLESS-104.143.223.80
-  type: vless
-  server: 104.143.223.80
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-8
-- name: VLESS-104.16.72.251
-  type: vless
-  server: 104.16.72.251
-  port: 2096
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: network
-  sni: decdn.ramlike.ir#GetXConfig-9
-- name: VLESS-188.132.237.20
-  type: vless
-  server: 188.132.237.20
-  port: 2095
-  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-10
-- name: VLESS-78.159.247.246
-  type: vless
-  server: 78.159.247.246
+  server: 185.236.8.83
   port: 443
-  uuid: 1852b02c-1828-40eb-81ff-4de3d097cb35
+  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
   udp: true
   tls: true
-  network: ws
-  ws-path: /ws
-  ws-headers:
-    Host: sb2.hat.onl
-  sni: sb2.hat.onl#GetXConfig-11
-- name: VLESS-89.125.147.199
-  type: vless
-  server: 89.125.147.199
-  port: 443
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
-  udp: true
-  tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: grpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+    public-key: KIWwTEe2oqmJF69P3KkR85kTvv0vhf2biYT5KJ0VCRs
     fingerprint: firefox
-  sni: maps.apple.com
-- name: VLESS-154.211.8.109
+  sni: mesh-nlwey.spliceflowtech.com
+- name: VLESS-144.31.7.182
   type: vless
-  server: 154.211.8.109
+  server: 144.31.7.182
   port: 443
-  uuid: 50414e45-4c5f-5a45-5553-aaa41f0d0cbc
+  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc#GetXConfig-7
+  sni: cdn-582.spliceflowtech.com
+- name: VLESS-2.27.59.147
+  type: vless
+  server: 2.27.59.147
+  port: 2059
+  uuid: 533e12d0-f7d8-4b8e-983a-f5fa586a3519
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: ApiMapsYandex
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: FtdsU_DLWDJ1Fk7NESJAy_S0ezFFL_gaslsFDF23KCw
+    fingerprint: firefox
+  sni: api-maps.yandex.ru
+- name: VLESS-77.233.213.106
+  type: vless
+  server: 77.233.213.106
+  port: 40443
+  uuid: 279a8eef-898f-44ef-b4f5-67a494f4b542
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-9
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: vAG5o6TQvpZAlvDnlyhHEFZBuSgEV_ybQigD_mGKh1M
+    short-id: 5b98
+  sni: deepl.com
+- name: VLESS-199.232.78.170
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: de7ac7a7-1edf-5a0f-95f2-c80d3f1412d2
+  udp: true
+  tls: true
+  network: ws#GetXConfig-10
+  sni: ssl.fastly.com
+- name: VLESS-104.16.2.130
+  type: vless
+  server: 104.16.2.130
+  port: 443
+  uuid: 906f0f3b-985c-4739-85c9-8297c391517c
   udp: true
   tls: true
   network: ws
-  ws-path: /stream/PANEL_ZEUS/aaa41f0d0cbc
+  ws-path: /vl/ELeeLDec9Sxa4xyKm0qnFonDEeNz?ed=2560
   ws-headers:
-    Host: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev
-  sni: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev#GetXConfig-13
-- name: VLESS-103.116.7.246
+    Host: LoAd-bal-76E172.MONITOR-hUb-823B61.wOrkers.dEv
+  sni: lOad-bal-76e172.mOnITOR-hUB-823B61.Workers.deV#GetXConfig-11
+- name: VLESS-104.143.223.217
   type: vless
-  server: 103.116.7.246
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-aaa41f0d0cbc
+  server: 104.143.223.217
+  port: 2085
+  uuid: c9373ff0-c263-4949-885f-366671f3c6a1
   udp: true
-  tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/aaa41f0d0cbc
-  ws-headers:
-    Host: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev
-  sni: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev#GetXConfig-14
-- name: VLESS-114.129.43.26
+  tls: false
+  network: grpc
+  grpc-service-name: vless#GetXConfig-12
+- name: VLESS-18.170.152.153
   type: vless
-  server: 114.129.43.26
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-aaa41f0d0cbc
+  server: 18.170.152.153
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
-  tls: true
-  network: ws
-  ws-path: /stream/PANEL_ZEUS/aaa41f0d0cbc
-  ws-headers:
-    Host: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev
-  sni: z-e-u-s-panel-xxqeq4.hwiwkcmekwk.workers.dev#GetXConfig-15
+  tls: false
+  network: tcp#GetXConfig-13
 - name: VLESS-104.19.45.195
   type: vless
   server: 104.19.45.195
@@ -235,21 +214,19 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-194.87.59.7
-  - VLESS-85.90.197.120
-  - VLESS-104.143.223.66
-  - VLESS-204.168.195.30
-  - VLESS-45.74.159.233
-  - VLESS-132.243.162.30
-  - VLESS-104.143.223.69
-  - VLESS-104.143.223.80
-  - VLESS-104.16.72.251
-  - VLESS-188.132.237.20
-  - VLESS-78.159.247.246
-  - VLESS-89.125.147.199
-  - VLESS-154.211.8.109
-  - VLESS-103.116.7.246
-  - VLESS-114.129.43.26
+  - VLESS-37.221.110.4
+  - VLESS-37.221.110.3
+  - VLESS-179.254.115.225
+  - VLESS-45.135.128.5
+  - VLESS-93.123.101.235
+  - VLESS-185.236.8.83
+  - VLESS-144.31.7.182
+  - VLESS-2.27.59.147
+  - VLESS-77.233.213.106
+  - VLESS-199.232.78.170
+  - VLESS-104.16.2.130
+  - VLESS-104.143.223.217
+  - VLESS-18.170.152.153
   - VLESS-104.19.45.195
   - VLESS-2.56.121.43
   - VLESS-134.122.154.210
@@ -258,21 +235,19 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-194.87.59.7
-  - VLESS-85.90.197.120
-  - VLESS-104.143.223.66
-  - VLESS-204.168.195.30
-  - VLESS-45.74.159.233
-  - VLESS-132.243.162.30
-  - VLESS-104.143.223.69
-  - VLESS-104.143.223.80
-  - VLESS-104.16.72.251
-  - VLESS-188.132.237.20
-  - VLESS-78.159.247.246
-  - VLESS-89.125.147.199
-  - VLESS-154.211.8.109
-  - VLESS-103.116.7.246
-  - VLESS-114.129.43.26
+  - VLESS-37.221.110.4
+  - VLESS-37.221.110.3
+  - VLESS-179.254.115.225
+  - VLESS-45.135.128.5
+  - VLESS-93.123.101.235
+  - VLESS-185.236.8.83
+  - VLESS-144.31.7.182
+  - VLESS-2.27.59.147
+  - VLESS-77.233.213.106
+  - VLESS-199.232.78.170
+  - VLESS-104.16.2.130
+  - VLESS-104.143.223.217
+  - VLESS-18.170.152.153
   - VLESS-104.19.45.195
   - VLESS-2.56.121.43
   - VLESS-134.122.154.210

@@ -173,6 +173,14 @@ proxies:
   ws-headers:
     Host: whitecreeper.pages.dev
   sni: whitecreeper.pages.dev
+- name: VLESS-13.39.30.143
+  type: vless
+  server: 13.39.30.143
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#meliproxyy-21
 - name: VLESS-185.32.6.62
   type: vless
   server: 185.32.6.62
@@ -186,36 +194,33 @@ proxies:
     public-key: xy8AHr_xZCNqFOuLq_t2fe4oLlrv5iu38uCQ1hUJ40w
     fingerprint: firefox
   sni: dropbox.com
-- name: VLESS-104.16.100.215
+- name: VLESS-safeweb.asan-ps.ir
   type: vless
-  server: 104.16.100.215
-  port: 8880
-  uuid: c6d29888-78d5-446a-b2f0-f3968e6d1634
+  server: safeweb.asan-ps.ir
+  port: 443
+  uuid: 73666228-9939-435d-a83b-a907dcc9b56f
   udp: true
-  tls: false
-  network: ws#meliproxyy-22
-- name: VLESS-104.21.55.229
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: IfL3wVjFBRcxqc1YEggYjyNfr-d97zwUZ5-mutUXT0w
+    fingerprint: firefox
+  sni: www.speedtest.net
+- name: VLESS-45.9.156.42
   type: vless
-  server: 104.21.55.229
-  port: 8880
-  uuid: f769b7ea-9cd1-4d61-b578-7644b7c8eb3d
-  udp: true
-  tls: false
-  network: ws#meliproxyy-23
-- name: VLESS-147.78.182.3
-  type: vless
-  server: 147.78.182.3
-  port: 8443
-  uuid: 8bf3e040-8ac9-5d0e-304f-9b735e145de8
+  server: 45.9.156.42
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: TunService
+  grpc-service-name: gw.v2.RelayService
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
-    fingerprint: chrome
-  sni: www.epson.com#meliproxyy-24
+    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
+    fingerprint: firefox
+  sni: bg5.univesalsrv.com
 proxy-groups:
 - name: PROXY
   type: select
@@ -235,10 +240,10 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
+  - VLESS-13.39.30.143
   - VLESS-185.32.6.62
-  - VLESS-104.16.100.215
-  - VLESS-104.21.55.229
-  - VLESS-147.78.182.3
+  - VLESS-safeweb.asan-ps.ir
+  - VLESS-45.9.156.42
 - name: Auto
   type: url-test
   proxies:
@@ -257,10 +262,10 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
+  - VLESS-13.39.30.143
   - VLESS-185.32.6.62
-  - VLESS-104.16.100.215
-  - VLESS-104.21.55.229
-  - VLESS-147.78.182.3
+  - VLESS-safeweb.asan-ps.ir
+  - VLESS-45.9.156.42
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

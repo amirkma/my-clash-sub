@@ -393,9 +393,9 @@ proxies:
   ws-path: /arki?ed=2048
 - name: '@meliproxyy-36'
   type: vmess
-  server: 65.109.189.128
-  port: 2086
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  server: 165.140.217.2
+  port: 443
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
   alterId: 0
   cipher: auto
   udp: true
@@ -403,9 +403,9 @@ proxies:
   network: tcp
 - name: '@meliproxyy-37'
   type: vmess
-  server: 165.140.217.2
-  port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  server: 65.109.189.128
+  port: 2086
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
   alterId: 0
   cipher: auto
   udp: true
@@ -448,6 +448,26 @@ proxies:
   tls: false
   network: ws
   ws-path: /vmess/
+- name: '@meliproxyy-41'
+  type: vmess
+  server: 46.8.100.213
+  port: 8080
+  uuid: cfd341d9-47d5-4dab-bb60-b588e643c778
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: xhttp
+- name: '@meliproxyy-42'
+  type: vmess
+  server: 46.8.100.213
+  port: 443
+  uuid: cfd341d9-47d5-4dab-bb60-b588e643c778
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
 proxy-groups:
 - name: PROXY
   type: select
@@ -492,6 +512,8 @@ proxy-groups:
   - '@meliproxyy-38'
   - '@meliproxyy-39'
   - '@meliproxyy-40'
+  - '@meliproxyy-41'
+  - '@meliproxyy-42'
 - name: Auto
   type: url-test
   proxies:
@@ -535,6 +557,8 @@ proxy-groups:
   - '@meliproxyy-38'
   - '@meliproxyy-39'
   - '@meliproxyy-40'
+  - '@meliproxyy-41'
+  - '@meliproxyy-42'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

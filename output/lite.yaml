@@ -173,75 +173,61 @@ proxies:
   ws-headers:
     Host: whitecreeper.pages.dev
   sni: whitecreeper.pages.dev
-- name: VLESS-5.75.195.136
+- name: VLESS-185.32.6.62
   type: vless
-  server: 5.75.195.136
-  port: 56539
-  uuid: 61bf1e79-a2fc-44ee-a576-e4b9ef0d3b16
-  udp: true
-  tls: false
-  network: tcp#meliproxyy-21
-- name: VLESS-38.128.251.24
-  type: vless
-  server: 38.128.251.24
-  port: 56539
-  uuid: 61bf1e79-a2fc-44ee-a576-e4b9ef0d3b16
-  udp: true
-  tls: false
-  network: tcp#meliproxyy-22
-- name: VLESS-trn4.mobileemdad.top
-  type: vless
-  server: trn4.mobileemdad.top
+  server: 185.32.6.62
   port: 443
-  uuid: bff5e463-1fe4-439c-8003-7594520ae43a
+  uuid: 0ce122a3-1c91-4cf5-a2cc-67f25e8cb56f
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    short-id: f88610dd
-    fingerprint: edge
-  sni: delivery.mp.microsoft.com
-- name: VLESS-tgfree.rush-server.com
+    public-key: xy8AHr_xZCNqFOuLq_t2fe4oLlrv5iu38uCQ1hUJ40w
+    fingerprint: firefox
+  sni: dropbox.com
+- name: VLESS-104.16.100.215
   type: vless
-  server: tgfree.rush-server.com
-  port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  server: 104.16.100.215
+  port: 8880
+  uuid: c6d29888-78d5-446a-b2f0-f3968e6d1634
+  udp: true
+  tls: false
+  network: ws#meliproxyy-22
+- name: VLESS-104.21.55.229
+  type: vless
+  server: 104.21.55.229
+  port: 8880
+  uuid: f769b7ea-9cd1-4d61-b578-7644b7c8eb3d
+  udp: true
+  tls: false
+  network: ws#meliproxyy-23
+- name: VLESS-147.78.182.3
+  type: vless
+  server: 147.78.182.3
+  port: 8443
+  uuid: 8bf3e040-8ac9-5d0e-304f-9b735e145de8
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: TunService
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
     fingerprint: chrome
-  sni: anyfile2file.com
-- name: VLESS-pereslavl.gosgenarchive.com
+  sni: www.epson.com#meliproxyy-24
+- name: VLESS-104.21.90.70
   type: vless
-  server: pereslavl.gosgenarchive.com
-  port: 443
-  uuid: 7c1edf38-3a67-4fba-be28-c31907d41ba8
+  server: 104.21.90.70
+  port: 80
+  uuid: 4e31a5a5-7adc-4c92-98c6-5e4d5042a583
   udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc
-    fingerprint: firefox
-  sni: pereslavl.gosgenarchive.com#meliproxyy-25
-- name: VLESS-uhta.gosgenarchive.com
-  type: vless
-  server: uhta.gosgenarchive.com
-  port: 443
-  uuid: 7c1edf38-3a67-4fba-be28-c31907d41ba8
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc
-    fingerprint: firefox
-  sni: uhta.gosgenarchive.com#meliproxyy-26
+  tls: false
+  network: ws
+  ws-path: /api/ws#meliproxyy-30
+  ws-headers:
+    Host: webapp-trexbridge-pi2hg.app-a8y84x.workers.dev
+  sni: webapp-trexbridge-pi2hg.app-a8y84x.workers.dev
 - name: VLESS-trn7.mobileemdad.top
   type: vless
   server: trn7.mobileemdad.top
@@ -461,12 +447,11 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-5.75.195.136
-  - VLESS-38.128.251.24
-  - VLESS-trn4.mobileemdad.top
-  - VLESS-tgfree.rush-server.com
-  - VLESS-pereslavl.gosgenarchive.com
-  - VLESS-uhta.gosgenarchive.com
+  - VLESS-185.32.6.62
+  - VLESS-104.16.100.215
+  - VLESS-104.21.55.229
+  - VLESS-147.78.182.3
+  - VLESS-104.21.90.70
   - VLESS-trn7.mobileemdad.top
   - VLESS-93.94.52.23
   - VLESS-199.232.78.160
@@ -502,12 +487,11 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-5.75.195.136
-  - VLESS-38.128.251.24
-  - VLESS-trn4.mobileemdad.top
-  - VLESS-tgfree.rush-server.com
-  - VLESS-pereslavl.gosgenarchive.com
-  - VLESS-uhta.gosgenarchive.com
+  - VLESS-185.32.6.62
+  - VLESS-104.16.100.215
+  - VLESS-104.21.55.229
+  - VLESS-147.78.182.3
+  - VLESS-104.21.90.70
   - VLESS-trn7.mobileemdad.top
   - VLESS-93.94.52.23
   - VLESS-199.232.78.160

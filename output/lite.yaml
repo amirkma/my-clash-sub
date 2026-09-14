@@ -5,70 +5,61 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-81.12.32.102-chacha20
-  type: ss
-  server: 81.12.32.102
-  port: 4431
-  cipher: chacha20-ietf-poly1305
-  password: HBOiTdsDp38imSsBPf0i2GQVDNMCkUi3
-  udp: true
-- name: VLESS-37.221.110.4
+- name: VLESS-a2.arshia-nova.ir
   type: vless
-  server: 37.221.110.4
-  port: 2085
-  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-2
-- name: VLESS-37.221.110.3
-  type: vless
-  server: 37.221.110.3
-  port: 2085
-  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-4
-- name: VLESS-179.254.115.225
-  type: vless
-  server: 179.254.115.225
+  server: a2.arshia-nova.ir
   port: 443
-  uuid: becd3b04-62a8-4b74-be67-be746008b4c2
+  uuid: 0d4fd99b-06ae-4ee2-fee2-fda93a9434f1
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: BjBzyn84HIjjpV94XxyY9pcvYtEhD-aGnOI7mnzgpD4
-    fingerprint: edge
-  sni: de-astra.grani-gaming.shop
-- name: VLESS-45.135.128.5
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: c12.com
+  sni: ssl.fastly.com#GetXConfig-1
+- name: VLESS-152.53.210.68
   type: vless
-  server: 45.135.128.5
-  port: 443
-  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
-    fingerprint: firefox#GetXConfig-8
-  sni: upload.tbotapi.ru
-- name: VLESS-93.123.101.235
-  type: vless
-  server: 93.123.101.235
-  port: 443
-  uuid: 7e083480-e6f2-44ef-bc3b-c254a7f8bb83
+  server: 152.53.210.68
+  port: 8443
+  uuid: 5934cc4f-c17b-41c0-9280-c75eb222f4b7
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 660bDah5b-PtCfAbQ3g2tJySO41zsfaXCPb7L3nQCQc
+    public-key: O_13gTb5W88d_u8W22JYm15-Ns6eAFg7wSAWpPVFgHQ
     fingerprint: firefox
-  sni: marrow.medic-ml.ru
+  sni: magoo.cykotix.com
+- name: VLESS-2.26.93.130
+  type: vless
+  server: 2.26.93.130
+  port: 443
+  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0q-auqEPBR3lETnoHLdm7OVbM0DWZQq74z_JV7WznUk
+    fingerprint: firefox
+  sni: se1.hat.onl
+- name: VLESS-104.18.140.67
+  type: vless
+  server: 104.18.140.67
+  port: 2083
+  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
+  udp: true
+  tls: true
+  network: xhttp
+  sni: cuhwuycneynsieuocxniseunciusecmsepiock.novexgroup.ir#GetXConfig-7
+- name: VLESS-35.180.221.118
+  type: vless
+  server: 35.180.221.118
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-9
 - name: 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   type: vmess
   server: 62.238.46.61
@@ -173,194 +164,198 @@ proxies:
   ws-headers:
     Host: whitecreeper.pages.dev
   sni: whitecreeper.pages.dev
-- name: VLESS-13.39.30.143
+- name: VLESS-195.133.73.65
   type: vless
-  server: 13.39.30.143
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#meliproxyy-21
-- name: VLESS-185.32.6.62
-  type: vless
-  server: 185.32.6.62
+  server: 195.133.73.65
   port: 443
-  uuid: 0ce122a3-1c91-4cf5-a2cc-67f25e8cb56f
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: xy8AHr_xZCNqFOuLq_t2fe4oLlrv5iu38uCQ1hUJ40w
-    fingerprint: firefox
-  sni: dropbox.com
-- name: VLESS-safeweb.asan-ps.ir
-  type: vless
-  server: safeweb.asan-ps.ir
-  port: 443
-  uuid: 73666228-9939-435d-a83b-a907dcc9b56f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: IfL3wVjFBRcxqc1YEggYjyNfr-d97zwUZ5-mutUXT0w
-    fingerprint: firefox
-  sni: www.speedtest.net
-- name: VLESS-45.9.156.42
-  type: vless
-  server: 45.9.156.42
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: gw.v2.RelayService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
-    fingerprint: firefox
-  sni: bg5.univesalsrv.com
-- name: VLESS-91.107.255.230
-  type: vless
-  server: 91.107.255.230
-  port: 443
-  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zuuVQT1tADcJ5FNMOXHYKlRDMfRO5VpvO3m_F88MQw4
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-158.94.216.50
-  type: vless
-  server: 158.94.216.50
-  port: 32306
-  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-65.109.178.164
-  type: vless
-  server: 65.109.178.164
-  port: 443
-  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: l8PcaI8FgBc7p2r-Smg5KA_5s-lOZCd2H2MZY7aBXSs
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-213.156.152.54
-  type: vless
-  server: 213.156.152.54
-  port: 8443
-  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 72SJFDXHCtB2fWWRrjMj23J8iJ8T_2jvj-iNThmLREs
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-tr.iramssmoth.ir
-  type: vless
-  server: tr.iramssmoth.ir
-  port: 8443
-  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 72SJFDXHCtB2fWWRrjMj23J8iJ8T_2jvj-iNThmLREs
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-45.9.156.28
-  type: vless
-  server: 45.9.156.28
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: cloud.v1.RelayService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k-vH6pkyAv26L1_dXKOFhp0Kesur9-FCUDoj-IIpVhc
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
     fingerprint: chrome
-  sni: bg4.univesalsrv.com
-- name: VLESS-151.101.56.11
+  sni: anyfile2file.com
+- name: VLESS-de-1.starsping.com
   type: vless
-  server: 151.101.56.11
+  server: de-1.starsping.com
   port: 443
-  uuid: '%5BV2XNET%5D'
+  uuid: 1577b744-8004-4eef-862c-8cae0cd27ab9
   udp: true
   tls: true
   network: xhttp
-  sni: ssl.fastly.com
-- name: VLESS-151.101.56.6
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ZBv1jOEHziWtQQoThg63_1gm4zIPyk_cfVmNJ1SOZSk
+    fingerprint: edge
+  sni: play.google.com
+- name: VLESS-51.38.70.192
   type: vless
-  server: 151.101.56.6
+  server: 51.38.70.192
   port: 443
-  uuid: 88b44962-7f99-4846-9113-6b0624b5a6a4
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#proxy_kafee-34
-  ws-headers:
-    Host: c12.com
-  sni: ssl.fastly.com
-- name: VLESS-38.107.233.95
-  type: vless
-  server: 38.107.233.95
-  port: 9090
-  uuid: Channel%3Atelegram%3ATurboConfigs
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-188.225.27.78
-  type: vless
-  server: 188.225.27.78
-  port: 443
-  uuid: 3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1
+  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Rf2jgZShaYRQ2kh9nF79eB2KFcIdiYHwPWJyFKA_CWU
-    fingerprint: firefox
-  sni: max.ru
-- name: TROJAN-188.114.96.2
-  type: trojan
-  server: 188.114.96.2
+    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+    fingerprint: random
+  sni: play.google.com
+- name: VLESS-dey.lnmarketplace.net
+  type: vless
+  server: dey.lnmarketplace.net
   port: 443
-  password: hhxmk%2BoOw2kX8woq
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
   udp: true
   tls: true
-  sni: r7YhmG1zXNT120WMkaG.Mf1h0MyPtv4louGs7341BmTtCz8.WoRkErs.DEV
+  network: xhttp
+  sni: dey.lnmarketplace.net#meliproxyy-25
+- name: VLESS-199.232.78.159
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: 5ff561f7-e1f1-4280-84bf-ac640b4d10d1
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
+  ws-headers:
+    Host: fancii.global.ssl.fastly.net
+  sni: ssl.fastly.com#meliproxyy-26
+- name: VLESS-158.69.112.254
+  type: vless
+  server: 158.69.112.254
+  port: 443
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
+  udp: true
+  tls: true
+  network: tcp#meliproxyy-27
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    fingerprint: chrome
+  sni: www.speedtest.net
+- name: VLESS-xray1-direct-mci1-fs-ce.freesocks.work
+  type: vless
+  server: xray1-direct-mci1-fs-ce.freesocks.work
+  port: 443
+  uuid: 45bbee73-a96e-4275-adea-6c298cd4412a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
+    fingerprint: chrome
+  sni: dl.google.com#meliproxyy-28
+- name: VLESS-tgfree.rush-server.com
+  type: vless
+  server: tgfree.rush-server.com
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    fingerprint: chrome
+  sni: anyfile2file.com
+- name: VLESS-185.126.238.87
+  type: vless
+  server: 185.126.238.87
+  port: 2083
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: security.debian.org
+- name: VLESS-89.35.14.30
+  type: vless
+  server: 89.35.14.30
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: hub.v1.RelayService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY
+    fingerprint: firefox
+  sni: md1.univesalsrv.com
+- name: VLESS-188.132.237.20
+  type: vless
+  server: 188.132.237.20
+  port: 2095
+  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-155.46.213.144
+  type: vless
+  server: 155.46.213.144
+  port: 443
+  uuid: https%3A%2F%2Ft.me%2Fdaredevill_404
+  udp: true
+  tls: true
+  network: xhttp
+  sni: daredevil.manufacturingcity.ir
+- name: VLESS-77.233.213.106
+  type: vless
+  server: 77.233.213.106
+  port: 40443
+  uuid: 279a8eef-898f-44ef-b4f5-67a494f4b542
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: vAG5o6TQvpZAlvDnlyhHEFZBuSgEV_ybQigD_mGKh1M
+    short-id: 5b98
+  sni: deepl.com
+- name: VLESS-upload.tbotapi.ru
+  type: vless
+  server: upload.tbotapi.ru
+  port: 443
+  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: nDUrcIPWyCo7gAOVPfjAneLz17NdCrUMCIvdJsTRsD4
+    fingerprint: firefox
+  sni: upload.tbotapi.ru
+- name: TROJAN-188.114.97.7
+  type: trojan
+  server: 188.114.97.7
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: true
+- name: TROJAN-130.250.137.171
+  type: trojan
+  server: 130.250.137.171
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-81.12.32.102-chacha20
-  - VLESS-37.221.110.4
-  - VLESS-37.221.110.3
-  - VLESS-179.254.115.225
-  - VLESS-45.135.128.5
-  - VLESS-93.123.101.235
+  - VLESS-a2.arshia-nova.ir
+  - VLESS-152.53.210.68
+  - VLESS-2.26.93.130
+  - VLESS-104.18.140.67
+  - VLESS-35.180.221.118
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -370,30 +365,30 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-13.39.30.143
-  - VLESS-185.32.6.62
-  - VLESS-safeweb.asan-ps.ir
-  - VLESS-45.9.156.42
-  - VLESS-91.107.255.230
-  - VLESS-158.94.216.50
-  - VLESS-65.109.178.164
-  - VLESS-213.156.152.54
-  - VLESS-tr.iramssmoth.ir
-  - VLESS-45.9.156.28
-  - VLESS-151.101.56.11
-  - VLESS-151.101.56.6
-  - VLESS-38.107.233.95
-  - VLESS-188.225.27.78
-  - TROJAN-188.114.96.2
+  - VLESS-195.133.73.65
+  - VLESS-de-1.starsping.com
+  - VLESS-51.38.70.192
+  - VLESS-dey.lnmarketplace.net
+  - VLESS-199.232.78.159
+  - VLESS-158.69.112.254
+  - VLESS-xray1-direct-mci1-fs-ce.freesocks.work
+  - VLESS-tgfree.rush-server.com
+  - VLESS-185.126.238.87
+  - VLESS-89.35.14.30
+  - VLESS-188.132.237.20
+  - VLESS-155.46.213.144
+  - VLESS-77.233.213.106
+  - VLESS-upload.tbotapi.ru
+  - TROJAN-188.114.97.7
+  - TROJAN-130.250.137.171
 - name: Auto
   type: url-test
   proxies:
-  - SS-81.12.32.102-chacha20
-  - VLESS-37.221.110.4
-  - VLESS-37.221.110.3
-  - VLESS-179.254.115.225
-  - VLESS-45.135.128.5
-  - VLESS-93.123.101.235
+  - VLESS-a2.arshia-nova.ir
+  - VLESS-152.53.210.68
+  - VLESS-2.26.93.130
+  - VLESS-104.18.140.67
+  - VLESS-35.180.221.118
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -403,21 +398,22 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-13.39.30.143
-  - VLESS-185.32.6.62
-  - VLESS-safeweb.asan-ps.ir
-  - VLESS-45.9.156.42
-  - VLESS-91.107.255.230
-  - VLESS-158.94.216.50
-  - VLESS-65.109.178.164
-  - VLESS-213.156.152.54
-  - VLESS-tr.iramssmoth.ir
-  - VLESS-45.9.156.28
-  - VLESS-151.101.56.11
-  - VLESS-151.101.56.6
-  - VLESS-38.107.233.95
-  - VLESS-188.225.27.78
-  - TROJAN-188.114.96.2
+  - VLESS-195.133.73.65
+  - VLESS-de-1.starsping.com
+  - VLESS-51.38.70.192
+  - VLESS-dey.lnmarketplace.net
+  - VLESS-199.232.78.159
+  - VLESS-158.69.112.254
+  - VLESS-xray1-direct-mci1-fs-ce.freesocks.work
+  - VLESS-tgfree.rush-server.com
+  - VLESS-185.126.238.87
+  - VLESS-89.35.14.30
+  - VLESS-188.132.237.20
+  - VLESS-155.46.213.144
+  - VLESS-77.233.213.106
+  - VLESS-upload.tbotapi.ru
+  - TROJAN-188.114.97.7
+  - TROJAN-130.250.137.171
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

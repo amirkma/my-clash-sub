@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-95.38.235.212
-  type: trojan
-  server: 95.38.235.212
-  port: 443
-  password: r24wt8wimy0mvhnm
-  udp: true
-  tls: true
-  skip-cert-verify: true
 - name: TROJAN-104.18.153.182
   type: trojan
   server: 104.18.153.182
@@ -38,7 +30,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-4
+  sni: www.calmlunch.com#Farah_VPN-3
   skip-cert-verify: false
 - name: TROJAN-104.21.70.21
   type: trojan
@@ -65,7 +57,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-8
+  sni: www.calmlunch.com#Farah_VPN-7
   skip-cert-verify: false
 - name: TROJAN-104.16.72.41
   type: trojan
@@ -74,7 +66,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-10
+  sni: www.calmlunch.com#Farah_VPN-9
   skip-cert-verify: false
 - name: TROJAN-www.calmlunch.com
   type: trojan
@@ -101,7 +93,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-13
+  sni: www.calmlunch.com#Farah_VPN-12
   skip-cert-verify: false
 - name: TROJAN-199.232.78.101
   type: trojan
@@ -110,7 +102,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-14
+  sni: ssl.fastly.com#meliproxyy-13
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -119,7 +111,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-15
+  sni: www.ignitelimit.com#meliproxyy-14
   skip-cert-verify: false
 - name: TROJAN-167.82.76.7
   type: trojan
@@ -128,7 +120,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-17
+  sni: ssl.fastly.com#meliproxyy-16
   skip-cert-verify: false
 - name: TROJAN-188.42.145.180
   type: trojan
@@ -137,7 +129,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#meliproxyy-18
+  sni: www.volumeroot.com#meliproxyy-17
   skip-cert-verify: false
 - name: TROJAN-151.101.56.101
   type: trojan
@@ -146,7 +138,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-19
+  sni: ssl.fastly.com#meliproxyy-18
   skip-cert-verify: false
 - name: TROJAN-130.185.123.21
   type: trojan
@@ -163,7 +155,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-23
+  sni: ssl.fastly.com#meliproxyy-22
   skip-cert-verify: false
 - name: TROJAN-8.47.69.0
   type: trojan
@@ -172,7 +164,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org#meliproxyy-29
+  sni: www.pleadcourt.org#meliproxyy-28
   skip-cert-verify: false
 - name: TROJAN-151.101.56.7
   type: trojan
@@ -181,7 +173,34 @@ proxies:
   password: MITIVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-32
+  sni: ssl.fastly.com#meliproxyy-31
+  skip-cert-verify: false
+- name: TROJAN-130.250.137.171
+  type: trojan
+  server: 130.250.137.171
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com#meliproxyy-33
+  skip-cert-verify: false
+- name: TROJAN-172.67.149.60
+  type: trojan
+  server: 172.67.149.60
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com#meliproxyy-34
+  skip-cert-verify: false
+- name: TROJAN-45.205.0.6
+  type: trojan
+  server: 45.205.0.6
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#meliproxyy-35
   skip-cert-verify: false
 - name: TROJAN-5.75.171.12
   type: trojan
@@ -205,7 +224,6 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-95.38.235.212
   - TROJAN-104.18.153.182
   - TROJAN-104.21.24.95
   - TROJAN-185.220.100.168
@@ -225,12 +243,14 @@ proxy-groups:
   - TROJAN-199.232.78.160
   - TROJAN-8.47.69.0
   - TROJAN-151.101.56.7
+  - TROJAN-130.250.137.171
+  - TROJAN-172.67.149.60
+  - TROJAN-45.205.0.6
   - TROJAN-5.75.171.12
   - TROJAN-172.67.167.173
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-95.38.235.212
   - TROJAN-104.18.153.182
   - TROJAN-104.21.24.95
   - TROJAN-185.220.100.168
@@ -250,6 +270,9 @@ proxy-groups:
   - TROJAN-199.232.78.160
   - TROJAN-8.47.69.0
   - TROJAN-151.101.56.7
+  - TROJAN-130.250.137.171
+  - TROJAN-172.67.149.60
+  - TROJAN-45.205.0.6
   - TROJAN-5.75.171.12
   - TROJAN-172.67.167.173
   url: http://www.gstatic.com/generate_204

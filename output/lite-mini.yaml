@@ -5,63 +5,57 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 'نامشخص 🏳️ | @GetXConfig | #6097-1'
+- name: VLESS-SNAPPFOOD.IR
+  type: vless
+  server: SNAPPFOOD.IR
+  port: 2096
+  uuid: c4615820-777b-46c1-bb61-2b0652fa0c55
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  sni: re4485a2ld.pasarguardpro.ir#GetXConfig-1
+- name: 'ترکیه 🇹🇷 | @GetXConfig | #6131-3'
   type: vmess
-  server: dashboard.afragame.top
-  port: 5387
-  uuid: b2bc2ff5-e36e-453b-84e9-d93a33203ac3
+  server: 144.225.65.173
+  port: 29199
+  uuid: de2afab2-344b-413f-93a9-5e62c8e219d5
   alterId: 0
   cipher: auto
   udp: true
   tls: false
-  network: tcp
-- name: VLESS-nl-3.it-crp.ru
+  network: grpc
+- name: VLESS-log.appbarekat1.abrdns.com
   type: vless
-  server: nl-3.it-crp.ru
-  port: 443
-  uuid: 0480039e-2e85-49e4-9087-ba85e738851a
+  server: log.appbarekat1.abrdns.com
+  port: 39446
+  uuid: ddb105e6-765f-47c1-972b-e57d05d31081
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
-    fingerprint: firefox
-  sni: nl-3.it-crp.ru
-- name: VLESS-179.255.186.170
-  type: vless
-  server: 179.255.186.170
-  port: 8443
-  uuid: a8e1d97e-3c64-452a-abae-21d9f0529d5b
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-5
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: KBtor6ap1Ml0bjcI_8UgdHhZYVYNOLuuYsuXsQUNGj0
-    fingerprint: firefox
-  sni: gstatic.com
-- name: VLESS-pl.bubahero.com
-  type: vless
-  server: pl.bubahero.com
-  port: 443
-  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00
+    public-key: vjnKxDfKfcMkdsWL0ElCytEZ5u3PePsnma6D_i7TckM
     fingerprint: chrome
-  sni: pl.bubahero.com
-- name: VLESS-77.110.101.97
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-199.232.77.215
   type: vless
-  server: 77.110.101.97
-  port: 56834
-  uuid: daf65e17-1ed5-42be-a34d-20a156ddedbc
+  server: 199.232.77.215
+  port: 443
+  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
   udp: true
-  tls: false
-  network: tcp#GetXConfig-9
+  tls: true
+  network: xhttp
+  sni: global.fastly.com
+- name: VLESS-199.232.245.94
+  type: vless
+  server: 199.232.245.94
+  port: 443
+  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
+  udp: true
+  tls: true
+  network: xhttp
+  sni: global.fastly.com
 - name: 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   type: vmess
   server: 62.238.46.61
@@ -166,75 +160,87 @@ proxies:
   ws-headers:
     Host: whitecreeper.pages.dev
   sni: whitecreeper.pages.dev
-- name: VLESS-104.143.223.66
+- name: VLESS-a2.arshia-nova.ir
   type: vless
-  server: 104.143.223.66
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#meliproxyy-21
-- name: VLESS-lp.mtcmicserver.ir
-  type: vless
-  server: lp.mtcmicserver.ir
-  port: 8080
-  uuid: fa87edcc-4751-4d28-b53b-3abf7bee7ece
-  udp: true
-  tls: true
-  network: grpc
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: wegUSBXt8tLaCp7Ze22cuKJa-MQ0KRSe7BX1dDgLRQg
-    fingerprint: edge
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-104.143.223.69
-  type: vless
-  server: 104.143.223.69
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#meliproxyy-23
-- name: VLESS-194.87.59.7
-  type: vless
-  server: 194.87.59.7
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#meliproxyy-24
-- name: VLESS-188.132.237.20
-  type: vless
-  server: 188.132.237.20
-  port: 2095
-  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
-  udp: true
-  tls: false
-  network: tcp#meliproxyy-25
-- name: VLESS-78.159.247.246
-  type: vless
-  server: 78.159.247.246
+  server: a2.arshia-nova.ir
   port: 443
-  uuid: 1852b02c-1828-40eb-81ff-4de3d097cb35
+  uuid: 0d4fd99b-06ae-4ee2-fee2-fda93a9434f1
   udp: true
   tls: true
   network: ws
-  ws-path: /ws
+  ws-path: /#meliproxyy-21
   ws-headers:
-    Host: sb2.hat.onl
-  sni: sb2.hat.onl#meliproxyy-26
+    Host: c12.com
+  sni: ssl.fastly.com
+- name: VLESS-37.221.110.249
+  type: vless
+  server: 37.221.110.249
+  port: 2085
+  uuid: 2f3f58c9-7a49-4783-9722-7fcae7e3a203
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless#meliproxyy-22
+- name: VLESS-app-ss-97.deep-aispb-analytics.com
+  type: vless
+  server: app-ss-97.deep-aispb-analytics.com
+  port: 443
+  uuid: a71ad164-3b29-4dbe-aa66-24d095ca7b6d
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ie82DDS-JoUrtvRfEWWOdcp2cEqs6v0-t2QFw3v7qiE
+    fingerprint: randomized
+  sni: assets-ss-97.deep-aispb-analytics.com
+- name: VLESS-170.168.99.8
+  type: vless
+  server: 170.168.99.8
+  port: 443
+  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -GbQJg3bnEGEVFjVaRRu01cgF1f0K_maI4d5MWtMb28
+    fingerprint: chrome
+  sni: www.epson.com
+- name: VLESS-netraidly.ru
+  type: vless
+  server: netraidly.ru
+  port: 40443
+  uuid: 4480161e-2c59-4d37-8736-675c9af32bf1
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y
+  sni: deepl.com
+- name: VLESS-130.49.77.4
+  type: vless
+  server: 130.49.77.4
+  port: 443
+  uuid: 0ab925b6-35f7-6e27-e713-925bea65455e
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Sq7mtLmaanwsTVNBR9gU7ECU87ftrb_wFGRLLNRBlmQ
+    fingerprint: chrome
+  sni: www.philips.com#proxy_kafee-31
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - 'نامشخص 🏳️ | @GetXConfig | #6097-1'
-  - VLESS-nl-3.it-crp.ru
-  - VLESS-179.255.186.170
-  - VLESS-pl.bubahero.com
-  - VLESS-77.110.101.97
+  - VLESS-SNAPPFOOD.IR
+  - 'ترکیه 🇹🇷 | @GetXConfig | #6131-3'
+  - VLESS-log.appbarekat1.abrdns.com
+  - VLESS-199.232.77.215
+  - VLESS-199.232.245.94
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -244,20 +250,20 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-104.143.223.66
-  - VLESS-lp.mtcmicserver.ir
-  - VLESS-104.143.223.69
-  - VLESS-194.87.59.7
-  - VLESS-188.132.237.20
-  - VLESS-78.159.247.246
+  - VLESS-a2.arshia-nova.ir
+  - VLESS-37.221.110.249
+  - VLESS-app-ss-97.deep-aispb-analytics.com
+  - VLESS-170.168.99.8
+  - VLESS-netraidly.ru
+  - VLESS-130.49.77.4
 - name: Auto
   type: url-test
   proxies:
-  - 'نامشخص 🏳️ | @GetXConfig | #6097-1'
-  - VLESS-nl-3.it-crp.ru
-  - VLESS-179.255.186.170
-  - VLESS-pl.bubahero.com
-  - VLESS-77.110.101.97
+  - VLESS-SNAPPFOOD.IR
+  - 'ترکیه 🇹🇷 | @GetXConfig | #6131-3'
+  - VLESS-log.appbarekat1.abrdns.com
+  - VLESS-199.232.77.215
+  - VLESS-199.232.245.94
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -267,12 +273,12 @@ proxy-groups:
   - VLESS-104.18.39.218
   - VLESS-138.16.141.59
   - VLESS-172.67.65.56
-  - VLESS-104.143.223.66
-  - VLESS-lp.mtcmicserver.ir
-  - VLESS-104.143.223.69
-  - VLESS-194.87.59.7
-  - VLESS-188.132.237.20
-  - VLESS-78.159.247.246
+  - VLESS-a2.arshia-nova.ir
+  - VLESS-37.221.110.249
+  - VLESS-app-ss-97.deep-aispb-analytics.com
+  - VLESS-170.168.99.8
+  - VLESS-netraidly.ru
+  - VLESS-130.49.77.4
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

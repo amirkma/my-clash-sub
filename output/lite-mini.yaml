@@ -5,39 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-herd.zavqeron.ir
-  type: vless
-  server: herd.zavqeron.ir
-  port: 2053
-  uuid: 1b4b3567-559f-4d78-a5c4-c00d1f61d62f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /de2-cdn
-  ws-headers:
-    Host: herd.zavqeron.ir
-  sni: zavqeron.ir#GetXConfig-1
-- name: VLESS-key.zavqeron.ir
-  type: vless
-  server: key.zavqeron.ir
-  port: 2053
-  uuid: 1b4b3567-559f-4d78-a5c4-c00d1f61d62f
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /tr1-cdn
-  ws-headers:
-    Host: key.zavqeron.ir
-  sni: zavqeron.ir#GetXConfig-3
-- name: TROJAN-199.232.78.101
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: MITIVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#GetXConfig-6
-  skip-cert-verify: false
 - name: TROJAN-167.82.76.7
   type: trojan
   server: 167.82.76.7
@@ -45,7 +12,7 @@ proxies:
   password: MITIVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#GetXConfig-7
+  sni: ssl.fastly.com#GetXConfig-1
   skip-cert-verify: false
 - name: VLESS-91.107.144.211
   type: vless
@@ -54,7 +21,7 @@ proxies:
   uuid: 85d8f8d3-6af8-4eb8-9bb7-7bcd21cf053c
   udp: true
   tls: true
-  network: tcp#GetXConfig-8
+  network: tcp#GetXConfig-2
   flow: xtls-rprx-vision
   reality-opts:
     public-key: TIkdjXzDQ5RmrSB4r8QoStVHhQTNHX2fwm8izRQ07C0
@@ -72,7 +39,32 @@ proxies:
   ws-path: /
   ws-headers:
     Host: sys-79d18b-341230.ezaccess11056aa.workers.dev
-  sni: sys-79d18b-341230.ezaccess11056aa.workers.dev#GetXConfig-10
+  sni: sys-79d18b-341230.ezaccess11056aa.workers.dev#GetXConfig-4
+- name: VLESS-167.82.101.159
+  type: vless
+  server: 167.82.101.159
+  port: 443
+  uuid: d9f0d703-c769-8d67-3f33-0aa0b511173d
+  udp: true
+  tls: true
+  network: xhttp
+  sni: ssl.fastly.com#GetXConfig-6
+- name: VLESS-nice.iranapplecenter.com
+  type: vless
+  server: nice.iranapplecenter.com
+  port: 80
+  uuid: d9f0d703-c769-8d67-3f33-0aa0b511173d
+  udp: true
+  tls: false
+  network: xhttp#GetXConfig-8
+- name: VLESS-13.39.182.161
+  type: vless
+  server: 13.39.182.161
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-10
 - name: 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   type: vmess
   server: 62.238.46.61
@@ -220,12 +212,12 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-herd.zavqeron.ir
-  - VLESS-key.zavqeron.ir
-  - TROJAN-199.232.78.101
   - TROJAN-167.82.76.7
   - VLESS-91.107.144.211
   - VLESS-172.67.76.186
+  - VLESS-167.82.101.159
+  - VLESS-nice.iranapplecenter.com
+  - VLESS-13.39.182.161
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13
@@ -242,12 +234,12 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-herd.zavqeron.ir
-  - VLESS-key.zavqeron.ir
-  - TROJAN-199.232.78.101
   - TROJAN-167.82.76.7
   - VLESS-91.107.144.211
   - VLESS-172.67.76.186
+  - VLESS-167.82.101.159
+  - VLESS-nice.iranapplecenter.com
+  - VLESS-13.39.182.161
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-11
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-12
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-13

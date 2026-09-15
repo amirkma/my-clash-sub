@@ -5,164 +5,108 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-91.107.144.211
+- name: VLESS-nl-3.it-crp.ru
   type: vless
-  server: 91.107.144.211
+  server: nl-3.it-crp.ru
   port: 443
-  uuid: 85d8f8d3-6af8-4eb8-9bb7-7bcd21cf053c
+  uuid: 0480039e-2e85-49e4-9087-ba85e738851a
   udp: true
   tls: true
-  network: tcp#GetXConfig-1
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: TIkdjXzDQ5RmrSB4r8QoStVHhQTNHX2fwm8izRQ07C0
-    short-id: 511a
-    fingerprint: chrome
-  sni: storage.googleapis.com
-- name: VLESS-172.67.76.186
+    public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
+    fingerprint: firefox
+  sni: nl-3.it-crp.ru
+- name: VLESS-179.255.186.170
   type: vless
-  server: 172.67.76.186
+  server: 179.255.186.170
+  port: 8443
+  uuid: a8e1d97e-3c64-452a-abae-21d9f0529d5b
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-2
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KBtor6ap1Ml0bjcI_8UgdHhZYVYNOLuuYsuXsQUNGj0
+    fingerprint: firefox
+  sni: gstatic.com
+- name: VLESS-pl.bubahero.com
+  type: vless
+  server: pl.bubahero.com
   port: 443
-  uuid: 18b477ab-902f-454c-9e2f-60dd4d9c3340
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00
+    fingerprint: chrome
+  sni: pl.bubahero.com
+- name: VLESS-77.110.101.97
+  type: vless
+  server: 77.110.101.97
+  port: 56834
+  uuid: daf65e17-1ed5-42be-a34d-20a156ddedbc
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-4
+- name: VLESS-tr-upa-ntl.ramzshadi.ir
+  type: vless
+  server: tr-upa-ntl.ramzshadi.ir
+  port: 31770
+  uuid: 91095da8-131f-4b79-8939-2cb9fb7dbf95
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GZqmhFHyMfIyRUi1k-2UDeJtjUakgZRhyXLhGLfL3Ws
+    fingerprint: chrome
+  sni: sheets.google.com
+- name: VLESS-151.101.56.6
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: f570779f-bbf7-4ef9-e657-8ebbdef2609b
   udp: true
   tls: true
   network: ws
-  ws-path: /
+  ws-path: /?TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
   ws-headers:
-    Host: sys-79d18b-341230.ezaccess11056aa.workers.dev
-  sni: sys-79d18b-341230.ezaccess11056aa.workers.dev#GetXConfig-2
-- name: VLESS-167.82.101.159
+    Host: c12.com
+  sni: ssl.fastly.com#GetXConfig-6
+- name: VLESS-66.33.22.222
   type: vless
-  server: 167.82.101.159
-  port: 443
-  uuid: d9f0d703-c769-8d67-3f33-0aa0b511173d
-  udp: true
-  tls: true
-  network: xhttp
-  sni: ssl.fastly.com#GetXConfig-3
-- name: VLESS-nice.iranapplecenter.com
-  type: vless
-  server: nice.iranapplecenter.com
-  port: 80
-  uuid: d9f0d703-c769-8d67-3f33-0aa0b511173d
-  udp: true
-  tls: false
-  network: xhttp#GetXConfig-4
-- name: VLESS-13.39.182.161
-  type: vless
-  server: 13.39.182.161
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-5
-- name: VLESS-finland.hosting-96.ir
-  type: vless
-  server: finland.hosting-96.ir
-  port: 8004
-  uuid: d9f0d703-c769-8d67-3f33-0aa0b511173d
+  server: 66.33.22.222
+  port: 56858
+  uuid: d51a5e3c-7779-43a4-a980-89a652653788
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Yx9sZxxT9sOMaGbrN_zo68hcbncuMK-MUIHUDgYLJ0Q
-    fingerprint: firefox
-  sni: www.afr-data-15.myket.ir
-- name: VLESS-46.8.208.17
+    public-key: Umy6cU1OA85PnrMLfhB99S9uq5HjHihvC3lYr6pnpxs
+    short-id: 5710ecf7
+    fingerprint: chrome
+  sni: myket.ir
+- name: VLESS-94.237.92.65
   type: vless
-  server: 46.8.208.17
-  port: 8443
-  uuid: 1157d32c-a56f-4070-a1a8-74c63b875d98
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xEprpxcbj30lJZMfNWftPtiAmgrXTzRnnN3HFRtFfB4
-    fingerprint: qq
-  sni: max.ru
-- name: VLESS-node-nl.usel.pro
-  type: vless
-  server: node-nl.usel.pro
+  server: 94.237.92.65
   port: 443
-  uuid: 5934cc4f-c17b-41c0-9280-c75eb222f4b7
+  uuid: e4b11ac9-46f7-4cc0-92ed-bb9dfaaf3600
   udp: true
   tls: true
-  network: tcp
+  network: tcp#GetXConfig-8
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: BTCZ0hMhV10H818mbm54EQdU0s3qQXMtY4Hl67dFA18
-    fingerprint: firefox
-  sni: vu.nl#GetXConfig-10
-- name: VLESS-194.87.59.14
+    public-key: lkMM9FR-o7Z6NwmmQVK8rLhCQR1mbJTgjY_0upeS2SY
+    fingerprint: chrome
+  sni: google.com
+- name: VLESS-t1fh.blazenetwork.ir
   type: vless
-  server: 194.87.59.14
-  port: 2085
-  uuid: a7e36d37-94e6-41b3-92f8-05e88ae0c9da
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-11
-- name: VLESS-150.40.126.28
-  type: vless
-  server: 150.40.126.28
-  port: 443
-  uuid: 4360f941-b541-43d4-8507-2de3763e0cfd
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-    fingerprint: qq
-  sni: rs.convert-flow.net#GetXConfig-12
-- name: VLESS-176.65.151.67
-  type: vless
-  server: 176.65.151.67
-  port: 25188
-  uuid: b9cfac77-f765-4a35-8d20-77f4831f4f77
-  udp: true
-  tls: false
-  network: grpc#GetXConfig-14
-- name: VLESS-185.87.24.172
-  type: vless
-  server: 185.87.24.172
-  port: 2085
-  uuid: a7e36d37-94e6-41b3-92f8-05e88ae0c9da
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#GetXConfig-15
-- name: VLESS-85.9.203.136
-  type: vless
-  server: 85.9.203.136
-  port: 443
-  uuid: abe21eae-96d8-41b0-8978-a5fad369f120
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zlxjoBYH6l_6DctmBvFIhvvTIMXlnFmRGab1SfSGuA4
-    fingerprint: edge
-  sni: region1.app-analytics-services-att.com
-- name: VLESS-87.58.147.113
-  type: vless
-  server: 87.58.147.113
-  port: 443
-  uuid: abe21eae-96d8-41b0-8978-a5fad369f120
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9IfmFNL1K2E7LIJ6nn8osBFu5SnUDJOFmvPIlZu55xg
-    fingerprint: qq
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-t1dn.blazenetwork.ir
-  type: vless
-  server: t1dn.blazenetwork.ir
+  server: t1fh.blazenetwork.ir
   port: 443
   uuid: 1b5a7a00-2bcf-463e-9f1f-c47756588fb5
   udp: true
@@ -170,8 +114,103 @@ proxies:
   network: ws
   ws-path: /t/assets
   ws-headers:
-    Host: t1dn.blazenetwork.ir
-  sni: t1dn.blazenetwork.ir#GetXConfig-18
+    Host: t1fh.blazenetwork.ir
+  sni: t1fh.blazenetwork.ir#GetXConfig-9
+- name: VLESS-64.176.64.194
+  type: vless
+  server: 64.176.64.194
+  port: 25585
+  uuid: 6eebb521-1844-4c3c-bf54-fb0e19870f80
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-31.56.146.50
+  type: vless
+  server: 31.56.146.50
+  port: 57180
+  uuid: cfaae315-931a-41b8-9fad-7a73813ea18a
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: rJtxFiSOMqWt3fwIzse02CcerLLQd2L0kQ8gV9PpzxA
+    short-id: fc85
+    fingerprint: chrome
+  sni: android.clients.google.com
+- name: VLESS-194.93.63.246
+  type: vless
+  server: 194.93.63.246
+  port: 443
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision#GetXConfig-12
+  reality-opts:
+    public-key: GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00
+    fingerprint: firefox
+  sni: pl.bubahero.com
+- name: VLESS-auto.trstcore.pro
+  type: vless
+  server: auto.trstcore.pro
+  port: 443
+  uuid: a8f5e04b-be34-4b84-9359-684ad9c417b0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: D3z23bK0kfpd8Bh8t9ohPDiR0RNpLTYV9hD6G4vH1h0
+    fingerprint: firefox
+  sni: auto.trstcore.pro
+- name: VLESS-51.44.29.85
+  type: vless
+  server: 51.44.29.85
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-14
+- name: VLESS-lab.trstcore.pro
+  type: vless
+  server: lab.trstcore.pro
+  port: 443
+  uuid: a8f5e04b-be34-4b84-9359-684ad9c417b0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: b91mfxeDAfBka157v449K1aX30C57gN_3cjztaK3jj8
+    fingerprint: firefox
+  sni: lab.trstcore.pro
+- name: VLESS-ai.trstcore.pro
+  type: vless
+  server: ai.trstcore.pro
+  port: 443
+  uuid: a8f5e04b-be34-4b84-9359-684ad9c417b0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 9WRqVZFCPMEG_BOcWGhyxAzZh7Khr32Bwk_Chn1qe00
+    fingerprint: firefox
+  sni: ai.trstcore.pro
+- name: VLESS-we.trstcore.pro
+  type: vless
+  server: we.trstcore.pro
+  port: 443
+  uuid: a8f5e04b-be34-4b84-9359-684ad9c417b0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: DFWRrmWINP3TyVKQaBZnWASVM5g-vovy0XFre7nqnEI
+    fingerprint: firefox
+  sni: we.trstcore.pro
 - name: VLESS-104.19.45.195
   type: vless
   server: 104.19.45.195
@@ -182,7 +221,7 @@ proxies:
   network: ws
   ws-path: /
   ws-headers:
-    Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc#Farah_VPN-19
+    Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc#Farah_VPN-20
   sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
 - name: VLESS-2.56.121.43
   type: vless
@@ -204,7 +243,7 @@ proxies:
   uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
   udp: true
   tls: false
-  network: tcp#Farah_VPN-21
+  network: tcp#Farah_VPN-22
 - name: VLESS-104.18.39.218
   type: vless
   server: 104.18.39.218
@@ -216,7 +255,7 @@ proxies:
   ws-path: /?ed=2560security=tls
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr#Farah_VPN-22
+  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr#Farah_VPN-23
 - name: VLESS-138.16.141.59
   type: vless
   server: 138.16.141.59
@@ -224,7 +263,7 @@ proxies:
   uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
   udp: true
   tls: true
-  network: tcp#Farah_VPN-23
+  network: tcp#Farah_VPN-24
   flow: xtls-rprx-vision
   reality-opts:
     public-key: RY7zkFQ01lI92jxNAyCa8T33UBW1fgpJgg8ZEqMA10k
@@ -251,7 +290,7 @@ proxies:
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: grpc-tunnel#Farah_VPN-25
+  grpc-service-name: grpc-tunnel#Farah_VPN-26
   flow: xtls-rprx-vision
   reality-opts:
     public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
@@ -266,7 +305,7 @@ proxies:
   udp: true
   tls: false
   network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-26
+  ws-path: /?ed=2560security=tls#Farah_VPN-27
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
@@ -277,7 +316,7 @@ proxies:
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   tls: true
-  network: ws#Farah_VPN-27
+  network: ws#Farah_VPN-28
   sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
 - name: VLESS-95.181.162.170
   type: vless
@@ -299,7 +338,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-29
+  ws-path: /#Farah_VPN-30
   ws-headers:
     Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
@@ -324,7 +363,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-31
+  ws-path: /#Farah_VPN-32
   ws-headers:
     Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
@@ -348,7 +387,7 @@ proxies:
   uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
   udp: true
   tls: false
-  network: ws#Farah_VPN-33
+  network: ws#Farah_VPN-34
   sni: dark-cake-4743.198-46c.workers.dev
 - name: VLESS-185.126.238.87
   type: vless
@@ -367,7 +406,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-35
+  ws-path: /#Farah_VPN-36
   ws-headers:
     Host: Appxdn.global.ssl.fastly.net
   sni: ssl.fastly.com
@@ -382,7 +421,7 @@ proxies:
   ws-path: /?ed=2560security=tls
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr#Farah_VPN-36
+  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr#Farah_VPN-37
 - name: VLESS-172.64.146.211
   type: vless
   server: 172.64.146.211
@@ -391,7 +430,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-37
+  ws-path: /#Farah_VPN-38
   ws-headers:
     Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   sni: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
@@ -402,7 +441,7 @@ proxies:
   uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
   udp: true
   tls: false
-  network: tcp#Farah_VPN-39
+  network: tcp#Farah_VPN-40
 - name: VLESS-162.159.45.19
   type: vless
   server: 162.159.45.19
@@ -411,7 +450,7 @@ proxies:
   udp: true
   tls: false
   network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-40
+  ws-path: /?ed=2560security=tls#Farah_VPN-41
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: VLESS-167.172.165.106
@@ -422,7 +461,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-42
+  ws-path: /#Farah_VPN-43
   ws-headers:
     Host: edge.yzkvm.top
   sni: edge.yzkvm.top
@@ -434,7 +473,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-43
+  ws-path: /#Farah_VPN-44
   ws-headers:
     Host: vp10.pages.dev
   sni: vp10.pages.dev
@@ -445,7 +484,7 @@ proxies:
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
-  network: ws#Farah_VPN-44
+  network: ws#Farah_VPN-45
 - name: VLESS-preview.netraidly.ru
   type: vless
   server: preview.netraidly.ru
@@ -470,7 +509,7 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: 01faa46
+    short-id: 01faa47
     fingerprint: chrome
   sni: fuck.rkn
 - name: VLESS-162.159.48.32
@@ -481,7 +520,7 @@ proxies:
   udp: true
   tls: false
   network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-47
+  ws-path: /?ed=2560security=tls#Farah_VPN-48
   ws-headers:
     Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
@@ -492,39 +531,29 @@ proxies:
   uuid: ea50b1a3-3a98-4c5e-a150-48ada40d68d7
   udp: true
   tls: false
-  network: ws#Farah_VPN-48
+  network: ws#Farah_VPN-49
   sni: cf-vless-4cf55824.aimall.fr
-- name: VLESS-129.146.134.26
-  type: vless
-  server: 129.146.134.26
-  port: 34237
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
-  ws-headers:
-    Host: cf3.schzyc.cc.cd
-  sni: cf3.schzyc.cc.cd
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-91.107.144.211
-  - VLESS-172.67.76.186
-  - VLESS-167.82.101.159
-  - VLESS-nice.iranapplecenter.com
-  - VLESS-13.39.182.161
-  - VLESS-finland.hosting-96.ir
-  - VLESS-46.8.208.17
-  - VLESS-node-nl.usel.pro
-  - VLESS-194.87.59.14
-  - VLESS-150.40.126.28
-  - VLESS-176.65.151.67
-  - VLESS-185.87.24.172
-  - VLESS-85.9.203.136
-  - VLESS-87.58.147.113
-  - VLESS-t1dn.blazenetwork.ir
+  - VLESS-nl-3.it-crp.ru
+  - VLESS-179.255.186.170
+  - VLESS-pl.bubahero.com
+  - VLESS-77.110.101.97
+  - VLESS-tr-upa-ntl.ramzshadi.ir
+  - VLESS-151.101.56.6
+  - VLESS-66.33.22.222
+  - VLESS-94.237.92.65
+  - VLESS-t1fh.blazenetwork.ir
+  - VLESS-64.176.64.194
+  - VLESS-31.56.146.50
+  - VLESS-194.93.63.246
+  - VLESS-auto.trstcore.pro
+  - VLESS-51.44.29.85
+  - VLESS-lab.trstcore.pro
+  - VLESS-ai.trstcore.pro
+  - VLESS-we.trstcore.pro
   - VLESS-104.19.45.195
   - VLESS-2.56.121.43
   - VLESS-134.122.154.210
@@ -553,25 +582,26 @@ proxy-groups:
   - VLESS-51.158.206.96
   - VLESS-162.159.48.32
   - VLESS-188.114.97.6
-  - VLESS-129.146.134.26
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-91.107.144.211
-  - VLESS-172.67.76.186
-  - VLESS-167.82.101.159
-  - VLESS-nice.iranapplecenter.com
-  - VLESS-13.39.182.161
-  - VLESS-finland.hosting-96.ir
-  - VLESS-46.8.208.17
-  - VLESS-node-nl.usel.pro
-  - VLESS-194.87.59.14
-  - VLESS-150.40.126.28
-  - VLESS-176.65.151.67
-  - VLESS-185.87.24.172
-  - VLESS-85.9.203.136
-  - VLESS-87.58.147.113
-  - VLESS-t1dn.blazenetwork.ir
+  - VLESS-nl-3.it-crp.ru
+  - VLESS-179.255.186.170
+  - VLESS-pl.bubahero.com
+  - VLESS-77.110.101.97
+  - VLESS-tr-upa-ntl.ramzshadi.ir
+  - VLESS-151.101.56.6
+  - VLESS-66.33.22.222
+  - VLESS-94.237.92.65
+  - VLESS-t1fh.blazenetwork.ir
+  - VLESS-64.176.64.194
+  - VLESS-31.56.146.50
+  - VLESS-194.93.63.246
+  - VLESS-auto.trstcore.pro
+  - VLESS-51.44.29.85
+  - VLESS-lab.trstcore.pro
+  - VLESS-ai.trstcore.pro
+  - VLESS-we.trstcore.pro
   - VLESS-104.19.45.195
   - VLESS-2.56.121.43
   - VLESS-134.122.154.210
@@ -600,7 +630,6 @@ proxy-groups:
   - VLESS-51.158.206.96
   - VLESS-162.159.48.32
   - VLESS-188.114.97.6
-  - VLESS-129.146.134.26
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

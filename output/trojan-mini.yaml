@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: TROJAN-mmd.asan9720.ir
+  type: trojan
+  server: mmd.asan9720.ir
+  port: 8880
+  password: gAFsFYKWb6
+  udp: true
+  tls: true
+  sni: www.aparat.com
+  skip-cert-verify: true
 - name: TROJAN-104.18.153.182
   type: trojan
   server: 104.18.153.182
@@ -30,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-3
+  sni: www.calmlunch.com#Farah_VPN-4
   skip-cert-verify: false
 - name: TROJAN-104.21.70.21
   type: trojan
@@ -57,7 +66,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-7
+  sni: www.calmlunch.com#Farah_VPN-8
   skip-cert-verify: false
 - name: TROJAN-104.16.72.41
   type: trojan
@@ -66,7 +75,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-9
+  sni: www.calmlunch.com#Farah_VPN-10
   skip-cert-verify: false
 - name: TROJAN-www.calmlunch.com
   type: trojan
@@ -93,7 +102,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-12
+  sni: www.calmlunch.com#Farah_VPN-13
   skip-cert-verify: false
 - name: TROJAN-199.232.78.101
   type: trojan
@@ -102,7 +111,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-13
+  sni: ssl.fastly.com#meliproxyy-14
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -111,7 +120,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-14
+  sni: www.ignitelimit.com#meliproxyy-15
   skip-cert-verify: false
 - name: TROJAN-167.82.76.7
   type: trojan
@@ -120,7 +129,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-16
+  sni: ssl.fastly.com#meliproxyy-17
   skip-cert-verify: false
 - name: TROJAN-188.42.145.180
   type: trojan
@@ -129,7 +138,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#meliproxyy-17
+  sni: www.volumeroot.com#meliproxyy-18
   skip-cert-verify: false
 - name: TROJAN-151.101.56.101
   type: trojan
@@ -138,12 +147,13 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-18
+  sni: ssl.fastly.com#meliproxyy-19
   skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - TROJAN-mmd.asan9720.ir
   - TROJAN-104.18.153.182
   - TROJAN-104.21.24.95
   - TROJAN-185.220.100.168
@@ -162,6 +172,7 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
+  - TROJAN-mmd.asan9720.ir
   - TROJAN-104.18.153.182
   - TROJAN-104.21.24.95
   - TROJAN-185.220.100.168

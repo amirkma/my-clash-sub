@@ -5,71 +5,50 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-mul12.danqela.ir
+- name: VLESS-jq.speedtest2028.com
   type: vless
-  server: mul12.danqela.ir
-  port: 5056
-  uuid: f9ac7d57-ccd9-4c3c-bcf2-08e08d1c7eed
+  server: jq.speedtest2028.com
+  port: 5865
+  uuid: fb91bed4-ab34-46e0-9085-296d8237c120
+  udp: true
+  tls: false
+  network: xhttp#GetXConfig-1
+- name: SS-config-england.zelnora.ir-chacha20
+  type: ss
+  server: config-england.zelnora.ir
+  port: 10803
+  cipher: chacha20-ietf-poly1305
+  password: VuR-wK82ssFWKyLbZAVtv6vAPY3Uh1Zt
+  udp: true
+- name: SS-config-germany.zelnora.ir-chacha20
+  type: ss
+  server: config-germany.zelnora.ir
+  port: 10804
+  cipher: chacha20-ietf-poly1305
+  password: VuR-wK82ssFWKyLbZAVtv6vAPY3Uh1Zt
+  udp: true
+- name: VLESS-172.66.156.82
+  type: vless
+  server: 172.66.156.82
+  port: 443
+  uuid: 7a657573-1936-bed7-40c5-ed19bdd7a759
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM
-    fingerprint: edge
-  sni: android.clients.google.com
-- name: VLESS-mul13.danqela.ir
-  type: vless
-  server: mul13.danqela.ir
-  port: 5058
-  uuid: f9ac7d57-ccd9-4c3c-bcf2-08e08d1c7eed
+  network: ws
+  ws-path: /stream/PANEL_ZEUS/ed19bdd7a759/loc-0
+  ws-headers:
+    Host: alzs5leoubzs.pedramgolnare.workers.dev
+  sni: alzs5leoubzs.pedramgolnare.workers.dev#GetXConfig-5
+- name: 'فرانسه 🇫🇷 | @GetXConfig | #6495-8'
+  type: vmess
+  server: 188.130.207.241
+  port: 8443
+  uuid: d65cd75f-27c9-4b79-86d4-7ca3e09bbe3f
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM
-    fingerprint: edge
-  sni: android.clients.google.com
-- name: VLESS-3zjyqi8l.danqela.ir
-  type: vless
-  server: 3zjyqi8l.danqela.ir
-  port: 5059
-  uuid: f9ac7d57-ccd9-4c3c-bcf2-08e08d1c7eed
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM
-    fingerprint: edge
-  sni: android.clients.google.com
-- name: VLESS-pdxmo5vd.danqela.ir
-  type: vless
-  server: pdxmo5vd.danqela.ir
-  port: 27812
-  uuid: f9ac7d57-ccd9-4c3c-bcf2-08e08d1c7eed
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM
-    fingerprint: edge
-  sni: android.clients.google.com
-- name: VLESS-mul14.danqela.ir
-  type: vless
-  server: mul14.danqela.ir
-  port: 5071
-  uuid: f9ac7d57-ccd9-4c3c-bcf2-08e08d1c7eed
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K-ra5wYRignlacUglfdjgTJOf4C4_oxKVm_T6YdgsTM
-    fingerprint: edge
-  sni: android.clients.google.com
 - name: TROJAN-172.64.80.1
   type: trojan
   server: 172.64.80.1
@@ -218,11 +197,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-mul12.danqela.ir
-  - VLESS-mul13.danqela.ir
-  - VLESS-3zjyqi8l.danqela.ir
-  - VLESS-pdxmo5vd.danqela.ir
-  - VLESS-mul14.danqela.ir
+  - VLESS-jq.speedtest2028.com
+  - SS-config-england.zelnora.ir-chacha20
+  - SS-config-germany.zelnora.ir-chacha20
+  - VLESS-172.66.156.82
+  - 'فرانسه 🇫🇷 | @GetXConfig | #6495-8'
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
   - SS-156.146.38.169-aes-128-
@@ -239,11 +218,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-mul12.danqela.ir
-  - VLESS-mul13.danqela.ir
-  - VLESS-3zjyqi8l.danqela.ir
-  - VLESS-pdxmo5vd.danqela.ir
-  - VLESS-mul14.danqela.ir
+  - VLESS-jq.speedtest2028.com
+  - SS-config-england.zelnora.ir-chacha20
+  - SS-config-germany.zelnora.ir-chacha20
+  - VLESS-172.66.156.82
+  - 'فرانسه 🇫🇷 | @GetXConfig | #6495-8'
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
   - SS-156.146.38.169-aes-128-

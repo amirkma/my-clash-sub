@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-config-england.zelnora.ir-chacha20
+  type: ss
+  server: config-england.zelnora.ir
+  port: 10802
+  cipher: chacha20-ietf-poly1305
+  password: VuR-wK82ssFWKyLbZAVtv6vAPY3Uh1Zt
+  udp: true
+- name: SS-config-germany.zelnora.ir-chacha20
+  type: ss
+  server: config-germany.zelnora.ir
+  port: 10803
+  cipher: chacha20-ietf-poly1305
+  password: VuR-wK82ssFWKyLbZAVtv6vAPY3Uh1Zt
+  udp: true
 - name: SS-156.146.38.169-aes-128-
   type: ss
   server: 156.146.38.169
@@ -58,6 +72,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-config-england.zelnora.ir-chacha20
+  - SS-config-germany.zelnora.ir-chacha20
   - SS-156.146.38.169-aes-128-
   - SS-37.19.198.244-aes-128-
   - SS-216.105.168.18-chacha20
@@ -68,6 +84,8 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
+  - SS-config-england.zelnora.ir-chacha20
+  - SS-config-germany.zelnora.ir-chacha20
   - SS-156.146.38.169-aes-128-
   - SS-37.19.198.244-aes-128-
   - SS-216.105.168.18-chacha20

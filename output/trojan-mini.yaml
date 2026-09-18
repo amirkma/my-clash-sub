@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-tr.v2xpin.top
-  type: trojan
-  server: tr.v2xpin.top
-  port: 8080
-  password: an-udxkZ0b9zco8saFeU2UtyujMYAeSl
-  udp: true
-  tls: true
-  skip-cert-verify: true
 - name: TROJAN-172.64.80.1
   type: trojan
   server: 172.64.80.1
@@ -20,7 +12,7 @@ proxies:
   password: Telegram_healer_config
   udp: true
   tls: true
-  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV#Farah_VPN-2
+  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV#Farah_VPN-1
   skip-cert-verify: false
 - name: TROJAN-104.21.8.63
   type: trojan
@@ -29,7 +21,7 @@ proxies:
   password: 5855d6850594830f
   udp: true
   tls: true
-  sni: AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV#Farah_VPN-3
+  sni: AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV#Farah_VPN-2
   skip-cert-verify: false
 - name: TROJAN-213.182.199.137
   type: trojan
@@ -47,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#Farah_VPN-5
+  sni: www.volumeroot.com#Farah_VPN-4
   skip-cert-verify: false
 - name: TROJAN-104.21.67.113
   type: trojan
@@ -56,7 +48,7 @@ proxies:
   password: Telegram_healer_config
   udp: true
   tls: true
-  sni: x0C3lq1A15ip-65Kc4-l1A1tx.cv4CGvqS05m-F4Hg5xU07wIAlm0.wOrkerS.DeV#Farah_VPN-6
+  sni: x0C3lq1A15ip-65Kc4-l1A1tx.cv4CGvqS05m-F4Hg5xU07wIAlm0.wOrkerS.DeV#Farah_VPN-5
   skip-cert-verify: false
 - name: TROJAN-172.67.132.80
   type: trojan
@@ -74,7 +66,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-8
+  sni: www.calmlunch.com#Farah_VPN-7
   skip-cert-verify: true
 - name: TROJAN-www.calmlunch.com
   type: trojan
@@ -92,7 +84,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-10
+  sni: www.calmlunch.com#Farah_VPN-9
   skip-cert-verify: false
 - name: TROJAN-78.47.146.151
   type: trojan
@@ -101,7 +93,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org#Farah_VPN-11
+  sni: www.pleadcourt.org#Farah_VPN-10
   skip-cert-verify: false
 - name: TROJAN-45.87.41.18
   type: trojan
@@ -110,7 +102,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-12
+  sni: www.calmlunch.com#Farah_VPN-11
   skip-cert-verify: false
 - name: TROJAN-185.220.100.168
   type: trojan
@@ -119,7 +111,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-13
+  sni: www.calmlunch.com#Farah_VPN-12
   skip-cert-verify: false
 - name: TROJAN-45.130.125.160
   type: trojan
@@ -128,7 +120,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-14
+  sni: www.calmlunch.com#Farah_VPN-13
   skip-cert-verify: false
 - name: TROJAN-104.19.229.21
   type: trojan
@@ -164,7 +156,7 @@ proxies:
   password: Telegram_healer_config
   udp: true
   tls: true
-  sni: y9p34JPJmQJazaYpf.pIIwDDIlxJcQEHr17af22U7XK-yu.workeRS.Dev#Farah_VPN-19
+  sni: y9p34JPJmQJazaYpf.pIIwDDIlxJcQEHr17af22U7XK-yu.workeRS.Dev#Farah_VPN-18
   skip-cert-verify: false
 - name: TROJAN-104.21.16.123
   type: trojan
@@ -175,11 +167,19 @@ proxies:
   tls: true
   sni: 7x7o3vtq5z6ymu3hv1fh-op9blt.hya6losm6lznoxhm6w3mk.workers.dev
   skip-cert-verify: true
+- name: TROJAN-188.114.97.3
+  type: trojan
+  server: 188.114.97.3
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  sni: 6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-tr.v2xpin.top
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
   - TROJAN-213.182.199.137
@@ -198,10 +198,10 @@ proxy-groups:
   - TROJAN-104.21.70.21
   - TROJAN-188.114.96.8
   - TROJAN-104.21.16.123
+  - TROJAN-188.114.97.3
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-tr.v2xpin.top
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
   - TROJAN-213.182.199.137
@@ -220,6 +220,7 @@ proxy-groups:
   - TROJAN-104.21.70.21
   - TROJAN-188.114.96.8
   - TROJAN-104.21.16.123
+  - TROJAN-188.114.97.3
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

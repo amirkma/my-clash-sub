@@ -5,189 +5,184 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-69.46.46.128
+- name: VLESS-host.taghvimtime.ir
   type: vless
-  server: 69.46.46.128
-  port: 443
-  uuid: 257d9e8d-5777-0d28-5ecb-a4464a85eafe
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/257d9e8d-5777-0d28-5ecb-a4464a85eafe
-  ws-headers:
-    Host: solipanel-production-9ac0.up.railway.app
-  sni: solipanel-production-9ac0.up.railway.app#GetXConfig-1
-- name: VLESS-varzesh3.com
-  type: vless
-  server: varzesh3.com
-  port: 80
-  uuid: dcadb1b7-0a96-4d47-b10e-5d3c745061aa
-  udp: true
-  tls: false
-  network: ws#GetXConfig-3
-- name: VLESS-13.39.230.204
-  type: vless
-  server: 13.39.230.204
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-7
-- name: VLESS-176.53.146.164
-  type: vless
-  server: 176.53.146.164
-  port: 443
-  uuid: 5ea9ae84-3274-404e-a070-d8718e36ae11
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tu5lj8_l0P0pC9BBgvdaQJ23l38WnfgugPq0iPxYznY
-    fingerprint: qq
-  sni: ru.whotellme.com
-- name: VLESS-87.120.165.52
-  type: vless
-  server: 87.120.165.52
-  port: 443
-  uuid: 45016458-a8c5-4e3f-814a-437145e4dd4f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k3RpAUPrxLoiPxp2cG4oqReK1WEHGBbw8UeIbXpwfkQ
-    fingerprint: qq
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-g.maxibar.ir
-  type: vless
-  server: g.maxibar.ir
-  port: 443
-  uuid: 45016458-a8c5-4e3f-814a-437145e4dd4f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k3RpAUPrxLoiPxp2cG4oqReK1WEHGBbw8UeIbXpwfkQ
-    fingerprint: qq
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-188.225.57.223
-  type: vless
-  server: 188.225.57.223
-  port: 443
-  uuid: 5ea9ae84-3274-404e-a070-d8718e36ae11
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc_vless
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9YcV-gA7iaXFnI0HXQa624OIqm4zxO_U2eMCWXQAiCQ
-    fingerprint: qq
-  sni: cloudcdn-m9-12.cdn.yandex.net
-- name: TROJAN-69.46.46.8
-  type: trojan
-  server: 69.46.46.8
-  port: 443
-  password: Soliconf
-  udp: true
-  tls: true
-  sni: solipanel-production-20b6.up.railway.app#GetXConfig-21
-  skip-cert-verify: false
-- name: VLESS-api.tenneltheducks.ir
-  type: vless
-  server: api.tenneltheducks.ir
-  port: 2096
-  uuid: 2d18e51e-7de6-49b5-882f-12242063c418
+  server: host.taghvimtime.ir
+  port: 8443
+  uuid: 9f44d517-29f2-4c6d-cc06-a1268f13da58
   udp: true
   tls: true
   network: xhttp
-  sni: z1000Mq848EaR.SeZaR.OrG
-- name: VLESS-66.33.22.226
-  type: vless
-  server: 66.33.22.226
-  port: 19258
-  uuid: cb597739-e745-4c61-a9b9-6e4ce852fe8d
-  udp: true
-  tls: false
-  network: ws#GetXConfig-24
-- name: VLESS-nl-1.bnc-gt.co.uk
-  type: vless
-  server: nl-1.bnc-gt.co.uk
+  sni: host.taghvimtime.ir#GetXConfig-1
+- name: 'نامشخص 🏳️ | @GetXConfig | #6649-3'
+  type: vmess
+  server: cloir.devilfruit.ir
   port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
+  uuid: 3baf26ff-a25d-4776-9333-a3c979324bb6
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
-    fingerprint: firefox
-  sni: a.nl-1.bnc-gt.co.uk
-- name: VLESS-de-3.bnc-gt.co.uk
+  network: ws
+  ws-path: /download
+- name: VLESS-103.175.79.4
   type: vless
-  server: de-3.bnc-gt.co.uk
-  port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
-    fingerprint: firefox
-  sni: de-3.bnc-gt.co.uk
-- name: VLESS-de-4.bnc-gt.co.uk
-  type: vless
-  server: de-4.bnc-gt.co.uk
-  port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
-    fingerprint: firefox
-  sni: de-4.bnc-gt.co.uk
-- name: VLESS-fi-1.bnc-gt.co.uk
-  type: vless
-  server: fi-1.bnc-gt.co.uk
-  port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
-    fingerprint: qq
-  sni: b.fi-1.bnc-gt.co.uk
-- name: VLESS-es-1.bnc-gt.co.uk
-  type: vless
-  server: es-1.bnc-gt.co.uk
-  port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
-    fingerprint: firefox
-  sni: a.es-1.bnc-gt.co.uk
-- name: VLESS-cz-1.bnc-gt.co.uk
-  type: vless
-  server: cz-1.bnc-gt.co.uk
-  port: 443
-  uuid: f6b58665-c524-4c60-a939-d8f27123e079
+  server: 103.175.79.4
+  port: 8443
+  uuid: b2141c97-76af-ff6f-839b-70a53e23aad9
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: grpc
-  sni: b.cz-1.bnc-gt.co.uk
+  grpc-service-name: TunService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 92KJ-ibs1qTy8nODGrHTW8T0b_trG7McLYv8My9o2EE
+    fingerprint: chrome
+  sni: download.autodesk.com#GetXConfig-5
+- name: VLESS-213.21.246.124
+  type: vless
+  server: 213.21.246.124
+  port: 443
+  uuid: d929e993-8053-488a-8a22-0ae09f706a2e
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 3Qh9roHIRJtLEM-gV_hudQrY6wPK_Dc3ePVtWLGqYho
+    fingerprint: chrome
+  sni: www.goo.gl
+- name: VLESS-13.212.18.89
+  type: vless
+  server: 13.212.18.89
+  port: 8686
+  uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+  sni: www.apple.com
+- name: VLESS-66.33.22.226
+  type: vless
+  server: 66.33.22.226
+  port: 51544
+  uuid: e5a61a6e-c64d-44b7-b29e-e79ac401a3c6
+  udp: true
+  tls: false
+  network: ws#GetXConfig-11
+- name: VLESS-151.101.65.57
+  type: vless
+  server: 151.101.65.57
+  port: 80
+  uuid: 2ac6479b-287b-4a20-9251-b94c7426ebbb
+  udp: true
+  tls: false
+  network: ws#GetXConfig-13
+- name: VLESS-91.107.154.227
+  type: vless
+  server: 91.107.154.227
+  port: 443
+  uuid: b01b01a6-d736-400c-b866-226383e0df72
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: L5zYyEMUJMiQqTFW7gZETrjZB5fNnAa7y6YBzZc-qgY
+    fingerprint: firefox
+  sni: s.aolcdn.com
+- name: VLESS-199.232.78.170
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-6
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-17
+- name: VLESS-itga8.guardora.pro
+  type: vless
+  server: itga8.guardora.pro
+  port: 10654
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lGKKIZsN9yBMxzZm8yl7nzNwJII18c_wLd_AbzzvRD8
+    fingerprint: firefox
+  sni: dailycanvas.sysopnova.art
+- name: VLESS-servconfmmmddd.ir
+  type: vless
+  server: servconfmmmddd.ir
+  port: 443
+  uuid: 4ac5e981-145c-4068-bc92-df7a55a929fe
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /vl-ws
+  ws-headers:
+    Host: servconfmmmddd.ir
+  sni: servconfmmmddd.ir#GetXConfig-21
+- name: VLESS-fi-3.bnc-gt.co.uk
+  type: vless
+  server: fi-3.bnc-gt.co.uk
+  port: 443
+  uuid: 74117310-1dc8-4035-830e-6c29f10ac170
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/
+  sni: a.fi-3.bnc-gt.co.uk#GetXConfig-23
+- name: VLESS-69.46.46.122
+  type: vless
+  server: 69.46.46.122
+  port: 443
+  uuid: e1b565f4-b997-4507-a472-af9f59ba6671
+  udp: true
+  tls: true
+  network: xhttp
+  sni: web-production-d6cf5.up.railway.app#GetXConfig-25
+- name: VLESS-greger.purpl.su
+  type: vless
+  server: greger.purpl.su
+  port: 443
+  uuid: 988be430-813f-4174-b5ed-86fcebd7cda0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q7E00O1zh2xSYK64FUVYWUHxZ5J8E10-gfojtkWqK2Q
+    fingerprint: qq
+  sni: greger.purpl.su
+- name: VLESS-62.60.157.19
+  type: vless
+  server: 62.60.157.19
+  port: 443
+  uuid: e3ec2866-96cd-4cc3-86c9-e7336ea2fbc2
+  udp: true
+  tls: true
+  network: xhttp
+  sni: 01fra.hello-there.ru#GetXConfig-31
+- name: VLESS-199.232.78.160
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnFree-5
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com#GetXConfig-34
 - name: TROJAN-172.64.80.1
   type: trojan
   server: 172.64.80.1
@@ -195,7 +190,7 @@ proxies:
   password: Telegram_healer_config
   udp: true
   tls: true
-  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV#Farah_VPN-38
+  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV#Farah_VPN-37
   skip-cert-verify: false
 - name: TROJAN-104.21.8.63
   type: trojan
@@ -204,51 +199,69 @@ proxies:
   password: 5855d6850594830f
   udp: true
   tls: true
-  sni: AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV#Farah_VPN-39
+  sni: AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV#Farah_VPN-38
   skip-cert-verify: false
+- name: SS-156.146.38.169-aes-128-
+  type: ss
+  server: 156.146.38.169
+  port: 44339
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.244-aes-128-
+  type: ss
+  server: 37.19.198.244
+  port: 44341
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-69.46.46.128
-  - VLESS-varzesh3.com
-  - VLESS-13.39.230.204
-  - VLESS-176.53.146.164
-  - VLESS-87.120.165.52
-  - VLESS-g.maxibar.ir
-  - VLESS-188.225.57.223
-  - TROJAN-69.46.46.8
-  - VLESS-api.tenneltheducks.ir
+  - VLESS-host.taghvimtime.ir
+  - 'نامشخص 🏳️ | @GetXConfig | #6649-3'
+  - VLESS-103.175.79.4
+  - VLESS-213.21.246.124
+  - VLESS-13.212.18.89
   - VLESS-66.33.22.226
-  - VLESS-nl-1.bnc-gt.co.uk
-  - VLESS-de-3.bnc-gt.co.uk
-  - VLESS-de-4.bnc-gt.co.uk
-  - VLESS-fi-1.bnc-gt.co.uk
-  - VLESS-es-1.bnc-gt.co.uk
-  - VLESS-cz-1.bnc-gt.co.uk
+  - VLESS-151.101.65.57
+  - VLESS-91.107.154.227
+  - VLESS-199.232.78.170
+  - VLESS-itga8.guardora.pro
+  - VLESS-servconfmmmddd.ir
+  - VLESS-fi-3.bnc-gt.co.uk
+  - VLESS-69.46.46.122
+  - VLESS-greger.purpl.su
+  - VLESS-62.60.157.19
+  - VLESS-199.232.78.160
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
+  - SS-156.146.38.169-aes-128-
+  - SS-37.19.198.244-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-69.46.46.128
-  - VLESS-varzesh3.com
-  - VLESS-13.39.230.204
-  - VLESS-176.53.146.164
-  - VLESS-87.120.165.52
-  - VLESS-g.maxibar.ir
-  - VLESS-188.225.57.223
-  - TROJAN-69.46.46.8
-  - VLESS-api.tenneltheducks.ir
+  - VLESS-host.taghvimtime.ir
+  - 'نامشخص 🏳️ | @GetXConfig | #6649-3'
+  - VLESS-103.175.79.4
+  - VLESS-213.21.246.124
+  - VLESS-13.212.18.89
   - VLESS-66.33.22.226
-  - VLESS-nl-1.bnc-gt.co.uk
-  - VLESS-de-3.bnc-gt.co.uk
-  - VLESS-de-4.bnc-gt.co.uk
-  - VLESS-fi-1.bnc-gt.co.uk
-  - VLESS-es-1.bnc-gt.co.uk
-  - VLESS-cz-1.bnc-gt.co.uk
+  - VLESS-151.101.65.57
+  - VLESS-91.107.154.227
+  - VLESS-199.232.78.170
+  - VLESS-itga8.guardora.pro
+  - VLESS-servconfmmmddd.ir
+  - VLESS-fi-3.bnc-gt.co.uk
+  - VLESS-69.46.46.122
+  - VLESS-greger.purpl.su
+  - VLESS-62.60.157.19
+  - VLESS-199.232.78.160
   - TROJAN-172.64.80.1
   - TROJAN-104.21.8.63
+  - SS-156.146.38.169-aes-128-
+  - SS-37.19.198.244-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,46 +5,56 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-13.37.147.23
+- name: VLESS-52.56.51.174
   type: vless
-  server: 13.37.147.23
-  port: 22223
+  server: 52.56.51.174
+  port: 22222
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   network: tcp#GetXConfig-1
-- name: VLESS-178.255.222.200
+- name: VLESS-p.farshadqw1.ir
   type: vless
-  server: 178.255.222.200
-  port: 81
-  uuid: 138a2254-7133-42a8-a454-fac19ec60999
+  server: p.farshadqw1.ir
+  port: 80
+  uuid: 60cc3696-76c7-46c5-aa3e-b18de335b2c9
   udp: true
   tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-x-ui.panelsazahb.dpdns.org
+  network: ws
+  ws-path: /pgcfws-r4
+  ws-headers:
+    Host: p.farshadqw1.ir#GetXConfig-3
+- name: VLESS-a.farshadqw1.ir
   type: vless
-  server: x-ui.panelsazahb.dpdns.org
-  port: 81
-  uuid: 138a2254-7133-42a8-a454-fac19ec60999
+  server: a.farshadqw1.ir
+  port: 8880
+  uuid: 60cc3696-76c7-46c5-aa3e-b18de335b2c9
   udp: true
   tls: false
-  network: tcp#GetXConfig-5
-- name: VLESS-195.58.144.56
+  network: ws
+  ws-path: /pgcfws-r4
+  ws-headers:
+    Host: a.farshadqw1.ir#GetXConfig-5
+- name: VLESS-uu.caroptions.ir
   type: vless
-  server: 195.58.144.56
-  port: 11907
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  server: uu.caroptions.ir
+  port: 80
+  uuid: 60cc3696-76c7-46c5-aa3e-b18de335b2c9
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /pgcfws-r4
+  ws-headers:
+    Host: uu.caroptions.ir#GetXConfig-7
+- name: VLESS-us.netease.uz
+  type: vless
+  server: us.netease.uz
+  port: 8444
+  uuid: fd3b5215-287b-4f16-84d9-6b5854dea110
   udp: true
   tls: true
   network: tcp
-- name: VLESS-151.101.1.194
-  type: vless
-  server: 151.101.1.194
-  port: 80
-  uuid: 8c016c41-1e60-457f-bbdf-e66729612079
-  udp: true
-  tls: false
-  network: ws#GetXConfig-9
+  sni: us.netease.uz
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -163,164 +173,186 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-144.31.131.38
+- name: VLESS-k2.cloud--vpn.site
   type: vless
-  server: 144.31.131.38
+  server: k2.cloud--vpn.site
   port: 443
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    fingerprint: firefox
-  sni: prod.pl-node-01.security-sbrf.ru
-- name: VLESS-music.navard.net
-  type: vless
-  server: music.navard.net
-  port: 80
-  uuid: d8d23e60-d5aa-4556-b513-875e1e85d924
-  udp: true
-  tls: false
-  network: tcp#meliproxyy-22
-- name: VLESS-104.143.223.56
-  type: vless
-  server: 104.143.223.56
-  port: 2085
-  uuid: 67671bce-990e-47fe-96c3-55a869800b00
-  udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: vless#meliproxyy-23
-- name: VLESS-freeman.bestxau.ir
-  type: vless
-  server: freeman.bestxau.ir
-  port: 19210
-  uuid: d65a82af-a403-405e-8b7b-27a68b830511
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 112X7iICOgZtFOHXdn59EY7m_gwKultc-zwYPzBv6wU
-    fingerprint: chrome
-  sni: play-apps-features.googleusercontent.com
-- name: VLESS-176.108.246.110
-  type: vless
-  server: 176.108.246.110
-  port: 9830
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc-tunnel
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    fingerprint: chrome
-  sni: dl.google.com#meliproxyy-25
-- name: VLESS-herd.zavqeron.ir
-  type: vless
-  server: herd.zavqeron.ir
-  port: 2053
-  uuid: 2fa4235a-51a7-452b-a760-498951646043
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /de2-cdn
-  ws-headers:
-    Host: herd.zavqeron.ir
-  sni: zavqeron.ir#meliproxyy-26
-- name: VLESS-land.zavqeron.ir
-  type: vless
-  server: land.zavqeron.ir
-  port: 2053
-  uuid: 2fa4235a-51a7-452b-a760-498951646043
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /fi-cdn
-  ws-headers:
-    Host: land.zavqeron.ir
-  sni: zavqeron.ir#meliproxyy-27
-- name: VLESS-199.232.78.160
-  type: vless
-  server: 199.232.78.160
-  port: 443
-  uuid: XpnTeam-4
+  uuid: 9503e890-3702-4847-af0a-2bceac2f0da0
   udp: true
   tls: true
   network: ws
   ws-path: /
   ws-headers:
-    Host: Appxdn.global.ssl.fastly.net
-  sni: ssl.fastly.com#meliproxyy-28
-- name: VLESS-nether11.velqixa.ir
+    Host: c12.com
+  sni: ssl.fastly.com
+- name: VLESS-88.216.63.21
   type: vless
-  server: nether11.velqixa.ir
-  port: 8448
-  uuid: 2fa4235a-51a7-452b-a760-498951646043
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: GKUHECPMuiffveVgQMvRHHg1GgOSNp5lVWPLjRZGN0c
-    fingerprint: qq
-  sni: play.google.com
-- name: VLESS-95.182.93.92
-  type: vless
-  server: 95.182.93.92
-  port: 58582
-  uuid: 0ca2dfa0-c6fb-47d6-94de-1f35b95bbb0b
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zcIOzb_4k_qiXl_Q-7H77H2ZuA-hKerL-KZd_xFhtV0
-    fingerprint: chrome
-  sni: goo.gl
-- name: VLESS-199.232.237.79
-  type: vless
-  server: 199.232.237.79
+  server: 88.216.63.21
   port: 443
-  uuid: turboo-server
+  uuid: 84a794a5-2420-4ca7-8e08-8d21571f36f3
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA
+    fingerprint: random
+  sni: hhhorp.plus-hit.ru
+- name: VLESS-kelvin73.fars-remen.ir
+  type: vless
+  server: kelvin73.fars-remen.ir
+  port: 443
+  uuid: 4c67f74c-84d4-467d-b127-136517d98746
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-93.190.8.18
+  type: vless
+  server: 93.190.8.18
+  port: 3090
+  uuid: 6c258a80-c068-4b9b-9991-88aa69be4810
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless#meliproxyy-24
+- name: VLESS-162.35.104.143
+  type: vless
+  server: 162.35.104.143
+  port: 443
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
+    fingerprint: firefox
+  sni: sheetpeek.com
+- name: VLESS-5.75.201.20
+  type: vless
+  server: 5.75.201.20
+  port: 14050
+  uuid: e4d18914-e4ea-467b-9341-f87dc52d7ff2
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fttGjOo5tU5b0fZfBeunOvN8miUFoXCGsyksqV96hnE
+    fingerprint: firefox
+  sni: play-apps-features.googleusercontent.com
+- name: VLESS-host.taghvimtime.ir
+  type: vless
+  server: host.taghvimtime.ir
+  port: 8443
+  uuid: 9f44d517-29f2-4c6d-cc06-a1268f13da58
+  udp: true
+  tls: true
+  network: xhttp
+  sni: host.taghvimtime.ir#meliproxyy-28
+- name: VLESS-2.27.205.59
+  type: vless
+  server: 2.27.205.59
+  port: 443
+  uuid: c21631d5-36c9-4664-b575-97eca17456be
+  udp: true
+  tls: false
+  network: ws#meliproxyy-29
+- name: VLESS-srv-waw.kintecolas.com
+  type: vless
+  server: srv-waw.kintecolas.com
+  port: 443
+  uuid: 4f8a1d19-4d21-47f5-816e-a8f475fbd3f7
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: qPgl3LmKAKs5K-KzGNRJyr5KTO0KoRNN5m2PTCMscXU
+    fingerprint: chrome
+  sni: srv-waw.kintecolas.com
+- name: VLESS-www.speedtest.net
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  uuid: 513beae3-56e7-4954-a17e-930e06237b27
   udp: true
   tls: true
   network: ws
-  ws-path: /#proxy_kafee-31
+  ws-path: /vl/3wSAeuGJbrGHwJ45DA6ircvHC6#proxy_kafee-31
   ws-headers:
-    Host: turboo-server-telegram.com
-  sni: turboo-server-telegram.com
-- name: VLESS-dl-cf.f8r.ir
+    Host: cfoi-2fx16g3-8ry2kdxmcj.wjesv2ila3rxbuhpc2nsugrachgawk.workers.dev
+  sni: CfOI-2FX16g3-8rY2kdXmCJ.WJeSv2ILA3rXbUhpC2NSugRAchGaWK.WOrkeRs.DEV
+- name: VLESS-5.160.198.183
   type: vless
-  server: dl-cf.f8r.ir
-  port: 80
-  uuid: 1889c089-be4d-4162-b00d-5ac9e3e4525f
+  server: 5.160.198.183
+  port: 8443
+  uuid: c82760c4-6cbc-4e73-8724-da9008ee9710
+  udp: true
+  tls: true
+  network: xhttp
+  sni: bgx.pizzamizza.blog
+- name: VLESS-93.190.9.58
+  type: vless
+  server: 93.190.9.58
+  port: 3090
+  uuid: a02acef7-4321-43b7-a10d-d5445b999e84
   udp: true
   tls: false
-  network: xhttp
-  flow: xtls-rprx-vision
-- name: VLESS-darsadgir.ir
+  network: grpc
+  grpc-service-name: vless
+- name: VLESS-185.189.58.195
   type: vless
-  server: darsadgir.ir
-  port: 443
-  uuid: d5af4dfe-eaf1-460c-87aa-fefe930db0ba
+  server: 185.189.58.195
+  port: 38353
+  uuid: 6c7614ff-88c9-47cd-a66c-103741109d00
   udp: true
   tls: true
-  network: xhttp
-  sni: chopin.paxr.ir
-- name: TROJAN-188.114.97.7
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
+  network: tcp
+  sni: 185.189.58.195
+- name: VLESS-93.190.9.45
+  type: vless
+  server: 93.190.9.45
+  port: 3090
+  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
   udp: true
-  tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless
+- name: VLESS-15.188.103.174
+  type: vless
+  server: 15.188.103.174
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-13.36.1.52
+  type: vless
+  server: 13.36.1.52
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-93.190.9.44
+  type: vless
+  server: 93.190.9.44
+  port: 3090
+  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless
+- name: VLESS-93.190.9.41
+  type: vless
+  server: 93.190.9.41
+  port: 3090
+  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
+  udp: true
+  tls: false
+  network: grpc
+  grpc-service-name: vless
 - name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
   type: vmess
   server: 165.140.217.53
@@ -443,62 +475,9 @@ proxies:
     public-key: kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk
     fingerprint: chrome
   sni: www.logitech.com
-- name: VLESS-91.107.149.82
+- name: VLESS-45.58.126.92
   type: vless
-  server: 91.107.149.82
-  port: 56539
-  uuid: 7acf89aa-9283-48bd-81a1-de35edf8737d
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-158.101.194.120
-  type: vless
-  server: 158.101.194.120
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-199.232.78.159
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 59d75dc8-0de0-452d-bf3b-10a4b1925abc
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053#anotherme_night-53
-  ws-headers:
-    Host: fancii.global.ssl.fastly.net
-  sni: ssl.fastly.com
-- name: VLESS-140.248.186.45
-  type: vless
-  server: 140.248.186.45
-  port: 443
-  uuid: XpnTeam-9
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#anotherme_night-54
-  ws-headers:
-    Host: Appxdn.global.ssl.fastly.net
-  sni: ssl.fastly.com
-- name: VLESS-177.3.209.179
-  type: vless
-  server: 177.3.209.179
-  port: 8443
-  uuid: a0d181f9-e82f-454c-8dea-79d8e630ab96
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EsGa1C0nTVYyW4luB4-VBu0ECgbm2-61A5mjUDzpwSA
-    fingerprint: firefox
-  sni: www.telia.se
-- name: VLESS-45.58.126.115
-  type: vless
-  server: 45.58.126.115
+  server: 45.58.126.92
   port: 8444
   uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
   udp: true
@@ -510,15 +489,62 @@ proxies:
     short-id: 08
     fingerprint: firefox
   sni: nbcnews.com
+- name: VLESS-84.201.164.49
+  type: vless
+  server: 84.201.164.49
+  port: 443
+  uuid: 06ec3898-f952-52a5-8547-51ae1e6f0a62
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 2SVMBXiViUclgzkSfLCV2w6dOMJwA61YGFv7ne5wMgM
+    fingerprint: firefox
+  sni: api-maps.yandex.ru
+- name: VLESS-185.209.29.83
+  type: vless
+  server: 185.209.29.83
+  port: 4443
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
+    fingerprint: chrome
+  sni: v3238789.hosted-by-vdsina.ru
+- name: VLESS-199.232.78.170
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-15
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#anotherme_night-54
+  ws-headers:
+    Host: Appxdn.global.ssl.fastly.net
+  sni: ssl.fastly.com
+- name: VLESS-131.123.34.145
+  type: vless
+  server: 131.123.34.145
+  port: 8081
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /vless-test#anotherme_night-55
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-13.37.147.23
-  - VLESS-178.255.222.200
-  - VLESS-x-ui.panelsazahb.dpdns.org
-  - VLESS-195.58.144.56
-  - VLESS-151.101.1.194
+  - VLESS-52.56.51.174
+  - VLESS-p.farshadqw1.ir
+  - VLESS-a.farshadqw1.ir
+  - VLESS-uu.caroptions.ir
+  - VLESS-us.netease.uz
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -529,20 +555,24 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-144.31.131.38
-  - VLESS-music.navard.net
-  - VLESS-104.143.223.56
-  - VLESS-freeman.bestxau.ir
-  - VLESS-176.108.246.110
-  - VLESS-herd.zavqeron.ir
-  - VLESS-land.zavqeron.ir
-  - VLESS-199.232.78.160
-  - VLESS-nether11.velqixa.ir
-  - VLESS-95.182.93.92
-  - VLESS-199.232.237.79
-  - VLESS-dl-cf.f8r.ir
-  - VLESS-darsadgir.ir
-  - TROJAN-188.114.97.7
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-88.216.63.21
+  - VLESS-kelvin73.fars-remen.ir
+  - VLESS-93.190.8.18
+  - VLESS-162.35.104.143
+  - VLESS-5.75.201.20
+  - VLESS-host.taghvimtime.ir
+  - VLESS-2.27.205.59
+  - VLESS-srv-waw.kintecolas.com
+  - VLESS-www.speedtest.net
+  - VLESS-5.160.198.183
+  - VLESS-93.190.9.58
+  - VLESS-185.189.58.195
+  - VLESS-93.190.9.45
+  - VLESS-15.188.103.174
+  - VLESS-13.36.1.52
+  - VLESS-93.190.9.44
+  - VLESS-93.190.9.41
   - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
   - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-42'
   - VLESS-150.40.126.28
@@ -553,20 +583,19 @@ proxy-groups:
   - VLESS-45.95.169.47
   - VLESS-31.56.184.132
   - VLESS-47.74.3.200
-  - VLESS-91.107.149.82
-  - VLESS-158.101.194.120
-  - VLESS-199.232.78.159
-  - VLESS-140.248.186.45
-  - VLESS-177.3.209.179
-  - VLESS-45.58.126.115
+  - VLESS-45.58.126.92
+  - VLESS-84.201.164.49
+  - VLESS-185.209.29.83
+  - VLESS-199.232.78.170
+  - VLESS-131.123.34.145
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-13.37.147.23
-  - VLESS-178.255.222.200
-  - VLESS-x-ui.panelsazahb.dpdns.org
-  - VLESS-195.58.144.56
-  - VLESS-151.101.1.194
+  - VLESS-52.56.51.174
+  - VLESS-p.farshadqw1.ir
+  - VLESS-a.farshadqw1.ir
+  - VLESS-uu.caroptions.ir
+  - VLESS-us.netease.uz
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -577,20 +606,24 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-144.31.131.38
-  - VLESS-music.navard.net
-  - VLESS-104.143.223.56
-  - VLESS-freeman.bestxau.ir
-  - VLESS-176.108.246.110
-  - VLESS-herd.zavqeron.ir
-  - VLESS-land.zavqeron.ir
-  - VLESS-199.232.78.160
-  - VLESS-nether11.velqixa.ir
-  - VLESS-95.182.93.92
-  - VLESS-199.232.237.79
-  - VLESS-dl-cf.f8r.ir
-  - VLESS-darsadgir.ir
-  - TROJAN-188.114.97.7
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-88.216.63.21
+  - VLESS-kelvin73.fars-remen.ir
+  - VLESS-93.190.8.18
+  - VLESS-162.35.104.143
+  - VLESS-5.75.201.20
+  - VLESS-host.taghvimtime.ir
+  - VLESS-2.27.205.59
+  - VLESS-srv-waw.kintecolas.com
+  - VLESS-www.speedtest.net
+  - VLESS-5.160.198.183
+  - VLESS-93.190.9.58
+  - VLESS-185.189.58.195
+  - VLESS-93.190.9.45
+  - VLESS-15.188.103.174
+  - VLESS-13.36.1.52
+  - VLESS-93.190.9.44
+  - VLESS-93.190.9.41
   - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
   - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-42'
   - VLESS-150.40.126.28
@@ -601,12 +634,11 @@ proxy-groups:
   - VLESS-45.95.169.47
   - VLESS-31.56.184.132
   - VLESS-47.74.3.200
-  - VLESS-91.107.149.82
-  - VLESS-158.101.194.120
-  - VLESS-199.232.78.159
-  - VLESS-140.248.186.45
-  - VLESS-177.3.209.179
-  - VLESS-45.58.126.115
+  - VLESS-45.58.126.92
+  - VLESS-84.201.164.49
+  - VLESS-185.209.29.83
+  - VLESS-199.232.78.170
+  - VLESS-131.123.34.145
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

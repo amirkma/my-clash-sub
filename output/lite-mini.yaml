@@ -5,35 +5,66 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-213.156.152.212
+- name: VLESS-31.77.161.15
   type: vless
-  server: 213.156.152.212
-  port: 8290
-  uuid: 0de1047d-fadd-4075-a08e-2223c5dadd0a
+  server: 31.77.161.15
+  port: 443
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: yYjMMztcB_8Ao3sp9QIP9ZF0XtsUGXawIBUGWeIvglc
-    fingerprint: firefox
-  sni: www.numpy.org
-- name: VLESS-15.224.194.93
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    fingerprint: firefox#GetXConfig-1
+  sni: nvidia.com
+- name: VLESS-bugcop.asan-ps.ir
   type: vless
-  server: 15.224.194.93
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: bugcop.asan-ps.ir
+  port: 8080
+  uuid: a5a9f3de-86bf-40a3-a8e1-39268165321a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q5UtRfP5bVsXXvCVfbP-1mqoKdKMcq7zfVEF3tgjGTY
+    fingerprint: chrome
+  sni: dl.google.com
+- name: VLESS-94.182.145.147
+  type: vless
+  server: 94.182.145.147
+  port: 8880
+  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
   udp: true
   tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-13.36.1.52
+  network: ws#GetXConfig-5
+- name: VLESS-latavi.0-lati0-0.hosting-96.ir
   type: vless
-  server: 13.36.1.52
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: latavi.0-lati0-0.hosting-96.ir
+  port: 2242
+  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
   udp: true
-  tls: false
-  network: tcp#GetXConfig-5
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: u8Lf72dhxHTC-UIxj9BlZTW52UiyjP-DfqssndWZI24
+    fingerprint: chrome
+  sni: google-analytics.com
+- name: VLESS-finland.hosting-96.ir
+  type: vless
+  server: finland.hosting-96.ir
+  port: 2242
+  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: u8Lf72dhxHTC-UIxj9BlZTW52UiyjP-DfqssndWZI24
+    fingerprint: chrome
+  sni: google-analytics.com
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -152,72 +183,72 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: '@meliproxyy-21'
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-130.49.77.6
+- name: VLESS-95.85.224.17
   type: vless
-  server: 130.49.77.6
+  server: 95.85.224.17
   port: 443
-  uuid: b2141c97-76af-ff6f-839b-70a53e23aad9
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+    fingerprint: firefox
+  sni: est1313.ggisopi.su#meliproxyy-21
+- name: VLESS-88.99.161.169
+  type: vless
+  server: 88.99.161.169
+  port: 33468
+  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: hwwiWVqYq5b7S0JaXNSxjWSEv_1OUFMaWJGHzeAGyRM
+    public-key: b_lcW8NJW78Qfw6AwHcgPbNosdfuBmiie3dNoPrgGno
     fingerprint: chrome
-  sni: download.nvidia.com#meliproxyy-22
-- name: VLESS-pl3.moritech.net
+  sni: www.mozilla.org
+- name: VLESS-31.184.244.162
   type: vless
-  server: pl3.moritech.net
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  server: 31.184.244.162
+  port: 2053
+  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
   udp: true
   tls: true
-  network: tcp
-  sni: pl3.moritech.net#meliproxyy-23
-  flow: xtls-rprx-vision
-- name: VLESS-tgfree.rush-server.com
-  type: vless
-  server: tgfree.rush-server.com
-  port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
-  udp: true
-  tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: grpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    fingerprint: ios
-  sni: anyfile2file.com
-- name: VLESS-hhhorp.plus-hit.ru
-  type: vless
-  server: hhhorp.plus-hit.ru
+    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
+  sni: www.google.com
+- name: TROJAN-199.232.78.101
+  type: trojan
+  server: 199.232.78.101
   port: 443
-  uuid: 84a794a5-2420-4ca7-8e08-8d21571f36f3
+  password: mitivpn
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA
-    fingerprint: random
-  sni: hhhorp.plus-hit.ru
+  sni: ssl.fastly.com#meliproxyy-24
+  skip-cert-verify: false
+- name: TROJAN-78.47.146.151
+  type: trojan
+  server: 78.47.146.151
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org#meliproxyy-25
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-213.156.152.212
-  - VLESS-15.224.194.93
-  - VLESS-13.36.1.52
+  - VLESS-31.77.161.15
+  - VLESS-bugcop.asan-ps.ir
+  - VLESS-94.182.145.147
+  - VLESS-latavi.0-lati0-0.hosting-96.ir
+  - VLESS-finland.hosting-96.ir
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -228,17 +259,19 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - '@meliproxyy-21'
-  - VLESS-130.49.77.6
-  - VLESS-pl3.moritech.net
-  - VLESS-tgfree.rush-server.com
-  - VLESS-hhhorp.plus-hit.ru
+  - VLESS-95.85.224.17
+  - VLESS-88.99.161.169
+  - VLESS-31.184.244.162
+  - TROJAN-199.232.78.101
+  - TROJAN-78.47.146.151
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-213.156.152.212
-  - VLESS-15.224.194.93
-  - VLESS-13.36.1.52
+  - VLESS-31.77.161.15
+  - VLESS-bugcop.asan-ps.ir
+  - VLESS-94.182.145.147
+  - VLESS-latavi.0-lati0-0.hosting-96.ir
+  - VLESS-finland.hosting-96.ir
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -249,11 +282,11 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - '@meliproxyy-21'
-  - VLESS-130.49.77.6
-  - VLESS-pl3.moritech.net
-  - VLESS-tgfree.rush-server.com
-  - VLESS-hhhorp.plus-hit.ru
+  - VLESS-95.85.224.17
+  - VLESS-88.99.161.169
+  - VLESS-31.184.244.162
+  - TROJAN-199.232.78.101
+  - TROJAN-78.47.146.151
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

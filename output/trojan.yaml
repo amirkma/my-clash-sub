@@ -36,19 +36,10 @@ proxies:
   type: trojan
   server: 167.82.76.7
   port: 443
-  password: mitivpn
+  password: MiTIVPN
   udp: true
   tls: true
   sni: ssl.fastly.com#meliproxyy-4
-  skip-cert-verify: false
-- name: TROJAN-151.101.56.56
-  type: trojan
-  server: 151.101.56.56
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#meliproxyy-5
   skip-cert-verify: false
 - name: TROJAN-172.67.149.60
   type: trojan
@@ -57,7 +48,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-7
+  sni: www.ignitelimit.com#meliproxyy-5
   skip-cert-verify: false
 - name: TROJAN-www.speedtest.net
   type: trojan
@@ -68,6 +59,15 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   skip-cert-verify: true
+- name: TROJAN-199.232.78.160
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: MiTIVPN
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#meliproxyy-9
+  skip-cert-verify: false
 - name: TROJAN-5.75.171.12
   type: trojan
   server: 5.75.171.12
@@ -77,15 +77,6 @@ proxies:
   tls: true
   sni: maps.google.com
   skip-cert-verify: true
-- name: TROJAN-199.232.78.160
-  type: trojan
-  server: 199.232.78.160
-  port: 443
-  password: MiTIVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: false
 - name: TROJAN-199.232.78.101
   type: trojan
   server: 199.232.78.101
@@ -103,11 +94,10 @@ proxy-groups:
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
   - TROJAN-167.82.76.7
-  - TROJAN-151.101.56.56
   - TROJAN-172.67.149.60
   - TROJAN-www.speedtest.net
-  - TROJAN-5.75.171.12
   - TROJAN-199.232.78.160
+  - TROJAN-5.75.171.12
   - TROJAN-199.232.78.101
 - name: Auto
   type: url-test
@@ -116,11 +106,10 @@ proxy-groups:
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
   - TROJAN-167.82.76.7
-  - TROJAN-151.101.56.56
   - TROJAN-172.67.149.60
   - TROJAN-www.speedtest.net
-  - TROJAN-5.75.171.12
   - TROJAN-199.232.78.160
+  - TROJAN-5.75.171.12
   - TROJAN-199.232.78.101
   url: http://www.gstatic.com/generate_204
   interval: 300

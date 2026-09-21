@@ -5,66 +5,74 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-31.77.161.15
+- name: VLESS-185.186.143.237
   type: vless
-  server: 31.77.161.15
+  server: 185.186.143.237
   port: 443
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  uuid: 20ea2fdb-568c-4646-a15d-2ab8fcca860e
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM
+    fingerprint: safari
+  sni: ru-kitchen.ru
+- name: VLESS-31.76.53.246
+  type: vless
+  server: 31.76.53.246
+  port: 443
+  uuid: 61da8f4b-6ab1-4ca7-bae0-1cec4f9be2f8
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    fingerprint: firefox#GetXConfig-1
-  sni: nvidia.com
-- name: VLESS-bugcop.asan-ps.ir
+    public-key: HhEhP1K1hj4tUSqlBNIroSqc5zfT_xK3DCvzQ5xOsBQ
+    fingerprint: safari
+  sni: cdnjs.cloudflare.com
+- name: VLESS-212.46.33.17
   type: vless
-  server: bugcop.asan-ps.ir
-  port: 8080
-  uuid: a5a9f3de-86bf-40a3-a8e1-39268165321a
+  server: 212.46.33.17
+  port: 443
+  uuid: 6be9f5e4-2634-4c24-819c-40644874daac
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: moktana.net.v1.StreamService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    fingerprint: safari
+  sni: open.dynamicway-cluster.com
+- name: VLESS-148.135.185.21
+  type: vless
+  server: 148.135.185.21
+  port: 8445
+  uuid: e5d73666-1ac5-49fc-8e4d-5c8cad769588
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: Google
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: _UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8
+    fingerprint: safari
+  sni: hetzner.com
+- name: VLESS-95.85.246.58
+  type: vless
+  server: 95.85.246.58
+  port: 8448
+  uuid: 91c593d7-6095-4e20-aaf2-e591b61da7f2
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: q5UtRfP5bVsXXvCVfbP-1mqoKdKMcq7zfVEF3tgjGTY
-    fingerprint: chrome
-  sni: dl.google.com
-- name: VLESS-94.182.145.147
-  type: vless
-  server: 94.182.145.147
-  port: 8880
-  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
-  udp: true
-  tls: false
-  network: ws#GetXConfig-5
-- name: VLESS-latavi.0-lati0-0.hosting-96.ir
-  type: vless
-  server: latavi.0-lati0-0.hosting-96.ir
-  port: 2242
-  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: u8Lf72dhxHTC-UIxj9BlZTW52UiyjP-DfqssndWZI24
-    fingerprint: chrome
-  sni: google-analytics.com
-- name: VLESS-finland.hosting-96.ir
-  type: vless
-  server: finland.hosting-96.ir
-  port: 2242
-  uuid: c4107be5-6cf0-8e55-7913-f45b832d6da8
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: u8Lf72dhxHTC-UIxj9BlZTW52UiyjP-DfqssndWZI24
-    fingerprint: chrome
-  sni: google-analytics.com
+    public-key: h9UaYbYpywLQ3QkOw99nR6HTmyDUaKrdkt7gZJwayCQ
+    fingerprint: safari
+  sni: icloud.com
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -183,72 +191,64 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-95.85.224.17
+- name: VLESS-marzban-node-production-5af6.up.railway.app
   type: vless
-  server: 95.85.224.17
+  server: marzban-node-production-5af6.up.railway.app
   port: 443
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  uuid: 19289706-1367-4e48-a2ae-fd533df78270
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-    fingerprint: firefox
-  sni: est1313.ggisopi.su#meliproxyy-21
-- name: VLESS-88.99.161.169
+  network: ws
+  ws-path: /vless
+  ws-headers:
+    Host: marzban-node-production-5af6.up.railway.app
+  sni: marzban-node-production-5af6.up.railway.app
+- name: VLESS-69.46.46.109
   type: vless
-  server: 88.99.161.169
-  port: 33468
-  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
+  server: 69.46.46.109
+  port: 443
+  uuid: 19289706-1367-4e48-a2ae-fd533df78270
   udp: true
   tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: b_lcW8NJW78Qfw6AwHcgPbNosdfuBmiie3dNoPrgGno
-    fingerprint: chrome
-  sni: www.mozilla.org
-- name: VLESS-31.184.244.162
+  network: ws
+  ws-path: /vless
+  ws-headers:
+    Host: marzban-node-production-5af6.up.railway.app
+  sni: marzban-node-production-5af6.up.railway.app
+- name: VLESS-94.154.123.222
   type: vless
-  server: 31.184.244.162
-  port: 2053
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
+  server: 94.154.123.222
+  port: 443
+  uuid: 19289706-1367-4e48-a2ae-fd533df78270
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /vless
+  ws-headers:
+    Host: marzban-node-production-5af6.up.railway.app
+  sni: marzban-node-production-5af6.up.railway.app
+- name: VLESS-31.56.184.132
+  type: vless
+  server: 31.56.184.132
+  port: 8443
+  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
   udp: true
   tls: true
   network: grpc
-  grpc-service-name: grpc
+  grpc-service-name: shiforgrpc
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-  sni: www.google.com
-- name: TROJAN-199.232.78.101
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#meliproxyy-24
-  skip-cert-verify: false
-- name: TROJAN-78.47.146.151
-  type: trojan
-  server: 78.47.146.151
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org#meliproxyy-25
-  skip-cert-verify: false
+    public-key: bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A
+  sni: cloudflare.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-31.77.161.15
-  - VLESS-bugcop.asan-ps.ir
-  - VLESS-94.182.145.147
-  - VLESS-latavi.0-lati0-0.hosting-96.ir
-  - VLESS-finland.hosting-96.ir
+  - VLESS-185.186.143.237
+  - VLESS-31.76.53.246
+  - VLESS-212.46.33.17
+  - VLESS-148.135.185.21
+  - VLESS-95.85.246.58
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -259,19 +259,18 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-95.85.224.17
-  - VLESS-88.99.161.169
-  - VLESS-31.184.244.162
-  - TROJAN-199.232.78.101
-  - TROJAN-78.47.146.151
+  - VLESS-marzban-node-production-5af6.up.railway.app
+  - VLESS-69.46.46.109
+  - VLESS-94.154.123.222
+  - VLESS-31.56.184.132
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-31.77.161.15
-  - VLESS-bugcop.asan-ps.ir
-  - VLESS-94.182.145.147
-  - VLESS-latavi.0-lati0-0.hosting-96.ir
-  - VLESS-finland.hosting-96.ir
+  - VLESS-185.186.143.237
+  - VLESS-31.76.53.246
+  - VLESS-212.46.33.17
+  - VLESS-148.135.185.21
+  - VLESS-95.85.246.58
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -282,11 +281,10 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-95.85.224.17
-  - VLESS-88.99.161.169
-  - VLESS-31.184.244.162
-  - TROJAN-199.232.78.101
-  - TROJAN-78.47.146.151
+  - VLESS-marzban-node-production-5af6.up.railway.app
+  - VLESS-69.46.46.109
+  - VLESS-94.154.123.222
+  - VLESS-31.56.184.132
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

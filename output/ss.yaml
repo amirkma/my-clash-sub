@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-3.121.219.170-chacha20
+  type: ss
+  server: 3.121.219.170
+  port: 44317
+  cipher: chacha20-ietf-poly1305
+  password: 9b10c9a65f0b4e77be3998c4a591cf25
+  udp: true
 - name: SS-173.244.56.9-aes-128-
   type: ss
   server: 173.244.56.9
@@ -30,6 +37,7 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-3.121.219.170-chacha20
   - SS-173.244.56.9-aes-128-
   - SS-141.98.101.181-aes-128-
   - SS-173.244.56.6-aes-128-

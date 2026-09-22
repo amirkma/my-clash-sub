@@ -32,24 +32,6 @@ proxies:
   tls: true
   sni: www.pleadcourt.org#Farah_VPN-3
   skip-cert-verify: false
-- name: TROJAN-167.82.76.7
-  type: trojan
-  server: 167.82.76.7
-  port: 443
-  password: MiTIVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#meliproxyy-4
-  skip-cert-verify: false
-- name: TROJAN-172.67.149.60
-  type: trojan
-  server: 172.67.149.60
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com#meliproxyy-5
-  skip-cert-verify: false
 - name: TROJAN-www.speedtest.net
   type: trojan
   server: www.speedtest.net
@@ -59,6 +41,15 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   skip-cert-verify: true
+- name: TROJAN-172.67.149.60
+  type: trojan
+  server: 172.67.149.60
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: true
 - name: TROJAN-199.232.78.160
   type: trojan
   server: 199.232.78.160
@@ -66,7 +57,7 @@ proxies:
   password: MiTIVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-9
+  sni: ssl.fastly.com#meliproxyy-7
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -95,15 +86,6 @@ proxies:
   tls: true
   sni: maps.google.com
   skip-cert-verify: true
-- name: TROJAN-199.232.78.101
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: MiTIVPN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
@@ -111,28 +93,24 @@ proxy-groups:
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
-  - TROJAN-167.82.76.7
-  - TROJAN-172.67.149.60
   - TROJAN-www.speedtest.net
+  - TROJAN-172.67.149.60
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-render.com
   - TROJAN-5.75.171.12
-  - TROJAN-199.232.78.101
 - name: Auto
   type: url-test
   proxies:
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
-  - TROJAN-167.82.76.7
-  - TROJAN-172.67.149.60
   - TROJAN-www.speedtest.net
+  - TROJAN-172.67.149.60
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-render.com
   - TROJAN-5.75.171.12
-  - TROJAN-199.232.78.101
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

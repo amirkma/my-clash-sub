@@ -5,50 +5,21 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-66.33.22.241
+- name: VLESS-172.67.130.159
   type: vless
-  server: 66.33.22.241
-  port: 48002
-  uuid: 5ddab4ff-c200-47e3-bee6-827f57eeba7b
-  udp: true
-  tls: false
-  network: ws#GetXConfig-1
-- name: 'نامشخص 🏳️ | @GetXConfig | #7155-3'
-  type: vmess
-  server: pahobac.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
+  server: 172.67.130.159
+  port: 2096
+  uuid: 36788cf4-fcb4-49c5-a563-5f888849b1cc
   udp: true
   tls: true
   network: ws
-  ws-path: /linkvws
+  ws-path: /vqyps6kf3
   ws-headers:
-    Host: pahobac.org
-- name: VLESS-91.193.58.201
+    Host: cdn-jp.skyvora.app
+  sni: cdn-jp.skyvora.app#GetXConfig-1
+- name: VLESS-199.232.237.245
   type: vless
-  server: 91.193.58.201
-  port: 2087
-  uuid: AstroVPN_official
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: Canada
-  sni: vp.accuratenetworkchecker.ir#GetXConfig-5
-- name: 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7157-7'
-  type: vmess
-  server: 167.88.62.124
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-140.248.185.253
-  type: vless
-  server: 140.248.185.253
+  server: 199.232.237.245
   port: 443
   uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
@@ -56,8 +27,44 @@ proxies:
   network: ws
   ws-path: /
   ws-headers:
-    Host: trapbazi.global.ssl.fastly.net
-  sni: ssl.fastly.com#GetXConfig-9
+    Host: Tirandazl.global.ssl.fastly.net
+  sni: global.fastly.com#GetXConfig-3
+- name: VLESS-104.21.8.201
+  type: vless
+  server: 104.21.8.201
+  port: 2096
+  uuid: 214bf4c5-045a-4ddb-944b-e2eef9b33338
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /9hf8a67dhf
+  ws-headers:
+    Host: cdn-fr.skyvora.app
+  sni: cdn-fr.skyvora.app#GetXConfig-5
+- name: VLESS-69.46.46.93
+  type: vless
+  server: 69.46.46.93
+  port: 443
+  uuid: 399f9850-428a-b00a-6688-01d24438f959
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/399f9850-428a-b00a-6688-01d24438f959
+  ws-headers:
+    Host: solipanelwodi-production-0e0c.up.railway.app
+  sni: solipanelwodi-production-0e0c.up.railway.app#GetXConfig-7
+- name: VLESS-69.46.46.92
+  type: vless
+  server: 69.46.46.92
+  port: 443
+  uuid: 399f9850-428a-b00a-6688-01d24438f959
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws/399f9850-428a-b00a-6688-01d24438f959
+  ws-headers:
+    Host: solipanelwodi-production-0e0c.up.railway.app
+  sni: solipanelwodi-production-0e0c.up.railway.app#GetXConfig-9
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -533,11 +540,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-66.33.22.241
-  - 'نامشخص 🏳️ | @GetXConfig | #7155-3'
-  - VLESS-91.193.58.201
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7157-7'
-  - VLESS-140.248.185.253
+  - VLESS-172.67.130.159
+  - VLESS-199.232.237.245
+  - VLESS-104.21.8.201
+  - VLESS-69.46.46.93
+  - VLESS-69.46.46.92
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -582,11 +589,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-66.33.22.241
-  - 'نامشخص 🏳️ | @GetXConfig | #7155-3'
-  - VLESS-91.193.58.201
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7157-7'
-  - VLESS-140.248.185.253
+  - VLESS-172.67.130.159
+  - VLESS-199.232.237.245
+  - VLESS-104.21.8.201
+  - VLESS-69.46.46.93
+  - VLESS-69.46.46.92
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249

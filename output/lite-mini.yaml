@@ -5,57 +5,71 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-3.79.184.50
+- name: VLESS-31.76.249.87
   type: vless
-  server: 3.79.184.50
-  port: 1002
-  uuid: a8245c28-e2ba-4f3b-8f4a-cf0d0da00d24
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-172.67.134.181
-  type: vless
-  server: 172.67.134.181
+  server: 31.76.249.87
   port: 443
-  uuid: 523e85fa-82b2-4ca5-9ff5-a734a4510197
+  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
   udp: true
   tls: true
-  network: xhttp
-  sni: assets-de1.mirolit.ru#GetXConfig-3
-- name: VLESS-31.56.180.87
-  type: vless
-  server: 31.56.180.87
-  port: 443
-  uuid: 496a2c7a-c963-4275-b317-4d4a68901456
-  udp: true
-  tls: true
-  network: xhttp
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Y5mW7bbhFRNJAbjiRwt0MVF2JIaTCPTj70ZfUEbHmig
+    public-key: gydLdekl4sNcE2j7vueKJJhpYWTBxlGs_VQ6-ZH55iQ
     fingerprint: safari
-  sni: autodiscover.kilotest.ru
-- name: VLESS-178.105.168.171
+  sni: www.akamai.com#GetXConfig-1
+- name: VLESS-45.134.15.107
   type: vless
-  server: 178.105.168.171
-  port: 9443
-  uuid: a8fb6d91-a176-4dd4-99d1-7cef7eed6336
+  server: 45.134.15.107
+  port: 443
+  uuid: fc47db0c-c6f2-4665-bdb2-8f717822ce9d
   udp: true
   tls: true
-  network: tcp#GetXConfig-7
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: OvEpExEu-A6ZRSO1BddxIrQVCvLNcHCVlVpb8Gxzcxs
-    fingerprint: chrome
-  sni: connect.amd.com
-- name: VLESS-188.114.98.44
+    public-key: os30BlxGQHk4KGZRHu2TwSc9rZYiKMsmJESx2B-2fDk
+    fingerprint: safari
+  sni: f9q7w8hy0fq0w8hy9.datahubfiles.com
+- name: VLESS-203.17.244.37
   type: vless
-  server: 188.114.98.44
-  port: 8080
-  uuid: 75ccd3c9-c815-4c62-8f0e-4d1c7df734b3
+  server: 203.17.244.37
+  port: 443
+  uuid: d5925e2c-f985-448d-a044-24dde417fe42
   udp: true
-  tls: false
-  network: xhttp#GetXConfig-9
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
+    fingerprint: safari
+  sni: nl-2.extra-solutions.ru
+- name: VLESS-144.31.62.224
+  type: vless
+  server: 144.31.62.224
+  port: 443
+  uuid: 58783e94-cff6-4b74-a80c-2d8828d44cc5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8
+    fingerprint: safari
+  sni: deepl.com
+- name: VLESS-2.56.172.228
+  type: vless
+  server: 2.56.172.228
+  port: 8443
+  uuid: 5b754a1a-11aa-4df9-a8ba-44af9a579fe1
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MjRaYQ5TjfU2rfHxVQ2Sa4nXRHHvsMvi3DW-x09n8Ts
+    fingerprint: safari
+  sni: poland.b2ai.top#GetXConfig-9
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -174,70 +188,64 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-turkeynewvdflvvjfkdsjvlk3jvoijuvoisdfjvoi3ju2voisfjdoivodfsiv.nevoxa.ir
+- name: VLESS-k2.cloud--vpn.site
   type: vless
-  server: turkeynewvdflvvjfkdsjvlk3jvoijuvoisdfjvoi3ju2voisfjdoivodfsiv.nevoxa.ir
-  port: 32210
-  uuid: 24051e17-a1c9-4566-a331-789e6b681007
+  server: k2.cloud--vpn.site
+  port: 443
+  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: c12.com
+  sni: ssl.fastly.com
+- name: VLESS-tun.finland.quickpl.ir
+  type: vless
+  server: tun.finland.quickpl.ir
+  port: 9091
+  uuid: 9af3f593-e81b-46a2-a49d-ec108fe95c8f
   udp: true
   tls: false
   network: tcp
-- name: VLESS-104.21.70.21
+- name: VLESS-35.180.105.155
   type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: 35e8826f-0873-492d-8b8a-d495c9947480
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /pyip=ProxyIP.KR.CMLiussss.net#meliproxyy-22
-  ws-headers:
-    Host: super-sunset-010c.24-43d.workers.dev
-  sni: super-sunset-010c.24-43d.workers.dev
-- name: VLESS-163.8.195.241
-  type: vless
-  server: 163.8.195.241
-  port: 2087
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  server: 35.180.105.155
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: ws
-  ws-path: /29c8fed7ca22#meliproxyy-23
-- name: VLESS-152.228.139.33
+  network: tcp
+- name: VLESS-milan.adaspoloandco.com
   type: vless
-  server: 152.228.139.33
-  port: 35108
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: grpc-common3#meliproxyy-24
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    fingerprint: firefox
-  sni: www.nvidia.com
-- name: VLESS-freef35panel-production.up.railway.app
-  type: vless
-  server: freef35panel-production.up.railway.app
-  port: 443
-  uuid: b6c94a66-0d8c-34dd-a671-4e84a9e5e123
+  server: milan.adaspoloandco.com
+  port: 8443
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
   udp: true
   tls: true
   network: ws
-  ws-path: /ws/b6c94a66-0d8c-34dd-a671-4e84a9e5e123#meliproxyy-25
+  ws-path: /RoBeRt#meliproxyy-24
   ws-headers:
-    Host: freef35panel-production.up.railway.app
-  sni: freef35panel-production.up.railway.app
+    Host: milan.adaspoloandco.com
+  sni: milan.adaspoloandco.com
+- name: VLESS-www.sorfema.ir
+  type: vless
+  server: www.sorfema.ir
+  port: 2052
+  uuid: 35144244-d73c-44c0-97ae-8b8003c2214a
+  udp: true
+  tls: true
+  network: tcp
+  sni: www.sorfema.ir
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-3.79.184.50
-  - VLESS-172.67.134.181
-  - VLESS-31.56.180.87
-  - VLESS-178.105.168.171
-  - VLESS-188.114.98.44
+  - VLESS-31.76.249.87
+  - VLESS-45.134.15.107
+  - VLESS-203.17.244.37
+  - VLESS-144.31.62.224
+  - VLESS-2.56.172.228
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -248,19 +256,19 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-turkeynewvdflvvjfkdsjvlk3jvoijuvoisdfjvoi3ju2voisfjdoivodfsiv.nevoxa.ir
-  - VLESS-104.21.70.21
-  - VLESS-163.8.195.241
-  - VLESS-152.228.139.33
-  - VLESS-freef35panel-production.up.railway.app
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-tun.finland.quickpl.ir
+  - VLESS-35.180.105.155
+  - VLESS-milan.adaspoloandco.com
+  - VLESS-www.sorfema.ir
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-3.79.184.50
-  - VLESS-172.67.134.181
-  - VLESS-31.56.180.87
-  - VLESS-178.105.168.171
-  - VLESS-188.114.98.44
+  - VLESS-31.76.249.87
+  - VLESS-45.134.15.107
+  - VLESS-203.17.244.37
+  - VLESS-144.31.62.224
+  - VLESS-2.56.172.228
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -271,11 +279,11 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-turkeynewvdflvvjfkdsjvlk3jvoijuvoisdfjvoi3ju2voisfjdoivodfsiv.nevoxa.ir
-  - VLESS-104.21.70.21
-  - VLESS-163.8.195.241
-  - VLESS-152.228.139.33
-  - VLESS-freef35panel-production.up.railway.app
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-tun.finland.quickpl.ir
+  - VLESS-35.180.105.155
+  - VLESS-milan.adaspoloandco.com
+  - VLESS-www.sorfema.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

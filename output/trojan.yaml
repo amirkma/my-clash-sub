@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: TROJAN-191.44.113.150
+  type: trojan
+  server: 191.44.113.150
+  port: 443
+  password: pkj3BBnG2NE4wD-72SwgzNcfaHSes-dr
+  udp: true
+  tls: true
+  sni: 16.img.avito.st
+  skip-cert-verify: true
 - name: TROJAN-104.21.70.21
   type: trojan
   server: 104.21.70.21
@@ -21,7 +30,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#Farah_VPN-2
+  sni: www.volumeroot.com#Farah_VPN-3
   skip-cert-verify: false
 - name: TROJAN-8.47.69.0
   type: trojan
@@ -30,7 +39,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org#Farah_VPN-3
+  sni: www.pleadcourt.org#Farah_VPN-4
   skip-cert-verify: false
 - name: TROJAN-199.232.78.160
   type: trojan
@@ -39,7 +48,7 @@ proxies:
   password: MiTIVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-5
+  sni: ssl.fastly.com#meliproxyy-6
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -50,6 +59,15 @@ proxies:
   tls: true
   sni: www.ignitelimit.com
   skip-cert-verify: true
+- name: TROJAN-172.64.152.23
+  type: trojan
+  server: 172.64.152.23
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#meliproxyy-8
+  skip-cert-verify: false
 - name: TROJAN-5.75.171.12
   type: trojan
   server: 5.75.171.12
@@ -63,20 +81,24 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - TROJAN-191.44.113.150
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
+  - TROJAN-172.64.152.23
   - TROJAN-5.75.171.12
 - name: Auto
   type: url-test
   proxies:
+  - TROJAN-191.44.113.150
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
+  - TROJAN-172.64.152.23
   - TROJAN-5.75.171.12
   url: http://www.gstatic.com/generate_204
   interval: 300

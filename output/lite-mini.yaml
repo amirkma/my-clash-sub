@@ -167,84 +167,70 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-88.216.220.88
+- name: VLESS-140.248.189.57
   type: vless
-  server: 88.216.220.88
-  port: 443
-  uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
+  server: 140.248.189.57
+  port: 80
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: api.v1.StreamService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g
-    fingerprint: firefox
-  sni: files.noneok.com
-- name: VLESS-fl.rushoppingforwomen.com
+  tls: false
+  network: ws#meliproxyy-21
+- name: VLESS-199.232.78.159
   type: vless
-  server: fl.rushoppingforwomen.com
+  server: 199.232.78.159
   port: 443
-  uuid: 5cdfb212-6257-42a7-8185-8b33f0d23bc6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: kSelqiijospUZVwgMaK2wAH6EIVVGBi4YEMI1RvqzGM
-    fingerprint: firefox
-  sni: fl.rushoppingforwomen.com
-- name: VLESS-91.210.169.181
-  type: vless
-  server: 91.210.169.181
-  port: 443
-  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
   tls: true
   network: ws
-  ws-path: /api/connect
+  ws-path: /
   ws-headers:
-    Host: wstg.datasynctrue.online
-  sni: wstg.datasynctrue.online#meliproxyy-23
-- name: VLESS-95.217.24.119
+    Host: skyfarst.global.ssl.fastly.net
+  sni: global.fastly.com#meliproxyy-22
+- name: VLESS-k2.cloud--vpn.site
   type: vless
-  server: 95.217.24.119
-  port: 2087
-  uuid: ddc0bc7e-04c6-4ff9-9adb-c68c71606e8f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: _FKzdndiMfCSU5YLVXSBqzk2lIG0W2-DauFpos684Uc
-    fingerprint: chrome
-  sni: 62.238.103.54
-- name: VLESS-tgfree.rush-server.com
-  type: vless
-  server: tgfree.rush-server.com
+  server: k2.cloud--vpn.site
   port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    fingerprint: chrome
-  sni: anyfile2file.com
-- name: VLESS-188.225.77.241
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: c12.com
+  sni: ssl.fastly.com#meliproxyy-23
+- name: VLESS-199.232.249.220
   type: vless
-  server: 188.225.77.241
+  server: 199.232.249.220
   port: 443
-  uuid: 026f58a9-b36e-4204-8f8d-54c5374163da
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg
-    fingerprint: firefox
-  sni: api.betust.net
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: sardach3.global.ssl.fastly.net
+  sni: global.fastly.com#meliproxyy-24
+- name: VLESS-199.232.237.245
+  type: vless
+  server: 199.232.237.245
+  port: 443
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: Tirandazl.global.ssl.fastly.net
+  sni: global.fastly.com#meliproxyy-25
+- name: VLESS-dl6.sepid-dl.ir
+  type: vless
+  server: dl6.sepid-dl.ir
+  port: 80
+  uuid: b40ddc5e-9d01-43e1-975c-30200fda12c4
+  udp: true
+  tls: false
+  network: httpupgrade#meliproxyy-26
 proxy-groups:
 - name: PROXY
   type: select
@@ -263,12 +249,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-88.216.220.88
-  - VLESS-fl.rushoppingforwomen.com
-  - VLESS-91.210.169.181
-  - VLESS-95.217.24.119
-  - VLESS-tgfree.rush-server.com
-  - VLESS-188.225.77.241
+  - VLESS-140.248.189.57
+  - VLESS-199.232.78.159
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-199.232.249.220
+  - VLESS-199.232.237.245
+  - VLESS-dl6.sepid-dl.ir
 - name: Auto
   type: url-test
   proxies:
@@ -286,12 +272,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-88.216.220.88
-  - VLESS-fl.rushoppingforwomen.com
-  - VLESS-91.210.169.181
-  - VLESS-95.217.24.119
-  - VLESS-tgfree.rush-server.com
-  - VLESS-188.225.77.241
+  - VLESS-140.248.189.57
+  - VLESS-199.232.78.159
+  - VLESS-k2.cloud--vpn.site
+  - VLESS-199.232.249.220
+  - VLESS-199.232.237.245
+  - VLESS-dl6.sepid-dl.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

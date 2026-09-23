@@ -50,24 +50,6 @@ proxies:
   tls: true
   sni: www.ignitelimit.com
   skip-cert-verify: true
-- name: TROJAN-render.com
-  type: trojan
-  server: render.com
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-- name: TROJAN-www.speedtest.net
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
 - name: TROJAN-5.75.171.12
   type: trojan
   server: 5.75.171.12
@@ -86,8 +68,6 @@ proxy-groups:
   - TROJAN-8.47.69.0
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
-  - TROJAN-render.com
-  - TROJAN-www.speedtest.net
   - TROJAN-5.75.171.12
 - name: Auto
   type: url-test
@@ -97,8 +77,6 @@ proxy-groups:
   - TROJAN-8.47.69.0
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
-  - TROJAN-render.com
-  - TROJAN-www.speedtest.net
   - TROJAN-5.75.171.12
   url: http://www.gstatic.com/generate_204
   interval: 300

@@ -167,6 +167,45 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
+- name: VLESS-88.216.220.88
+  type: vless
+  server: 88.216.220.88
+  port: 443
+  uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: api.v1.StreamService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g
+    fingerprint: firefox
+  sni: files.noneok.com
+- name: VLESS-fl.rushoppingforwomen.com
+  type: vless
+  server: fl.rushoppingforwomen.com
+  port: 443
+  uuid: 5cdfb212-6257-42a7-8185-8b33f0d23bc6
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: kSelqiijospUZVwgMaK2wAH6EIVVGBi4YEMI1RvqzGM
+    fingerprint: firefox
+  sni: fl.rushoppingforwomen.com
+- name: VLESS-91.210.169.181
+  type: vless
+  server: 91.210.169.181
+  port: 443
+  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /api/connect
+  ws-headers:
+    Host: wstg.datasynctrue.online
+  sni: wstg.datasynctrue.online#meliproxyy-23
 - name: VLESS-95.217.24.119
   type: vless
   server: 95.217.24.119
@@ -180,32 +219,19 @@ proxies:
     public-key: _FKzdndiMfCSU5YLVXSBqzk2lIG0W2-DauFpos684Uc
     fingerprint: chrome
   sni: 62.238.103.54
-- name: VLESS-116.202.2.27
+- name: VLESS-tgfree.rush-server.com
   type: vless
-  server: 116.202.2.27
-  port: 2053
-  uuid: 0f2b674f-1855-47d3-aa4e-e5e3c637ebcf
+  server: tgfree.rush-server.com
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: kQ80VUyUaQF2Qczqb4XqnNdGD8pYwuVNqBEezMjtBTc
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
     fingerprint: chrome
-  sni: 91.98.44.116
-- name: VLESS-5.78.28.48
-  type: vless
-  server: 5.78.28.48
-  port: 80
-  uuid: 2be98d5e-6eed-445d-aef4-9c776fdd03af
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: u42o3SnK9nE0nEUNd1JREM03dsT7N_c-m2rECXFCCHg
-    fingerprint: chrome
-  sni: 5.78.159.97
+  sni: anyfile2file.com
 - name: VLESS-188.225.77.241
   type: vless
   server: 188.225.77.241
@@ -219,32 +245,6 @@ proxies:
     public-key: YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg
     fingerprint: firefox
   sni: api.betust.net
-- name: VLESS-67.159.17.62
-  type: vless
-  server: 67.159.17.62
-  port: 443
-  uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
-    fingerprint: chrome
-  sni: filesconvert.org
-- name: VLESS-188.225.57.78
-  type: vless
-  server: 188.225.57.78
-  port: 443
-  uuid: 026f58a9-b36e-4204-8f8d-54c5374163da
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk
-    fingerprint: firefox
-  sni: app4.betust.net
 proxy-groups:
 - name: PROXY
   type: select
@@ -263,12 +263,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
+  - VLESS-88.216.220.88
+  - VLESS-fl.rushoppingforwomen.com
+  - VLESS-91.210.169.181
   - VLESS-95.217.24.119
-  - VLESS-116.202.2.27
-  - VLESS-5.78.28.48
+  - VLESS-tgfree.rush-server.com
   - VLESS-188.225.77.241
-  - VLESS-67.159.17.62
-  - VLESS-188.225.57.78
 - name: Auto
   type: url-test
   proxies:
@@ -286,12 +286,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
+  - VLESS-88.216.220.88
+  - VLESS-fl.rushoppingforwomen.com
+  - VLESS-91.210.169.181
   - VLESS-95.217.24.119
-  - VLESS-116.202.2.27
-  - VLESS-5.78.28.48
+  - VLESS-tgfree.rush-server.com
   - VLESS-188.225.77.241
-  - VLESS-67.159.17.62
-  - VLESS-188.225.57.78
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

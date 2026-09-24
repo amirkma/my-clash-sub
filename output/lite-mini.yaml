@@ -167,84 +167,73 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-88.216.220.88
-  type: vless
-  server: 88.216.220.88
+- name: '@meliproxyy-21'
+  type: vmess
+  server: 45.32.120.173
   port: 443
-  uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
+  uuid: XEXEVIL
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: api.v1.StreamService
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g
-    fingerprint: firefox
-  sni: files.noneok.com
-- name: VLESS-fl.rushoppingforwomen.com
-  type: vless
-  server: fl.rushoppingforwomen.com
-  port: 443
-  uuid: 5cdfb212-6257-42a7-8185-8b33f0d23bc6
-  udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: kSelqiijospUZVwgMaK2wAH6EIVVGBi4YEMI1RvqzGM
-    fingerprint: firefox
-  sni: fl.rushoppingforwomen.com
-- name: VLESS-91.210.169.181
-  type: vless
-  server: 91.210.169.181
-  port: 443
-  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+- name: '@meliproxyy-22'
+  type: vmess
+  server: 165.154.195.38
+  port: 35034
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
+  network: tcp
+- name: '@meliproxyy-23'
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
   network: ws
-  ws-path: /api/connect
+  ws-path: /
   ws-headers:
-    Host: wstg.datasynctrue.online
-  sni: wstg.datasynctrue.online#meliproxyy-23
-- name: VLESS-95.217.24.119
+    Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: VLESS-188.114.96.12
   type: vless
-  server: 95.217.24.119
-  port: 2087
-  uuid: ddc0bc7e-04c6-4ff9-9adb-c68c71606e8f
+  server: 188.114.96.12
+  port: 2052
+  uuid: 1cc9916b-7de3-451d-941e-0fe4298208cb
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: _FKzdndiMfCSU5YLVXSBqzk2lIG0W2-DauFpos684Uc
-    fingerprint: chrome
-  sni: 62.238.103.54
-- name: VLESS-tgfree.rush-server.com
+  tls: false
+  network: httpupgrade#meliproxyy-24
+- name: VLESS-31.56.180.87
   type: vless
-  server: tgfree.rush-server.com
+  server: 31.56.180.87
   port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  uuid: 496a2c7a-c963-4275-b317-4d4a68901456
   udp: true
   tls: true
-  network: tcp
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    fingerprint: chrome
-  sni: anyfile2file.com
-- name: VLESS-188.225.77.241
+    public-key: Y5mW7bbhFRNJAbjiRwt0MVF2JIaTCPTj70ZfUEbHmig
+    fingerprint: safari
+  sni: autodiscover.kilotest.ru
+- name: VLESS-138.124.9.108
   type: vless
-  server: 188.225.77.241
+  server: 138.124.9.108
   port: 443
-  uuid: 026f58a9-b36e-4204-8f8d-54c5374163da
+  uuid: c795bdd5-0460-42bd-927b-fbff154d2ab5
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg
-    fingerprint: firefox
-  sni: api.betust.net
+    public-key: ssz8kvl1tH0TUaFREVSV_X-ED0AR-eeaWpKg2jQM8D8
+    fingerprint: safari
+  sni: gag.fl2.iki-servers.com#meliproxyy-26
 proxy-groups:
 - name: PROXY
   type: select
@@ -263,12 +252,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-88.216.220.88
-  - VLESS-fl.rushoppingforwomen.com
-  - VLESS-91.210.169.181
-  - VLESS-95.217.24.119
-  - VLESS-tgfree.rush-server.com
-  - VLESS-188.225.77.241
+  - '@meliproxyy-21'
+  - '@meliproxyy-22'
+  - '@meliproxyy-23'
+  - VLESS-188.114.96.12
+  - VLESS-31.56.180.87
+  - VLESS-138.124.9.108
 - name: Auto
   type: url-test
   proxies:
@@ -286,12 +275,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-88.216.220.88
-  - VLESS-fl.rushoppingforwomen.com
-  - VLESS-91.210.169.181
-  - VLESS-95.217.24.119
-  - VLESS-tgfree.rush-server.com
-  - VLESS-188.225.77.241
+  - '@meliproxyy-21'
+  - '@meliproxyy-22'
+  - '@meliproxyy-23'
+  - VLESS-188.114.96.12
+  - VLESS-31.56.180.87
+  - VLESS-138.124.9.108
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

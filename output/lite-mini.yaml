@@ -167,73 +167,80 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: '@meliproxyy-21'
-  type: vmess
-  server: 45.32.120.173
+- name: VLESS-199.232.78.159
+  type: vless
+  server: 199.232.78.159
   port: 443
-  uuid: XEXEVIL
-  alterId: 0
-  cipher: auto
+  uuid: 9129b5f6-d771-4072-b065-c2fae7b034b4
   udp: true
-  tls: false
+  tls: true
+  network: ws
+  ws-path: /#meliproxyy-21
+  ws-headers:
+    Host: towndtime.global.ssl.fastly.neT.
+  sni: ssl.fastly.com
+- name: VLESS-147.45.148.6
+  type: vless
+  server: 147.45.148.6
+  port: 443
+  uuid: 974f2c7e-a292-4207-8315-ef4151bdca41
+  udp: true
+  tls: true
   network: tcp
-- name: '@meliproxyy-22'
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ZJlfiMh4ebjrTl2_kwAk_zXMAaCiwNS7yMd5XzlUgmI
+    fingerprint: firefox
+  sni: yoy-api.bachidze.com
+- name: VLESS-137.184.218.169
+  type: vless
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
   udp: true
-  tls: false
+  tls: true
   network: tcp
-- name: '@meliproxyy-23'
-  type: vmess
-  server: 188.114.96.19
-  port: 80
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
-  alterId: 0
-  cipher: auto
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+    fingerprint: chrome
+  sni: www.cloudflare.com
+- name: VLESS-169.40.42.184
+  type: vless
+  server: 169.40.42.184
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
-  tls: false
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    fingerprint: chrome
+  sni: yahoo.com
+- name: VLESS-195.123.235.177
+  type: vless
+  server: 195.123.235.177
+  port: 443
+  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+    fingerprint: chrome
+  sni: gateway.icloud.com
+- name: VLESS-tr3.wba-pn.ru
+  type: vless
+  server: tr3.wba-pn.ru
+  port: 443
+  uuid: af2a0c18-b08c-471f-baa3-259ac2ce3a85
+  udp: true
+  tls: true
   network: ws
   ws-path: /
-  ws-headers:
-    Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: VLESS-188.114.96.12
-  type: vless
-  server: 188.114.96.12
-  port: 2052
-  uuid: 1cc9916b-7de3-451d-941e-0fe4298208cb
-  udp: true
-  tls: false
-  network: httpupgrade#meliproxyy-24
-- name: VLESS-31.56.180.87
-  type: vless
-  server: 31.56.180.87
-  port: 443
-  uuid: 496a2c7a-c963-4275-b317-4d4a68901456
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Y5mW7bbhFRNJAbjiRwt0MVF2JIaTCPTj70ZfUEbHmig
-    fingerprint: safari
-  sni: autodiscover.kilotest.ru
-- name: VLESS-138.124.9.108
-  type: vless
-  server: 138.124.9.108
-  port: 443
-  uuid: c795bdd5-0460-42bd-927b-fbff154d2ab5
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ssz8kvl1tH0TUaFREVSV_X-ED0AR-eeaWpKg2jQM8D8
-    fingerprint: safari
-  sni: gag.fl2.iki-servers.com#meliproxyy-26
+  sni: tr3.wba-pn.ru#meliproxyy-26
 proxy-groups:
 - name: PROXY
   type: select
@@ -252,12 +259,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - '@meliproxyy-21'
-  - '@meliproxyy-22'
-  - '@meliproxyy-23'
-  - VLESS-188.114.96.12
-  - VLESS-31.56.180.87
-  - VLESS-138.124.9.108
+  - VLESS-199.232.78.159
+  - VLESS-147.45.148.6
+  - VLESS-137.184.218.169
+  - VLESS-169.40.42.184
+  - VLESS-195.123.235.177
+  - VLESS-tr3.wba-pn.ru
 - name: Auto
   type: url-test
   proxies:
@@ -275,12 +282,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - '@meliproxyy-21'
-  - '@meliproxyy-22'
-  - '@meliproxyy-23'
-  - VLESS-188.114.96.12
-  - VLESS-31.56.180.87
-  - VLESS-138.124.9.108
+  - VLESS-199.232.78.159
+  - VLESS-147.45.148.6
+  - VLESS-137.184.218.169
+  - VLESS-169.40.42.184
+  - VLESS-195.123.235.177
+  - VLESS-tr3.wba-pn.ru
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

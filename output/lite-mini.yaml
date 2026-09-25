@@ -167,68 +167,72 @@ proxies:
   tls: true
   sni: id1.nathaya.web.id
   skip-cert-verify: true
-- name: VLESS-185.141.227.180
+- name: VLESS-188.114.96.6
   type: vless
-  server: 185.141.227.180
-  port: 2053
-  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  udp: true
-  tls: true
-  network: xhttp
-  sni: dismissaltree.net
-- name: VLESS-psumszdg.danqela.ir
-  type: vless
-  server: psumszdg.danqela.ir
-  port: 51595
-  uuid: c95f2cfc-ebae-4293-ad37-68c60553182c
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-yellow-disk-0edf.diyenec996.workers.dev
-  type: vless
-  server: yellow-disk-0edf.diyenec996.workers.dev
+  server: 188.114.96.6
   port: 443
-  uuid: e73d4e2a-ac73-4948-960a-2c2dd57b7ea8
+  uuid: a592b4ac-e209-4a13-3cef-539600000005
   udp: true
   tls: true
   network: ws
-  ws-path: /#meliproxyy-23
+  ws-path: /sync
   ws-headers:
-    Host: yellow-disk-0edf.diyenec996.workers.dev
-  sni: yellow-disk-0edf.diyenec996.workers.dev
-- name: VLESS-ez-abcc2c.igunsjgjnfgn.workers.dev
+    Host: 0404.infinityconfig5.workers.dev
+  sni: 0404.infinityconfig5.workers.dev#meliproxyy-21
+- name: VLESS-212.46.33.90
   type: vless
-  server: ez-abcc2c.igunsjgjnfgn.workers.dev
-  port: 2087
-  uuid: 50414e45-4c5f-5a45-5553-9b0ee99e36dd
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#meliproxyy-24
-  ws-headers:
-    Host: ez-abcc2c.igunsjgjnfgn.workers.dev
-  sni: ez-abcc2c.igunsjgjnfgn.workers.dev
-- name: VLESS-199.232.78.159
-  type: vless
-  server: 199.232.78.159
-  port: 80
-  uuid: 6261bc9c-128d-446a-9e16-7b340c7544e6
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /#meliproxyy-25
-  ws-headers:
-    Host: yaSharClass.global.ssl.fastly.net
-- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
-  type: vmess
-  server: 165.140.217.53
+  server: 212.46.33.90
   port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-  alterId: 0
-  cipher: none
+  uuid: 71091100-c6ed-41fa-84ac-acf7ff9eeb7f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
+    fingerprint: firefox
+  sni: slowkd.sadiepinki.com
+- name: VLESS-91.107.190.84
+  type: vless
+  server: 91.107.190.84
+  port: 443
+  uuid: 1c509788-72c0-4510-bcae-eedbc20c43d8
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: gvS7f3yIhT9QT7HnoI5YNev_xvGdW1HS5IRXiw8tbi4
+    fingerprint: chrome
+  sni: storage.googleapis.com
+- name: VLESS-172.67.130.159
+  type: vless
+  server: 172.67.130.159
+  port: 2096
+  uuid: 735b8344-0b95-464c-b687-1c5616138908
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /3cagtz3
+  ws-headers:
+    Host: cdn-de.skyvora.app
+  sni: cdn-de.skyvora.app#meliproxyy-24
+- name: VLESS-104.21.6.82
+  type: vless
+  server: 104.21.6.82
+  port: 8080
+  uuid: 03a8d415-1d9c-470d-9e2d-ea0fd6aef9c0
   udp: true
   tls: false
-  network: tcp
+  network: ws#meliproxyy-25
+- name: VLESS-147.135.213.131
+  type: vless
+  server: 147.135.213.131
+  port: 20240
+  uuid: a2530a4e-dd10-47ba-a031-d9ef77dd673b
+  udp: true
+  tls: false
+  network: ws#meliproxyy-26
 proxy-groups:
 - name: PROXY
   type: select
@@ -247,12 +251,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-185.141.227.180
-  - VLESS-psumszdg.danqela.ir
-  - VLESS-yellow-disk-0edf.diyenec996.workers.dev
-  - VLESS-ez-abcc2c.igunsjgjnfgn.workers.dev
-  - VLESS-199.232.78.159
-  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+  - VLESS-188.114.96.6
+  - VLESS-212.46.33.90
+  - VLESS-91.107.190.84
+  - VLESS-172.67.130.159
+  - VLESS-104.21.6.82
+  - VLESS-147.135.213.131
 - name: Auto
   type: url-test
   proxies:
@@ -270,12 +274,12 @@ proxy-groups:
   - VLESS-104.24.0.184
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
-  - VLESS-185.141.227.180
-  - VLESS-psumszdg.danqela.ir
-  - VLESS-yellow-disk-0edf.diyenec996.workers.dev
-  - VLESS-ez-abcc2c.igunsjgjnfgn.workers.dev
-  - VLESS-199.232.78.159
-  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+  - VLESS-188.114.96.6
+  - VLESS-212.46.33.90
+  - VLESS-91.107.190.84
+  - VLESS-172.67.130.159
+  - VLESS-104.21.6.82
+  - VLESS-147.135.213.131
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -121,15 +121,6 @@ proxies:
   tls: true
   sni: maps.google.com
   skip-cert-verify: true
-- name: TROJAN-151.101.56.90
-  type: trojan
-  server: 151.101.56.90
-  port: 443
-  password: miTivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
@@ -147,7 +138,6 @@ proxy-groups:
   - TROJAN-172.67.149.60
   - TROJAN-render.com
   - TROJAN-5.75.171.12
-  - TROJAN-151.101.56.90
 - name: Auto
   type: url-test
   proxies:
@@ -164,7 +154,6 @@ proxy-groups:
   - TROJAN-172.67.149.60
   - TROJAN-render.com
   - TROJAN-5.75.171.12
-  - TROJAN-151.101.56.90
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

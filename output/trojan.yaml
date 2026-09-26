@@ -5,15 +5,15 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-191.44.113.150
+- name: TROJAN-xhop-production.up.railway.app
   type: trojan
-  server: 191.44.113.150
+  server: xhop-production.up.railway.app
   port: 443
-  password: pkj3BBnG2NE4wD-72SwgzNcfaHSes-dr
+  password: fvXi1ZyhJ9TMbgZSdc3g9g
   udp: true
   tls: true
-  sni: 16.img.avito.st
-  skip-cert-verify: true
+  sni: xhop-production.up.railway.app#GetXConfig-1
+  skip-cert-verify: false
 - name: TROJAN-104.21.70.21
   type: trojan
   server: 104.21.70.21
@@ -41,33 +41,6 @@ proxies:
   tls: true
   sni: www.pleadcourt.org#Farah_VPN-4
   skip-cert-verify: false
-- name: TROJAN-167.82.76.7
-  type: trojan
-  server: 167.82.76.7
-  port: 443
-  password: MITIVpN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#meliproxyy-5
-  skip-cert-verify: false
-- name: TROJAN-151.101.56.7
-  type: trojan
-  server: 151.101.56.7
-  port: 443
-  password: MITIVpN
-  udp: true
-  tls: true
-  sni: ssl.fastly.com#meliproxyy-6
-  skip-cert-verify: false
-- name: TROJAN-188.114.97.6
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org
-  skip-cert-verify: true
 - name: TROJAN-199.232.78.160
   type: trojan
   server: 199.232.78.160
@@ -75,7 +48,7 @@ proxies:
   password: MITIVpN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-8
+  sni: ssl.fastly.com#meliproxyy-5
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -84,7 +57,16 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-9
+  sni: www.ignitelimit.com#meliproxyy-6
+  skip-cert-verify: false
+- name: TROJAN-188.114.97.6
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com#meliproxyy-7
   skip-cert-verify: false
 - name: TROJAN-api.ohbah.com
   type: trojan
@@ -101,7 +83,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-13
+  sni: www.ignitelimit.com#meliproxyy-10
   skip-cert-verify: false
 - name: TROJAN-render.com
   type: trojan
@@ -110,7 +92,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-14
+  sni: www.ignitelimit.com#meliproxyy-11
   skip-cert-verify: false
 - name: TROJAN-5.75.171.12
   type: trojan
@@ -125,15 +107,13 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-191.44.113.150
+  - TROJAN-xhop-production.up.railway.app
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
-  - TROJAN-167.82.76.7
-  - TROJAN-151.101.56.7
-  - TROJAN-188.114.97.6
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
+  - TROJAN-188.114.97.6
   - TROJAN-api.ohbah.com
   - TROJAN-172.67.149.60
   - TROJAN-render.com
@@ -141,15 +121,13 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-191.44.113.150
+  - TROJAN-xhop-production.up.railway.app
   - TROJAN-104.21.70.21
   - TROJAN-188.42.145.180
   - TROJAN-8.47.69.0
-  - TROJAN-167.82.76.7
-  - TROJAN-151.101.56.7
-  - TROJAN-188.114.97.6
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
+  - TROJAN-188.114.97.6
   - TROJAN-api.ohbah.com
   - TROJAN-172.67.149.60
   - TROJAN-render.com

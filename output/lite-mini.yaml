@@ -5,50 +5,70 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-143.246.194.213
+- name: VLESS-cdnxv.xvcloud.shop
   type: vless
-  server: 143.246.194.213
+  server: cdnxv.xvcloud.shop
+  port: 2083
+  uuid: b3425365-9251-4d70-860c-cc8caa23c9f4
+  udp: true
+  tls: true
+  network: xhttp
+  sni: panel.xvcloud.shop
+- name: VLESS-13.39.231.13
+  type: vless
+  server: 13.39.231.13
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-3
+- name: TROJAN-xhop-production.up.railway.app
+  type: trojan
+  server: xhop-production.up.railway.app
   port: 443
-  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
+  password: fvXi1ZyhJ9TMbgZSdc3g9g
+  udp: true
+  tls: true
+  sni: xhop-production.up.railway.app#GetXConfig-5
+  skip-cert-verify: false
+- name: VLESS-163.128.99.14
+  type: vless
+  server: 163.128.99.14
+  port: 443
+  uuid: bda35755-c838-49c3-a19e-3712f2d54275
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+    public-key: -LuhwN_cSgNr7nYIfCcu_XAjviKVSGwVGHxmB-s1AD0
     fingerprint: safari
-  sni: www.ikea.com#GetXConfig-3
-- name: VLESS-2.26.53.224
+  sni: www.apple.com
+- name: VLESS-37.221.79.226
   type: vless
-  server: 2.26.53.224
-  port: 5432
-  uuid: cc01f435-d561-4525-bf1f-7a9876d33207
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision#GetXConfig-5
-- name: VLESS-138.124.30.28
-  type: vless
-  server: 138.124.30.28
-  port: 46443
-  uuid: 82804f53-f9cd-49b1-a2d2-23f17b29d671
+  server: 37.221.79.226
+  port: 18443
+  uuid: 6933bb34-cb01-4605-88c3-f335e4307d23
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: LPt1TunZESX9sCSHXdFnsrs2b3uyBc4wV6u96mqg2ic
-    fingerprint: safari
-  sni: www.google.com
-- name: VLESS-193.23.201.65
+    public-key: 9hnmqap98ULg2y1fk4aqAtQEtPLQPIypZNmnrb42VWs
+    fingerprint: chrome
+  sni: www.sony.com
+- name: VLESS-64.188.126.56
   type: vless
-  server: 193.23.201.65
-  port: 5432
-  uuid: e84e0918-68ca-4fcc-a1d1-b566fd9ac7ee
+  server: 64.188.126.56
+  port: 43000
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision#GetXConfig-9
+  network: tcp#GetXConfig-10
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: jjbMUO41S9JE7ou_zbbDStzSYLzJVN_0O-j0f6b380E
+  sni: 64.188.126.56
 - name: VLESS-46.137.202.178
   type: vless
   server: 46.137.202.178
@@ -169,73 +189,46 @@ proxies:
   skip-cert-verify: true
 - name: '@meliproxyy-21'
   type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: dl1.armd.fun
+  port: 443
+  uuid: 72ec8eaf-6a67-4026-aea6-963e3a9ca16a
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: tcp
-- name: '@meliproxyy-22'
-  type: vmess
-  server: 188.114.96.19
-  port: 80
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: VLESS-199.232.78.159
+- name: VLESS-darsadgir.ir
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 9f714831-a392-429d-b09f-15f0e4653049
+  server: darsadgir.ir
+  port: 2087
+  uuid: 8c561eb2-f643-49ce-b5b6-81690ec268c0
   udp: true
   tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: lsjaoijji.global.ssl.fastly.neT
-  sni: ssl.fastly.com#meliproxyy-23
-- name: VLESS-199.232.237.79
+  network: xhttp
+  sni: fish.kaftarkakolbesarwifi.ir#meliproxyy-23
+- name: VLESS-201.10.90.24
   type: vless
-  server: 199.232.237.79
-  port: 443
-  uuid: eb423e4e-d09c-4e28-b074-e30f090cfcc6
+  server: 201.10.90.24
+  port: 2027
+  uuid: a6b29052-e9ba-4714-a43c-4a660f452c44
   udp: true
   tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: turboo-server-fastly.com
-  sni: turboo-server-fastly.com#meliproxyy-24
-- name: VLESS-91.107.190.84
-  type: vless
-  server: 91.107.190.84
-  port: 443
-  uuid: 9c9aa693-a32a-49af-a201-2a0da0507ed0
-  udp: true
-  tls: true
-  network: tcp#meliproxyy-26
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: gvS7f3yIhT9QT7HnoI5YNev_xvGdW1HS5IRXiw8tbi4
-    short-id: b47b665b
-    fingerprint: chrome
-  sni: storage.googleapis.com
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    fingerprint: firefox
+  sni: 2gis.ru
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-143.246.194.213
-  - VLESS-2.26.53.224
-  - VLESS-138.124.30.28
-  - VLESS-193.23.201.65
+  - VLESS-cdnxv.xvcloud.shop
+  - VLESS-13.39.231.13
+  - TROJAN-xhop-production.up.railway.app
+  - VLESS-163.128.99.14
+  - VLESS-37.221.79.226
+  - VLESS-64.188.126.56
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -247,17 +240,17 @@ proxy-groups:
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
   - '@meliproxyy-21'
-  - '@meliproxyy-22'
-  - VLESS-199.232.78.159
-  - VLESS-199.232.237.79
-  - VLESS-91.107.190.84
+  - VLESS-darsadgir.ir
+  - VLESS-201.10.90.24
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-143.246.194.213
-  - VLESS-2.26.53.224
-  - VLESS-138.124.30.28
-  - VLESS-193.23.201.65
+  - VLESS-cdnxv.xvcloud.shop
+  - VLESS-13.39.231.13
+  - TROJAN-xhop-production.up.railway.app
+  - VLESS-163.128.99.14
+  - VLESS-37.221.79.226
+  - VLESS-64.188.126.56
   - VLESS-46.137.202.178
   - VLESS-158.69.112.254
   - VLESS-194.55.189.249
@@ -269,10 +262,8 @@ proxy-groups:
   - VLESS-134.122.154.210
   - TROJAN-104.21.70.21
   - '@meliproxyy-21'
-  - '@meliproxyy-22'
-  - VLESS-199.232.78.159
-  - VLESS-199.232.237.79
-  - VLESS-91.107.190.84
+  - VLESS-darsadgir.ir
+  - VLESS-201.10.90.24
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

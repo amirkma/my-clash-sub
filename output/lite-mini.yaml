@@ -5,273 +5,279 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-52.56.136.35
+- name: VLESS-91.107.133.246
   type: vless
-  server: 52.56.136.35
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: 91.107.133.246
+  port: 443
+  uuid: 03264534-5cb0-4ef9-b07a-379688b0e1f7
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-1
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lxxT_BXt2FflnppeojhoOM9wbWmutFJXu7uT6RntxyQ
+    fingerprint: chrome
+  sni: storage.googleapis.com
+- name: VLESS-143.246.41.23
+  type: vless
+  server: 143.246.41.23
+  port: 443
+  uuid: 56c31489-bb78-472d-afcc-47aa475b99e4
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fX_lcKJGFqvSVThGrEotEcw7_NNCkBREtjSHHX5v8SU
+    fingerprint: safari
+  sni: yandex.ru
+- name: VLESS-45.150.192.26
+  type: vless
+  server: 45.150.192.26
+  port: 42411
+  uuid: 900e2cca-4798-47f6-b972-5288a77c8093
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: r3JIlDorHc3OSNWDPs4ZqJ-HbNj5JVPvSKP_fuU1Fw4
+    fingerprint: safari
+  sni: www.oracle.com
+- name: VLESS-144.31.166.55
+  type: vless
+  server: 144.31.166.55
+  port: 8443
+  uuid: 482514e8-2979-4628-acf3-d04f607c4f12
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: kBVqBeTLp4F9KLA2qfqRLgiwd1oTxK3PM3GnrRzMYCA
+    fingerprint: safari
+  sni: deport.ptlux.pro
+- name: TROJAN-199.232.78.188
+  type: trojan
+  server: 199.232.78.188
+  port: 443
+  password: MiTiVPN
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#GetXConfig-9
+  skip-cert-verify: false
+- name: VLESS-xuinj.plusvip.tr
+  type: vless
+  server: xuinj.plusvip.tr
+  port: 443
+  uuid: 651ff31b-6fc6-4b72-a633-bcfefe58e0f5
   udp: true
   tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-lxv2xt3x.danqela.ir
-  type: vless
-  server: lxv2xt3x.danqela.ir
-  port: 26431
-  uuid: b899fcda-7086-4e09-a17a-5680a9b80df8
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: RGvP0zcNhyQzsACfTqG4iMYs4e0zlGcM5TGrkgIhb3s
-    fingerprint: edge
-  sni: play.google.com
-- name: VLESS-usa-1.wwwstariran.fun
-  type: vless
-  server: usa-1.wwwstariran.fun
-  port: 5000
-  uuid: 8cbb5a88-74d6-43d3-953b-01e0eeb0c9cf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-fl-1.stariran1.fun
-  type: vless
-  server: fl-1.stariran1.fun
-  port: 5000
-  uuid: 8cbb5a88-74d6-43d3-953b-01e0eeb0c9cf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk
-    fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-91.216.171.174
-  type: vless
-  server: 91.216.171.174
-  port: 9626
-  uuid: 280e6d2e-b93e-4f51-bc9e-bf2bb709c81c
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Z8SkRvKJ3W8K6qn0qRskWval4QwcU0-N1YCQfETy4zY
-    fingerprint: chrome
-  sni: play.google.com
-- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-11
+  network: tcp#GetXConfig-10
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
   type: vmess
-  server: 57.129.132.223
-  port: 80
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  server: wwafj5lhl6bi8au9.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   network: ws
-  ws-path: /vmess/
+  ws-path: /ws-vmess
   ws-headers:
-    Host: google.com
-- name: VLESS-platform106.golnamakcert.top
+    Host: wwafj5LHl6bI8aU9.v.3dns.vip
+- name: VLESS-platform117.golnamakcert.top
   type: vless
-  server: platform106.golnamakcert.top
+  server: platform117.golnamakcert.top
   port: 80
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   network: ws
-  ws-path: /platform106#Farah_VPN-12
+  ws-path: /platform117#Farah_VPN-12
   ws-headers:
-    Host: platform106.halalkhor.info
-- name: VLESS-57.131.38.163
+    Host: platform117.halalkhor.info
+- name: VLESS-103.86.49.57
   type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    fingerprint: chrome
-  sni: www.apple.com
-- name: VLESS-15.204.97.219
-  type: vless
-  server: 15.204.97.219
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  network: tcp#Farah_VPN-14
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-    fingerprint: chrome
-  sni: fuck.rkn
-- name: VLESS-162.159.39.218
-  type: vless
-  server: 162.159.39.218
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 103.86.49.57
+  port: 80
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
   udp: true
   tls: false
   network: ws
-  ws-path: /?ed=2560security=tls
+  ws-path: /ws#Farah_VPN-13
   ws-headers:
-    Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr#Farah_VPN-15
-- name: VLESS-199.232.78.160
+    Host: aIs.SpEeDtEsT.nEt
+- name: VLESS-platform113.golnamakcert.top
   type: vless
-  server: 199.232.78.160
+  server: platform113.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /platform113#Farah_VPN-14
+  ws-headers:
+    Host: platform113.halalkhor.info
+- name: VLESS-103.31.4.10
+  type: vless
+  server: 103.31.4.10
   port: 443
-  uuid: XpnTeam-33
+  uuid: 77dc177b-79d9-49ac-92e1-2f1011faa5e3
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-16
+  ws-path: /api/v2/b8ee4ba356df307c/stream#Farah_VPN-15
   ws-headers:
-    Host: Appxdn.global.ssl.fastly.net
-  sni: ssl.fastly.com
-- name: VLESS-91.196.32.216
+    Host: f871a986.69lover.site
+  sni: f871a986.69lover.site
+- name: VLESS-platform101.golnamakcert.top
   type: vless
-  server: 91.196.32.216
-  port: 9543
-  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    fingerprint: chrome
-  sni: storage.yandexcloud.net
-- name: VLESS-194.150.166.108
-  type: vless
-  server: 194.150.166.108
-  port: 9443
-  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    fingerprint: chrome
-  sni: storage.yandexcloud.net
-- name: '@meliproxyy-21'
-  type: vmess
-  server: dl1.armd.fun
-  port: 443
-  uuid: 72ec8eaf-6a67-4026-aea6-963e3a9ca16a
-  alterId: 0
-  cipher: auto
+  server: platform101.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
-  network: tcp
-- name: VLESS-188.114.97.6
-  type: vless
-  server: 188.114.97.6
+  network: ws
+  ws-path: /platform101#Farah_VPN-16
+  ws-headers:
+    Host: platform101.halalkhor.info
+- name: TROJAN-104.21.70.21
+  type: trojan
+  server: 104.21.70.21
   port: 443
-  uuid: 9f44d517-29f2-4c6d-cc06-a1268f13da58
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
   udp: true
   tls: true
-  network: xhttp
-  sni: kala.bestsellers1.site#meliproxyy-22
-- name: VLESS-darsadgir.ir
+  sni: id1.nathaya.web.id
+  skip-cert-verify: true
+- name: VLESS-gesmankos.sadiepinki.com
   type: vless
-  server: darsadgir.ir
-  port: 2087
-  uuid: 8c561eb2-f643-49ce-b5b6-81690ec268c0
+  server: gesmankos.sadiepinki.com
+  port: 443
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
   udp: true
   tls: true
-  network: xhttp
-  sni: fish.kaftarkakolbesarwifi.ir#meliproxyy-23
-- name: VLESS-201.10.90.24
-  type: vless
-  server: 201.10.90.24
-  port: 2027
-  uuid: a6b29052-e9ba-4714-a43c-4a660f452c44
-  udp: true
-  tls: true
-  network: xhttp
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
     fingerprint: firefox
-  sni: 2gis.ru
-- name: VLESS-trk2.chaqalli.com
+- name: VLESS-45.95.96.236
   type: vless
-  server: trk2.chaqalli.com
-  port: 8080
-  uuid: 560ecca1-7e20-4b41-b4d6-781fb3bc179d
-  udp: true
-  tls: false
-  network: ws#meliproxyy-26
-- name: VLESS-193.202.10.2
-  type: vless
-  server: 193.202.10.2
-  port: 40443
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+  server: 45.95.96.236
+  port: 443
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
-    fingerprint: chrome
-  sni: deepl.com
+    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
+    fingerprint: firefox
+  sni: gesmankos.sadiepinki.com
+- name: VLESS-144.31.5.3
+  type: vless
+  server: 144.31.5.3
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  udp: true
+  tls: true
+  network: tcp
+  sni: pl4.moritech.net#meliproxyy-23
+  flow: xtls-rprx-vision
+- name: VLESS-144.31.2.33
+  type: vless
+  server: 144.31.2.33
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  udp: true
+  tls: true
+  network: tcp
+  sni: pl3.moritech.net#meliproxyy-24
+  flow: xtls-rprx-vision
+- name: VLESS-5xgovtcyqgoh5tedrlj6sg--sn9pbh.mahsapodcst.workers.dev
+  type: vless
+  server: 5xgovtcyqgoh5tedrlj6sg--sn9pbh.mahsapodcst.workers.dev
+  port: 443
+  uuid: a4ec0cdd-a71d-4093-b8e1-aa9bfbcd75eb
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /vl/P7l2zlifeGb5UNmfWMkoVakVd
+  sni: 5xgovtCYqgoh5tEDRLJ6Sg--sn9PbH.mAHsApOdCSt.WOrKers.deV#meliproxyy-25
+- name: VLESS-91.210.169.181
+  type: vless
+  server: 91.210.169.181
+  port: 443
+  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /api/connect
+  ws-headers:
+    Host: wstg.datasynctrue.online
+- name: VLESS-grpmin.esterla.ir
+  type: vless
+  server: grpmin.esterla.ir
+  port: 443
+  uuid: d7f23d5e-87c9-4686-bfc1-9b68a90b6304
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: OmkXD1dMbfqjeIWqknjlLL2n02LEZWEofWwMN5S-K0g
+    short-id: d0c1e27
+  sni: www.cloudflare.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-52.56.136.35
-  - VLESS-lxv2xt3x.danqela.ir
-  - VLESS-usa-1.wwwstariran.fun
-  - VLESS-fl-1.stariran1.fun
-  - VLESS-91.216.171.174
-  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-11
-  - VLESS-platform106.golnamakcert.top
-  - VLESS-57.131.38.163
-  - VLESS-15.204.97.219
-  - VLESS-162.159.39.218
-  - VLESS-199.232.78.160
-  - VLESS-91.196.32.216
-  - VLESS-194.150.166.108
-  - '@meliproxyy-21'
-  - VLESS-188.114.97.6
-  - VLESS-darsadgir.ir
-  - VLESS-201.10.90.24
-  - VLESS-trk2.chaqalli.com
-  - VLESS-193.202.10.2
+  - VLESS-91.107.133.246
+  - VLESS-143.246.41.23
+  - VLESS-45.150.192.26
+  - VLESS-144.31.166.55
+  - TROJAN-199.232.78.188
+  - VLESS-xuinj.plusvip.tr
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-platform117.golnamakcert.top
+  - VLESS-103.86.49.57
+  - VLESS-platform113.golnamakcert.top
+  - VLESS-103.31.4.10
+  - VLESS-platform101.golnamakcert.top
+  - TROJAN-104.21.70.21
+  - VLESS-gesmankos.sadiepinki.com
+  - VLESS-45.95.96.236
+  - VLESS-144.31.5.3
+  - VLESS-144.31.2.33
+  - VLESS-5xgovtcyqgoh5tedrlj6sg--sn9pbh.mahsapodcst.workers.dev
+  - VLESS-91.210.169.181
+  - VLESS-grpmin.esterla.ir
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-52.56.136.35
-  - VLESS-lxv2xt3x.danqela.ir
-  - VLESS-usa-1.wwwstariran.fun
-  - VLESS-fl-1.stariran1.fun
-  - VLESS-91.216.171.174
-  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-11
-  - VLESS-platform106.golnamakcert.top
-  - VLESS-57.131.38.163
-  - VLESS-15.204.97.219
-  - VLESS-162.159.39.218
-  - VLESS-199.232.78.160
-  - VLESS-91.196.32.216
-  - VLESS-194.150.166.108
-  - '@meliproxyy-21'
-  - VLESS-188.114.97.6
-  - VLESS-darsadgir.ir
-  - VLESS-201.10.90.24
-  - VLESS-trk2.chaqalli.com
-  - VLESS-193.202.10.2
+  - VLESS-91.107.133.246
+  - VLESS-143.246.41.23
+  - VLESS-45.150.192.26
+  - VLESS-144.31.166.55
+  - TROJAN-199.232.78.188
+  - VLESS-xuinj.plusvip.tr
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-platform117.golnamakcert.top
+  - VLESS-103.86.49.57
+  - VLESS-platform113.golnamakcert.top
+  - VLESS-103.31.4.10
+  - VLESS-platform101.golnamakcert.top
+  - TROJAN-104.21.70.21
+  - VLESS-gesmankos.sadiepinki.com
+  - VLESS-45.95.96.236
+  - VLESS-144.31.5.3
+  - VLESS-144.31.2.33
+  - VLESS-5xgovtcyqgoh5tedrlj6sg--sn9pbh.mahsapodcst.workers.dev
+  - VLESS-91.210.169.181
+  - VLESS-grpmin.esterla.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

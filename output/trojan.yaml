@@ -5,42 +5,60 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-185.114.72.31
+- name: TROJAN-199.232.78.188
   type: trojan
-  server: 185.114.72.31
-  port: 2053
+  server: 199.232.78.188
+  port: 443
+  password: MiTiVPN
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#GetXConfig-1
+  skip-cert-verify: false
+- name: TROJAN-104.21.70.21
+  type: trojan
+  server: 104.21.70.21
+  port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  udp: true
+  tls: true
+  sni: id1.nathaya.web.id
+  skip-cert-verify: true
+- name: TROJAN-188.42.145.180
+  type: trojan
+  server: 188.42.145.180
+  port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-1
+  sni: www.volumeroot.com#Farah_VPN-3
   skip-cert-verify: false
-- name: TROJAN-185.220.100.168
+- name: TROJAN-185.255.179.166
   type: trojan
-  server: 185.220.100.168
+  server: 185.255.179.166
   port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-2
+  sni: www.calmlunch.com#Farah_VPN-4
   skip-cert-verify: false
-- name: TROJAN-100.42.228.109
+- name: TROJAN-47.250.84.25
   type: trojan
-  server: 100.42.228.109
+  server: 47.250.84.25
   port: 443
-  password: BxceQaOe
+  password: 5931134d1cde66bf83a54acdfebe7ab2
   udp: true
   tls: true
-  sni: t.me/ripaojiedian#Farah_VPN-3
+  sni: moltbot.doctoroyy.net#Farah_VPN-5
   skip-cert-verify: true
-- name: TROJAN-45.32.157.84
+- name: TROJAN-185.225.68.232
   type: trojan
-  server: 45.32.157.84
+  server: 185.225.68.232
   port: 443
-  password: Tg3RnK7Xp8B1
+  password: humanity
   udp: true
   tls: true
-  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com#Farah_VPN-4
-  skip-cert-verify: true
+  sni: www.calmlunch.com#Farah_VPN-6
+  skip-cert-verify: false
 - name: TROJAN-199.232.78.160
   type: trojan
   server: 199.232.78.160
@@ -48,7 +66,7 @@ proxies:
   password: MITIVpN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-5
+  sni: ssl.fastly.com#meliproxyy-7
   skip-cert-verify: false
 - name: TROJAN-188.114.97.7
   type: trojan
@@ -57,7 +75,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-6
+  sni: www.ignitelimit.com#meliproxyy-8
   skip-cert-verify: false
 - name: TROJAN-188.114.97.6
   type: trojan
@@ -66,7 +84,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-7
+  sni: www.ignitelimit.com#meliproxyy-9
   skip-cert-verify: false
 - name: TROJAN-api.ohbah.com
   type: trojan
@@ -83,7 +101,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-10
+  sni: www.ignitelimit.com#meliproxyy-12
   skip-cert-verify: false
 - name: TROJAN-render.com
   type: trojan
@@ -92,7 +110,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-11
+  sni: www.ignitelimit.com#meliproxyy-13
   skip-cert-verify: false
 - name: TROJAN-8.47.69.0
   type: trojan
@@ -101,7 +119,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org#meliproxyy-12
+  sni: www.pleadcourt.org#meliproxyy-14
   skip-cert-verify: false
 - name: TROJAN-www.speedtest.net
   type: trojan
@@ -125,10 +143,12 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-185.114.72.31
-  - TROJAN-185.220.100.168
-  - TROJAN-100.42.228.109
-  - TROJAN-45.32.157.84
+  - TROJAN-199.232.78.188
+  - TROJAN-104.21.70.21
+  - TROJAN-188.42.145.180
+  - TROJAN-185.255.179.166
+  - TROJAN-47.250.84.25
+  - TROJAN-185.225.68.232
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-188.114.97.6
@@ -141,10 +161,12 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-185.114.72.31
-  - TROJAN-185.220.100.168
-  - TROJAN-100.42.228.109
-  - TROJAN-45.32.157.84
+  - TROJAN-199.232.78.188
+  - TROJAN-104.21.70.21
+  - TROJAN-188.42.145.180
+  - TROJAN-185.255.179.166
+  - TROJAN-47.250.84.25
+  - TROJAN-185.225.68.232
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-188.114.97.6

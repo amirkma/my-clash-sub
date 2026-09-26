@@ -5,42 +5,42 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-xhop-production.up.railway.app
+- name: TROJAN-185.114.72.31
   type: trojan
-  server: xhop-production.up.railway.app
-  port: 443
-  password: fvXi1ZyhJ9TMbgZSdc3g9g
+  server: 185.114.72.31
+  port: 2053
+  password: humanity
   udp: true
   tls: true
-  sni: xhop-production.up.railway.app#GetXConfig-1
+  sni: www.calmlunch.com#Farah_VPN-1
   skip-cert-verify: false
-- name: TROJAN-104.21.70.21
+- name: TROJAN-185.220.100.168
   type: trojan
-  server: 104.21.70.21
+  server: 185.220.100.168
   port: 443
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  password: humanity
   udp: true
   tls: true
-  sni: id1.nathaya.web.id
+  sni: www.calmlunch.com#Farah_VPN-2
+  skip-cert-verify: false
+- name: TROJAN-100.42.228.109
+  type: trojan
+  server: 100.42.228.109
+  port: 443
+  password: BxceQaOe
+  udp: true
+  tls: true
+  sni: t.me/ripaojiedian#Farah_VPN-3
   skip-cert-verify: true
-- name: TROJAN-188.42.145.180
+- name: TROJAN-45.32.157.84
   type: trojan
-  server: 188.42.145.180
+  server: 45.32.157.84
   port: 443
-  password: humanity
+  password: Tg3RnK7Xp8B1
   udp: true
   tls: true
-  sni: www.volumeroot.com#Farah_VPN-3
-  skip-cert-verify: false
-- name: TROJAN-8.47.69.0
-  type: trojan
-  server: 8.47.69.0
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org#Farah_VPN-4
-  skip-cert-verify: false
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com#Farah_VPN-4
+  skip-cert-verify: true
 - name: TROJAN-199.232.78.160
   type: trojan
   server: 199.232.78.160
@@ -94,6 +94,24 @@ proxies:
   tls: true
   sni: www.ignitelimit.com#meliproxyy-11
   skip-cert-verify: false
+- name: TROJAN-8.47.69.0
+  type: trojan
+  server: 8.47.69.0
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org#meliproxyy-12
+  skip-cert-verify: false
+- name: TROJAN-www.speedtest.net
+  type: trojan
+  server: www.speedtest.net
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: true
 - name: TROJAN-5.75.171.12
   type: trojan
   server: 5.75.171.12
@@ -107,30 +125,34 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-xhop-production.up.railway.app
-  - TROJAN-104.21.70.21
-  - TROJAN-188.42.145.180
-  - TROJAN-8.47.69.0
+  - TROJAN-185.114.72.31
+  - TROJAN-185.220.100.168
+  - TROJAN-100.42.228.109
+  - TROJAN-45.32.157.84
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-188.114.97.6
   - TROJAN-api.ohbah.com
   - TROJAN-172.67.149.60
   - TROJAN-render.com
+  - TROJAN-8.47.69.0
+  - TROJAN-www.speedtest.net
   - TROJAN-5.75.171.12
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-xhop-production.up.railway.app
-  - TROJAN-104.21.70.21
-  - TROJAN-188.42.145.180
-  - TROJAN-8.47.69.0
+  - TROJAN-185.114.72.31
+  - TROJAN-185.220.100.168
+  - TROJAN-100.42.228.109
+  - TROJAN-45.32.157.84
   - TROJAN-199.232.78.160
   - TROJAN-188.114.97.7
   - TROJAN-188.114.97.6
   - TROJAN-api.ohbah.com
   - TROJAN-172.67.149.60
   - TROJAN-render.com
+  - TROJAN-8.47.69.0
+  - TROJAN-www.speedtest.net
   - TROJAN-5.75.171.12
   url: http://www.gstatic.com/generate_204
   interval: 300

@@ -5,193 +5,221 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-178.105.120.168
+- name: VLESS-3.9.168.14
   type: vless
-  server: 178.105.120.168
-  port: 80
-  uuid: 1d9cbbf4-bb99-4b09-8750-1cc22d510018
-  udp: true
-  tls: false
-  network: ws#GetXConfig-1
-- name: VLESS-139.100.236.245
-  type: vless
-  server: 139.100.236.245
-  port: 563
-  uuid: 8341bd22-04f5-420a-92f6-73220ad3dd5e
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-122.8.45.3
-  type: vless
-  server: 122.8.45.3
-  port: 443
-  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo
-    fingerprint: chrome
-  sni: cdn.steamstatic.com#GetXConfig-3
-- name: VLESS-nl9-node.rumedia-cdn.com
-  type: vless
-  server: nl9-node.rumedia-cdn.com
-  port: 2096
-  uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
-  udp: true
-  tls: true
-  network: ws#GetXConfig-5
-  sni: stadb90.rumedia-cdn.com
-- name: VLESS-13.36.157.66
-  type: vless
-  server: 13.36.157.66
-  port: 22223
+  server: 3.9.168.14
+  port: 22224
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#GetXConfig-6
-- name: VLESS-k2.cloud--vpn.site
+  network: tcp#GetXConfig-1
+- name: VLESS-66.33.22.234
   type: vless
-  server: k2.cloud--vpn.site
+  server: 66.33.22.234
+  port: 47078
+  uuid: 4cb23ec6-c295-47b8-800a-315d8e43d1ac
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GVAbecF6i4oCyWF7VrfM0UXfTmqXmDkCQLNRjXIcEjQ
+    fingerprint: chrome
+  sni: au-images.shop.samsung.com
+- name: VLESS-66.33.22.237
+  type: vless
+  server: 66.33.22.237
+  port: 54233
+  uuid: 4cb23ec6-c295-47b8-800a-315d8e43d1ac
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ntf3pNCrpc032JJ_Jzxlx22zOHAK8hp8Bokvu1lwECY
+    fingerprint: chrome
+  sni: api.semiconductor.samsung.com
+- name: VLESS-www.medium.com
+  type: vless
+  server: www.medium.com
   port: 443
-  uuid: 5b8ce557-47d6-4a57-ada2-097a795a6d19
+  uuid: 0ce9e6d8-fa4f-4746-8d8a-1da5c46c964f
+  udp: true
+  tls: true
+  network: ws#GetXConfig-6
+  sni: shop.lilium-rozh.ir
+- name: VLESS-shop.jarorobo.ir
+  type: vless
+  server: shop.jarorobo.ir
+  port: 8443
+  uuid: 0ce9e6d8-fa4f-4746-8d8a-1da5c46c964f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    short-id: ab5becf7
+    fingerprint: random
+  sni: www.github.com
+- name: VLESS-www.canva.com
+  type: vless
+  server: www.canva.com
+  port: 443
+  uuid: 0ce9e6d8-fa4f-4746-8d8a-1da5c46c964f
+  udp: true
+  tls: true
+  network: ws#GetXConfig-8
+  sni: shop.lilium-rozh.ir
+- name: VLESS-pp.tr.f.k.n.vpxpp.ir
+  type: vless
+  server: pp.tr.f.k.n.vpxpp.ir
+  port: 2053
+  uuid: d99bcdb7-13b3-46da-822e-788f04afb614
+  udp: true
+  tls: true
+  network: xhttp
+  sni: tls.zerossrz.ir#GetXConfig-9
+- name: VLESS-15.236.253.118
+  type: vless
+  server: 15.236.253.118
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-10
+- name: VLESS-176.108.247.104
+  type: vless
+  server: 176.108.247.104
+  port: 9881
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-tunnel
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    fingerprint: qq
+  sni: dl.google.com
+- name: VLESS-87.120.107.246
+  type: vless
+  server: 87.120.107.246
+  port: 443
+  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-tunnel_nl
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
+    fingerprint: firefox
+  sni: dl.google.com
+- name: VLESS-99.86.12.106
+  type: vless
+  server: 99.86.12.106
+  port: 443
+  uuid: ad2603d2-5780-447a-9a27-10525c016037
   udp: true
   tls: true
   network: ws
   ws-path: /
   ws-headers:
-    Host: c12.com
-  sni: ssl.fastly.com#GetXConfig-9
-- name: VLESS-a1b7659484d424be.IROnlY4l.Ir
+    Host: d1m6uggsa6602r.cloudfront.net#GetXConfig-15
+  sni: d1m6uggsa6602r.cloudfront.net
+- name: VLESS-g1.sabet1.blazevx.ir
   type: vless
-  server: a1b7659484d424be.IROnlY4l.Ir
-  port: 8080
-  uuid: c96767fe-fdc1-4af0-9666-9ba108603de4
+  server: g1.sabet1.blazevx.ir
+  port: 31913
+  uuid: d74e7091-297e-4fa1-a100-bc1e753161c1
   udp: true
-  tls: false
-  network: ws#GetXConfig-10
-- name: VLESS-31.130.149.165
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: u8QXW7crvuXyOf305UfxBrr7Pa9epO1fK2rpPxmJ4lc
+    fingerprint: chrome
+  sni: cdn.eiger.io
+- name: VLESS-xstack.mahanfixe.workers.dev
   type: vless
-  server: 31.130.149.165
-  port: 875
-  uuid: 4a9d6057-985a-4531-851c-5b4db77b0409
+  server: xstack.mahanfixe.workers.dev
+  port: 443
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
   udp: true
-  tls: false
-  network: tcp
-- name: VLESS-91.107.185.32
+  tls: true
+  network: ws#Farah_VPN-17
+- name: VLESS-platform118.golnamakcert.top
   type: vless
-  server: 91.107.185.32
+  server: platform118.golnamakcert.top
   port: 80
-  uuid: 4b3df39e-94a1-4e7e-957a-d3f9befc6b87
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
-  network: xhttp#GetXConfig-12
-- name: VLESS-idfr.melvona-digital.ir
+  network: ws
+  ws-path: /platform118#Farah_VPN-18
+  ws-headers:
+    Host: platform118.halalkhor.info
+- name: VLESS-172.64.150.28
   type: vless
-  server: idfr.melvona-digital.ir
-  port: 443
-  uuid: 0422ee7e-b216-4cf1-b193-842e432ff233
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: aD59VPJ29gUZ0x2Fb-k9atwznX7tn4OfIrX5CbLGURE
-    fingerprint: edge
-  sni: play.google.com
-- name: VLESS-pl.iramnovira.com
-  type: vless
-  server: pl.iramnovira.com
-  port: 443
-  uuid: 0422ee7e-b216-4cf1-b193-842e432ff233
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qQsjMiQdwd5U97jSseGl21jkEEJ3yiGE-ESfzIH1oiQ
-    fingerprint: edge
-  sni: edge.com
-- name: VLESS-jj.trialkade.ir
-  type: vless
-  server: jj.trialkade.ir
-  port: 443
-  uuid: 363e5ed1-ad1d-40d6-bfad-33f29ba0cc87
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: QIeY9TjjtwN2mnnH-VLmOcXY5eZ2m1g5FCQURQ5aGwQ
-    fingerprint: edge
-  sni: testspeed-foreign.tci.ir
-- name: VLESS-91.107.162.148
-  type: vless
-  server: 91.107.162.148
-  port: 1819
-  uuid: 9ef511af-41a3-4c92-afa6-3139016f8e93
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   tls: false
-  network: tcp#GetXConfig-16
-- name: VLESS-dd.naym.ir
+  network: ws#Farah_VPN-19
+- name: VLESS-dorado.yokkastars.com
   type: vless
-  server: dd.naym.ir
-  port: 443
-  uuid: 363e5ed1-ad1d-40d6-bfad-33f29ba0cc87
+  server: dorado.yokkastars.com
+  port: 40443
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: z9zZr8_F9y_I6y03VKpVb9iC69wOEYthzslpIRejyhI
-    fingerprint: ios
-  sni: play.google.com
-- name: VLESS-15.236.236.185
-  type: vless
-  server: 15.236.236.185
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-18
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    fingerprint: qq
+  sni: deepl.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-178.105.120.168
-  - VLESS-139.100.236.245
-  - VLESS-122.8.45.3
-  - VLESS-nl9-node.rumedia-cdn.com
-  - VLESS-13.36.157.66
-  - VLESS-k2.cloud--vpn.site
-  - VLESS-a1b7659484d424be.IROnlY4l.Ir
-  - VLESS-31.130.149.165
-  - VLESS-91.107.185.32
-  - VLESS-idfr.melvona-digital.ir
-  - VLESS-pl.iramnovira.com
-  - VLESS-jj.trialkade.ir
-  - VLESS-91.107.162.148
-  - VLESS-dd.naym.ir
-  - VLESS-15.236.236.185
+  - VLESS-3.9.168.14
+  - VLESS-66.33.22.234
+  - VLESS-66.33.22.237
+  - VLESS-www.medium.com
+  - VLESS-shop.jarorobo.ir
+  - VLESS-www.canva.com
+  - VLESS-pp.tr.f.k.n.vpxpp.ir
+  - VLESS-15.236.253.118
+  - VLESS-176.108.247.104
+  - VLESS-87.120.107.246
+  - VLESS-99.86.12.106
+  - VLESS-g1.sabet1.blazevx.ir
+  - VLESS-xstack.mahanfixe.workers.dev
+  - VLESS-platform118.golnamakcert.top
+  - VLESS-172.64.150.28
+  - VLESS-dorado.yokkastars.com
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-178.105.120.168
-  - VLESS-139.100.236.245
-  - VLESS-122.8.45.3
-  - VLESS-nl9-node.rumedia-cdn.com
-  - VLESS-13.36.157.66
-  - VLESS-k2.cloud--vpn.site
-  - VLESS-a1b7659484d424be.IROnlY4l.Ir
-  - VLESS-31.130.149.165
-  - VLESS-91.107.185.32
-  - VLESS-idfr.melvona-digital.ir
-  - VLESS-pl.iramnovira.com
-  - VLESS-jj.trialkade.ir
-  - VLESS-91.107.162.148
-  - VLESS-dd.naym.ir
-  - VLESS-15.236.236.185
+  - VLESS-3.9.168.14
+  - VLESS-66.33.22.234
+  - VLESS-66.33.22.237
+  - VLESS-www.medium.com
+  - VLESS-shop.jarorobo.ir
+  - VLESS-www.canva.com
+  - VLESS-pp.tr.f.k.n.vpxpp.ir
+  - VLESS-15.236.253.118
+  - VLESS-176.108.247.104
+  - VLESS-87.120.107.246
+  - VLESS-99.86.12.106
+  - VLESS-g1.sabet1.blazevx.ir
+  - VLESS-xstack.mahanfixe.workers.dev
+  - VLESS-platform118.golnamakcert.top
+  - VLESS-172.64.150.28
+  - VLESS-dorado.yokkastars.com
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

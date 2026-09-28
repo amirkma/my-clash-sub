@@ -5,38 +5,52 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-156.146.38.170-aes-128-
+- name: SS-80.97.27.106-chacha20
   type: ss
-  server: 156.146.38.170
-  port: 44345
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.20.171-aes-128-
-  type: ss
-  server: 158.173.20.171
-  port: 44351
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-216.105.168.18-chacha20
-  type: ss
-  server: 216.105.168.18
-  port: 44367
+  server: 80.97.27.106
+  port: 1167
   cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
+  password: 9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj
   udp: true
-- name: SS-158.173.24.73-aes-128-
+- name: SS-54.36.174.140-chacha20
   type: ss
-  server: 158.173.24.73
-  port: 44374
+  server: 54.36.174.140
+  port: 44328
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+  udp: true
+- name: SS-173.244.56.6-aes-128-
+  type: ss
+  server: 173.244.56.6
+  port: 44365
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-173.244.56.9-aes-128-
+  type: ss
+  server: 173.244.56.9
+  port: 44367
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-102.37.156.224-chacha20
+  type: ss
+  server: 102.37.156.224
+  port: 44390
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: SS-156.146.38.167-aes-128-
+  type: ss
+  server: 156.146.38.167
+  port: 44395
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-156.146.38.168-aes-128-
   type: ss
   server: 156.146.38.168
-  port: 44399
+  port: 44397
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -44,18 +58,22 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-156.146.38.170-aes-128-
-  - SS-158.173.20.171-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-158.173.24.73-aes-128-
+  - SS-80.97.27.106-chacha20
+  - SS-54.36.174.140-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
+  - SS-102.37.156.224-chacha20
+  - SS-156.146.38.167-aes-128-
   - SS-156.146.38.168-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-156.146.38.170-aes-128-
-  - SS-158.173.20.171-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-158.173.24.73-aes-128-
+  - SS-80.97.27.106-chacha20
+  - SS-54.36.174.140-chacha20
+  - SS-173.244.56.6-aes-128-
+  - SS-173.244.56.9-aes-128-
+  - SS-102.37.156.224-chacha20
+  - SS-156.146.38.167-aes-128-
   - SS-156.146.38.168-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300

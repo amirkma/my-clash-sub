@@ -5,60 +5,51 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-france.poelspsgwk.ir
+- name: TROJAN-151.101.56.90
   type: trojan
-  server: france.poelspsgwk.ir
-  port: 44370
-  password: _HoxBDsA9ugdz1bacIK1OFr9YfR6B0dS
-  udp: true
-  tls: true
-  sni: speedtest.net
-  skip-cert-verify: true
-- name: TROJAN-188.42.145.180
-  type: trojan
-  server: 188.42.145.180
+  server: 151.101.56.90
   port: 443
-  password: humanity
+  password: 2223970e6a0b8ad289d3c43dd85dd2c9
   udp: true
   tls: true
-  sni: www.volumeroot.com#Farah_VPN-2
+  sni: ssl.fastly.com
   skip-cert-verify: false
-- name: TROJAN-109.206.241.10
+- name: TROJAN-151.101.56.9
   type: trojan
-  server: 109.206.241.10
-  port: 449
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  server: 151.101.56.9
+  port: 443
+  password: 2223970e6a0b8ad289d3c43dd85dd2c9
   udp: true
   tls: true
-  sni: russiapower.accesscam.org#Farah_VPN-3
-  skip-cert-verify: true
-- name: TROJAN-188.114.97.6
+  sni: ssl.fastly.com#GetXConfig-2
+  skip-cert-verify: false
+- name: TROJAN-199.232.78.160
   type: trojan
-  server: 188.114.97.6
+  server: 199.232.78.160
   port: 443
+  password: 2223970e6a0b8ad289d3c43dd85dd2c9
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#GetXConfig-3
+  skip-cert-verify: false
+- name: TROJAN-47.250.84.25
+  type: trojan
+  server: 47.250.84.25
+  port: 443
+  password: 5931134d1cde66bf83a54acdfebe7ab2
+  udp: true
+  tls: true
+  sni: moltbot.doctoroyy.net#Farah_VPN-4
+  skip-cert-verify: true
+- name: TROJAN-185.114.72.31
+  type: trojan
+  server: 185.114.72.31
+  port: 2053
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org
-  skip-cert-verify: true
-- name: TROJAN-www.speedtest.net
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-- name: TROJAN-188.114.97.7
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
+  sni: www.calmlunch.com#Farah_VPN-5
+  skip-cert-verify: false
 - name: TROJAN-8.47.69.0
   type: trojan
   server: 8.47.69.0
@@ -66,16 +57,16 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org
-  skip-cert-verify: true
-- name: TROJAN-188.114.96.8
+  sni: www.pleadcourt.org#Farah_VPN-6
+  skip-cert-verify: false
+- name: TROJAN-172.64.145.158
   type: trojan
-  server: 188.114.96.8
+  server: 172.64.145.158
   port: 443
-  password: '%54%65%6c%65%67%72%61%6d%5f%68%65%61%6c%65%72%5f%63%6f%6e%66%69%67'
+  password: xhl549341
   udp: true
   tls: true
-  sni: y9p34jpjmqjazaypf.piiwddilxjcqehr17af22u7xk-yu.workers.dev
+  sni: tro.baiyi.cloudns.org
   skip-cert-verify: true
 - name: TROJAN-167.82.76.7
   type: trojan
@@ -84,7 +75,7 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-9
+  sni: ssl.fastly.com#meliproxyy-8
   skip-cert-verify: false
 - name: TROJAN-151.101.56.7
   type: trojan
@@ -93,11 +84,20 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-10
+  sni: ssl.fastly.com#meliproxyy-9
   skip-cert-verify: false
 - name: TROJAN-172.67.149.60
   type: trojan
   server: 172.67.149.60
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com#meliproxyy-10
+  skip-cert-verify: false
+- name: TROJAN-188.114.97.7
+  type: trojan
+  server: 188.114.97.7
   port: 443
   password: humanity
   udp: true
@@ -107,6 +107,15 @@ proxies:
 - name: TROJAN-render.com
   type: trojan
   server: render.com
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.ignitelimit.com#meliproxyy-12
+  skip-cert-verify: false
+- name: TROJAN-www.speedtest.net
+  type: trojan
+  server: www.speedtest.net
   port: 443
   password: humanity
   udp: true
@@ -129,41 +138,43 @@ proxies:
   password: MiTiVPN
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-20
+  sni: ssl.fastly.com#meliproxyy-19
   skip-cert-verify: false
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-france.poelspsgwk.ir
-  - TROJAN-188.42.145.180
-  - TROJAN-109.206.241.10
-  - TROJAN-188.114.97.6
-  - TROJAN-www.speedtest.net
-  - TROJAN-188.114.97.7
+  - TROJAN-151.101.56.90
+  - TROJAN-151.101.56.9
+  - TROJAN-199.232.78.160
+  - TROJAN-47.250.84.25
+  - TROJAN-185.114.72.31
   - TROJAN-8.47.69.0
-  - TROJAN-188.114.96.8
+  - TROJAN-172.64.145.158
   - TROJAN-167.82.76.7
   - TROJAN-151.101.56.7
   - TROJAN-172.67.149.60
+  - TROJAN-188.114.97.7
   - TROJAN-render.com
+  - TROJAN-www.speedtest.net
   - TROJAN-199.232.78.188
   - TROJAN-151.101.56.255
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-france.poelspsgwk.ir
-  - TROJAN-188.42.145.180
-  - TROJAN-109.206.241.10
-  - TROJAN-188.114.97.6
-  - TROJAN-www.speedtest.net
-  - TROJAN-188.114.97.7
+  - TROJAN-151.101.56.90
+  - TROJAN-151.101.56.9
+  - TROJAN-199.232.78.160
+  - TROJAN-47.250.84.25
+  - TROJAN-185.114.72.31
   - TROJAN-8.47.69.0
-  - TROJAN-188.114.96.8
+  - TROJAN-172.64.145.158
   - TROJAN-167.82.76.7
   - TROJAN-151.101.56.7
   - TROJAN-172.67.149.60
+  - TROJAN-188.114.97.7
   - TROJAN-render.com
+  - TROJAN-www.speedtest.net
   - TROJAN-199.232.78.188
   - TROJAN-151.101.56.255
   url: http://www.gstatic.com/generate_204

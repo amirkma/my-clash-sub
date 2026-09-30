@@ -5,46 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-2.28.192.133
-  type: vless
-  server: 2.28.192.133
-  port: 33925
-  uuid: 92a8cd3e-be1b-45a6-ba7c-c5a30595f05d
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-162.159.90.197
-  type: vless
-  server: 162.159.90.197
-  port: 443
-  uuid: 6af0916d-be8f-4229-b167-c0cec0a453b3
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: web.gogleproject.ru
-  sni: web.gogleproject.ru#GetXConfig-2
-- name: VLESS-206.1.99.60
-  type: vless
-  server: 206.1.99.60
-  port: 19101
-  uuid: 2b8527d1-b4ab-4d3b-9863-409058552fec
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-yg9.ygkkk.dpdns.org
-  type: vless
-  server: yg9.ygkkk.dpdns.org
-  port: 8443
-  uuid: 86c50e3a-5b87-40dd-bd20-03c7f2735e40
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /?ed=2560
-  ws-headers:
-    Host: ygwp.sbbz.tech
-  sni: ygwp.sbbz.tech#GetXConfig-4
 - name: VLESS-5.223.41.93
   type: vless
   server: 5.223.41.93
@@ -53,7 +13,7 @@ proxies:
   udp: true
   tls: false
   network: ws
-  ws-path: /#GetXConfig-5
+  ws-path: /#GetXConfig-1
 - name: VLESS-109.248.162.28
   type: vless
   server: 109.248.162.28
@@ -127,7 +87,7 @@ proxies:
   uuid: 79f0aac8-656a-435b-b092-c973a3f85e02
   udp: true
   tls: false
-  network: tcp#GetXConfig-11
+  network: tcp#GetXConfig-7
 - name: VLESS-144.31.122.33
   type: vless
   server: 144.31.122.33
@@ -141,93 +101,148 @@ proxies:
     public-key: YfO61P-1nE3eQlo_QOYbSlrYpQto89TFVD2B3T_V30Q
     fingerprint: chrome
   sni: www.tripadvisor.com
-- name: VLESS-162.159.38.127
+- name: VLESS-91.107.141.240
   type: vless
-  server: 162.159.38.127
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-13
-  ws-headers:
-    Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: VLESS-162.159.39.218
-  type: vless
-  server: 162.159.39.218
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-14
-  ws-headers:
-    Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: VLESS-188.114.97.6
-  type: vless
-  server: 188.114.97.6
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /?ed=2560
-  ws-headers:
-    Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: VLESS-62.77.158.1
-  type: vless
-  server: 62.77.158.1
+  server: 91.107.141.240
   port: 443
-  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
+  uuid: 05dff627-6615-424d-9e2d-5612017246f4
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ams-r4
+  ws-headers:
+    Host: k7m2p9qa4.lynch.ir
+  sni: k7m2p9qa4.lynch.ir#GetXConfig-9
+- name: VLESS-ip-aelix.berqovo.ir
+  type: vless
+  server: ip-aelix.berqovo.ir
+  port: 6304
+  uuid: 3df643c6-9f15-4400-a55d-5828998bfd40
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
-    short-id: 6a
-    fingerprint: chrome
-  sni: online.1c.ru
-- name: VLESS-rubifen.adaspoloandco.com
+    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
+    short-id: ecf10
+    fingerprint: qq
+  sni: play.google.com
+- name: VLESS-aelix.berqovo.ir
   type: vless
-  server: rubifen.adaspoloandco.com
+  server: aelix.berqovo.ir
+  port: 6309
+  uuid: 3df643c6-9f15-4400-a55d-5828998bfd40
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
+    short-id: ecf12
+    fingerprint: qq
+  sni: play.google.com
+- name: VLESS-aelix-al.safire-soleiman.ir
+  type: vless
+  server: aelix-al.safire-soleiman.ir
+  port: 6311
+  uuid: 3df643c6-9f15-4400-a55d-5828998bfd40
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
+    short-id: ecf13
+    fingerprint: qq
+  sni: play.google.com
+- name: VLESS-cayosh.fastshot.net
+  type: vless
+  server: cayosh.fastshot.net
   port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  uuid: 25bc9eee-e900-49c5-b195-7e6a6a323189
   udp: true
   tls: true
   network: ws
-  ws-path: /GOrbEh
-  sni: rubifen.adaspoloandco.com#Farah_VPN-17
-- name: VLESS-172.64.229.170
+  ws-path: /
+  sni: cayosh.fastshot.net
+- name: VLESS-85.198.49.186
   type: vless
-  server: 172.64.229.170
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 85.198.49.186
+  port: 443
+  uuid: 53255b8c-49ca-400d-9818-71386d800c5b
   udp: true
   tls: false
+  network: tcp
+- name: VLESS-104.21.0.87
+  type: vless
+  server: 104.21.0.87
+  port: 443
+  uuid: 5da16620-0386-4da3-a252-12a6380ed1a6
+  udp: true
+  tls: true
   network: ws
-  ws-path: /?ed=2560security=tls#Farah_VPN-18
+  ws-path: /eyJqdW5rIjoiUHRlMEpuSzRFY1EyeUUwIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=#Farah_VPN-16
   ws-headers:
-    Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sni: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: VLESS-108.162.198.178
+    Host: server3.pegibol940.workers.dev
+  sni: server3.pegibol940.workers.dev
+- name: VLESS-194.76.154.31
   type: vless
-  server: 108.162.198.178
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 194.76.154.31
+  port: 40443
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
   udp: true
-  tls: false
-  network: ws#Farah_VPN-19
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+    fingerprint: chrome
+  sni: deepl.com
+- name: VLESS-176.123.162.100
+  type: vless
+  server: 176.123.162.100
+  port: 9880
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-tunnel#Farah_VPN-18
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabb
+    fingerprint: firefox
+  sni: dl.google.com
+- name: VLESS-146.70.124.85
+  type: vless
+  server: 146.70.124.85
+  port: 443
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
+    fingerprint: chrome
+  sni: www.datadoghq.com
+- name: VLESS-144.31.27.215
+  type: vless
+  server: 144.31.27.215
+  port: 43000
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
+    fingerprint: edge
+  sni: 144.31.27.215
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-2.28.192.133
-  - VLESS-162.159.90.197
-  - VLESS-206.1.99.60
-  - VLESS-yg9.ygkkk.dpdns.org
   - VLESS-5.223.41.93
   - VLESS-109.248.162.28
   - VLESS-rag3.hopexy.com
@@ -236,20 +251,20 @@ proxy-groups:
   - VLESS-p2real22.greewebservices.ir
   - VLESS-BatManAli.Savfasf.ir
   - VLESS-144.31.122.33
-  - VLESS-162.159.38.127
-  - VLESS-162.159.39.218
-  - VLESS-188.114.97.6
-  - VLESS-62.77.158.1
-  - VLESS-rubifen.adaspoloandco.com
-  - VLESS-172.64.229.170
-  - VLESS-108.162.198.178
+  - VLESS-91.107.141.240
+  - VLESS-ip-aelix.berqovo.ir
+  - VLESS-aelix.berqovo.ir
+  - VLESS-aelix-al.safire-soleiman.ir
+  - VLESS-cayosh.fastshot.net
+  - VLESS-85.198.49.186
+  - VLESS-104.21.0.87
+  - VLESS-194.76.154.31
+  - VLESS-176.123.162.100
+  - VLESS-146.70.124.85
+  - VLESS-144.31.27.215
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-2.28.192.133
-  - VLESS-162.159.90.197
-  - VLESS-206.1.99.60
-  - VLESS-yg9.ygkkk.dpdns.org
   - VLESS-5.223.41.93
   - VLESS-109.248.162.28
   - VLESS-rag3.hopexy.com
@@ -258,13 +273,17 @@ proxy-groups:
   - VLESS-p2real22.greewebservices.ir
   - VLESS-BatManAli.Savfasf.ir
   - VLESS-144.31.122.33
-  - VLESS-162.159.38.127
-  - VLESS-162.159.39.218
-  - VLESS-188.114.97.6
-  - VLESS-62.77.158.1
-  - VLESS-rubifen.adaspoloandco.com
-  - VLESS-172.64.229.170
-  - VLESS-108.162.198.178
+  - VLESS-91.107.141.240
+  - VLESS-ip-aelix.berqovo.ir
+  - VLESS-aelix.berqovo.ir
+  - VLESS-aelix-al.safire-soleiman.ir
+  - VLESS-cayosh.fastshot.net
+  - VLESS-85.198.49.186
+  - VLESS-104.21.0.87
+  - VLESS-194.76.154.31
+  - VLESS-176.123.162.100
+  - VLESS-146.70.124.85
+  - VLESS-144.31.27.215
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

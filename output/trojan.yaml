@@ -5,15 +5,33 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-212.183.88.136
+- name: TROJAN-104.21.70.21
   type: trojan
-  server: 212.183.88.136
+  server: 104.21.70.21
   port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  udp: true
+  tls: true
+  sni: id1.nathaya.web.id
+  skip-cert-verify: true
+- name: TROJAN-172.67.132.80
+  type: trojan
+  server: 172.67.132.80
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  sni: 5Er0m2I2eNS2ULPg7Sjd45UGQs.87FCVt2K11501YnO2txm6yw-MiPJ2KR.worKERs.dEV
+  skip-cert-verify: false
+- name: TROJAN-185.114.72.31
+  type: trojan
+  server: 185.114.72.31
+  port: 2053
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
+  sni: www.calmlunch.com#Farah_VPN-3
+  skip-cert-verify: false
 - name: TROJAN-45.87.41.18
   type: trojan
   server: 45.87.41.18
@@ -21,16 +39,61 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-2
+  sni: www.calmlunch.com#Farah_VPN-4
   skip-cert-verify: false
-- name: TROJAN-199.232.78.188
+- name: TROJAN-172.64.145.158
   type: trojan
-  server: 199.232.78.188
+  server: 172.64.145.158
+  port: 443
+  password: xhl549341
+  udp: true
+  tls: true
+  sni: tro.baiyi.cloudns.org
+  skip-cert-verify: true
+- name: TROJAN-104.21.42.129
+  type: trojan
+  server: 104.21.42.129
+  port: 2087
+  password: eabf1999fefbb7d2
+  udp: true
+  tls: true
+  sni: waysi.waysi6688.workers.dev
+  skip-cert-verify: true
+- name: TROJAN-199.232.78.170
+  type: trojan
+  server: 199.232.78.170
   port: 443
   password: mitivpn
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-3
+  sni: ssl.fastly.com#Farah_VPN-8
+  skip-cert-verify: false
+- name: TROJAN-199.232.78.160
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#Farah_VPN-9
+  skip-cert-verify: false
+- name: TROJAN-188.114.97.3
+  type: trojan
+  server: 188.114.97.3
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  sni: 6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev
+  skip-cert-verify: true
+- name: TROJAN-172.64.80.1
+  type: trojan
+  server: 172.64.80.1
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV#Farah_VPN-11
   skip-cert-verify: false
 - name: TROJAN-151.101.56.9
   type: trojan
@@ -39,25 +102,16 @@ proxies:
   password: mitivpn
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-4
+  sni: ssl.fastly.com#meliproxyy-12
   skip-cert-verify: false
-- name: TROJAN-172.67.149.60
+- name: TROJAN-199.232.78.188
   type: trojan
-  server: 172.67.149.60
+  server: 199.232.78.188
   port: 443
-  password: humanity
+  password: mitivpn
   udp: true
   tls: true
-  sni: www.ignitelimit.com#meliproxyy-5
-  skip-cert-verify: false
-- name: TROJAN-188.114.97.7
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.ignitelimit.com#meliproxyy-6
+  sni: ssl.fastly.com#meliproxyy-13
   skip-cert-verify: false
 - name: TROJAN-5.75.171.12
   type: trojan
@@ -72,22 +126,34 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-212.183.88.136
+  - TROJAN-104.21.70.21
+  - TROJAN-172.67.132.80
+  - TROJAN-185.114.72.31
   - TROJAN-45.87.41.18
-  - TROJAN-199.232.78.188
+  - TROJAN-172.64.145.158
+  - TROJAN-104.21.42.129
+  - TROJAN-199.232.78.170
+  - TROJAN-199.232.78.160
+  - TROJAN-188.114.97.3
+  - TROJAN-172.64.80.1
   - TROJAN-151.101.56.9
-  - TROJAN-172.67.149.60
-  - TROJAN-188.114.97.7
+  - TROJAN-199.232.78.188
   - TROJAN-5.75.171.12
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-212.183.88.136
+  - TROJAN-104.21.70.21
+  - TROJAN-172.67.132.80
+  - TROJAN-185.114.72.31
   - TROJAN-45.87.41.18
-  - TROJAN-199.232.78.188
+  - TROJAN-172.64.145.158
+  - TROJAN-104.21.42.129
+  - TROJAN-199.232.78.170
+  - TROJAN-199.232.78.160
+  - TROJAN-188.114.97.3
+  - TROJAN-172.64.80.1
   - TROJAN-151.101.56.9
-  - TROJAN-172.67.149.60
-  - TROJAN-188.114.97.7
+  - TROJAN-199.232.78.188
   - TROJAN-5.75.171.12
   url: http://www.gstatic.com/generate_204
   interval: 300

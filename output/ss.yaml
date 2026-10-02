@@ -5,41 +5,77 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-5.160.198.244-chacha20
+- name: SS-156.146.38.170-aes-128-
   type: ss
-  server: 5.160.198.244
-  port: 44316
-  cipher: chacha20-ietf-poly1305
-  password: 44xgqIHCG64I2kMxXzr4AexLc3TmyXX1oYY5C68s2ck=
+  server: 156.146.38.170
+  port: 44327
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+- name: SS-156.146.38.168-aes-128-
   type: ss
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 44333
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  server: 156.146.38.168
+  port: 44328
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-- name: SS-45.207.207.25-aes-256-
+- name: SS-149.22.95.183-aes-128-
   type: ss
-  server: 45.207.207.25
-  port: 44359
+  server: 149.22.95.183
+  port: 44331
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.102.149.207-aes-256-
+  type: ss
+  server: 149.102.149.207
+  port: 44335
   cipher: aes-256-gcm
-  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
+  password: LXchLsIwtCeUAUgu
   udp: true
-- name: SS-51.222.141.125-aes-256-
+- name: SS-149.22.87.240-aes-128-
   type: ss
-  server: 51.222.141.125
-  port: 44572
+  server: 149.22.87.240
+  port: 44383
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-2.58.81.221-aes-256-
+  type: ss
+  server: 2.58.81.221
+  port: 44386
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  password: kKEd0rBrd56Furjz
+  udp: true
+- name: SS-156.146.38.169-aes-128-
+  type: ss
+  server: 156.146.38.169
+  port: 44390
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-5.160.198.244-chacha20
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-45.207.207.25-aes-256-
-  - SS-51.222.141.125-aes-256-
+  - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.168-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-149.102.149.207-aes-256-
+  - SS-149.22.87.240-aes-128-
+  - SS-2.58.81.221-aes-256-
+  - SS-156.146.38.169-aes-128-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.168-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-149.102.149.207-aes-256-
+  - SS-149.22.87.240-aes-128-
+  - SS-2.58.81.221-aes-256-
+  - SS-156.146.38.169-aes-128-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

@@ -5,45 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-104.21.78.194
-  type: vless
-  server: 104.21.78.194
-  port: 2053
-  uuid: 3f2fa042-49ba-4c0b-9c7d-4c729d69f7c4
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /fintest
-  ws-headers:
-    Host: findo.chalghooz.com
-  sni: findo.chalghooz.com#GetXConfig-1
-- name: VLESS-136.176.68.44
-  type: vless
-  server: 136.176.68.44
-  port: 443
-  uuid: 0b21158e-00f5-4a2f-b242-e3e5574f68a0
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: C-_dFKmuuFw7zIT6ThH0N2FKkR21f2v31zGRIbTmuBM
-    fingerprint: qq
-  sni: www.amd.com
-- name: SS-p2tun3.greewebservices.ir-chacha20
-  type: ss
-  server: p2tun3.greewebservices.ir
-  port: 10305
-  cipher: chacha20-ietf-poly1305
-  password: f4Z-ikyuWC0D926rZwbThg
-  udp: true
-- name: SS-p2tun2.greewebservices.ir-chacha20
-  type: ss
-  server: p2tun2.greewebservices.ir
-  port: 10206
-  cipher: chacha20-ietf-poly1305
-  password: f4Z-ikyuWC0D926rZwbThg
-  udp: true
 - name: VLESS-142.91.106.31
   type: vless
   server: 142.91.106.31
@@ -98,7 +59,7 @@ proxies:
   udp: true
   tls: false
   network: grpc
-  grpc-service-name: vless#GetXConfig-15
+  grpc-service-name: vless#GetXConfig-9
 - name: TROJAN-104.21.8.34
   type: trojan
   server: 104.21.8.34
@@ -119,7 +80,7 @@ proxies:
   ws-path: /
   ws-headers:
     Host: Appxdn.global.ssl.fastly.net
-  sni: ssl.fastly.com#GetXConfig-18
+  sni: ssl.fastly.com#GetXConfig-12
 - name: VLESS-91.98.107.229
   type: vless
   server: 91.98.107.229
@@ -237,14 +198,59 @@ proxies:
     public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
     fingerprint: safari
   sni: delta.cloudserverix.com
+- name: 'ترکیه 🇹🇷 | @GetXConfig | #8085-32'
+  type: vmess
+  server: 206.1.98.53
+  port: 2053
+  uuid: 8020664a-510d-40f3-b111-0d277bda9ed7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-176.109.108.244
+  type: vless
+  server: 176.109.108.244
+  port: 9880
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-tunnel
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    fingerprint: firefox
+  sni: dl.google.com
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
+  type: vmess
+  server: yg1.ygkkk.dpdns.org
+  port: 443
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+  ws-headers:
+    Host: jmp1.907737.xyz
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
+  type: vmess
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws-vmess
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-104.21.78.194
-  - VLESS-136.176.68.44
-  - SS-p2tun3.greewebservices.ir-chacha20
-  - SS-p2tun2.greewebservices.ir-chacha20
   - VLESS-142.91.106.31
   - VLESS-num3-ge.specialteam2.com
   - VLESS-199.232.78.160
@@ -261,13 +267,13 @@ proxy-groups:
   - VLESS-176.65.144.84
   - VLESS-2.27.249.133
   - VLESS-2.27.160.4
+  - 'ترکیه 🇹🇷 | @GetXConfig | #8085-32'
+  - VLESS-176.109.108.244
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-104.21.78.194
-  - VLESS-136.176.68.44
-  - SS-p2tun3.greewebservices.ir-chacha20
-  - SS-p2tun2.greewebservices.ir-chacha20
   - VLESS-142.91.106.31
   - VLESS-num3-ge.specialteam2.com
   - VLESS-199.232.78.160
@@ -284,6 +290,10 @@ proxy-groups:
   - VLESS-176.65.144.84
   - VLESS-2.27.249.133
   - VLESS-2.27.160.4
+  - 'ترکیه 🇹🇷 | @GetXConfig | #8085-32'
+  - VLESS-176.109.108.244
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

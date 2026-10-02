@@ -5,59 +5,41 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-149.102.132.184-aes-256-
+- name: SS-5.160.198.244-chacha20
   type: ss
-  server: 149.102.132.184
-  port: 8029
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
-- name: SS-173.244.56.6-aes-128-
-  type: ss
-  server: 173.244.56.6
-  port: 44335
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.9-aes-128-
-  type: ss
-  server: 173.244.56.9
-  port: 44337
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-141.98.101.181-aes-128-
-  type: ss
-  server: 141.98.101.181
-  port: 44354
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-216.105.168.18-chacha20
-  type: ss
-  server: 216.105.168.18
-  port: 44371
+  server: 5.160.198.244
+  port: 44316
   cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
+  password: 44xgqIHCG64I2kMxXzr4AexLc3TmyXX1oYY5C68s2ck=
+  udp: true
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  type: ss
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44333
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-45.207.207.25-aes-256-
+  type: ss
+  server: 45.207.207.25
+  port: 44359
+  cipher: aes-256-gcm
+  password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C
+  udp: true
+- name: SS-51.222.141.125-aes-256-
+  type: ss
+  server: 51.222.141.125
+  port: 44572
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-149.102.132.184-aes-256-
-  - SS-173.244.56.6-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-141.98.101.181-aes-128-
-  - SS-216.105.168.18-chacha20
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-149.102.132.184-aes-256-
-  - SS-173.244.56.6-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-141.98.101.181-aes-128-
-  - SS-216.105.168.18-chacha20
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-5.160.198.244-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-45.207.207.25-aes-256-
+  - SS-51.222.141.125-aes-256-
 rules:
 - MATCH,PROXY

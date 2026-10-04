@@ -8,21 +8,42 @@ proxies:
 - name: SS-158.173.20.171-aes-128-
   type: ss
   server: 158.173.20.171
-  port: 44327
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
-  port: 44374
+  port: 44337
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-156.146.38.167-aes-128-
   type: ss
   server: 156.146.38.167
-  port: 44375
+  port: 44391
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.169-aes-128-
+  type: ss
+  server: 156.146.38.169
+  port: 44394
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-149.22.95.183-aes-128-
+  type: ss
+  server: 149.22.95.183
+  port: 44395
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.244-aes-128-
+  type: ss
+  server: 37.19.198.244
+  port: 44396
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.160-aes-128-
+  type: ss
+  server: 37.19.198.160
+  port: 44398
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -31,7 +52,21 @@ proxy-groups:
   type: select
   proxies:
   - SS-158.173.20.171-aes-128-
-  - SS-156.146.38.169-aes-128-
   - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-158.173.20.171-aes-128-
+  - SS-156.146.38.167-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-149.22.95.183-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

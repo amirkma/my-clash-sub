@@ -5,32 +5,86 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: TROJAN-18.143.92.167
+- name: TROJAN-guided-ferret.rooster465.autos
   type: trojan
-  server: 18.143.92.167
+  server: guided-ferret.rooster465.autos
   port: 443
   password: UX82473651
   udp: true
   tls: true
-  sni: glowing-marmoset.rooster465.autos#GetXConfig-1
+  sni: guided-ferret.rooster465.autos#Farah_VPN-1
   skip-cert-verify: true
-- name: TROJAN-185.220.100.168
+- name: TROJAN-glowing-marmoset.rooster465.autos
   type: trojan
-  server: 185.220.100.168
+  server: glowing-marmoset.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: glowing-marmoset.rooster465.autos#Farah_VPN-2
+  skip-cert-verify: true
+- name: TROJAN-real-cardinal.rooster465.autos
+  type: trojan
+  server: real-cardinal.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: real-cardinal.rooster465.autos#Farah_VPN-3
+  skip-cert-verify: true
+- name: TROJAN-desired-boxer.rooster465.autos
+  type: trojan
+  server: desired-boxer.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: desired-boxer.rooster465.autos#Farah_VPN-4
+  skip-cert-verify: true
+- name: TROJAN-musical-terrier.rooster465.autos
+  type: trojan
+  server: musical-terrier.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: musical-terrier.rooster465.autos#Farah_VPN-5
+  skip-cert-verify: true
+- name: TROJAN-8.47.69.0
+  type: trojan
+  server: 8.47.69.0
   port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-2
+  sni: www.pleadcourt.org#Farah_VPN-6
   skip-cert-verify: false
-- name: TROJAN-185.114.72.31
+- name: TROJAN-104.19.229.21
   type: trojan
-  server: 185.114.72.31
-  port: 2053
+  server: 104.19.229.21
+  port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com#Farah_VPN-3
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+- name: TROJAN-43.173.90.202
+  type: trojan
+  server: 43.173.90.202
+  port: 443
+  password: sg-trojan-2026
+  udp: true
+  tls: true
+  sni: sg-proxy.local#Farah_VPN-8
+  skip-cert-verify: true
+- name: TROJAN-199.232.78.101
+  type: trojan
+  server: 199.232.78.101
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com#Farah_VPN-9
   skip-cert-verify: false
 - name: TROJAN-172.67.139.14
   type: trojan
@@ -39,7 +93,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#meliproxyy-4
+  sni: www.volumeroot.com#meliproxyy-10
   skip-cert-verify: false
 - name: TROJAN-188.114.97.6
   type: trojan
@@ -48,7 +102,7 @@ proxies:
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#meliproxyy-5
+  sni: www.volumeroot.com#meliproxyy-11
   skip-cert-verify: false
 - name: TROJAN-mhzedir.qzz.io
   type: trojan
@@ -66,7 +120,7 @@ proxies:
   password: vUMFCo5ghEArq09bxy8NuLL3lQtqFRHE
   udp: true
   tls: true
-  sni: mr-amir-production-e40d.up.railway.app#meliproxyy-8
+  sni: mr-amir-production-e40d.up.railway.app#meliproxyy-14
   skip-cert-verify: false
 - name: TROJAN-167.82.76.27
   type: trojan
@@ -75,7 +129,7 @@ proxies:
   password: mitivpn
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-9
+  sni: ssl.fastly.com#meliproxyy-15
   skip-cert-verify: false
 - name: TROJAN-167.82.76.7
   type: trojan
@@ -84,7 +138,7 @@ proxies:
   password: mitivpn
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-10
+  sni: ssl.fastly.com#meliproxyy-16
   skip-cert-verify: false
 - name: TROJAN-199.232.78.160
   type: trojan
@@ -93,7 +147,7 @@ proxies:
   password: mitivpn
   udp: true
   tls: true
-  sni: ssl.fastly.com#meliproxyy-11
+  sni: ssl.fastly.com#meliproxyy-17
   skip-cert-verify: false
 - name: TROJAN-104.16.104.34
   type: trojan
@@ -162,9 +216,15 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - TROJAN-18.143.92.167
-  - TROJAN-185.220.100.168
-  - TROJAN-185.114.72.31
+  - TROJAN-guided-ferret.rooster465.autos
+  - TROJAN-glowing-marmoset.rooster465.autos
+  - TROJAN-real-cardinal.rooster465.autos
+  - TROJAN-desired-boxer.rooster465.autos
+  - TROJAN-musical-terrier.rooster465.autos
+  - TROJAN-8.47.69.0
+  - TROJAN-104.19.229.21
+  - TROJAN-43.173.90.202
+  - TROJAN-199.232.78.101
   - TROJAN-172.67.139.14
   - TROJAN-188.114.97.6
   - TROJAN-mhzedir.qzz.io
@@ -182,9 +242,15 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - TROJAN-18.143.92.167
-  - TROJAN-185.220.100.168
-  - TROJAN-185.114.72.31
+  - TROJAN-guided-ferret.rooster465.autos
+  - TROJAN-glowing-marmoset.rooster465.autos
+  - TROJAN-real-cardinal.rooster465.autos
+  - TROJAN-desired-boxer.rooster465.autos
+  - TROJAN-musical-terrier.rooster465.autos
+  - TROJAN-8.47.69.0
+  - TROJAN-104.19.229.21
+  - TROJAN-43.173.90.202
+  - TROJAN-199.232.78.101
   - TROJAN-172.67.139.14
   - TROJAN-188.114.97.6
   - TROJAN-mhzedir.qzz.io

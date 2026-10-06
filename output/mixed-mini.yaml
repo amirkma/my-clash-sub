@@ -5,46 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-areal5.greewebservices.ir
-  type: vless
-  server: areal5.greewebservices.ir
-  port: 5455
-  uuid: 97b236b9-47ba-4c9a-ae0d-3ddfff5acadf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    fingerprint: edge
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-p2tun0.greewebservices.ir
-  type: vless
-  server: p2tun0.greewebservices.ir
-  port: 28820
-  uuid: 97b236b9-47ba-4c9a-ae0d-3ddfff5acadf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    fingerprint: ios
-  sni: play.google.com
-- name: VLESS-64.188.89.94
-  type: vless
-  server: 64.188.89.94
-  port: 33517
-  uuid: 5a586979-1e6d-4db7-8fe4-35f5d5b3082e
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: baHq6sp0MwdJZbXy6AQGHi6szdmUzx6Xk5RRiTQ1XUw
-    short-id: 6fecf5
-    fingerprint: safari
-  sni: api15.yandex-cdn-mirror.ru
 - name: VLESS-179.198.49.99
   type: vless
   server: 179.198.49.99
@@ -200,7 +160,7 @@ proxies:
   reality-opts:
     public-key: bk_4g13q6U0Aki1qMV3wGm34mRzJOOmZb5BK5XMZIQE
     fingerprint: safari
-  sni: yahoo.com#GetXConfig-29
+  sni: yahoo.com#GetXConfig-23
 - name: VLESS-109.69.17.166
   type: vless
   server: 109.69.17.166
@@ -266,13 +226,37 @@ proxies:
     public-key: RX4VBHIJ29Oo4oQYRtdmBX5IN35vHwENneqUvwLpjlU
     fingerprint: firefox
   sni: yandex.ru
+- name: 'نامشخص 🏳️ | @GetXConfig | #8545-35'
+  type: vmess
+  server: fisgww.povrak.ir
+  port: 58179
+  uuid: 574df633-0bfb-4fda-88d9-437e6ad0594d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-38.135.54.24
+  type: vless
+  server: 38.135.54.24
+  port: 2045
+  uuid: 58dc9d3c-2623-49dc-87dc-d587b2412eb7
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-50.7.216.173
+  type: vless
+  server: 50.7.216.173
+  port: 443
+  uuid: 3f89518a-e78f-4d31-a1c5-1725b4cfb70d
+  udp: true
+  tls: true
+  network: xhttp
+  sni: 3f89518a.ferrin.uk#GetXConfig-39
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-areal5.greewebservices.ir
-  - VLESS-p2tun0.greewebservices.ir
-  - VLESS-64.188.89.94
   - VLESS-179.198.49.99
   - VLESS-178.162.254.203
   - VLESS-142.228.52.44
@@ -290,12 +274,12 @@ proxy-groups:
   - VLESS-103.137.193.156
   - VLESS-31.129.42.23
   - VLESS-46.254.19.190
+  - 'نامشخص 🏳️ | @GetXConfig | #8545-35'
+  - VLESS-38.135.54.24
+  - VLESS-50.7.216.173
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-areal5.greewebservices.ir
-  - VLESS-p2tun0.greewebservices.ir
-  - VLESS-64.188.89.94
   - VLESS-179.198.49.99
   - VLESS-178.162.254.203
   - VLESS-142.228.52.44
@@ -313,6 +297,9 @@ proxy-groups:
   - VLESS-103.137.193.156
   - VLESS-31.129.42.23
   - VLESS-46.254.19.190
+  - 'نامشخص 🏳️ | @GetXConfig | #8545-35'
+  - VLESS-38.135.54.24
+  - VLESS-50.7.216.173
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

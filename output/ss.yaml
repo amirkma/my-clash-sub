@@ -5,58 +5,94 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-p2tun1.greewebservices.ir-chacha20
-  type: ss
-  server: p2tun1.greewebservices.ir
-  port: 10101
-  cipher: chacha20-ietf-poly1305
-  password: ueWtfPaGavAj6Pc-suQgBg
-  udp: true
-- name: SS-2.58.81.221-aes-256-
-  type: ss
-  server: 2.58.81.221
-  port: 44341
-  cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
-  udp: true
 - name: SS-156.146.38.170-aes-128-
   type: ss
   server: 156.146.38.170
-  port: 44344
+  port: 44347
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.168-aes-128-
+  type: ss
+  server: 156.146.38.168
+  port: 44350
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.244-aes-128-
+  type: ss
+  server: 37.19.198.244
+  port: 44357
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44358
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44359
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
+  udp: true
+- name: SS-149.22.87.240-aes-128-
+  type: ss
+  server: 149.22.87.240
+  port: 44378
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-158.173.24.73-aes-128-
+  type: ss
+  server: 158.173.24.73
+  port: 44379
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-141.98.101.181-aes-128-
   type: ss
   server: 141.98.101.181
-  port: 44382
+  port: 44381
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-84.247.155.196-aes-256-
+- name: SS-149.22.87.241-aes-128-
   type: ss
-  server: 84.247.155.196
-  port: 44391
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
+  server: 149.22.87.241
+  port: 44382
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-p2tun1.greewebservices.ir-chacha20
-  - SS-2.58.81.221-aes-256-
   - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.168-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-216.105.168.18-chacha20
+  - SS-149.22.87.240-aes-128-
+  - SS-158.173.24.73-aes-128-
   - SS-141.98.101.181-aes-128-
-  - SS-84.247.155.196-aes-256-
+  - SS-149.22.87.241-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-p2tun1.greewebservices.ir-chacha20
-  - SS-2.58.81.221-aes-256-
   - SS-156.146.38.170-aes-128-
+  - SS-156.146.38.168-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-216.105.168.18-chacha20
+  - SS-149.22.87.240-aes-128-
+  - SS-158.173.24.73-aes-128-
   - SS-141.98.101.181-aes-128-
-  - SS-84.247.155.196-aes-256-
+  - SS-149.22.87.241-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

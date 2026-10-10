@@ -8,38 +8,56 @@ proxies:
 - name: SS-frnce2.thugiping.info-aes-256-
   type: ss
   server: frnce2.thugiping.info
-  port: 44317
+  port: 4432
   cipher: aes-256-gcm
   password: afbd1804-25b0-4838-af92-bf742bab33d5
   udp: true
-- name: SS-149.22.87.204-aes-128-
+- name: SS-84.247.155.196-aes-256-
   type: ss
-  server: 149.22.87.204
-  port: 44339
+  server: 84.247.155.196
+  port: 44335
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  udp: true
+- name: SS-158.173.20.171-aes-128-
+  type: ss
+  server: 158.173.20.171
+  port: 44371
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-2.58.81.221-aes-256-
+- name: SS-149.102.149.207-aes-256-
   type: ss
-  server: 2.58.81.221
-  port: 44349
+  server: 149.102.149.207
+  port: 44372
   cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
+  password: LXchLsIwtCeUAUgu
   udp: true
-- name: SS-51.222.12.127-aes-256-
+- name: SS-82.38.31.159-chacha20
   type: ss
-  server: 51.222.12.127
-  port: 44550
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  server: 82.38.31.159
+  port: 44374
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-frnce2.thugiping.info-aes-256-
-  - SS-149.22.87.204-aes-128-
-  - SS-2.58.81.221-aes-256-
-  - SS-51.222.12.127-aes-256-
+  - SS-84.247.155.196-aes-256-
+  - SS-158.173.20.171-aes-128-
+  - SS-149.102.149.207-aes-256-
+  - SS-82.38.31.159-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-frnce2.thugiping.info-aes-256-
+  - SS-84.247.155.196-aes-256-
+  - SS-158.173.20.171-aes-128-
+  - SS-149.102.149.207-aes-256-
+  - SS-82.38.31.159-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

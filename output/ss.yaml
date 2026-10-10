@@ -5,68 +5,33 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+- name: SS-20.123.1.55-chacha20
   type: ss
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 44325
+  server: 20.123.1.55
+  port: 4431
   cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  password: YF329KNGVTUZ1qrH
   udp: true
-- name: SS-102.37.156.224-chacha20
+- name: SS-82.38.31.174-chacha20
   type: ss
-  server: 102.37.156.224
-  port: 44339
+  server: 82.38.31.174
+  port: 44362
   cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: SS-149.22.87.241-aes-128-
+- name: SS-51.222.141.125-aes-256-
   type: ss
-  server: 149.22.87.241
-  port: 44342
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.240-aes-128-
-  type: ss
-  server: 149.22.87.240
-  port: 44344
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-216.105.168.18-chacha20
-  type: ss
-  server: 216.105.168.18
-  port: 44347
-  cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-  udp: true
-- name: SS-84.247.155.196-aes-256-
-  type: ss
-  server: 84.247.155.196
-  port: 44394
+  server: 51.222.141.125
+  port: 44571
   cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
+  password: zDNVedRFPQexG9v
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-102.37.156.224-chacha20
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.240-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-84.247.155.196-aes-256-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-102.37.156.224-chacha20
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.240-aes-128-
-  - SS-216.105.168.18-chacha20
-  - SS-84.247.155.196-aes-256-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-20.123.1.55-chacha20
+  - SS-82.38.31.174-chacha20
+  - SS-51.222.141.125-aes-256-
 rules:
 - MATCH,PROXY

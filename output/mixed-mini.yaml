@@ -5,288 +5,248 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-64.188.83.188
+- name: SS-20.123.1.55-chacha20
+  type: ss
+  server: 20.123.1.55
+  port: 4431
+  cipher: chacha20-ietf-poly1305
+  password: YF329KNGVTUZ1qrH
+  udp: true
+- name: VLESS-tun3.appii.ir
   type: vless
-  server: 64.188.83.188
-  port: 2083
-  uuid: 75b517db-1f97-4bda-a479-863d988c31a0
+  server: tun3.appii.ir
+  port: 8023
+  uuid: 412c08d3-d2c4-4a29-a7ce-bc16d6ca6d79
   udp: true
   tls: true
-  network: ws
-  ws-path: /vless-ws#GetXConfig-1
-  sni: speedtestmark.com
-- name: VLESS-88.198.108.26
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 3VKs9HG9EgsB69ppfvFEJcXiO5MDOvvQOByDD2HceXQ
+    fingerprint: chrome
+  sni: www.apple.com
+- name: VLESS-irrran.zeeshop.click
   type: vless
-  server: 88.198.108.26
-  port: 29870
-  uuid: 54abd374-612d-4bee-b469-f28ec3ba5632
+  server: irrran.zeeshop.click
+  port: 443
+  uuid: ddbcf201-aba3-40c9-b1fb-a91e56c9ab81
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Dp0sJ6LxqlrMJiQJnsdxbc_77whcVU3uplS2wsA9nzE
+    fingerprint: chrome
+  sni: workbee.ca
+- name: VLESS-193.35.17.179
+  type: vless
+  server: 193.35.17.179
+  port: 443
+  uuid: 6cd40a62-e648-4529-a034-0b40cf01b067
   udp: true
   tls: true
   network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6ylQnvHKj9JnxJc0u2RdzI2HekMGnBopPlQUXISbG3k
+    public-key: ZNFkZgAlqc1INkiTMgdnlncNb5hKhehX8D7iUX_fqko
     fingerprint: chrome
-  sni: play.google.com
-- name: VLESS-sieh.varqino.ir
+  sni: gap.pashalloh.org
+- name: VLESS-37.202.246.68
   type: vless
-  server: sieh.varqino.ir
-  port: 32211
-  uuid: ece4f1a6-4d09-4678-82e4-b14ecb1645ed
+  server: 37.202.246.68
+  port: 55032
+  uuid: b36756d4-ec22-4278-9f2d-85b400d1d7bf
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-8
+- name: VLESS-gcore.com
+  type: vless
+  server: gcore.com
+  port: 443
+  uuid: 2c5f2d6e-d683-49f7-a12b-a95460b90a92
   udp: true
   tls: true
   network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zsQSeUcOoUUn85pzjv9axmKqX9VPViFP3YC-IeXuZTE
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-archive.m2ip-video.cloud
+  sni: gcore.com#GetXConfig-10
+- name: VLESS-ukhy2.richforever.ru
   type: vless
-  server: archive.m2ip-video.cloud
+  server: ukhy2.richforever.ru
   port: 8443
-  uuid: 3ed41dfc-0d38-4379-a470-c815673dc504
+  uuid: 7918e6f6-df8f-4a20-9c1d-59dbd1f22770
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg
+    public-key: 3ziuq7wssNcpYpcqcLHqax8nIb2uJok5qAwxuS3mKns
     fingerprint: firefox
-  sni: peplow-labs.info
-- name: VLESS-pubsub.m2ip-video.cloud
+  sni: ukhy2.richforever.ru#GetXConfig-12
+- name: VLESS-pl3.richforever.ru
   type: vless
-  server: pubsub.m2ip-video.cloud
+  server: pl3.richforever.ru
+  port: 9443
+  uuid: 7918e6f6-df8f-4a20-9c1d-59dbd1f22770
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc-service
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lQcmwpXJsT5tdh9mQhcsDyiDNFe0nAVLvSc_5WnfqSY
+    fingerprint: firefox
+  sni: pl3.richforever.ru#GetXConfig-16
+- name: VLESS-nlhy2.richforever.ru
+  type: vless
+  server: nlhy2.richforever.ru
   port: 8443
-  uuid: 3ed41dfc-0d38-4379-a470-c815673dc504
+  uuid: 7918e6f6-df8f-4a20-9c1d-59dbd1f22770
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg
+    public-key: fKz8iMdY9dfMURdjdVcb9mYOJz2FlexJ3_v8mlM2RTE
     fingerprint: firefox
-  sni: peplow-labs.info
-- name: VLESS-validate.m2ip-video.cloud
+  sni: nlhy2.richforever.ru#GetXConfig-18
+- name: VLESS-li.zainet.tech
   type: vless
-  server: validate.m2ip-video.cloud
+  server: li.zainet.tech
+  port: 443
+  uuid: c387a6c8-5c79-4019-bb4e-fa39d53374d6
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: F5fFt0rWebsWQBjRX8sHDkYqoZF2ElQ2uFpB5MpEyXY
+  sni: li.zainet.tech
+- name: VLESS-game-survival.surverssss.pro
+  type: vless
+  server: game-survival.surverssss.pro
   port: 8443
-  uuid: 3ed41dfc-0d38-4379-a470-c815673dc504
+  uuid: efa9d618-443e-4d9a-9c67-c4b3d9d73995
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: h-lXoMXS7rllNOzX6BL8NdhZMPFxEG6GEha-LmzpY2A
+  sni: game-survival.surverssss.pro#GetXConfig-24
+- name: VLESS-ne.zainet.tech
+  type: vless
+  server: ne.zainet.tech
+  port: 443
+  uuid: c387a6c8-5c79-4019-bb4e-fa39d53374d6
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg
+    public-key: l4KBY1YUUCxUn2Q5QcwUjDt7GI9cLa_d2YjIw9Xn2VY
+  sni: ne.zainet.tech
+- name: VLESS-fi.salfetkastroy.ru
+  type: vless
+  server: fi.salfetkastroy.ru
+  port: 443
+  uuid: 5250f957-1c28-4795-b8e0-ce63f2219884
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: QTTneNQLYl_-Q0JbPyQWe2GpLUeL7JPl4P-5h0El6S8
+  sni: fi.salfetkastroy.ru
+- name: VLESS-sw1.hidenet.xyz
+  type: vless
+  server: sw1.hidenet.xyz
+  port: 8443
+  uuid: efa9d618-443e-4d9a-9c67-c4b3d9d73995
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: grpc
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KytvB8Lzvah7cEpkRxXCWhaVAdjIrGZgZ-i_RWW8i0E
+  sni: sw1.hidenet.xyz#GetXConfig-30
+- name: VLESS-specific3.kandnet.com
+  type: vless
+  server: specific3.kandnet.com
+  port: 443
+  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
     fingerprint: firefox
-  sni: peplow-labs.info
-- name: VLESS-neuwhbe.wingerdt.com
+  sni: specific3.kandnet.com#GetXConfig-32
+- name: VLESS-2.26.55.163
   type: vless
-  server: neuwhbe.wingerdt.com
-  port: 11221
-  uuid: ece4f1a6-4d09-4678-82e4-b14ecb1645ed
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zsQSeUcOoUUn85pzjv9axmKqX9VPViFP3YC-IeXuZTE
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-oebrhbe.wingerdt.org
-  type: vless
-  server: oebrhbe.wingerdt.org
-  port: 15627
-  uuid: ece4f1a6-4d09-4678-82e4-b14ecb1645ed
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 59Fl4mMEYwB2pOcBZzX4Bdd0OA4xG8BXjd73RtER_QQ
-    fingerprint: chrome
-  sni: aparat.com
-- name: VLESS-ouhfge.wingerdt.org
-  type: vless
-  server: ouhfge.wingerdt.org
-  port: 10382
-  uuid: ece4f1a6-4d09-4678-82e4-b14ecb1645ed
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 59Fl4mMEYwB2pOcBZzX4Bdd0OA4xG8BXjd73RtER_QQ
-    fingerprint: chrome
-  sni: aparat.com
-- name: VLESS-69.46.46.149
-  type: vless
-  server: 69.46.46.149
+  server: 2.26.55.163
   port: 443
-  uuid: 4e3c8768-486f-5804-8dbc-33e952f89859
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/Mardom
-  ws-headers:
-    Host: srv-9120d4-53ea2e-production.up.railway.app
-  sni: srv-9120d4-53ea2e-production.up.railway.app#GetXConfig-21
-- name: VLESS-main.v2xenet.site
-  type: vless
-  server: main.v2xenet.site
-  port: 443
-  uuid: 21b424bf-bf4c-498d-a9a8-0b40ee7e113d
+  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PpBSOp2P4Dfx2aQubqibRu05iSH604LeHRFl-fdvsVg
-    fingerprint: chrome
-  sni: green.ai
-- name: VLESS-dns7.m3hrzd.ir
+    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
+    fingerprint: random
+  sni: specific3.kandnet.com#GetXConfig-36
+- name: VLESS-31.207.7.117
   type: vless
-  server: dns7.m3hrzd.ir
-  port: 8030
-  uuid: bae7d9c5-b1e4-46f9-8973-39137797a694
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: yNCiWHU2y1M-cWl5jJLfSDwwYM_9gdP5sqBLANxxdAs
-    fingerprint: edge
-  sni: race.egistration.ir
-- name: VLESS-dns2.m3hrzd.ir
-  type: vless
-  server: dns2.m3hrzd.ir
-  port: 2800
-  uuid: bae7d9c5-b1e4-46f9-8973-39137797a694
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Y6EGB3qFcmBFAfL-gHaB4emJzC5fXq5ov9Ri4JqHenc
-    fingerprint: safari
-  sni: play.google.com
-- name: VLESS-69.46.46.217
-  type: vless
-  server: 69.46.46.217
+  server: 31.207.7.117
   port: 443
-  uuid: 4e3c8768-486f-5804-8dbc-33e952f89859
+  uuid: 524dd22d-9f8c-4cc4-9e12-f427f497dff4
   udp: true
   tls: true
-  network: ws
-  ws-path: /ws/Mardom?ed#telegram--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-  ws-headers:
-    Host: srv-9120d4-53ea2e-production.up.railway.app
-  sni: srv-9120d4-53ea2e-production.up.railway.app#GetXConfig-29
-- name: VLESS-79.174.92.207
-  type: vless
-  server: 79.174.92.207
-  port: 443
-  uuid: d1004cfe-c279-e865-d865-71964dbdf85d
-  udp: true
-  tls: true
-  network: xhttp
-  sni: felex.felexstudio.online#GetXConfig-31
-- name: VLESS-p2real5.greewebservices.ir
-  type: vless
-  server: p2real5.greewebservices.ir
-  port: 1350
-  uuid: 2d0c4aa3-d3a8-484e-ae49-c962035b8d74
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    fingerprint: ios
-  sni: play.googleapis.com
-- name: VLESS-69.46.46.155
-  type: vless
-  server: 69.46.46.155
-  port: 443
-  uuid: Iran
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/Iran#GetXConfig-36
-  ws-headers:
-    Host: app-a917ee-f957ee-production.up.railway.app
-  sni: app-a917ee-f957ee-production.up.railway.app
-- name: VLESS-69.46.46.207
-  type: vless
-  server: 69.46.46.207
-  port: 443
-  uuid: Iran
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /ws/Iran#GetXConfig-38
-  ws-headers:
-    Host: app-a917ee-f957ee-production.up.railway.app
-  sni: app-a917ee-f957ee-production.up.railway.app
-- name: VLESS-tk1.high-speed-test-56424.me
-  type: vless
-  server: tk1.high-speed-test-56424.me
-  port: 443
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
-    fingerprint: chrome
-  sni: aws.amazon.com
+  network: grpc
+  grpc-service-name: content.v1.Feed
+  sni: se-twitch.global-cdn.org#GetXConfig-38
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-64.188.83.188
-  - VLESS-88.198.108.26
-  - VLESS-sieh.varqino.ir
-  - VLESS-archive.m2ip-video.cloud
-  - VLESS-pubsub.m2ip-video.cloud
-  - VLESS-validate.m2ip-video.cloud
-  - VLESS-neuwhbe.wingerdt.com
-  - VLESS-oebrhbe.wingerdt.org
-  - VLESS-ouhfge.wingerdt.org
-  - VLESS-69.46.46.149
-  - VLESS-main.v2xenet.site
-  - VLESS-dns7.m3hrzd.ir
-  - VLESS-dns2.m3hrzd.ir
-  - VLESS-69.46.46.217
-  - VLESS-79.174.92.207
-  - VLESS-p2real5.greewebservices.ir
-  - VLESS-69.46.46.155
-  - VLESS-69.46.46.207
-  - VLESS-tk1.high-speed-test-56424.me
+  - SS-20.123.1.55-chacha20
+  - VLESS-tun3.appii.ir
+  - VLESS-irrran.zeeshop.click
+  - VLESS-193.35.17.179
+  - VLESS-37.202.246.68
+  - VLESS-gcore.com
+  - VLESS-ukhy2.richforever.ru
+  - VLESS-pl3.richforever.ru
+  - VLESS-nlhy2.richforever.ru
+  - VLESS-li.zainet.tech
+  - VLESS-game-survival.surverssss.pro
+  - VLESS-ne.zainet.tech
+  - VLESS-fi.salfetkastroy.ru
+  - VLESS-sw1.hidenet.xyz
+  - VLESS-specific3.kandnet.com
+  - VLESS-2.26.55.163
+  - VLESS-31.207.7.117
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-64.188.83.188
-  - VLESS-88.198.108.26
-  - VLESS-sieh.varqino.ir
-  - VLESS-archive.m2ip-video.cloud
-  - VLESS-pubsub.m2ip-video.cloud
-  - VLESS-validate.m2ip-video.cloud
-  - VLESS-neuwhbe.wingerdt.com
-  - VLESS-oebrhbe.wingerdt.org
-  - VLESS-ouhfge.wingerdt.org
-  - VLESS-69.46.46.149
-  - VLESS-main.v2xenet.site
-  - VLESS-dns7.m3hrzd.ir
-  - VLESS-dns2.m3hrzd.ir
-  - VLESS-69.46.46.217
-  - VLESS-79.174.92.207
-  - VLESS-p2real5.greewebservices.ir
-  - VLESS-69.46.46.155
-  - VLESS-69.46.46.207
-  - VLESS-tk1.high-speed-test-56424.me
+  - SS-20.123.1.55-chacha20
+  - VLESS-tun3.appii.ir
+  - VLESS-irrran.zeeshop.click
+  - VLESS-193.35.17.179
+  - VLESS-37.202.246.68
+  - VLESS-gcore.com
+  - VLESS-ukhy2.richforever.ru
+  - VLESS-pl3.richforever.ru
+  - VLESS-nlhy2.richforever.ru
+  - VLESS-li.zainet.tech
+  - VLESS-game-survival.surverssss.pro
+  - VLESS-ne.zainet.tech
+  - VLESS-fi.salfetkastroy.ru
+  - VLESS-sw1.hidenet.xyz
+  - VLESS-specific3.kandnet.com
+  - VLESS-2.26.55.163
+  - VLESS-31.207.7.117
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

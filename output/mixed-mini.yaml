@@ -5,34 +5,96 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-sso.illusion-id.ru
+- name: VLESS-ir2.mobileemdad.top
   type: vless
-  server: sso.illusion-id.ru
-  port: 8443
-  uuid: 00e765d7-cda0-5ed7-b852-b81eaa7ba9ce
-  udp: true
-  tls: true
-  network: xhttp#GetXConfig-1
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: L44ElLSfe-KeR0VgNkBIscg3PpU4a3RMWDyrufazv3M
-  sni: sso.illusion-id.ru
-- name: VLESS-45.139.84.4
-  type: vless
-  server: 45.139.84.4
-  port: 8443
-  uuid: 7918e6f6-df8f-4a20-9c1d-59dbd1f22770
+  server: ir2.mobileemdad.top
+  port: 443
+  uuid: 4bab42ab-6370-45d1-86a3-69d2b58cd12c
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: lQcmwpXJsT5tdh9mQhcsDyiDNFe0nAVLvSc_5WnfqSY
-    fingerprint: random
-  sni: pl3.richforever.ru
-- name: VLESS-fi.pythonsetupbib.online
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: firefox
+  sni: nobitex.ir
+- name: TROJAN-194.110.24.28
+  type: trojan
+  server: 194.110.24.28
+  port: 8080
+  password: 3ig0ulsvoo9t4f6s
+  udp: true
+  tls: true
+  sni: 194.110.24.28#GetXConfig-3
+  skip-cert-verify: false
+- name: VLESS-87.242.95.150
   type: vless
-  server: fi.pythonsetupbib.online
+  server: 87.242.95.150
+  port: 8448
+  uuid: accfae78-b31c-47cb-86a1-bb9a07973e4a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0CqG1bve7Hc-kLpAnxXVdfR_MJlf8L_GM7O9oTn8e34
+    fingerprint: random
+  sni: passport.yandex.ru
+- name: VLESS-194.110.24.28
+  type: vless
+  server: 194.110.24.28
+  port: 1819
+  uuid: 68d6952f-05e4-4b4b-8dc1-792233a5f419
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /skwkabsslanapspzkamvsksd
+  ws-headers:
+    Host: 194.110.24.28
+  sni: 194.110.24.28#GetXConfig-6
+- name: VLESS-dears.moon-night.ir
+  type: vless
+  server: dears.moon-night.ir
+  port: 443
+  uuid: 4bab42ab-6370-45d1-86a3-69d2b58cd12c
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: dMBDL7ry94pavIxYmzimeyaCqor6fUNb0v3dzHif9xY
+    fingerprint: ios
+  sni: play.google.com
+- name: VLESS-fr5.wizard.select
+  type: vless
+  server: fr5.wizard.select
+  port: 443
+  uuid: 2acc3742-c568-11f1-9902-a337233c6cda
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: uqLRHVERHP974FJk39ltiV8pkcGAWYKJfOJ1nMALahU
+    short-id: 984f
+    fingerprint: firefox
+  sni: fr5.wizard.select
+- name: VLESS-de5.wizard.select
+  type: vless
+  server: de5.wizard.select
+  port: 443
+  uuid: cebcaf04-c567-11f1-9902-a337233c6cda
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KIawAxTmmnz2tLnTg26djq1f20QSgBzy9y2mp9HCiFA
+    fingerprint: qq
+  sni: de5.wizard.select
+- name: VLESS-144.31.156.82
+  type: vless
+  server: 144.31.156.82
   port: 443
   uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
   udp: true
@@ -41,78 +103,26 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
-    fingerprint: chrome
+    fingerprint: random
   sni: fi.pythonsetupbib.online
-- name: VLESS-2c807acb4eb7a73b.tunvi.w-ert.org
+- name: VLESS-15.164.245.92
   type: vless
-  server: 2c807acb4eb7a73b.tunvi.w-ert.org
-  port: 442
-  uuid: f6308222-871c-447c-90df-fef9d6393b16
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-164.5.224.90
-  type: vless
-  server: 164.5.224.90
-  port: 8880
-  uuid: c50686f1-c55d-410c-b72c-4e158f843ca3
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: XIGNHX7LtjPiNHMdgFjoGdlsqWpRzdRRHYFVHqa4aTM
-    fingerprint: chrome
-  sni: dl.l.google.com
-- name: VLESS-261f987baa93435a.tunvi.w-ert.org
-  type: vless
-  server: 261f987baa93435a.tunvi.w-ert.org
-  port: 442
-  uuid: f6308222-871c-447c-90df-fef9d6393b16
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-tun2.w-ert.org
-  type: vless
-  server: tun2.w-ert.org
-  port: 447
-  uuid: f6308222-871c-447c-90df-fef9d6393b16
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-89.125.100.59
-  type: vless
-  server: 89.125.100.59
+  server: 15.164.245.92
   port: 443
-  uuid: 86096188-0ece-41af-922d-792c5f96c3ad
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: BzXQPqKb1waqaBR4b2GGyE6VWX4LGd9iCOkyuMc8IGs
+    public-key: 9y70yaeBADfbMlb5_6t6fJqmSozYmv5lhKFVl32bX3E
     fingerprint: chrome
-  sni: anime.caloribro.uno
-- name: VLESS-4d3f6f8316a821b8.tunvi.w-ert.org
+  sni: www.manseryeok.com
+- name: VLESS-85481d30afe0cfa6.tunde.w-ert.org
   type: vless
-  server: 4d3f6f8316a821b8.tunvi.w-ert.org
-  port: 448
-  uuid: f6308222-871c-447c-90df-fef9d6393b16
+  server: 85481d30afe0cfa6.tunde.w-ert.org
+  port: 450
+  uuid: 71ac1da6-1a93-4625-a5c9-201a67374bd7
   udp: true
   tls: true
   network: xhttp
@@ -121,37 +131,39 @@ proxies:
     public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
   sni: www.aparat.com
-- name: VLESS-e9ac296b61eb1ef6.tunvi.w-ert.org
+- name: VLESS-senfi.animereze.site
   type: vless
-  server: e9ac296b61eb1ef6.tunvi.w-ert.org
-  port: 36414
-  uuid: 942b0b07-4396-4243-aa65-18623295ffde
+  server: senfi.animereze.site
+  port: 1443
+  uuid: bffafdda-4515-41f3-8744-82a94de32c6f
   udp: true
   tls: true
-  network: xhttp
+  network: grpc
+  grpc-service-name: grpc-reality
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-dns5.m3hrzd.ir
+    public-key: tzXJk66qglPF_72IxD2hDsohL4WhlpJ_RKmmZdAxOwQ
+    fingerprint: firefox
+  sni: www.bmw.com
+- name: VLESS-llm.animereze.site
   type: vless
-  server: dns5.m3hrzd.ir
-  port: 8055
-  uuid: cea0f525-0b93-4a5d-8b98-9256023ff86d
+  server: llm.animereze.site
+  port: 443
+  uuid: bffafdda-4515-41f3-8744-82a94de32c6f
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: llmforge.generate.v1.TokenStream
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 4ExW95eL_lG7-vBq744NvIrYYm9tQyl33xf5mqNvEho
-    fingerprint: edge
-  sni: race.egistration.ir
+    public-key: -eX26hX3zGAV0yYpnSVAz4Xxu2JEXxXWHh1teejZrHc
+    fingerprint: firefox
+  sni: llm.animereze.site
 - name: VLESS-dns4.m3hrzd.ir
   type: vless
   server: dns4.m3hrzd.ir
   port: 8055
-  uuid: cea0f525-0b93-4a5d-8b98-9256023ff86d
+  uuid: 2cbb50a6-b6c8-4e82-aef7-4f985defa746
   udp: true
   tls: true
   network: tcp
@@ -160,76 +172,53 @@ proxies:
     public-key: 4ExW95eL_lG7-vBq744NvIrYYm9tQyl33xf5mqNvEho
     fingerprint: edge
   sni: race.egistration.ir
-- name: VLESS-64.176.77.216
+- name: VLESS-dns5.m3hrzd.ir
   type: vless
-  server: 64.176.77.216
-  port: 443
-  uuid: eb15d3f4-c2c4-4f1e-b220-d6fdd60d7879
+  server: dns5.m3hrzd.ir
+  port: 8055
+  uuid: 2cbb50a6-b6c8-4e82-aef7-4f985defa746
   udp: true
   tls: true
-  network: xhttp
+  network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
+    public-key: 4ExW95eL_lG7-vBq744NvIrYYm9tQyl33xf5mqNvEho
+    fingerprint: edge
+  sni: race.egistration.ir
+- name: VLESS-varzesh3.com
+  type: vless
+  server: varzesh3.com
+  port: 2095
+  uuid: 5926234a-a75b-4538-8734-5ab77aa6f680
+  udp: true
+  tls: false
+  network: ws#GetXConfig-28
+- name: VLESS-95.111.212.241
+  type: vless
+  server: 95.111.212.241
+  port: 443
+  uuid: 924fe46b-b6e0-479e-ae7f-a3661680e706
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: BSTnEthBXhb_UyuWpLBDxg82-C-wcpU2_kOD5ohS12g
     fingerprint: chrome
-  sni: www.wikipedia.org
-- name: VLESS-70.34.245.251
+  sni: www.samsung.com
+- name: VLESS-82.39.154.32
   type: vless
-  server: 70.34.245.251
-  port: 443
-  uuid: 933e241f-b0e6-4b5c-aba9-83f8ae4da61e
+  server: 82.39.154.32
+  port: 2084
+  uuid: 6d249067-afc2-4196-ab18-dde3d7146ca0
   udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
-    fingerprint: chrome
-  sni: www.wikipedia.org
-- name: VLESS-70.34.250.134
+  tls: false
+  network: ws#GetXConfig-32
+- name: VLESS-f1636c9e8476a4a3.tunvi.w-ert.org
   type: vless
-  server: 70.34.250.134
-  port: 443
-  uuid: 838b9be7-1d88-4759-8657-b8d08d0479a8
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
-    fingerprint: chrome
-  sni: www.wikipedia.org
-- name: VLESS-70.34.244.121
-  type: vless
-  server: 70.34.244.121
-  port: 443
-  uuid: c64cd10d-9772-43a8-9203-d753bce02514
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
-    fingerprint: chrome
-  sni: www.wikipedia.org
-- name: VLESS-144.31.165.102
-  type: vless
-  server: 144.31.165.102
-  port: 443
-  uuid: b1936288-a353-4ff1-89b3-edaead599c6b
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-34
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Ego9_BM1Sy20swG1UaGOucL_o94l3F6uw8TOTH2jYRI
-    fingerprint: random
-  sni: www.lovelive-anime.jp
-- name: VLESS-02812ac828aa016b.tunvi.w-ert.org
-  type: vless
-  server: 02812ac828aa016b.tunvi.w-ert.org
-  port: 36414
-  uuid: d4ef3d59-0141-46bd-84fa-f342dd88dd8c
+  server: f1636c9e8476a4a3.tunvi.w-ert.org
+  port: 451
+  uuid: 5f9f1765-4d05-401b-be33-de208ea9fa17
   udp: true
   tls: true
   network: xhttp
@@ -238,80 +227,75 @@ proxies:
     public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
   sni: www.aparat.com
-- name: VLESS-de2.my-cdn.org
+- name: VLESS-fitness.varqino.ir
   type: vless
-  server: de2.my-cdn.org
-  port: 443
-  uuid: 249cce58-48ab-49a0-8aa1-fb8cd68a1104
+  server: fitness.varqino.ir
+  port: 32211
+  uuid: 51accab4-47c1-4a67-aa8f-c0d488825de0
   udp: true
   tls: true
-  network: tcp#GetXConfig-38
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 4EUWyCLFjgb-cDwj8ws2nC82mCY_L5VvoCia7mHPH2o
-    short-id: adbbecad
-    fingerprint: random
-  sni: de2.my-cdn.org
-- name: VLESS-de2.srv.vbuste.ru
+    public-key: zsQSeUcOoUUn85pzjv9axmKqX9VPViFP3YC-IeXuZTE
+    fingerprint: chrome
+  sni: www.aparat.com
+- name: VLESS-pl.tiptop-1.top
   type: vless
-  server: de2.srv.vbuste.ru
-  port: 443
-  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+  server: pl.tiptop-1.top
+  port: 8443
+  uuid: 2b701acc-0587-42f9-98db-dd8af385d351
   udp: true
   tls: true
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
-    fingerprint: chrome
-  sni: de2.srv.vbuste.ru
+  sni: pl.tiptop-1.top
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-sso.illusion-id.ru
-  - VLESS-45.139.84.4
-  - VLESS-fi.pythonsetupbib.online
-  - VLESS-2c807acb4eb7a73b.tunvi.w-ert.org
-  - VLESS-164.5.224.90
-  - VLESS-261f987baa93435a.tunvi.w-ert.org
-  - VLESS-tun2.w-ert.org
-  - VLESS-89.125.100.59
-  - VLESS-4d3f6f8316a821b8.tunvi.w-ert.org
-  - VLESS-e9ac296b61eb1ef6.tunvi.w-ert.org
-  - VLESS-dns5.m3hrzd.ir
+  - VLESS-ir2.mobileemdad.top
+  - TROJAN-194.110.24.28
+  - VLESS-87.242.95.150
+  - VLESS-194.110.24.28
+  - VLESS-dears.moon-night.ir
+  - VLESS-fr5.wizard.select
+  - VLESS-de5.wizard.select
+  - VLESS-144.31.156.82
+  - VLESS-15.164.245.92
+  - VLESS-85481d30afe0cfa6.tunde.w-ert.org
+  - VLESS-senfi.animereze.site
+  - VLESS-llm.animereze.site
   - VLESS-dns4.m3hrzd.ir
-  - VLESS-64.176.77.216
-  - VLESS-70.34.245.251
-  - VLESS-70.34.250.134
-  - VLESS-70.34.244.121
-  - VLESS-144.31.165.102
-  - VLESS-02812ac828aa016b.tunvi.w-ert.org
-  - VLESS-de2.my-cdn.org
-  - VLESS-de2.srv.vbuste.ru
+  - VLESS-dns5.m3hrzd.ir
+  - VLESS-varzesh3.com
+  - VLESS-95.111.212.241
+  - VLESS-82.39.154.32
+  - VLESS-f1636c9e8476a4a3.tunvi.w-ert.org
+  - VLESS-fitness.varqino.ir
+  - VLESS-pl.tiptop-1.top
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-sso.illusion-id.ru
-  - VLESS-45.139.84.4
-  - VLESS-fi.pythonsetupbib.online
-  - VLESS-2c807acb4eb7a73b.tunvi.w-ert.org
-  - VLESS-164.5.224.90
-  - VLESS-261f987baa93435a.tunvi.w-ert.org
-  - VLESS-tun2.w-ert.org
-  - VLESS-89.125.100.59
-  - VLESS-4d3f6f8316a821b8.tunvi.w-ert.org
-  - VLESS-e9ac296b61eb1ef6.tunvi.w-ert.org
-  - VLESS-dns5.m3hrzd.ir
+  - VLESS-ir2.mobileemdad.top
+  - TROJAN-194.110.24.28
+  - VLESS-87.242.95.150
+  - VLESS-194.110.24.28
+  - VLESS-dears.moon-night.ir
+  - VLESS-fr5.wizard.select
+  - VLESS-de5.wizard.select
+  - VLESS-144.31.156.82
+  - VLESS-15.164.245.92
+  - VLESS-85481d30afe0cfa6.tunde.w-ert.org
+  - VLESS-senfi.animereze.site
+  - VLESS-llm.animereze.site
   - VLESS-dns4.m3hrzd.ir
-  - VLESS-64.176.77.216
-  - VLESS-70.34.245.251
-  - VLESS-70.34.250.134
-  - VLESS-70.34.244.121
-  - VLESS-144.31.165.102
-  - VLESS-02812ac828aa016b.tunvi.w-ert.org
-  - VLESS-de2.my-cdn.org
-  - VLESS-de2.srv.vbuste.ru
+  - VLESS-dns5.m3hrzd.ir
+  - VLESS-varzesh3.com
+  - VLESS-95.111.212.241
+  - VLESS-82.39.154.32
+  - VLESS-f1636c9e8476a4a3.tunvi.w-ert.org
+  - VLESS-fitness.varqino.ir
+  - VLESS-pl.tiptop-1.top
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

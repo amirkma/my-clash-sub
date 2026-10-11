@@ -5,24 +5,24 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-20.123.1.55-chacha20
+- name: SS-frnce2.thugiping.info-aes-256-
   type: ss
-  server: 20.123.1.55
-  port: 4431
-  cipher: chacha20-ietf-poly1305
-  password: YF329KNGVTUZ1qrH
+  server: frnce2.thugiping.info
+  port: 4432
+  cipher: aes-256-gcm
+  password: c73bb1ef-2676-442d-99c3-7473a351c236
   udp: true
-- name: SS-82.38.31.174-chacha20
+- name: SS-51.222.12.127-aes-256-
   type: ss
-  server: 82.38.31.174
-  port: 44362
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  server: 51.222.12.127
+  port: 44557
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   udp: true
 - name: SS-51.222.141.125-aes-256-
   type: ss
   server: 51.222.141.125
-  port: 44571
+  port: 44596
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
   udp: true
@@ -30,8 +30,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-20.123.1.55-chacha20
-  - SS-82.38.31.174-chacha20
+  - SS-frnce2.thugiping.info-aes-256-
+  - SS-51.222.12.127-aes-256-
   - SS-51.222.141.125-aes-256-
 rules:
 - MATCH,PROXY

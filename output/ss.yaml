@@ -5,17 +5,25 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-156.253.5.197-chacha20
+- name: SS-51.222.141.125-aes-256-
   type: ss
-  server: 156.253.5.197
-  port: 10806
+  server: 51.222.141.125
+  port: 44526
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
+- name: SS-54.36.174.140-chacha20
+  type: ss
+  server: 54.36.174.140
+  port: 44381
   cipher: chacha20-ietf-poly1305
-  password: 528UsTVttBZoGDagD5OdXw
+  password: mrs2e9a
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-156.253.5.197-chacha20
+  - SS-51.222.141.125-aes-256-
+  - SS-54.36.174.140-chacha20
 rules:
 - MATCH,PROXY

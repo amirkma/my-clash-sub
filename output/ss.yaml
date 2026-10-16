@@ -12,26 +12,26 @@ proxies:
   cipher: aes-128-gcm
   password: 2bf536a4bd6008511734a505d248de2c
   udp: true
-- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+- name: SS-102.37.156.224-chacha20
   type: ss
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 44330
+  server: 102.37.156.224
+  port: 44335
   cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  password: aduB9HGxQHjA2SBMRjkHX6
   udp: true
-- name: SS-158.173.24.73-aes-128-
+- name: SS-51.222.141.125-aes-256-
   type: ss
-  server: 158.173.24.73
-  port: 44348
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 51.222.141.125
+  port: 44571
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-86.106.84.194-aes-128-
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-158.173.24.73-aes-128-
+  - SS-102.37.156.224-chacha20
+  - SS-51.222.141.125-aes-256-
 rules:
 - MATCH,PROXY

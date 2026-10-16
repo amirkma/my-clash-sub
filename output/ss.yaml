@@ -12,26 +12,61 @@ proxies:
   cipher: aes-128-gcm
   password: 2bf536a4bd6008511734a505d248de2c
   udp: true
+- name: SS-176.32.32.108-aes-256-
+  type: ss
+  server: 176.32.32.108
+  port: 18443
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  udp: true
+- name: SS-Ms-IP.xQNetWork.iR-chacha20
+  type: ss
+  server: Ms-IP.xQNetWork.iR
+  port: 3327
+  cipher: chacha20-ietf-poly1305
+  password: spQuOeqxV3nmxSnSmojU1mOISVgOBvFE
+  udp: true
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  type: ss
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44360
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-54.36.174.134-chacha20
+  type: ss
+  server: 54.36.174.134
+  port: 44370
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+  udp: true
 - name: SS-102.37.156.224-chacha20
   type: ss
   server: 102.37.156.224
-  port: 44335
+  port: 44392
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-  udp: true
-- name: SS-51.222.141.125-aes-256-
-  type: ss
-  server: 51.222.141.125
-  port: 44571
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-86.106.84.194-aes-128-
+  - SS-176.32.32.108-aes-256-
+  - SS-Ms-IP.xQNetWork.iR-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-54.36.174.134-chacha20
   - SS-102.37.156.224-chacha20
-  - SS-51.222.141.125-aes-256-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-86.106.84.194-aes-128-
+  - SS-176.32.32.108-aes-256-
+  - SS-Ms-IP.xQNetWork.iR-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-54.36.174.134-chacha20
+  - SS-102.37.156.224-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

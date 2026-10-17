@@ -5,121 +5,94 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-mui.firzav.ir-chacha20
+  type: ss
+  server: mui.firzav.ir
+  port: 10803
+  cipher: chacha20-ietf-poly1305
+  password: ZJdYmMiJBWkbTZ5nExBRpQ_f7uIG7wL4
+  udp: true
+- name: SS-Ms-IP.xQNetWork.iR-chacha20
+  type: ss
+  server: Ms-IP.xQNetWork.iR
+  port: 33214
+  cipher: chacha20-ietf-poly1305
+  password: iA8JoEQg2ikm3ngC9WduO2MCEHuHYZMA
+  udp: true
 - name: SS-149.22.87.204-aes-128-
   type: ss
   server: 149.22.87.204
-  port: 44328
+  port: 44320
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.241-aes-128-
   type: ss
   server: 149.22.87.241
-  port: 44329
+  port: 44321
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-149.22.87.240-aes-128-
   type: ss
   server: 149.22.87.240
-  port: 44330
+  port: 44322
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-37.19.198.160-aes-128-
+- name: SS-38.54.59.102-aes-256-
   type: ss
-  server: 37.19.198.160
-  port: 44340
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 38.54.59.102
+  port: 44323
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
   udp: true
-- name: SS-37.19.198.244-aes-128-
+- name: SS-156.146.38.169-aes-128-
   type: ss
-  server: 37.19.198.244
-  port: 44342
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.24.73-aes-128-
-  type: ss
-  server: 158.173.24.73
-  port: 44343
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.243-aes-128-
-  type: ss
-  server: 37.19.198.243
-  port: 44347
+  server: 156.146.38.169
+  port: 44379
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-156.146.38.167-aes-128-
   type: ss
   server: 156.146.38.167
-  port: 44357
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.170-aes-128-
-  type: ss
-  server: 156.146.38.170
   port: 44380
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-37.19.198.236-aes-128-
+- name: SS-82.38.31.174-chacha20
   type: ss
-  server: 37.19.198.236
-  port: 44383
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44384
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.9-aes-128-
-  type: ss
-  server: 173.244.56.9
-  port: 44391
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 82.38.31.174
+  port: 44389
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-mui.firzav.ir-chacha20
+  - SS-Ms-IP.xQNetWork.iR-chacha20
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
-  - SS-37.19.198.160-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-37.19.198.243-aes-128-
+  - SS-38.54.59.102-aes-256-
+  - SS-156.146.38.169-aes-128-
   - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.170-aes-128-
-  - SS-37.19.198.236-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-173.244.56.9-aes-128-
+  - SS-82.38.31.174-chacha20
 - name: Auto
   type: url-test
   proxies:
+  - SS-mui.firzav.ir-chacha20
+  - SS-Ms-IP.xQNetWork.iR-chacha20
   - SS-149.22.87.204-aes-128-
   - SS-149.22.87.241-aes-128-
   - SS-149.22.87.240-aes-128-
-  - SS-37.19.198.160-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-37.19.198.243-aes-128-
+  - SS-38.54.59.102-aes-256-
+  - SS-156.146.38.169-aes-128-
   - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.170-aes-128-
-  - SS-37.19.198.236-aes-128-
-  - SS-156.146.38.168-aes-128-
-  - SS-173.244.56.9-aes-128-
+  - SS-82.38.31.174-chacha20
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

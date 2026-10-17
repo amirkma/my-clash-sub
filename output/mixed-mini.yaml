@@ -5,30 +5,10 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 'نامشخص 🏳️ | @GetXConfig | #9467-1'
-  type: vmess
-  server: gerdi-1.povrak.ir
-  port: 64852
-  uuid: fc9fedfd-59f4-4c65-9859-7b36e0f6a9d8
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: 'نامشخص 🏳️ | @GetXConfig | #9468-3'
-  type: vmess
-  server: fer-4.povrak.ir
-  port: 47014
-  uuid: fc9fedfd-59f4-4c65-9859-7b36e0f6a9d8
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
 - name: SS-mui.firzav.ir-chacha20
   type: ss
   server: mui.firzav.ir
-  port: 10805
+  port: 10801
   cipher: chacha20-ietf-poly1305
   password: ZJdYmMiJBWkbTZ5nExBRpQ_f7uIG7wL4
   udp: true
@@ -52,7 +32,7 @@ proxies:
   uuid: 55a4af52-69b8-4eb8-872f-43a32c6c5043
   udp: true
   tls: false
-  network: xhttp#GetXConfig-8
+  network: xhttp#GetXConfig-4
 - name: VLESS-bpi.ir
   type: vless
   server: bpi.ir
@@ -60,7 +40,7 @@ proxies:
   uuid: 0f0ae6f4-0108-4b14-82e0-0d10cdad7a3f
   udp: true
   tls: false
-  network: ws#GetXConfig-10
+  network: ws#GetXConfig-6
 - name: VLESS-86.54.42.79
   type: vless
   server: 86.54.42.79
@@ -68,7 +48,7 @@ proxies:
   uuid: 2a289474-6956-4459-a787-79c0a6ebeae8
   udp: true
   tls: true
-  network: tcp#GetXConfig-13
+  network: tcp#GetXConfig-9
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 73QOSDTA-kwqhjHTGOlL7skQZ5n54tp6k7iu7H0nU34
@@ -81,7 +61,7 @@ proxies:
   password: u93yPGuY2zgIsisJZKS2QzJzg
   udp: true
   tls: true
-  sni: FREETOPLAY-2.TETRIS-GAME.WORLD#GetXConfig-19
+  sni: FREETOPLAY-2.TETRIS-GAME.WORLD#GetXConfig-15
   skip-cert-verify: true
 - name: VLESS-funagfrdfs.alixxplay.com
   type: vless
@@ -116,11 +96,11 @@ proxies:
   uuid: bc1aa246-f99d-45d5-b46a-e0c938f4c9b3
   udp: true
   tls: false
-  network: tcp#GetXConfig-24
+  network: tcp#GetXConfig-20
 - name: SS-Ms-IP.xQNetWork.iR-chacha20
   type: ss
   server: Ms-IP.xQNetWork.iR
-  port: 33226
+  port: 33222
   cipher: chacha20-ietf-poly1305
   password: iA8JoEQg2ikm3ngC9WduO2MCEHuHYZMA
   udp: true
@@ -176,33 +156,56 @@ proxies:
     public-key: psDbYkVscfXXlPKTGdQuC-TMCUvBSWhisaei8lXJvi8
     fingerprint: chrome
   sni: www3.velqixa.ir
-- name: 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-36
+- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-34
   type: vmess
-  server: 152.67.8.205
+  server: 168.138.43.75
   port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: ws
-  ws-path: /
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-37
+  ws-path: /cctv13.m3u8
+  ws-headers:
+    Host: jp01.a0a.xyz
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
   type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21020
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  server: ex1ogt73nzpqkac2.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /ws-vmess
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-36
+  type: vmess
+  server: 169.197.142.22
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: tcp
+- name: VLESS-5.178.109.174
+  type: vless
+  server: 5.178.109.174
+  port: 14430
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /vless#Farah_VPN-37
+  ws-headers:
+    Host: 5.178.109.174
+  sni: 5.178.109.174
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - 'نامشخص 🏳️ | @GetXConfig | #9467-1'
-  - 'نامشخص 🏳️ | @GetXConfig | #9468-3'
   - SS-mui.firzav.ir-chacha20
   - VLESS-993ca5e3a9a7f4f2.tunde.w-ert.org
   - VLESS-146.75.59.186
@@ -217,13 +220,13 @@ proxy-groups:
   - VLESS-6327.velqixa.ir
   - VLESS-de3-allnet.onlinernet.ir
   - VLESS-ed6b.zavqeron.ir
-  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-36
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-37
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-34
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-36
+  - VLESS-5.178.109.174
 - name: Auto
   type: url-test
   proxies:
-  - 'نامشخص 🏳️ | @GetXConfig | #9467-1'
-  - 'نامشخص 🏳️ | @GetXConfig | #9468-3'
   - SS-mui.firzav.ir-chacha20
   - VLESS-993ca5e3a9a7f4f2.tunde.w-ert.org
   - VLESS-146.75.59.186
@@ -238,8 +241,10 @@ proxy-groups:
   - VLESS-6327.velqixa.ir
   - VLESS-de3-allnet.onlinernet.ir
   - VLESS-ed6b.zavqeron.ir
-  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-36
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-37
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-34
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-35
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-36
+  - VLESS-5.178.109.174
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

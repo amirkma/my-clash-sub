@@ -8,65 +8,37 @@ proxies:
 - name: SS-mui.firzav.ir-chacha20
   type: ss
   server: mui.firzav.ir
-  port: 10803
+  port: 10801
   cipher: chacha20-ietf-poly1305
   password: ZJdYmMiJBWkbTZ5nExBRpQ_f7uIG7wL4
   udp: true
 - name: SS-Ms-IP.xQNetWork.iR-chacha20
   type: ss
   server: Ms-IP.xQNetWork.iR
-  port: 33214
+  port: 33212
   cipher: chacha20-ietf-poly1305
   password: iA8JoEQg2ikm3ngC9WduO2MCEHuHYZMA
   udp: true
-- name: SS-149.22.87.204-aes-128-
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   type: ss
-  server: 149.22.87.204
-  port: 44320
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.241-aes-128-
-  type: ss
-  server: 149.22.87.241
-  port: 44321
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-149.22.87.240-aes-128-
-  type: ss
-  server: 149.22.87.240
-  port: 44322
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-38.54.59.102-aes-256-
-  type: ss
-  server: 38.54.59.102
-  port: 44323
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  udp: true
-- name: SS-156.146.38.169-aes-128-
-  type: ss
-  server: 156.146.38.169
+  server: bogging-eyeteeth-fly.freesocks.work
   port: 44379
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44380
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-82.38.31.174-chacha20
-  type: ss
-  server: 82.38.31.174
-  port: 44389
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: SS-54.36.174.134-chacha20
+  type: ss
+  server: 54.36.174.134
+  port: 44381
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44386
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
   udp: true
 proxy-groups:
 - name: PROXY
@@ -74,25 +46,17 @@ proxy-groups:
   proxies:
   - SS-mui.firzav.ir-chacha20
   - SS-Ms-IP.xQNetWork.iR-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.240-aes-128-
-  - SS-38.54.59.102-aes-256-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-82.38.31.174-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-54.36.174.134-chacha20
+  - SS-216.105.168.18-chacha20
 - name: Auto
   type: url-test
   proxies:
   - SS-mui.firzav.ir-chacha20
   - SS-Ms-IP.xQNetWork.iR-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-149.22.87.240-aes-128-
-  - SS-38.54.59.102-aes-256-
-  - SS-156.146.38.169-aes-128-
-  - SS-156.146.38.167-aes-128-
-  - SS-82.38.31.174-chacha20
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  - SS-54.36.174.134-chacha20
+  - SS-216.105.168.18-chacha20
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

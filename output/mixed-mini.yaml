@@ -5,48 +5,65 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-tun2.w-ert.org
+- name: VLESS-195.177.255.233
   type: vless
-  server: tun2.w-ert.org
-  port: 447
-  uuid: b13d474d-7440-469d-af8e-e6f24c01d1af
+  server: 195.177.255.233
+  port: 15902
+  uuid: 53519671-6f95-4d33-b36e-edfbda22b6d8
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-1
+- name: VLESS-51.44.146.230
+  type: vless
+  server: 51.44.146.230
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-3
+- name: VLESS-136.148.64.229
+  type: vless
+  server: 136.148.64.229
+  port: 2083
+  uuid: 0f32f9e7-d83c-4052-9a5e-103ed967b11c
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-51.44.197.117
+  type: vless
+  server: 51.44.197.117
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-11
+- name: VLESS-fi.alpheratzz.org
+  type: vless
+  server: fi.alpheratzz.org
+  port: 443
+  uuid: b3441cc7-1e5f-4eb6-8207-90788eeca21e
+  udp: true
+  tls: true
+  network: xhttp
+  sni: b3441cc7.ferrin.uk#GetXConfig-17
+- name: VLESS-dns5.m3hrzd.ir
+  type: vless
+  server: dns5.m3hrzd.ir
+  port: 2800
+  uuid: bef0a9f4-2dff-4ae1-a5d0-6cea98bfa406
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
-    fingerprint: chrome
-  sni: www.aparat.com
-- name: VLESS-194.110.24.99
+    public-key: Y6EGB3qFcmBFAfL-gHaB4emJzC5fXq5ov9Ri4JqHenc
+    fingerprint: edge
+  sni: play.google.com
+- name: VLESS-dns4.m3hrzd.ir
   type: vless
-  server: 194.110.24.99
-  port: 52721
-  uuid: f72af8e5-8640-4878-920f-70923aca9e6e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-213.182.201.11
-  type: vless
-  server: 213.182.201.11
-  port: 3090
-  uuid: dbc8a7a7-4c99-4aff-a50a-9940f992ef88
-  udp: true
-  tls: false
-  network: grpc#GetXConfig-5
-- name: VLESS-3.11.104.202
-  type: vless
-  server: 3.11.104.202
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-7
-- name: VLESS-dns5.m3hrzd.ir
-  type: vless
-  server: dns5.m3hrzd.ir
+  server: dns4.m3hrzd.ir
   port: 8055
-  uuid: 656a11ef-c5e0-4b0d-9e2a-b72a00731195
+  uuid: bef0a9f4-2dff-4ae1-a5d0-6cea98bfa406
   udp: true
   tls: true
   network: tcp
@@ -55,183 +72,160 @@ proxies:
     public-key: 4ExW95eL_lG7-vBq744NvIrYYm9tQyl33xf5mqNvEho
     fingerprint: edge
   sni: race.egistration.ir
-- name: VLESS-104.171.134.165
-  type: vless
-  server: 104.171.134.165
-  port: 443
-  uuid: 355a9948-c284-4669-bd57-43fcdc8dd71e
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: ru-split-test
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: H0iW-vqJSN6Q2KYuT1v9-ThYh3lNb-MnHVpuvqPnGDY
-    fingerprint: firefox
-  sni: yt-ru.convertvideo123.online
-- name: VLESS-109.176.91.52
-  type: vless
-  server: 109.176.91.52
-  port: 443
-  uuid: 902f2ea9-fd1e-41eb-81ae-aa05d17c207e
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: simplegrpc
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 36gCTf6guU1bPIRVS56qE1NXx-6rAW1zW1mxwA6ZzUk
-    fingerprint: firefox
-  sni: convertvideo123.online
-- name: VLESS-88.216.191.10
-  type: vless
-  server: 88.216.191.10
-  port: 443
-  uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-  sni: si1.lazeroe.com
-- name: VLESS-196.245.52.149
-  type: vless
-  server: 196.245.52.149
-  port: 25535
-  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
-  sni: www.microsoft.com
-- name: VLESS-13.135.33.165
-  type: vless
-  server: 13.135.33.165
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 'فنلاند 🇫🇮 | @GetXConfig | #9563-23'
+  type: vmess
+  server: 95.217.27.161
+  port: 29163
+  uuid: telegram-id-----MiMiTDL-----
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
-  network: tcp#GetXConfig-23
-- name: VLESS-tamiiiiz.aryan-sport.ir
+  network: ws
+  ws-path: /index.php
+  ws-headers:
+    Host: dynu.com
+- name: VLESS-46c94d18655db03e.tunvi.w-ert.org
   type: vless
-  server: tamiiiiz.aryan-sport.ir
+  server: 46c94d18655db03e.tunvi.w-ert.org
+  port: 444
+  uuid: 5ac13f85-4243-45fc-a38a-8cdd03ef1efb
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
+    fingerprint: chrome
+  sni: www.aparat.com
+- name: 'آلمان 🇩🇪 | @GetXConfig | #9566-28'
+  type: vmess
+  server: 57.131.168.202
+  port: 57160
+  uuid: fdc80741-a32b-4890-a6a1-5ea8b3e60ab1
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: VLESS-87.242.95.93
+  type: vless
+  server: 87.242.95.93
+  port: 8031
+  uuid: 23b2931b-70d3-4a04-ad5f-f61167a1065d
+  udp: true
+  tls: true
+  network: grpc
+  grpc-service-name: media.ingest.v2.ChunkUploadService
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PAP10NLpy_4J_vf1CEtDuLJtce3pLSNhHLbuuAUXqBU
+    fingerprint: firefox
+  sni: pic.rutubelist.ru
+- name: VLESS-46.254.17.76
+  type: vless
+  server: 46.254.17.76
   port: 443
-  uuid: 4e4f3e7b-ec74-4fd3-bfd5-b83568d1622b
+  uuid: ad7966f9-7710-47b9-90d9-2f33e539b06a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE
+    fingerprint: firefox
+  sni: 5post-gate.x5.ru
+- name: VLESS-37.9.4.48
+  type: vless
+  server: 37.9.4.48
+  port: 443
+  uuid: ad7966f9-7710-47b9-90d9-2f33e539b06a
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE
+    fingerprint: firefox
+  sni: 5post-gate.x5.ru
+- name: VLESS-188.225.73.107
+  type: vless
+  server: 188.225.73.107
+  port: 20005
+  uuid: 4dc01fb2-dd87-413a-b712-47fe016c7641
   udp: true
   tls: true
   network: xhttp
-  sni: s2.aryan-sport.ir
-- name: VLESS-196.198.111.138
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: tJaZ8vXoAN-32aowNJtgVHWMay1bYyW3P8sR0aToxDQ
+    fingerprint: firefox
+  sni: vko-177-3-220-161.nubov.org
+- name: VLESS-185.86.145.128
   type: vless
-  server: 196.198.111.138
+  server: 185.86.145.128
   port: 8443
-  uuid: b3441cc7-1e5f-4eb6-8207-90788eeca21e
+  uuid: 4c44b85a-71f8-41d8-b6bc-01d4c2f08dd0
   udp: true
   tls: true
   network: tcp
-  sni: api-6ad3c751.adhil.uk
   flow: xtls-rprx-vision
-- name: VLESS-43.249.72.254
+  reality-opts:
+    public-key: NEaLMYvat0TO8YX1FuR1yt11UT5iUQmrUNRpSTvT0xA
+    fingerprint: firefox
+  sni: cinderrack.app
+- name: VLESS-54.251.9.130
   type: vless
-  server: 43.249.72.254
-  port: 443
-  uuid: ba33c872-d552-4c44-b0f2-b9bd8669d70c
+  server: 54.251.9.130
+  port: 24146
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
   udp: true
   tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: henzoo.global.ssl.fastly.net
-  sni: default.ssl.fastly.net#GetXConfig-33
-- name: VLESS-simpleone.asan-ps.ir
-  type: vless
-  server: simpleone.asan-ps.ir
-  port: 443
-  uuid: ba33c872-d552-4c44-b0f2-b9bd8669d70c
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: henzooo.global.ssl.fastly.net
-  sni: default.ssl.fastly.net#GetXConfig-35
-- name: VLESS-54.46.72.234
-  type: vless
-  server: 54.46.72.234
-  port: 8030
-  uuid: 37665857-8b6e-4daa-8231-3e2927221558
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /proxyip=ProxyIP.US.CMLiussss.net#Farah_VPN-38
-  ws-headers:
-    Host: spjd.cbc.qzz.io
-  sni: spjd.cbc.qzz.io
-- name: VLESS-104.25.199.149
-  type: vless
-  server: 104.25.199.149
-  port: 80
-  uuid: 50414e45-4c5f-5a45-5553-5dd075c8ae9b
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /api/ws
-  ws-headers:
-    Host: web-app-gjn19f.z0zxy6ehuwgs.workers.dev
-  sni: web-app-gjn19f.z0zxy6ehuwgs.workers.dev#Farah_VPN-39
-- name: VLESS-188.114.97.6
-  type: vless
-  server: 188.114.97.6
-  port: 8080
-  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
-  udp: true
-  tls: false
-  network: ws#Farah_VPN-40
-  sni: index.harmonica01.workers.dev
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    fingerprint: chrome
+  sni: www.intel.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-tun2.w-ert.org
-  - VLESS-194.110.24.99
-  - VLESS-213.182.201.11
-  - VLESS-3.11.104.202
+  - VLESS-195.177.255.233
+  - VLESS-51.44.146.230
+  - VLESS-136.148.64.229
+  - VLESS-51.44.197.117
+  - VLESS-fi.alpheratzz.org
   - VLESS-dns5.m3hrzd.ir
-  - VLESS-104.171.134.165
-  - VLESS-109.176.91.52
-  - VLESS-88.216.191.10
-  - VLESS-196.245.52.149
-  - VLESS-13.135.33.165
-  - VLESS-tamiiiiz.aryan-sport.ir
-  - VLESS-196.198.111.138
-  - VLESS-43.249.72.254
-  - VLESS-simpleone.asan-ps.ir
-  - VLESS-54.46.72.234
-  - VLESS-104.25.199.149
-  - VLESS-188.114.97.6
+  - VLESS-dns4.m3hrzd.ir
+  - 'فنلاند 🇫🇮 | @GetXConfig | #9563-23'
+  - VLESS-46c94d18655db03e.tunvi.w-ert.org
+  - 'آلمان 🇩🇪 | @GetXConfig | #9566-28'
+  - VLESS-87.242.95.93
+  - VLESS-46.254.17.76
+  - VLESS-37.9.4.48
+  - VLESS-188.225.73.107
+  - VLESS-185.86.145.128
+  - VLESS-54.251.9.130
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-tun2.w-ert.org
-  - VLESS-194.110.24.99
-  - VLESS-213.182.201.11
-  - VLESS-3.11.104.202
+  - VLESS-195.177.255.233
+  - VLESS-51.44.146.230
+  - VLESS-136.148.64.229
+  - VLESS-51.44.197.117
+  - VLESS-fi.alpheratzz.org
   - VLESS-dns5.m3hrzd.ir
-  - VLESS-104.171.134.165
-  - VLESS-109.176.91.52
-  - VLESS-88.216.191.10
-  - VLESS-196.245.52.149
-  - VLESS-13.135.33.165
-  - VLESS-tamiiiiz.aryan-sport.ir
-  - VLESS-196.198.111.138
-  - VLESS-43.249.72.254
-  - VLESS-simpleone.asan-ps.ir
-  - VLESS-54.46.72.234
-  - VLESS-104.25.199.149
-  - VLESS-188.114.97.6
+  - VLESS-dns4.m3hrzd.ir
+  - 'فنلاند 🇫🇮 | @GetXConfig | #9563-23'
+  - VLESS-46c94d18655db03e.tunvi.w-ert.org
+  - 'آلمان 🇩🇪 | @GetXConfig | #9566-28'
+  - VLESS-87.242.95.93
+  - VLESS-46.254.17.76
+  - VLESS-37.9.4.48
+  - VLESS-188.225.73.107
+  - VLESS-185.86.145.128
+  - VLESS-54.251.9.130
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

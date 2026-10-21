@@ -5,159 +5,154 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-51.44.187.221
+- name: VLESS-15.224.233.221
   type: vless
-  server: 51.44.187.221
-  port: 22223
+  server: 15.224.233.221
+  port: 22222
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   network: tcp#GetXConfig-1
-- name: VLESS-51.44.147.45
+- name: VLESS-e90846b20d1dd39b.tunvi.w-ert.org
   type: vless
-  server: 51.44.147.45
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-185.253.116.46
-  type: vless
-  server: 185.253.116.46
-  port: 443
-  uuid: CQ9D5NqEbxPfdg
+  server: e90846b20d1dd39b.tunvi.w-ert.org
+  port: 448
+  uuid: 3e16033f-71d8-417b-abea-7756253f3c3d
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: RQ4Z91En99W1IloruReNIuqeIY1PHfrd-Unv7XL--jU
+    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
-  sni: www.heise.de
-- name: VLESS-89.127.210.40
+  sni: www.aparat.com
+- name: VLESS-dcc59f522e6a9537.tunvi.w-ert.org
   type: vless
-  server: 89.127.210.40
-  port: 443
-  uuid: 4HqptXtMlj8IT2
+  server: dcc59f522e6a9537.tunvi.w-ert.org
+  port: 32093
+  uuid: 3e16033f-71d8-417b-abea-7756253f3c3d
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: wYnBI1xzD8pqAN7xyI8OKotC_Eo2Vz-z08fI5suWQFU
+    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
-  sni: onlycats.photos
-- name: SS-104.46.14.31-chacha20
+  sni: www.aparat.com
+- name: SS-ir.yzcq.ir-chacha20
   type: ss
-  server: 104.46.14.31
-  port: 4439
+  server: ir.yzcq.ir
+  port: 20608
   cipher: chacha20-ietf-poly1305
-  password: dIuRNbl5mM2ac6d0
+  password: 9zf3IfVuiG0aWpzHqqt0PSZEk6XvetYV
   udp: true
-- name: VLESS-pub-07h33f.mydevelopertool.xyz
+- name: VLESS-account.datagrid.cl
   type: vless
-  server: pub-07h33f.mydevelopertool.xyz
-  port: 8000
-  uuid: 74f5426b-19d9-4567-a7ff-865aa4c87cca
+  server: account.datagrid.cl
+  port: 8443
+  uuid: TeLEgRAM-ID-conf0088
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 2dv8gNuhbvuxFB2A2bsxGj1lQ_ApOmj_-5qXejNxRwY
-    fingerprint: safari
-  sni: sni-07h33f.mydevelopertool.xyz
-- name: VLESS-ww9.levikogjgfdd.ir
-  type: vless
-  server: ww9.levikogjgfdd.ir
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+    public-key: 8m9MBxGrlPxtC4cYpEkEQsUHt5sHf9EBzb2DkOn2niw
     fingerprint: chrome
-  sni: www.cloudflare.com#Farah_VPN-11
-- name: VLESS-45.12.30.30
-  type: vless
-  server: 45.12.30.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  network: ws#Farah_VPN-12
-- name: VLESS-159.89.87.21
-  type: vless
-  server: 159.89.87.21
-  port: 28190
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  sni: nbg1-speed.hetzner.com
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  type: vmess
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-    fingerprint: chrome
-  sni: aws.amazon.com#Farah_VPN-13
-- name: VLESS-8.34.70.30
+  network: ws
+  ws-path: /ws-vmess
+  skip-cert-verify: true
+- name: VLESS-159.65.51.189
   type: vless
-  server: 8.34.70.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 159.65.51.189
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
-  tls: false
-  network: ws#Farah_VPN-14
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-12
+  ws-headers:
+    Host: ccc.010304.xyz
+  sni: ccc.010304.xyz
 - name: VLESS-188.114.97.6
   type: vless
   server: 188.114.97.6
-  port: 443
-  uuid: c5db14f6-2a21-401c-8160-a8093ff4ffd3
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /vl/14m2B3TtxW5N85ews?ed=2560
-  ws-headers:
-    Host: mxp6jvjacystdp-s4f.kjnnv3i410u6mq-itd.workers.dev
-  sni: mxp6jvjacystdp-s4f.kjnnv3i410u6mq-itd.workers.dev
-- name: VLESS-104.18.12.149
-  type: vless
-  server: 104.18.12.149
-  port: 80
-  uuid: 5f4845b4-11dc-41d6-9508-4ff6a02e36c1
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
-  network: ws#Farah_VPN-16
-- name: VLESS-172.67.151.77
-  type: vless
-  server: 172.67.151.77
-  port: 443
-  uuid: 73796e63-0000-4000-8000-000000000000
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /sync
-  ws-headers:
-    Host: nahan-core.fatitelegram.workers.dev
-  sni: nahan-core.fatitelegram.workers.dev#Farah_VPN-17
-- name: TROJAN-45.32.52.173
+  network: ws#Farah_VPN-13
+- name: TROJAN-212.183.88.136
   type: trojan
-  server: 45.32.52.173
-  port: 8886
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  udp: true
-  tls: true
-  sni: 45.32.52.173#Farah_VPN-19
-  skip-cert-verify: true
-- name: TROJAN-57.128.179.254
-  type: trojan
-  server: 57.128.179.254
+  server: 212.183.88.136
   port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.volumeroot.com#Farah_VPN-20
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+- name: TROJAN-www.calmlunch.com
+  type: trojan
+  server: www.calmlunch.com
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+- name: TROJAN-104.19.229.21
+  type: trojan
+  server: 104.19.229.21
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+- name: TROJAN-45.130.125.160
+  type: trojan
+  server: 45.130.125.160
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#Farah_VPN-17
+  skip-cert-verify: false
+- name: TROJAN-165.215.250.14
+  type: trojan
+  server: 165.215.250.14
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com#Farah_VPN-18
+  skip-cert-verify: true
+- name: TROJAN-185.230.44.62
+  type: trojan
+  server: 185.230.44.62
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org#Farah_VPN-19
+  skip-cert-verify: false
+- name: TROJAN-185.22.172.249
+  type: trojan
+  server: 185.22.172.249
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org#Farah_VPN-20
   skip-cert-verify: false
 - name: VLESS-sino.bestsellers1.site
   type: vless
@@ -201,51 +196,62 @@ proxies:
   tls: true
   network: xhttp
   sni: host.taghvimtime.ir#meliproxyy-24
+- name: VLESS-kala.fortresshost.ir
+  type: vless
+  server: kala.fortresshost.ir
+  port: 443
+  uuid: c60cd62f-8dc5-415f-826b-abb7856027d1
+  udp: true
+  tls: true
+  network: xhttp
+  sni: kala.fortresshost.ir#meliproxyy-25
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-51.44.187.221
-  - VLESS-51.44.147.45
-  - VLESS-185.253.116.46
-  - VLESS-89.127.210.40
-  - SS-104.46.14.31-chacha20
-  - VLESS-pub-07h33f.mydevelopertool.xyz
-  - VLESS-ww9.levikogjgfdd.ir
-  - VLESS-45.12.30.30
-  - VLESS-159.89.87.21
-  - VLESS-8.34.70.30
+  - VLESS-15.224.233.221
+  - VLESS-e90846b20d1dd39b.tunvi.w-ert.org
+  - VLESS-dcc59f522e6a9537.tunvi.w-ert.org
+  - SS-ir.yzcq.ir-chacha20
+  - VLESS-account.datagrid.cl
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-159.65.51.189
   - VLESS-188.114.97.6
-  - VLESS-104.18.12.149
-  - VLESS-172.67.151.77
-  - TROJAN-45.32.52.173
-  - TROJAN-57.128.179.254
+  - TROJAN-212.183.88.136
+  - TROJAN-www.calmlunch.com
+  - TROJAN-104.19.229.21
+  - TROJAN-45.130.125.160
+  - TROJAN-165.215.250.14
+  - TROJAN-185.230.44.62
+  - TROJAN-185.22.172.249
   - VLESS-sino.bestsellers1.site
   - VLESS-43.174.193.1
   - VLESS-assets.halyvanedorogo.ru
   - VLESS-host.taghvimtime.ir
+  - VLESS-kala.fortresshost.ir
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-51.44.187.221
-  - VLESS-51.44.147.45
-  - VLESS-185.253.116.46
-  - VLESS-89.127.210.40
-  - SS-104.46.14.31-chacha20
-  - VLESS-pub-07h33f.mydevelopertool.xyz
-  - VLESS-ww9.levikogjgfdd.ir
-  - VLESS-45.12.30.30
-  - VLESS-159.89.87.21
-  - VLESS-8.34.70.30
+  - VLESS-15.224.233.221
+  - VLESS-e90846b20d1dd39b.tunvi.w-ert.org
+  - VLESS-dcc59f522e6a9537.tunvi.w-ert.org
+  - SS-ir.yzcq.ir-chacha20
+  - VLESS-account.datagrid.cl
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-11
+  - VLESS-159.65.51.189
   - VLESS-188.114.97.6
-  - VLESS-104.18.12.149
-  - VLESS-172.67.151.77
-  - TROJAN-45.32.52.173
-  - TROJAN-57.128.179.254
+  - TROJAN-212.183.88.136
+  - TROJAN-www.calmlunch.com
+  - TROJAN-104.19.229.21
+  - TROJAN-45.130.125.160
+  - TROJAN-165.215.250.14
+  - TROJAN-185.230.44.62
+  - TROJAN-185.22.172.249
   - VLESS-sino.bestsellers1.site
   - VLESS-43.174.193.1
   - VLESS-assets.halyvanedorogo.ru
   - VLESS-host.taghvimtime.ir
+  - VLESS-kala.fortresshost.ir
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

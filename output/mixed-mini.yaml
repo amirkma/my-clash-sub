@@ -5,94 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-51.44.187.221
-  type: vless
-  server: 51.44.187.221
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-51.44.147.45
-  type: vless
-  server: 51.44.147.45
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-3
-- name: VLESS-185.253.116.46
-  type: vless
-  server: 185.253.116.46
-  port: 443
-  uuid: CQ9D5NqEbxPfdg
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: RQ4Z91En99W1IloruReNIuqeIY1PHfrd-Unv7XL--jU
-    fingerprint: chrome
-  sni: www.heise.de
-- name: VLESS-89.127.210.40
-  type: vless
-  server: 89.127.210.40
-  port: 443
-  uuid: 4HqptXtMlj8IT2
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: wYnBI1xzD8pqAN7xyI8OKotC_Eo2Vz-z08fI5suWQFU
-    fingerprint: chrome
-  sni: onlycats.photos
-- name: SS-104.46.14.31-chacha20
-  type: ss
-  server: 104.46.14.31
-  port: 4439
-  cipher: chacha20-ietf-poly1305
-  password: dIuRNbl5mM2ac6d0
-  udp: true
-- name: VLESS-pub-07h33f.mydevelopertool.xyz
-  type: vless
-  server: pub-07h33f.mydevelopertool.xyz
-  port: 8000
-  uuid: 74f5426b-19d9-4567-a7ff-865aa4c87cca
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 2dv8gNuhbvuxFB2A2bsxGj1lQ_ApOmj_-5qXejNxRwY
-    fingerprint: safari
-  sni: sni-07h33f.mydevelopertool.xyz
-- name: VLESS-pub-odro27lpfz.mydevelopertool.xyz
-  type: vless
-  server: pub-odro27lpfz.mydevelopertool.xyz
-  port: 443
-  uuid: 74f5426b-19d9-4567-a7ff-865aa4c87cca
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 8AUF38jwIBefT5bVE-_bDTmOvGKxSQ59hnmVJF2pwSw
-    fingerprint: safari
-  sni: sni-odro27lpfz.mydevelopertool.xyz
-- name: VLESS-50.7.43.117
-  type: vless
-  server: 50.7.43.117
-  port: 443
-  uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI
-    fingerprint: firefox
-  sni: pt3.magazinnarubeva.ru
 - name: VLESS-15.224.233.221
   type: vless
   server: 15.224.233.221
@@ -100,7 +12,7 @@ proxies:
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#GetXConfig-16
+  network: tcp#GetXConfig-1
 - name: VLESS-e90846b20d1dd39b.tunvi.w-ert.org
   type: vless
   server: e90846b20d1dd39b.tunvi.w-ert.org
@@ -127,6 +39,13 @@ proxies:
     public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
   sni: www.aparat.com
+- name: SS-ir.yzcq.ir-chacha20
+  type: ss
+  server: ir.yzcq.ir
+  port: 20608
+  cipher: chacha20-ietf-poly1305
+  password: 9zf3IfVuiG0aWpzHqqt0PSZEk6XvetYV
+  udp: true
 - name: VLESS-account.datagrid.cl
   type: vless
   server: account.datagrid.cl
@@ -169,7 +88,7 @@ proxies:
     public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
   sni: www.aparat.com
-- name: 'آلمان 🇩🇪 | @GetXConfig | #9828-34'
+- name: 'آلمان 🇩🇪 | @GetXConfig | #9828-19'
   type: vmess
   server: 89.124.251.17
   port: 53402
@@ -179,95 +98,115 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: VLESS-ww9.levikogjgfdd.ir
+- name: VLESS-tun2.w-ert.org
   type: vless
-  server: ww9.levikogjgfdd.ir
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  server: tun2.w-ert.org
+  port: 44512
+  uuid: b2dacbda-8221-4548-a104-aa8aa56ab282
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+    public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU
     fingerprint: chrome
-  sni: www.cloudflare.com#Farah_VPN-36
-- name: VLESS-45.12.30.30
+  sni: www.aparat.com
+- name: VLESS-3.11.48.149
   type: vless
-  server: 45.12.30.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 3.11.48.149
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: ws#Farah_VPN-37
-- name: VLESS-159.89.87.21
+  network: tcp#GetXConfig-24
+- name: VLESS-13.134.170.98
   type: vless
-  server: 159.89.87.21
-  port: 28190
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  server: 13.134.170.98
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-28
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
+  type: vmess
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-    fingerprint: chrome
-  sni: aws.amazon.com#Farah_VPN-38
-- name: VLESS-8.34.70.30
+  network: ws
+  ws-path: /ws-vmess
+  skip-cert-verify: true
+- name: VLESS-159.65.51.189
   type: vless
-  server: 8.34.70.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 159.65.51.189
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-37
+  ws-headers:
+    Host: ccc.010304.xyz
+  sni: ccc.010304.xyz
+- name: VLESS-188.114.97.6
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
-  network: ws#Farah_VPN-39
+  network: ws#Farah_VPN-38
+- name: TROJAN-212.183.88.136
+  type: trojan
+  server: 212.183.88.136
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-51.44.187.221
-  - VLESS-51.44.147.45
-  - VLESS-185.253.116.46
-  - VLESS-89.127.210.40
-  - SS-104.46.14.31-chacha20
-  - VLESS-pub-07h33f.mydevelopertool.xyz
-  - VLESS-pub-odro27lpfz.mydevelopertool.xyz
-  - VLESS-50.7.43.117
   - VLESS-15.224.233.221
   - VLESS-e90846b20d1dd39b.tunvi.w-ert.org
   - VLESS-dcc59f522e6a9537.tunvi.w-ert.org
+  - SS-ir.yzcq.ir-chacha20
   - VLESS-account.datagrid.cl
   - VLESS-3.72.50.236
   - VLESS-35.156.10.185
   - VLESS-a652768e4c2240fc.tunvi.w-ert.org
-  - 'آلمان 🇩🇪 | @GetXConfig | #9828-34'
-  - VLESS-ww9.levikogjgfdd.ir
-  - VLESS-45.12.30.30
-  - VLESS-159.89.87.21
-  - VLESS-8.34.70.30
+  - 'آلمان 🇩🇪 | @GetXConfig | #9828-19'
+  - VLESS-tun2.w-ert.org
+  - VLESS-3.11.48.149
+  - VLESS-13.134.170.98
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
+  - VLESS-159.65.51.189
+  - VLESS-188.114.97.6
+  - TROJAN-212.183.88.136
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-51.44.187.221
-  - VLESS-51.44.147.45
-  - VLESS-185.253.116.46
-  - VLESS-89.127.210.40
-  - SS-104.46.14.31-chacha20
-  - VLESS-pub-07h33f.mydevelopertool.xyz
-  - VLESS-pub-odro27lpfz.mydevelopertool.xyz
-  - VLESS-50.7.43.117
   - VLESS-15.224.233.221
   - VLESS-e90846b20d1dd39b.tunvi.w-ert.org
   - VLESS-dcc59f522e6a9537.tunvi.w-ert.org
+  - SS-ir.yzcq.ir-chacha20
   - VLESS-account.datagrid.cl
   - VLESS-3.72.50.236
   - VLESS-35.156.10.185
   - VLESS-a652768e4c2240fc.tunvi.w-ert.org
-  - 'آلمان 🇩🇪 | @GetXConfig | #9828-34'
-  - VLESS-ww9.levikogjgfdd.ir
-  - VLESS-45.12.30.30
-  - VLESS-159.89.87.21
-  - VLESS-8.34.70.30
+  - 'آلمان 🇩🇪 | @GetXConfig | #9828-19'
+  - VLESS-tun2.w-ert.org
+  - VLESS-3.11.48.149
+  - VLESS-13.134.170.98
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
+  - VLESS-159.65.51.189
+  - VLESS-188.114.97.6
+  - TROJAN-212.183.88.136
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

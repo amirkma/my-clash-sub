@@ -5,74 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-13.37.140.13
-  type: vless
-  server: 13.37.140.13
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-1
-- name: VLESS-35.180.76.81
-  type: vless
-  server: 35.180.76.81
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  network: tcp#GetXConfig-2
-- name: VLESS-shortbig.ir
-  type: vless
-  server: shortbig.ir
-  port: 2087
-  uuid: 31f185b6-e591-413b-ba72-88083a87feb2
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /hokm
-  ws-headers:
-    Host: a4.ladankashani.ir
-  sni: a4.ladankashani.ir#GetXConfig-6
-- name: VLESS-13.140.92.73
-  type: vless
-  server: 13.140.92.73
-  port: 8080
-  uuid: b71895d9-b628-4612-835f-655bd08d2600
-  udp: true
-  tls: true
-  network: grpc
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 5XZyj_5zdK6yOwkG7UEH_D7qFDzxnc5e2jG2Agxdcz8
-    short-id: 63ecf7
-    fingerprint: chrome
-  sni: ftp.heanet.ie
-- name: VLESS-da0bcdc2133654d7.tunvi.w-ert.org
-  type: vless
-  server: da0bcdc2133654d7.tunvi.w-ert.org
-  port: 32093
-  uuid: 3e16033f-71d8-417b-abea-7756253f3c3d
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Jps_lXkq4doz-qvvikPlMevcR1CG3ZFRPHyAadj3Fhc
-    fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
-- name: VLESS-iralal.azad0namah.ir
-  type: vless
-  server: iralal.azad0namah.ir
-  port: 2094
-  uuid: fef52d71-c5cf-4891-9672-b3f8195b597b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tQdcEPYgtwY4onejmXY7_gSV90nG96v0p7MJLvP58WM
-    fingerprint: chrome
-  sni: play.google.com
 - name: VLESS-p2real4.greewebservices.ir
   type: vless
   server: p2real4.greewebservices.ir
@@ -94,7 +26,7 @@ proxies:
   uuid: 0a9dfb0b-4fe1-40fe-b74c-0367e666ca96
   udp: true
   tls: false
-  network: tcp#GetXConfig-11
+  network: tcp#GetXConfig-2
 - name: VLESS-51.44.38.228
   type: vless
   server: 51.44.38.228
@@ -102,7 +34,7 @@ proxies:
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
-  network: tcp#GetXConfig-13
+  network: tcp#GetXConfig-4
 - name: VLESS-894b83d7b0eed7de.tunvi.w-ert.org
   type: vless
   server: 894b83d7b0eed7de.tunvi.w-ert.org
@@ -142,79 +74,182 @@ proxies:
     public-key: Jps_lXkq4doz-qvvikPlMevcR1CG3ZFRPHyAadj3Fhc
     fingerprint: chrome
   sni: amp-api-edge.apps.apple.com
-- name: VLESS-51.158.206.8
+- name: VLESS-p2real22.greewebservices.ir
   type: vless
-  server: 51.158.206.8
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: p2real22.greewebservices.ir
+  port: 1320
+  uuid: 2582857a-632b-4c4e-9b67-96213cbaf58c
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: 01faa18
-    fingerprint: chrome
-  sni: fuck.rkn
-- name: VLESS-172.67.174.157
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    fingerprint: ios
+  sni: play.googleapis.com
+- name: VLESS-195.58.134.26
   type: vless
-  server: 172.67.174.157
-  port: 2083
-  uuid: 283665ab-54c2-4c59-ac55-5e8388558eba
+  server: 195.58.134.26
+  port: 443
+  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
+    fingerprint: firefox
+  sni: login.mskvibe.fyi
+- name: VLESS-panel.cloud-net-new.ru
+  type: vless
+  server: panel.cloud-net-new.ru
+  port: 41969
+  uuid: 2b0572a8-56a2-445d-9978-818e301fcda7
+  udp: true
+  tls: true
+  network: xhttp
+  sni: panel.cloud-net-new.ru#GetXConfig-11
+- name: VLESS-787f753345096511.tunvi.w-ert.org
+  type: vless
+  server: 787f753345096511.tunvi.w-ert.org
+  port: 448
+  uuid: b2dacbda-8221-4548-a104-aa8aa56ab282
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Jps_lXkq4doz-qvvikPlMevcR1CG3ZFRPHyAadj3Fhc
+    fingerprint: chrome
+  sni: amp-api-edge.apps.apple.com
+- name: VLESS-5.22.212.81
+  type: vless
+  server: 5.22.212.81
+  port: 8080
+  uuid: 7f36e606-3eb9-4b60-b783-8d8806818286
+  udp: true
+  tls: false
+  network: ws#GetXConfig-13
+- name: VLESS-172.64.229.129
+  type: vless
+  server: 172.64.229.129
+  port: 2052
+  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /rain1226#Farah_VPN-14
+  ws-headers:
+    Host: eu02.123450908.xyz
+- name: VLESS-2.26.30.216
+  type: vless
+  server: 2.26.30.216
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-15
+  ws-headers:
+    Host: edgetunnel-4uw.pages.dev
+  sni: edgetunnel-4uw.pages.dev
+- name: VLESS-104.18.46.234
+  type: vless
+  server: 104.18.46.234
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /?ed=2560security=tls#Farah_VPN-16
+  ws-headers:
+    Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: VLESS-78.135.73.47
+  type: vless
+  server: 78.135.73.47
+  port: 443
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    fingerprint: chrome
+  sni: www.datadoghq.com
+- name: VLESS-172.67.65.56
+  type: vless
+  server: 172.67.65.56
+  port: 2053
+  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /proxyip
+  ws-headers:
+    Host: whitecreeper.pages.dev
+  sni: whitecreeper.pages.dev#Farah_VPN-18
+- name: VLESS-www.speedtest.net
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  uuid: b19419fa-8009-455b-b059-765e2856883a
   udp: true
   tls: true
   network: ws#Farah_VPN-19
-  sni: 27l432tlhnpcojr6u0d3.adfasdfadfasdf.workers.dev
-- name: VLESS-54.37.136.194
+  sni: akbarian34.j9z65ce2uyks.workers.dev
+- name: VLESS-104.21.44.253
   type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  server: 104.21.44.253
+  port: 8080
+  uuid: c6ba83a7-c4b5-481f-8f71-0f17deff0bf2
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-    fingerprint: chrome
-  sni: www.cloudflare.com
+  tls: false
+  network: ws#Farah_VPN-20
+  sni: billowing-sunset-e340.qaraatayi.workers.dev
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-13.37.140.13
-  - VLESS-35.180.76.81
-  - VLESS-shortbig.ir
-  - VLESS-13.140.92.73
-  - VLESS-da0bcdc2133654d7.tunvi.w-ert.org
-  - VLESS-iralal.azad0namah.ir
   - VLESS-p2real4.greewebservices.ir
   - VLESS-65.109.209.239
   - VLESS-51.44.38.228
   - VLESS-894b83d7b0eed7de.tunvi.w-ert.org
   - VLESS-appsj4.87544899.xyz
   - VLESS-e29181f3ebfce73d.tunvi.w-ert.org
-  - VLESS-51.158.206.8
-  - VLESS-172.67.174.157
-  - VLESS-54.37.136.194
+  - VLESS-p2real22.greewebservices.ir
+  - VLESS-195.58.134.26
+  - VLESS-panel.cloud-net-new.ru
+  - VLESS-787f753345096511.tunvi.w-ert.org
+  - VLESS-5.22.212.81
+  - VLESS-172.64.229.129
+  - VLESS-2.26.30.216
+  - VLESS-104.18.46.234
+  - VLESS-78.135.73.47
+  - VLESS-172.67.65.56
+  - VLESS-www.speedtest.net
+  - VLESS-104.21.44.253
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-13.37.140.13
-  - VLESS-35.180.76.81
-  - VLESS-shortbig.ir
-  - VLESS-13.140.92.73
-  - VLESS-da0bcdc2133654d7.tunvi.w-ert.org
-  - VLESS-iralal.azad0namah.ir
   - VLESS-p2real4.greewebservices.ir
   - VLESS-65.109.209.239
   - VLESS-51.44.38.228
   - VLESS-894b83d7b0eed7de.tunvi.w-ert.org
   - VLESS-appsj4.87544899.xyz
   - VLESS-e29181f3ebfce73d.tunvi.w-ert.org
-  - VLESS-51.158.206.8
-  - VLESS-172.67.174.157
-  - VLESS-54.37.136.194
+  - VLESS-p2real22.greewebservices.ir
+  - VLESS-195.58.134.26
+  - VLESS-panel.cloud-net-new.ru
+  - VLESS-787f753345096511.tunvi.w-ert.org
+  - VLESS-5.22.212.81
+  - VLESS-172.64.229.129
+  - VLESS-2.26.30.216
+  - VLESS-104.18.46.234
+  - VLESS-78.135.73.47
+  - VLESS-172.67.65.56
+  - VLESS-www.speedtest.net
+  - VLESS-104.21.44.253
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,211 +5,253 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-lxybfcdlgj.falqiro.ir
+- name: SS-87.107.169.14-chacha20
+  type: ss
+  server: 87.107.169.14
+  port: 9001
+  cipher: chacha20-ietf-poly1305
+  password: 4DduSJhuCPIut1egwBKEd5RxYm2UVUol
+  udp: true
+- name: SS-87.107.169.12-chacha20
+  type: ss
+  server: 87.107.169.12
+  port: 9002
+  cipher: chacha20-ietf-poly1305
+  password: 4DduSJhuCPIut1egwBKEd5RxYm2UVUol
+  udp: true
+- name: VLESS-gate.liyusub.ir
   type: vless
-  server: lxybfcdlgj.falqiro.ir
-  port: 2096
-  uuid: 06dbe829-7f11-4b64-9443-ae3a959f48d5
+  server: gate.liyusub.ir
+  port: 2083
+  uuid: 1935f43b-5766-4d93-bba7-fb61893a4ae4
   udp: true
   tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: Tun.pasarguardspeed.ir
-  sni: Tun.pasarguardspeed.ir#GetXConfig-2
-- name: VLESS-31.57.185.188
-  type: vless
-  server: 31.57.185.188
-  port: 443
-  uuid: 46a607ef-cfda-448b-a360-62d2ac31c292
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-5
+  network: tcp#GetXConfig-3
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Bg4kHOi2UIYLXDAdoW48an2OaRsy8drXoA3Mw2QzEWk
-    short-id: c6
-    fingerprint: chrome
-  sni: aparat.com
-- name: VLESS-5.129.222.115
-  type: vless
-  server: 5.129.222.115
-  port: 443
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    public-key: yY9_a3wO7Jokw2IK4Kxtyn8J6BbFA41BkG1_j9YyakA
+    fingerprint: safari
+  sni: www.apple.com
+- name: 'هلند 🇳🇱 | @GetXConfig | #10183-5'
+  type: vmess
+  server: 185.19.33.102
+  port: 21898
+  uuid: b7f2538f-adba-41ba-b901-3391a5ebdf90
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-    fingerprint: firefox
-  sni: ad7.vkusnews.com#GetXConfig-8
-- name: VLESS-aws.root.sync-bridge.ir
+- name: VLESS-mojigr.fusetea.ir
   type: vless
-  server: aws.root.sync-bridge.ir
-  port: 443
-  uuid: a52fcd33-b235-4b30-a4e8-165287302c66
+  server: mojigr.fusetea.ir
+  port: 1102
+  uuid: 1a62ce14-2bac-4a56-98a8-851841b41df6
   udp: true
   tls: true
-  network: grpc
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cSku9Lo_wLXixUZuWW2JZxcSUK-fGprJLKrCGUfoAgI
+    public-key: r753xovnUQvFw0toamiB3UsmgR33o8SXswOK_HrKrmU
     fingerprint: chrome
-  sni: www.cloudflare.com
-- name: VLESS-159.65.51.189
-  type: vless
-  server: 159.65.51.189
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  sni: www.aparat.com
+- name: 'آلمان 🇩🇪 | @GetXConfig | #10185-9'
+  type: vmess
+  server: 3.68.92.72
+  port: 1003
+  uuid: 3d94220c-a974-49ca-a1a3-d7e3c7359ccd
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  network: ws
-  ws-path: /fp
-  ws-headers:
-    Host: ccc.010304.xyz
-  sni: ccc.010304.xyz#Farah_VPN-11
-- name: VLESS-57.128.177.198
+  tls: false
+  network: tcp
+- name: VLESS-138.124.70.41
   type: vless
-  server: 57.128.177.198
-  port: 443
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /Telegram🇨🇳 fp=chrome#Farah_VPN-15
-  ws-headers:
-    Host: vp58.cc.cd
-  sni: vp58.cc.cd
-- name: VLESS-31.57.190.49
-  type: vless
-  server: 31.57.190.49
-  port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /cart/docs/www/proxyip=108.160.132.132#Farah_VPN-16
-  ws-headers:
-    Host: lucasjow.us.ci
-  sni: lucasjow.us.ci
-- name: VLESS-116.204.164.17
-  type: vless
-  server: 116.204.164.17
-  port: 7443
-  uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
+  server: 138.124.70.41
+  port: 14430
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   udp: true
   tls: false
   network: ws
-  ws-path: /@Marisa_kristifp=chrome
+  ws-path: /vless
   ws-headers:
-    Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  sni: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: VLESS-fun.zovip2.ir
+    Host: 138.124.70.41
+  sni: 138.124.70.41
+- name: VLESS-217.60.63.5
   type: vless
-  server: fun.zovip2.ir
+  server: 217.60.63.5
   port: 443
-  uuid: ba2d57de-b732-4c7f-96e2-4496b14c8316
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
   udp: true
   tls: true
-  network: ws
-  ws-path: /api/v3/pulse
-  ws-headers:
-    Host: fun.zovip2.ir
-  sni: fun.zovip2.ir#meliproxyy-20
-- name: VLESS-goold.zovip2.ir
+  network: ws#Farah_VPN-12
+  sni: shephe.dpdns.org
+- name: VLESS-62.210.91.2
   type: vless
-  server: goold.zovip2.ir
-  port: 443
-  uuid: ba2d57de-b732-4c7f-96e2-4496b14c8316
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/v3/pulse
-  ws-headers:
-    Host: goold.zovip2.ir
-  sni: goold.zovip2.ir#meliproxyy-21
-- name: VLESS-199.232.78.159
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 82599a61-3580-4141-b48c-42f4594ae675
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: frenchji.global.ssl.fastly.net.
-  sni: firefox.com#meliproxyy-22
-- name: VLESS-146.75.59.186
-  type: vless
-  server: 146.75.59.186
-  port: 443
-  uuid: 82599a61-3580-4141-b48c-42f4594ae675
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: germanyi.global.ssl.fastly.net.
-  sni: firefox.com#meliproxyy-23
-- name: VLESS-89.42.196.211
-  type: vless
-  server: 89.42.196.211
-  port: 443
-  uuid: b25b6ef7-b892-4b66-b404-e1f6d39a934d
-  udp: true
-  tls: true
-  network: tcp
-  sni: 89.42.196.211#meliproxyy-25
-- name: VLESS-3d98be61142753f3.tunvi.w-ert.org
-  type: vless
-  server: 3d98be61142753f3.tunvi.w-ert.org
-  port: 50855
-  uuid: 61747651-8a4c-40de-becd-174dc32e7495
+  server: 62.210.91.2
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Jps_lXkq4doz-qvvikPlMevcR1CG3ZFRPHyAadj3Fhc
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: 01faa13
     fingerprint: chrome
-  sni: amp-api-edge.apps.apple.com
+  sni: fuck.rkn
+- name: VLESS-51.77.217.70
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+    fingerprint: chrome
+  sni: www.apple.com#Farah_VPN-14
+- name: VLESS-82.117.255.174
+  type: vless
+  server: 82.117.255.174
+  port: 443
+  uuid: 679439c5-28f2-485e-af5f-60a5fcd9c36c
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0QDBHaCRO2dPeeSVy3B3R_U12ZOvbvWl1JTFW_ZcpD0#Farah_VPN-15
+    fingerprint: chrome
+  sni: gateway.icloud.com
+- name: VLESS-46.28.67.55
+  type: vless
+  server: 46.28.67.55
+  port: 443
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    fingerprint: chrome
+  sni: www.cloudflare.com
+- name: VLESS-95.216.27.15
+  type: vless
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    fingerprint: chrome
+  sni: www.google.com
+- name: VLESS-77.110.97.245
+  type: vless
+  server: 77.110.97.245
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /fp=chrome
+  ws-headers:
+    Host: ccc.010304.xyz
+  sni: ccc.010304.xyz
+- name: VLESS-31.77.199.147
+  type: vless
+  server: 31.77.199.147
+  port: 4443
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
+    fingerprint: chrome
+  sni: images.unsplash.com
+- name: VLESS-107.189.26.160
+  type: vless
+  server: 107.189.26.160
+  port: 443
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /cart/docs/www/proxyip=108.160.132.132fp=chrome
+  ws-headers:
+    Host: lucasjow.us.ci
+  sni: lucasjow.us.ci
+- name: VLESS-15.188.252.7
+  type: vless
+  server: 15.188.252.7
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  network: tcp#meliproxyy-21
+- name: VLESS-103.91.147.212
+  type: vless
+  server: 103.91.147.212
+  port: 443
+  uuid: 261160d5-0343-4b85-8c28-3d40dd681559
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  sni: de.ozon.ru#meliproxyy-22
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-lxybfcdlgj.falqiro.ir
-  - VLESS-31.57.185.188
-  - VLESS-5.129.222.115
-  - VLESS-aws.root.sync-bridge.ir
-  - VLESS-159.65.51.189
-  - VLESS-57.128.177.198
-  - VLESS-31.57.190.49
-  - VLESS-116.204.164.17
-  - VLESS-fun.zovip2.ir
-  - VLESS-goold.zovip2.ir
-  - VLESS-199.232.78.159
-  - VLESS-146.75.59.186
-  - VLESS-89.42.196.211
-  - VLESS-3d98be61142753f3.tunvi.w-ert.org
+  - SS-87.107.169.14-chacha20
+  - SS-87.107.169.12-chacha20
+  - VLESS-gate.liyusub.ir
+  - 'هلند 🇳🇱 | @GetXConfig | #10183-5'
+  - VLESS-mojigr.fusetea.ir
+  - 'آلمان 🇩🇪 | @GetXConfig | #10185-9'
+  - VLESS-138.124.70.41
+  - VLESS-217.60.63.5
+  - VLESS-62.210.91.2
+  - VLESS-51.77.217.70
+  - VLESS-82.117.255.174
+  - VLESS-46.28.67.55
+  - VLESS-95.216.27.15
+  - VLESS-77.110.97.245
+  - VLESS-31.77.199.147
+  - VLESS-107.189.26.160
+  - VLESS-15.188.252.7
+  - VLESS-103.91.147.212
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-lxybfcdlgj.falqiro.ir
-  - VLESS-31.57.185.188
-  - VLESS-5.129.222.115
-  - VLESS-aws.root.sync-bridge.ir
-  - VLESS-159.65.51.189
-  - VLESS-57.128.177.198
-  - VLESS-31.57.190.49
-  - VLESS-116.204.164.17
-  - VLESS-fun.zovip2.ir
-  - VLESS-goold.zovip2.ir
-  - VLESS-199.232.78.159
-  - VLESS-146.75.59.186
-  - VLESS-89.42.196.211
-  - VLESS-3d98be61142753f3.tunvi.w-ert.org
+  - SS-87.107.169.14-chacha20
+  - SS-87.107.169.12-chacha20
+  - VLESS-gate.liyusub.ir
+  - 'هلند 🇳🇱 | @GetXConfig | #10183-5'
+  - VLESS-mojigr.fusetea.ir
+  - 'آلمان 🇩🇪 | @GetXConfig | #10185-9'
+  - VLESS-138.124.70.41
+  - VLESS-217.60.63.5
+  - VLESS-62.210.91.2
+  - VLESS-51.77.217.70
+  - VLESS-82.117.255.174
+  - VLESS-46.28.67.55
+  - VLESS-95.216.27.15
+  - VLESS-77.110.97.245
+  - VLESS-31.77.199.147
+  - VLESS-107.189.26.160
+  - VLESS-15.188.252.7
+  - VLESS-103.91.147.212
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

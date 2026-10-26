@@ -5,278 +5,253 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-109.176.229.51
+- name: VLESS-ru-new.rrbs.online
   type: vless
-  server: 109.176.229.51
+  server: ru-new.rrbs.online
   port: 443
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  uuid: 4a935df7-d1d3-4097-8d14-7f52ecd9877c
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: ru-new.rrbs.online#GetXConfig-2
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 4FgTYQNtmGhIj137SdjagESDb61Kl6Anj_de5JP7YBs
-    fingerprint: firefox
-  sni: ad9.vkusnews.com#GetXConfig-1
-- name: VLESS-free.tharu.site
+    public-key: QF_5wcsQ_BR9FiqXljw81rpsoMbFFWUwKZXALlxICj0
+    short-id: ba5c
+    fingerprint: safari
+  sni: ru-new.rrbs.online
+- name: VLESS-au2.pad-sservice.lat
   type: vless
-  server: free.tharu.site
-  port: 8880
-  uuid: e730e554-c23c-4ba5-a10d-54ac38f7312f
+  server: au2.pad-sservice.lat
+  port: 8443
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   udp: true
-  tls: false
-  network: ws#GetXConfig-3
-- name: 'نامشخص 🏳️ | @GetXConfig | #10224-5'
+  tls: true
+  network: ws
+  ws-path: /A11U
+  ws-headers:
+    Host: au2.pad-service.com
+  sni: au2.pad-sservice.lat#GetXConfig-5
+- name: 'نامشخص 🏳️ | @GetXConfig | #10246-8'
   type: vmess
   server: funnymemes.goalir.co.uk
   port: 8880
-  uuid: d525f335-63b2-43b0-b142-df56a681a09e
+  uuid: 57f6abd4-7e42-494d-bf7e-c966bf3f82c4
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: tcp
-- name: VLESS-dearb.moon-night.ir
+- name: VLESS-2.dzen-se-1.com
   type: vless
-  server: dearb.moon-night.ir
+  server: 2.dzen-se-1.com
   port: 443
-  uuid: 871d8872-caff-4d13-b69a-b4a6e4c7535d
+  uuid: ae091bed-c397-49c9-aa28-c4a250f757c6
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: dMBDL7ry94pavIxYmzimeyaCqor6fUNb0v3dzHif9xY
-    fingerprint: ios
-  sni: play.google.com
-- name: VLESS-203.202.232.211
-  type: vless
-  server: 203.202.232.211
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+    public-key: 9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg
+    fingerprint: firefox
+  sni: 2.dzen-se-1.com
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
-  network: ws
-  ws-path: /fp=chromesecurity=tls#Farah_VPN-11
-  ws-headers:
-    Host: ccc.010304.xyz
-  sni: ccc.010304.xyz
-- name: VLESS-57.128.177.198
+  network: tcp
+- name: VLESS-cf-vless-4cf55824.aimall.fr
   type: vless
-  server: 57.128.177.198
+  server: cf-vless-4cf55824.aimall.fr
   port: 443
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  uuid: ea50b1a3-3a98-4c5e-a150-48ada40d68d7
   udp: true
   tls: true
   network: ws#Farah_VPN-12
-  sni: vp58.cc.cd
-- name: VLESS-82.118.19.153
+- name: VLESS-107.189.26.160
   type: vless
-  server: 82.118.19.153
-  port: 443
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE#Farah_VPN-13
-    fingerprint: chrome
-  sni: www.cloudflare.com
-- name: VLESS-2.26.30.216
-  type: vless
-  server: 2.26.30.216
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  udp: true
-  tls: false
-  network: ws
-  ws-path: /fp=chrome
-  ws-headers:
-    Host: edgetunnel-4uw.pages.dev
-  sni: edgetunnel-4uw.pages.dev
-- name: VLESS-109.122.198.83
-  type: vless
-  server: 109.122.198.83
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: shephe.dpdns.org
-  sni: shephe.dpdns.org#Farah_VPN-15
-- name: VLESS-159.65.51.189
-  type: vless
-  server: 159.65.51.189
+  server: 107.189.26.160
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   network: ws
-  ws-path: /#Farah_VPN-16
+  ws-path: /fp
   ws-headers:
     Host: ccc.010304.xyz
-  sni: ccc.010304.xyz
-- name: VLESS-31.77.126.2
+  sni: ccc.010304.xyz#Farah_VPN-13
+- name: VLESS-67.220.73.204
   type: vless
-  server: 31.77.126.2
+  server: 67.220.73.204
+  port: 18662
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#Farah_VPN-14
+    short-id: 48050fab
+    fingerprint: chrome
+  sni: www.apple.com
+- name: VLESS-144.31.243.120
+  type: vless
+  server: 144.31.243.120
+  port: 8443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  network: ws#Farah_VPN-15
+  sni: edgetunnel-4uw.pages.dev
+- name: VLESS-195.72.166.251
+  type: vless
+  server: 195.72.166.251
   port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk#Farah_VPN-16
+    fingerprint: firefox
+  sni: www.lloydsbankinggroup.com
+- name: VLESS-pp-fx2.firelinkservers.ir
+  type: vless
+  server: pp-fx2.firelinkservers.ir
+  port: 443
+  uuid: 2d7977e4-e4eb-4ff2-a35f-f4e765480e58
+  udp: true
+  tls: true
+  network: xhttp
+  sni: cdn.akamai.steamstatic.com
+- name: VLESS-wwww.qarvian.ir
+  type: vless
+  server: wwww.qarvian.ir
+  port: 443
+  uuid: 7dee06cc-4bc8-43ca-a6c2-59f81107f2e3
   udp: true
   tls: true
   network: ws
-  ws-path: /cart/docs/www/proxyip=108.160.132.132
+  ws-path: /?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
   ws-headers:
-    Host: lucasjow.us.ci
-  sni: lucasjow.us.ci#Farah_VPN-17
-- name: VLESS-144.31.125.60
+    Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
+  sni: firefox.com
+- name: VLESS-199.232.78.159
   type: vless
-  server: 144.31.125.60
+  server: 199.232.78.159
   port: 443
-  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
+  uuid: 7dee06cc-4bc8-43ca-a6c2-59f81107f2e3
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
-    fingerprint: chrome
-  sni: www.intel.com
-- name: VLESS-130.12.242.106
+  network: ws
+  ws-path: /?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
+  ws-headers:
+    Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
+  sni: firefox.com
+- name: VLESS-199.232.239.239
   type: vless
-  server: 130.12.242.106
+  server: 199.232.239.239
   port: 443
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: 49883404-5bd4-42fc-9cb4-913980e278ad
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    fingerprint: chrome
-  sni: deepl.com
-- name: '@meliproxy-21'
-  type: vmess
-  server: 132.145.80.230
-  port: 80
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
+  network: ws
+  ws-path: /@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C/@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C/@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C/@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C/@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C/@%43%6C%6F%75%64%56%50%4E%63%68%61%6E%6E%65%6C?ed=2056/?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
+  ws-headers:
+    Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+  sni: firefox.com
+- name: VLESS-199.232.78.160
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: 7dee06cc-4bc8-43ca-a6c2-59f81107f2e3
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
+  ws-headers:
+    Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+  sni: firefox.com
+- name: VLESS-172.64.150.28
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   tls: false
   network: ws
-  ws-path: /cctv13.m3u8
+  ws-path: /fp
   ws-headers:
-    Host: kr02.a0a.xyz
-- name: VLESS-31.77.131.246
-  type: vless
-  server: 31.77.131.246
+    Host: hhlfy.twiladaphne.ndjp.net#meliproxyy-28
+- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+  type: vmess
+  server: 165.140.217.53
   port: 443
-  uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  alterId: 0
+  cipher: none
   udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1cnb_l4zv5exEEuv_cYoglyW_Tk4yGl9mjzHoHzvUXA
-    fingerprint: firefox
-  sni: nl5.himoy.space
-- name: VLESS-54.39.96.233
-  type: vless
-  server: 54.39.96.233
-  port: 8080
-  uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc
-    short-id: 2b30e23
-  sni: icloud.com
-- name: VLESS-213.152.165.203
-  type: vless
-  server: 213.152.165.203
-  port: 2091
-  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
-  sni: www.apple.com
-- name: VLESS-200.165.231.209
-  type: vless
-  server: 200.165.231.209
+- name: '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
+  type: vmess
+  server: 165.140.217.53
   port: 443
-  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  alterId: 0
+  cipher: none
   udp: true
-  tls: true
-  network: ws
-  ws-path: /api/connect
-  ws-headers:
-    Host: wstg.datasynctrue.online
-  sni: wstg.datasynctrue.online#meliproxyy-25
-- name: VLESS-gb2.murainternet.network
-  type: vless
-  server: gb2.murainternet.network
-  port: 443
-  uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
-  udp: true
-  tls: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo
-  sni: gb2.murainternet.network
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-109.176.229.51
-  - VLESS-free.tharu.site
-  - 'نامشخص 🏳️ | @GetXConfig | #10224-5'
-  - VLESS-dearb.moon-night.ir
-  - VLESS-203.202.232.211
-  - VLESS-57.128.177.198
-  - VLESS-82.118.19.153
-  - VLESS-2.26.30.216
-  - VLESS-109.122.198.83
-  - VLESS-159.65.51.189
-  - VLESS-31.77.126.2
-  - VLESS-144.31.125.60
-  - VLESS-130.12.242.106
-  - '@meliproxy-21'
-  - VLESS-31.77.131.246
-  - VLESS-54.39.96.233
-  - VLESS-213.152.165.203
-  - VLESS-200.165.231.209
-  - VLESS-gb2.murainternet.network
+  - VLESS-ru-new.rrbs.online
+  - VLESS-au2.pad-sservice.lat
+  - 'نامشخص 🏳️ | @GetXConfig | #10246-8'
+  - VLESS-2.dzen-se-1.com
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
+  - VLESS-cf-vless-4cf55824.aimall.fr
+  - VLESS-107.189.26.160
+  - VLESS-67.220.73.204
+  - VLESS-144.31.243.120
+  - VLESS-195.72.166.251
+  - VLESS-pp-fx2.firelinkservers.ir
+  - VLESS-wwww.qarvian.ir
+  - VLESS-199.232.78.159
+  - VLESS-199.232.239.239
+  - VLESS-199.232.78.160
+  - VLESS-172.64.150.28
+  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-109.176.229.51
-  - VLESS-free.tharu.site
-  - 'نامشخص 🏳️ | @GetXConfig | #10224-5'
-  - VLESS-dearb.moon-night.ir
-  - VLESS-203.202.232.211
-  - VLESS-57.128.177.198
-  - VLESS-82.118.19.153
-  - VLESS-2.26.30.216
-  - VLESS-109.122.198.83
-  - VLESS-159.65.51.189
-  - VLESS-31.77.126.2
-  - VLESS-144.31.125.60
-  - VLESS-130.12.242.106
-  - '@meliproxy-21'
-  - VLESS-31.77.131.246
-  - VLESS-54.39.96.233
-  - VLESS-213.152.165.203
-  - VLESS-200.165.231.209
-  - VLESS-gb2.murainternet.network
+  - VLESS-ru-new.rrbs.online
+  - VLESS-au2.pad-sservice.lat
+  - 'نامشخص 🏳️ | @GetXConfig | #10246-8'
+  - VLESS-2.dzen-se-1.com
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
+  - VLESS-cf-vless-4cf55824.aimall.fr
+  - VLESS-107.189.26.160
+  - VLESS-67.220.73.204
+  - VLESS-144.31.243.120
+  - VLESS-195.72.166.251
+  - VLESS-pp-fx2.firelinkservers.ir
+  - VLESS-wwww.qarvian.ir
+  - VLESS-199.232.78.159
+  - VLESS-199.232.239.239
+  - VLESS-199.232.78.160
+  - VLESS-172.64.150.28
+  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

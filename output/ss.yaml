@@ -5,38 +5,38 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-dns22.m3hrzd.ir-chacha20
+  type: ss
+  server: dns22.m3hrzd.ir
+  port: 13458
+  cipher: chacha20-ietf-poly1305
+  password: qtzuB0fNa_X3Io31IjefVBpYh8fzmf_R
+  udp: true
 - name: SS-149.22.87.240-aes-128-
   type: ss
   server: 149.22.87.240
-  port: 44310
+  port: 44364
   cipher: aes-128-gcm
   password: shadowsocks
+  udp: true
+- name: SS-156.146.38.167-aes-128-
+  type: ss
+  server: 156.146.38.167
+  port: 44374
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44384
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
   udp: true
 - name: SS-173.244.56.6-aes-128-
   type: ss
   server: 173.244.56.6
-  port: 44332
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  type: ss
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 44335
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  udp: true
-- name: SS-102.37.156.224-chacha20
-  type: ss
-  server: 102.37.156.224
-  port: 44338
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44386
+  port: 44385
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -44,19 +44,19 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-dns22.m3hrzd.ir-chacha20
   - SS-149.22.87.240-aes-128-
+  - SS-156.146.38.167-aes-128-
+  - SS-216.105.168.18-chacha20
   - SS-173.244.56.6-aes-128-
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-102.37.156.224-chacha20
-  - SS-156.146.38.168-aes-128-
 - name: Auto
   type: url-test
   proxies:
+  - SS-dns22.m3hrzd.ir-chacha20
   - SS-149.22.87.240-aes-128-
+  - SS-156.146.38.167-aes-128-
+  - SS-216.105.168.18-chacha20
   - SS-173.244.56.6-aes-128-
-  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
-  - SS-102.37.156.224-chacha20
-  - SS-156.146.38.168-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

@@ -5,85 +5,70 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-193.233.252.100
+- name: VLESS-gcore.com
   type: vless
-  server: 193.233.252.100
+  server: gcore.com
   port: 443
-  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
+  uuid: 3fccf1f5-dd4b-4527-a0e6-392719d6aa0d
+  udp: true
+  tls: true
+  network: xhttp
+  sni: img.jsdelivr.com
+- name: VLESS-sg003.zestapp778.com
+  type: vless
+  server: sg003.zestapp778.com
+  port: 443
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  udp: true
+  tls: true
+  network: tcp
+  sni: sg003.zestapp778.com
+- name: VLESS-ricardolu955.ccwu.cc
+  type: vless
+  server: ricardolu955.ccwu.cc
+  port: 443
+  uuid: 9ea8c73c-01a3-420f-851b-aa5741b69355
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /
+  ws-headers:
+    Host: ricardolu955.ccwu.cc
+  sni: ricardolu955.ccwu.cc
+- name: VLESS-94.249.189.87
+  type: vless
+  server: 94.249.189.87
+  port: 43000
+  uuid: 9a1acad0-081d-4a40-9541-f544865225bb
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: FX23FdMBb-cdr29rzlCrh4tAWgqwhjaV3zXm3kW3fX0
+    fingerprint: chrome
+- name: VLESS-94.249.189.41
+  type: vless
+  server: 94.249.189.41
+  port: 43000
+  uuid: cec0cf85-cf9f-44ce-9eb0-cb1f9b8d7ba1
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: YagqjrSaICX5_qhcRvWOfM_yatBa5FtJexO9IlZeIEo
+    fingerprint: chrome
+- name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-11
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
-  network: grpc
-  grpc-service-name: assets
-  sni: swe.qik-fin.uk
-- name: VLESS-31.76.7.233
-  type: vless
-  server: 31.76.7.233
-  port: 443
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  udp: true
-  tls: true
-  network: xhttp
-  sni: e2865c20.con.rasterparcel.tech#GetXConfig-3
-- name: VLESS-sg2-xr.zgrelay.com
-  type: vless
-  server: sg2-xr.zgrelay.com
-  port: 443
-  uuid: e221699d-e705-4664-9162-a75a82aa3997
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /700gvl-kr3
-  ws-headers:
-    Host: sg2-xr.zgrelay.com
-  sni: sg2-xr.zgrelay.com#GetXConfig-5
-- name: TROJAN-170.101.101.53
-  type: trojan
-  server: 170.101.101.53
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  sni: www.explorecreativejobsandenhanceyourcareerportfolio.com#GetXConfig-7
-  skip-cert-verify: false
-- name: VLESS-177.3.214.133
-  type: vless
-  server: 177.3.214.133
-  port: 443
-  uuid: 4023b626-ce42-4a8f-a1c4-93e263118e7c
-  udp: true
-  tls: true
-  network: xhttp
-  sni: planktonmanager.xyz#GetXConfig-8
-- name: TROJAN-208.69.78.29
-  type: trojan
-  server: 208.69.78.29
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  sni: learn.yourultimateprofessionalcareerhub.com#GetXConfig-10
-  skip-cert-verify: false
-- name: VLESS-server16.peekconfig.workers.dev
-  type: vless
-  server: server16.peekconfig.workers.dev
-  port: 443
-  uuid: 419b7a2c-9fa2-4870-b58a-0498ccc7d6c4
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /eyJqdW5rIjoiYXdUWFpSYnZubU5hIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
-  ws-headers:
-    Host: server16.peekconfig.workers.dev
-  sni: sERveR16.pEeKCoNFIg.worKerS.DeV#Farah_VPN-11
-- name: VLESS-sino.bestsellers1.site
-  type: vless
-  server: sino.bestsellers1.site
-  port: 2083
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  udp: true
-  tls: true
-  network: ws#Farah_VPN-12
-  sni: sino.bestsellers1.site
+  network: tcp
 - name: VLESS-212.227.235.66
   type: vless
   server: 212.227.235.66
@@ -94,127 +79,35 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk#Farah_VPN-13
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk#Farah_VPN-12
     fingerprint: firefox
   sni: www.apple.com
-- name: VLESS-3h-unitedstates1.09vpn.com
+- name: VLESS-88.216.69.30
   type: vless
-  server: 3h-unitedstates1.09vpn.com
-  port: 80
-  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  server: 88.216.69.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
-  network: ws
-  ws-path: /vless/#Farah_VPN-14
-  ws-headers:
-    Host: 3h-unitedstates1.09vpn.com
-- name: VLESS-47.253.226.114
+  network: ws#Farah_VPN-13
+- name: VLESS-104.19.230.21
   type: vless
-  server: 47.253.226.114
+  server: 104.19.230.21
   port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  uuid: 615d9f74-4d51-bad3-f240-2a8400000011
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-    fingerprint: chrome
-  sni: www.cloudflare.com#Farah_VPN-15
-- name: VLESS-wwww.qarvian.ir
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: 7dee06cc-4bc8-43ca-a6c2-59f81107f2e3
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#Farah_VPN-16
-  ws-headers:
-    Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-  sni: firefox.com
-- name: VLESS-66.70.179.198
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    fingerprint: firefox
-  sni: www.cloudflare.com
-- name: VLESS-51.158.206.86
-  type: vless
-  server: 51.158.206.86
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  network: tcp#Farah_VPN-18
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-    fingerprint: chrome
-  sni: fuck.rkn
-- name: VLESS-169.128.83.4
-  type: vless
-  server: 169.128.83.4
-  port: 57259
-  uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
-  udp: true
-  tls: false
-  network: tcp
-- name: TROJAN-188.226.181.61
+  network: ws#Farah_VPN-14
+  sni: main.packetloss-com.workers.dev
+- name: TROJAN-216.152.156.42
   type: trojan
-  server: 188.226.181.61
+  server: 216.152.156.42
   port: 443
-  password: humanity
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
-  sni: www.pleadcourt.org#Farah_VPN-20
-  skip-cert-verify: false
-- name: VLESS-193.160.141.138
-  type: vless
-  server: 193.160.141.138
-  port: 8443
-  uuid: b4a1200a-9765-4649-94f2-c26e0a37dffb
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  sni: apple.com#meliproxyy-21
-- name: VLESS-193.160.140.159
-  type: vless
-  server: 193.160.140.159
-  port: 8443
-  uuid: d4353076-3ec7-47dc-88b0-f21eb59fbfb8
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    fingerprint: chrome
-  sni: apple.com#meliproxyy-22
-- name: VLESS-edge.bookmai.com
-  type: vless
-  server: edge.bookmai.com
-  port: 443
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    fingerprint: chrome
-  sni: mother-earth.fyi#meliproxyy-23
+  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com#Farah_VPN-15
+  skip-cert-verify: true
 - name: VLESS-199.195.193.91
   type: vless
   server: 199.195.193.91
@@ -228,19 +121,142 @@ proxies:
     public-key: gCcUt0o6KZqq3QMrHAwUEUGlyB2H8ZEwXM9WczAHkmU
     fingerprint: firefox
   sni: germ.nullo.pro
-- name: VLESS-199.232.78.159
+- name: VLESS-103.21.244.10
   type: vless
-  server: 199.232.78.159
+  server: 103.21.244.10
   port: 443
-  uuid: 236ab0d4-7d11-4d33-94c1-f271072d8c58
+  uuid: aef32408-b6f3-4ed9-8d70-983b2df79991
   udp: true
   tls: true
   network: ws
-  ws-path: /
+  ws-path: /stream/DEVCOP/983b2df79991/loc-0
   ws-headers:
-    Host: italyma.global.ssl.fastly.net.
-  sni: firefox.com#meliproxyy-30
-- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
+    Host: nisit-h7qx.matinnnamiri.workers.dev
+  sni: nisit-h7qx.matinnnamiri.workers.dev#meliproxyy-22
+- name: VLESS-188.114.97.124
+  type: vless
+  server: 188.114.97.124
+  port: 443
+  uuid: aef32408-b6f3-4ed9-8d70-983b2df79991
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /stream/DEVCOP/983b2df79991/loc-0
+  ws-headers:
+    Host: nisit-h7qx.matinnnamiri.workers.dev
+  sni: nisit-h7qx.matinnnamiri.workers.dev#meliproxyy-23
+- name: VLESS-190.93.246.231
+  type: vless
+  server: 190.93.246.231
+  port: 443
+  uuid: aef32408-b6f3-4ed9-8d70-983b2df79991
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /stream/DEVCOP/983b2df79991/loc-1
+  ws-headers:
+    Host: nisit-h7qx.matinnnamiri.workers.dev
+  sni: nisit-h7qx.matinnnamiri.workers.dev#meliproxyy-24
+- name: VLESS-193.160.141.138
+  type: vless
+  server: 193.160.141.138
+  port: 8443
+  uuid: b4a1200a-9765-4649-94f2-c26e0a37dffb
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  sni: apple.com#meliproxyy-25
+- name: VLESS-104.25.180.184
+  type: vless
+  server: 104.25.180.184
+  port: 443
+  uuid: aef32408-b6f3-4ed9-8d70-983b2df79991
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /stream/DEVCOP/983b2df79991/loc-1
+  ws-headers:
+    Host: nisit-h7qx.matinnnamiri.workers.dev
+  sni: nisit-h7qx.matinnnamiri.workers.dev#meliproxyy-26
+- name: VLESS-51.158.206.8
+  type: vless
+  server: 51.158.206.8
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+    fingerprint: chrome
+  sni: fuck.rkn
+- name: VLESS-germany1.xorsand.eu
+  type: vless
+  server: germany1.xorsand.eu
+  port: 10105
+  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
+    fingerprint: chrome
+  sni: play.google.com
+- name: VLESS-51.158.206.34
+  type: vless
+  server: 51.158.206.34
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  sni: fuck.rkn
+- name: VLESS-bs.cexora.ir
+  type: vless
+  server: bs.cexora.ir
+  port: 2087
+  uuid: 17a6d68f-76ef-4d98-5f5b-0cce58fd96b1
+  udp: true
+  tls: true
+  network: xhttp
+  sni: bs.cexora.ir
+- name: VLESS-51.158.206.86
+  type: vless
+  server: 51.158.206.86
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  sni: fuck.rkn
+- name: VLESS-94.249.187.46
+  type: vless
+  server: 94.249.187.46
+  port: 43000
+  uuid: 53e31ee1-0a75-48c8-82fd-a54c8728ed9d
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 9JxTswHvWeq5349tgvXL7fDWaWuCb3jstVS7e6daAD4
+    short-id: 81a5b989
+    fingerprint: firefox
+- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
   type: vmess
   server: 165.140.217.53
   port: 443
@@ -250,7 +266,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
+- name: '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-42'
   type: vmess
   server: 165.140.217.53
   port: 443
@@ -306,7 +322,7 @@ proxies:
   udp: true
   tls: true
   network: tcp
-  sni: pl6.moritech.net#Spotify_Porteghali-36
+  sni: pl6.moritech.net#Spotify_Porteghali-46
   flow: xtls-rprx-vision
 - name: VLESS-212.92.101.89
   type: vless
@@ -366,29 +382,30 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-193.233.252.100
-  - VLESS-31.76.7.233
-  - VLESS-sg2-xr.zgrelay.com
-  - TROJAN-170.101.101.53
-  - VLESS-177.3.214.133
-  - TROJAN-208.69.78.29
-  - VLESS-server16.peekconfig.workers.dev
-  - VLESS-sino.bestsellers1.site
+  - VLESS-gcore.com
+  - VLESS-sg003.zestapp778.com
+  - VLESS-ricardolu955.ccwu.cc
+  - VLESS-94.249.189.87
+  - VLESS-94.249.189.41
+  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-11
   - VLESS-212.227.235.66
-  - VLESS-3h-unitedstates1.09vpn.com
-  - VLESS-47.253.226.114
-  - VLESS-wwww.qarvian.ir
-  - VLESS-66.70.179.198
-  - VLESS-51.158.206.86
-  - VLESS-169.128.83.4
-  - TROJAN-188.226.181.61
-  - VLESS-193.160.141.138
-  - VLESS-193.160.140.159
-  - VLESS-edge.bookmai.com
+  - VLESS-88.216.69.30
+  - VLESS-104.19.230.21
+  - TROJAN-216.152.156.42
   - VLESS-199.195.193.91
-  - VLESS-199.232.78.159
-  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
-  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
+  - VLESS-103.21.244.10
+  - VLESS-188.114.97.124
+  - VLESS-190.93.246.231
+  - VLESS-193.160.141.138
+  - VLESS-104.25.180.184
+  - VLESS-51.158.206.8
+  - VLESS-germany1.xorsand.eu
+  - VLESS-51.158.206.34
+  - VLESS-bs.cexora.ir
+  - VLESS-51.158.206.86
+  - VLESS-94.249.187.46
+  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
+  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-42'
   - VLESS-150.40.126.28
   - VLESS-51.38.70.192
   - VLESS-93.94.52.23
@@ -400,29 +417,30 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-193.233.252.100
-  - VLESS-31.76.7.233
-  - VLESS-sg2-xr.zgrelay.com
-  - TROJAN-170.101.101.53
-  - VLESS-177.3.214.133
-  - TROJAN-208.69.78.29
-  - VLESS-server16.peekconfig.workers.dev
-  - VLESS-sino.bestsellers1.site
+  - VLESS-gcore.com
+  - VLESS-sg003.zestapp778.com
+  - VLESS-ricardolu955.ccwu.cc
+  - VLESS-94.249.189.87
+  - VLESS-94.249.189.41
+  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-11
   - VLESS-212.227.235.66
-  - VLESS-3h-unitedstates1.09vpn.com
-  - VLESS-47.253.226.114
-  - VLESS-wwww.qarvian.ir
-  - VLESS-66.70.179.198
-  - VLESS-51.158.206.86
-  - VLESS-169.128.83.4
-  - TROJAN-188.226.181.61
-  - VLESS-193.160.141.138
-  - VLESS-193.160.140.159
-  - VLESS-edge.bookmai.com
+  - VLESS-88.216.69.30
+  - VLESS-104.19.230.21
+  - TROJAN-216.152.156.42
   - VLESS-199.195.193.91
-  - VLESS-199.232.78.159
-  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-31'
-  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-32'
+  - VLESS-103.21.244.10
+  - VLESS-188.114.97.124
+  - VLESS-190.93.246.231
+  - VLESS-193.160.141.138
+  - VLESS-104.25.180.184
+  - VLESS-51.158.206.8
+  - VLESS-germany1.xorsand.eu
+  - VLESS-51.158.206.34
+  - VLESS-bs.cexora.ir
+  - VLESS-51.158.206.86
+  - VLESS-94.249.187.46
+  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-41'
+  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-42'
   - VLESS-150.40.126.28
   - VLESS-51.38.70.192
   - VLESS-93.94.52.23

@@ -8,74 +8,30 @@ proxies:
 - name: SS-20.164.42.62-chacha20
   type: ss
   server: 20.164.42.62
-  port: 4438
+  port: 4431
   cipher: chacha20-ietf-poly1305
   password: Ipuj9QJYOOpCsgP8
   udp: true
-- name: SS-37.19.198.160-aes-128-
+- name: SS-dns27.m3hrzd.ir-chacha20
   type: ss
-  server: 37.19.198.160
-  port: 44377
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.244-aes-128-
-  type: ss
-  server: 37.19.198.244
-  port: 44378
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-37.19.198.243-aes-128-
-  type: ss
-  server: 37.19.198.243
-  port: 44379
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-198.98.53.130-chacha20
-  type: ss
-  server: 198.98.53.130
-  port: 44389
+  server: dns27.m3hrzd.ir
+  port: 13557
   cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
+  password: xMtvPR9GLGbGXO_sk7CTh1Zg4EmhkCGl
   udp: true
-- name: SS-156.146.38.167-aes-128-
+- name: SS-51.222.141.125-aes-256-
   type: ss
-  server: 156.146.38.167
-  port: 44391
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44394
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 51.222.141.125
+  port: 44544
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-20.164.42.62-chacha20
-  - SS-37.19.198.160-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-198.98.53.130-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.168-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-20.164.42.62-chacha20
-  - SS-37.19.198.160-aes-128-
-  - SS-37.19.198.244-aes-128-
-  - SS-37.19.198.243-aes-128-
-  - SS-198.98.53.130-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-156.146.38.168-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-dns27.m3hrzd.ir-chacha20
+  - SS-51.222.141.125-aes-256-
 rules:
 - MATCH,PROXY

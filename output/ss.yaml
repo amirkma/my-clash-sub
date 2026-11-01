@@ -5,33 +5,25 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-20.164.42.62-chacha20
+- name: SS-173.244.56.9-aes-128-
   type: ss
-  server: 20.164.42.62
-  port: 4431
-  cipher: chacha20-ietf-poly1305
-  password: Ipuj9QJYOOpCsgP8
+  server: 173.244.56.9
+  port: 44368
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-- name: SS-dns27.m3hrzd.ir-chacha20
+- name: SS-158.173.20.208-aes-128-
   type: ss
-  server: dns27.m3hrzd.ir
-  port: 13557
-  cipher: chacha20-ietf-poly1305
-  password: xMtvPR9GLGbGXO_sk7CTh1Zg4EmhkCGl
-  udp: true
-- name: SS-51.222.141.125-aes-256-
-  type: ss
-  server: 51.222.141.125
-  port: 44544
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  server: 158.173.20.208
+  port: 44392
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-20.164.42.62-chacha20
-  - SS-dns27.m3hrzd.ir-chacha20
-  - SS-51.222.141.125-aes-256-
+  - SS-173.244.56.9-aes-128-
+  - SS-158.173.20.208-aes-128-
 rules:
 - MATCH,PROXY

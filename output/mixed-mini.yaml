@@ -5,52 +5,17 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-185.225.205.53
-  type: vless
-  server: 185.225.205.53
-  port: 443
-  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
-    fingerprint: qq
-  sni: addons.mozilla.org
-- name: VLESS-46.8.100.28
-  type: vless
-  server: 46.8.100.28
-  port: 443
-  uuid: 3dc76b67-6d26-4446-b542-0254b073bd8a
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-3
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tnEAM-61f1idRp0_FNf01mVdV1Ks8l1j55KIHJEcY28
-  sni: swdist.apple.com
-- name: 'آلمان 🇩🇪 | @GetXConfig | #11232-5'
-  type: vmess
-  server: 109.70.74.113
-  port: 30553
-  uuid: ef7de3d4-d488-4506-b01d-8b6fe6d3aad8
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
 - name: SS-52.221.209.72-chacha20
   type: ss
   server: 52.221.209.72
-  port: 20967
+  port: 20961
   cipher: chacha20-ietf-poly1305
   password: bf5129f1-31f5-4edf-a07a-27ec31b26c1d
   udp: true
 - name: SS-dns27.m3hrzd.ir-chacha20
   type: ss
   server: dns27.m3hrzd.ir
-  port: 13539
+  port: 13533
   cipher: chacha20-ietf-poly1305
   password: NA17zpMdnE_O7hRk5ZaEaiLGoGg8e4gI
   udp: true
@@ -92,7 +57,7 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: qxy9TJUB7D7mvYncIIjjpmk5_wiPxlP18zhrL4JNuBg
-    short-id: 33ecf14
+    short-id: 33ecf8
     fingerprint: chrome
   sni: digikala.com
 - name: VLESS-43.153.121.144
@@ -111,7 +76,7 @@ proxies:
 - name: SS-52.138.233.48-chacha20
   type: ss
   server: 52.138.233.48
-  port: 44318
+  port: 44312
   cipher: chacha20-ietf-poly1305
   password: 4ivh6F6XFBD12gEg
   udp: true
@@ -170,7 +135,7 @@ proxies:
   uuid: ab4e24ea-92ee-43eb-aadd-62cac4b2f6fe
   udp: true
   tls: true
-  network: tcp#GetXConfig-27
+  network: tcp#GetXConfig-21
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 55dHJ98JJF5OyKLOqF8ACF3PYFCq_1ax89TmIQEFDGM
@@ -209,22 +174,46 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: VLESS-172.64.147.91
+- name: VLESS-88.216.67.54
   type: vless
-  server: 172.64.147.91
+  server: 88.216.67.54
   port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  uuid: 50414e45-4c5f-5a45-5553-47be357e54da
   udp: true
   tls: true
-  network: ws#Farah_VPN-36
-  sni: powered-by-surena.configfarsi695fce27aa549.workers.dev
+  network: ws
+  ws-path: /stream/PANEL_ZEUS/47be357e54da/loc-0#GetXConfig-30
+  ws-headers:
+    Host: 52z4vtewuass.game4090taking.workers.dev
+  sni: 52z4vtewuass.game4090taking.workers.dev
+- name: 'کانادا 🇨🇦 | @GetXConfig | #11252-34'
+  type: vmess
+  server: 188.114.96.3
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /lMnsZUN4/
+  ws-headers:
+    Host: v2ray1.dozapp.xyz
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
+  type: vmess
+  server: 47.244.120.197
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-path: /arki
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-185.225.205.53
-  - VLESS-46.8.100.28
-  - 'آلمان 🇩🇪 | @GetXConfig | #11232-5'
   - SS-52.221.209.72-chacha20
   - SS-dns27.m3hrzd.ir-chacha20
   - VLESS-new-t11.vurneq.ir
@@ -240,13 +229,12 @@ proxy-groups:
   - VLESS-109.120.185.201
   - VLESS-2.59.21.188
   - TROJAN-185.36.145.44
-  - VLESS-172.64.147.91
+  - VLESS-88.216.67.54
+  - 'کانادا 🇨🇦 | @GetXConfig | #11252-34'
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-185.225.205.53
-  - VLESS-46.8.100.28
-  - 'آلمان 🇩🇪 | @GetXConfig | #11232-5'
   - SS-52.221.209.72-chacha20
   - SS-dns27.m3hrzd.ir-chacha20
   - VLESS-new-t11.vurneq.ir
@@ -262,7 +250,9 @@ proxy-groups:
   - VLESS-109.120.185.201
   - VLESS-2.59.21.188
   - TROJAN-185.36.145.44
-  - VLESS-172.64.147.91
+  - VLESS-88.216.67.54
+  - 'کانادا 🇨🇦 | @GetXConfig | #11252-34'
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-36
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

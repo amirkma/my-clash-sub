@@ -5,17 +5,95 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-54.36.174.140-chacha20
+- name: SS-pg2.rmastore.ir-aes-256-
   type: ss
-  server: 54.36.174.140
-  port: 44323
+  server: pg2.rmastore.ir
+  port: 30443
+  cipher: aes-256-gcm
+  password: c5PtLhylY5r3jJQ6XlzGiOdXeYYlhu-k
+  udp: true
+- name: SS-20.107.206.186-chacha20
+  type: ss
+  server: 20.107.206.186
+  port: 44313
   cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
+  password: 45dM0ZrNdAk4OHiM
+  udp: true
+- name: SS-158.173.20.208-aes-128-
+  type: ss
+  server: 158.173.20.208
+  port: 44320
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44335
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-173.244.56.6-aes-128-
+  type: ss
+  server: 173.244.56.6
+  port: 44342
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.169-aes-128-
+  type: ss
+  server: 156.146.38.169
+  port: 44345
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-158.173.20.171-aes-128-
+  type: ss
+  server: 158.173.20.171
+  port: 44350
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-84.247.155.196-aes-256-
+  type: ss
+  server: 84.247.155.196
+  port: 44364
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  udp: true
+- name: SS-82.38.31.159-chacha20
+  type: ss
+  server: 82.38.31.159
+  port: 44397
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-54.36.174.140-chacha20
+  - SS-pg2.rmastore.ir-aes-256-
+  - SS-20.107.206.186-chacha20
+  - SS-158.173.20.208-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-173.244.56.6-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-158.173.20.171-aes-128-
+  - SS-84.247.155.196-aes-256-
+  - SS-82.38.31.159-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-pg2.rmastore.ir-aes-256-
+  - SS-20.107.206.186-chacha20
+  - SS-158.173.20.208-aes-128-
+  - SS-37.19.198.236-aes-128-
+  - SS-173.244.56.6-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-158.173.20.171-aes-128-
+  - SS-84.247.155.196-aes-256-
+  - SS-82.38.31.159-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

@@ -5,25 +5,68 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-54.36.174.134-chacha20
+- name: SS-37.19.198.160-aes-128-
   type: ss
-  server: 54.36.174.134
-  port: 44335
+  server: 37.19.198.160
+  port: 44319
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-198.98.53.130-chacha20
+  type: ss
+  server: 198.98.53.130
+  port: 44360
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+  udp: true
+- name: SS-37.19.198.236-aes-128-
+  type: ss
+  server: 37.19.198.236
+  port: 44361
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-54.36.174.140-chacha20
+  type: ss
+  server: 54.36.174.140
+  port: 44384
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
   udp: true
-- name: SS-216.105.168.18-chacha20
+- name: SS-49.51.39.148-chacha20
   type: ss
-  server: 216.105.168.18
-  port: 44399
+  server: 49.51.39.148
+  port: 44389
   cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
+  password: LCvps-199-168-136-193-bak8443
+  udp: true
+- name: SS-158.173.24.73-aes-128-
+  type: ss
+  server: 158.173.24.73
+  port: 44393
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-54.36.174.134-chacha20
-  - SS-216.105.168.18-chacha20
+  - SS-37.19.198.160-aes-128-
+  - SS-198.98.53.130-chacha20
+  - SS-37.19.198.236-aes-128-
+  - SS-54.36.174.140-chacha20
+  - SS-49.51.39.148-chacha20
+  - SS-158.173.24.73-aes-128-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-37.19.198.160-aes-128-
+  - SS-198.98.53.130-chacha20
+  - SS-37.19.198.236-aes-128-
+  - SS-54.36.174.140-chacha20
+  - SS-49.51.39.148-chacha20
+  - SS-158.173.24.73-aes-128-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

@@ -8,29 +8,17 @@ proxies:
 - name: VLESS-usa4.un1.cloud
   type: vless
   server: usa4.un1.cloud
-  port: 443
+  port: 9443
   uuid: d3790aa8-9c54-440a-b91d-1c8d689e0258
   udp: true
   tls: true
-  network: tcp
+  network: grpc
+  grpc-service-name: uploadimage
   flow: xtls-rprx-vision
   reality-opts:
     public-key: Ef3MlZmKu6OYxX7EotP_-FJPdfRmhrOZQpqqPAVAzz4
     fingerprint: firefox
   sni: usa4.un1.cloud
-- name: VLESS-bridgestone.best
-  type: vless
-  server: bridgestone.best
-  port: 443
-  uuid: acc50200-7f21-4f90-9cca-0057efcbf042
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 7T1P1SUjOmgdvYnEyjnBxeo0pI3ilNgY8DPxC3y-6w0
-    fingerprint: firefox
-  sni: bridgestone.best
 - name: VLESS-usa5.un1.cloud
   type: vless
   server: usa5.un1.cloud
@@ -100,7 +88,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /api/v3/pulse#GetXConfig-9
+  ws-path: /api/v3/pulse#GetXConfig-7
   ws-headers:
     Host: sync.zovip2.ir
   sni: sync.zovip2.ir
@@ -137,7 +125,7 @@ proxies:
   uuid: e08d8c24-9e55-48ec-a04c-63fbe149f71e
   udp: true
   tls: false
-  network: tcp#GetXConfig-12
+  network: tcp#GetXConfig-10
 - name: VLESS-static.212.115.12.49.clients.your-server.de
   type: vless
   server: static.212.115.12.49.clients.your-server.de
@@ -161,80 +149,94 @@ proxies:
     public-key: ii5nFqaXeYMOc3I_blPZ3AB8msCtXjSvU48A_ESRETc
     fingerprint: firefox
   sni: serbiya.worldfly.io
-- name: VLESS-201.24.121.243
+- name: VLESS-167.233.129.126
   type: vless
-  server: 201.24.121.243
-  port: 443
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  server: 167.233.129.126
+  port: 2474
+  uuid: 287db857-de04-4212-bd69-5d14083e340e
   udp: true
   tls: false
-  network: grpc
-  grpc-service-name: vlgrpc
-  sni: kk-ru24a1.testkknegr.online
-- name: VLESS-n04.jinggai.online
+  network: tcp#GetXConfig-13
+- name: VLESS-web-production-90ce33.up.railway.app
   type: vless
-  server: n04.jinggai.online
-  port: 8443
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  server: web-production-90ce33.up.railway.app
+  port: 443
+  uuid: 0cd8ccfe-c4f0-479c-b246-07fcfd75925d
   udp: true
   tls: true
   network: ws
-  ws-path: /nvl-n04-ws/e0577fe8fd7c8823#Farah_VPN-16
+  ws-path: /ws/0cd8ccfe-c4f0-479c-b246-07fcfd75925d#GetXConfig-14
   ws-headers:
-    Host: n04.jinggai.online
-  sni: n04.jinggai.online
-- name: VLESS-186.246.6.110
+    Host: web-production-90ce33.up.railway.app
+  sni: web-production-90ce33.up.railway.app
+- name: VLESS-188.114.97.6
   type: vless
-  server: 186.246.6.110
+  server: 188.114.97.6
   port: 443
-  uuid: 8c40bb2c-157a-4830-a2c3-0b35ef50c660
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
-  network: grpc
-  grpc-service-name: moktana.net.v1.StreamService#Farah_VPN-17
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
-    fingerprint: random
-  sni: upload.hexagonicfield.com
-- name: VLESS-178.172.227.228
+  network: ws
+  ws-path: /tyxyws
+  ws-headers:
+    Host: jp3.yohototo.top
+  sni: jp3.yohototo.top
+- name: VLESS-138.124.86.230
   type: vless
-  server: 178.172.227.228
-  port: 14430
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  server: 138.124.86.230
+  port: 48115
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
   udp: true
   tls: false
-  network: ws
-  ws-path: /vless
-  ws-headers:
-    Host: 178.172.227.228
-- name: VLESS-152.228.162.19
+  network: grpc
+  grpc-service-name: 138-124-86-230-sslip-io
+  sni: 138-124-86-230.sslip.io
+- name: VLESS-104.21.227.134
   type: vless
-  server: 152.228.162.19
+  server: 104.21.227.134
   port: 80
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
   udp: true
   tls: false
-  network: ws#Farah_VPN-19
-- name: VLESS-82.39.171.12
+  network: ws
+  ws-path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY
+  ws-headers:
+    Host: elenaaaaaaaaaa.cloudns.pro
+- name: VLESS-104.18.12.149
   type: vless
-  server: 82.39.171.12
+  server: 104.18.12.149
+  port: 80
+  uuid: 5f4845b4-11dc-41d6-9508-4ff6a02e36c1
+  udp: true
+  tls: false
+  network: ws#Farah_VPN-18
+- name: VLESS-172.67.208.1
+  type: vless
+  server: 172.67.208.1
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: 1443b7a1-7ba9-4ec9-b904-2e867367b5d7
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#Farah_VPN-20
-    fingerprint: ios
-  sni: yahoo.com
+  network: ws
+  ws-path: /sync
+  ws-headers:
+    Host: odd-violet-5440.asdgrweeee13.workers.dev
+  sni: odd-violet-5440.asdgrweeee13.workers.dev#Farah_VPN-19
+- name: VLESS-34.39.80.57
+  type: vless
+  server: 34.39.80.57
+  port: 50818
+  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /GunService#Farah_VPN-20
+  sni: yingguo.rymaker.cn
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - VLESS-usa4.un1.cloud
-  - VLESS-bridgestone.best
   - VLESS-usa5.un1.cloud
   - VLESS-93.190.9.194
   - VLESS-89.105.218.148
@@ -246,17 +248,18 @@ proxy-groups:
   - VLESS-91.107.147.12
   - VLESS-static.212.115.12.49.clients.your-server.de
   - VLESS-serbiya.worldfly.io
-  - VLESS-201.24.121.243
-  - VLESS-n04.jinggai.online
-  - VLESS-186.246.6.110
-  - VLESS-178.172.227.228
-  - VLESS-152.228.162.19
-  - VLESS-82.39.171.12
+  - VLESS-167.233.129.126
+  - VLESS-web-production-90ce33.up.railway.app
+  - VLESS-188.114.97.6
+  - VLESS-138.124.86.230
+  - VLESS-104.21.227.134
+  - VLESS-104.18.12.149
+  - VLESS-172.67.208.1
+  - VLESS-34.39.80.57
 - name: Auto
   type: url-test
   proxies:
   - VLESS-usa4.un1.cloud
-  - VLESS-bridgestone.best
   - VLESS-usa5.un1.cloud
   - VLESS-93.190.9.194
   - VLESS-89.105.218.148
@@ -268,12 +271,14 @@ proxy-groups:
   - VLESS-91.107.147.12
   - VLESS-static.212.115.12.49.clients.your-server.de
   - VLESS-serbiya.worldfly.io
-  - VLESS-201.24.121.243
-  - VLESS-n04.jinggai.online
-  - VLESS-186.246.6.110
-  - VLESS-178.172.227.228
-  - VLESS-152.228.162.19
-  - VLESS-82.39.171.12
+  - VLESS-167.233.129.126
+  - VLESS-web-production-90ce33.up.railway.app
+  - VLESS-188.114.97.6
+  - VLESS-138.124.86.230
+  - VLESS-104.21.227.134
+  - VLESS-104.18.12.149
+  - VLESS-172.67.208.1
+  - VLESS-34.39.80.57
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

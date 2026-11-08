@@ -8,82 +8,73 @@ proxies:
 - name: SS-4.168.233.69-chacha20
   type: ss
   server: 4.168.233.69
-  port: 44310
+  port: 4436
   cipher: chacha20-ietf-poly1305
   password: cdrSQWa9CwUAVdt3
   udp: true
-- name: SS-156.146.38.168-aes-128-
+- name: SS-37.19.198.236-aes-128-
   type: ss
-  server: 156.146.38.168
-  port: 44328
+  server: 37.19.198.236
+  port: 44344
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-51.222.141.125-aes-256-
+- name: SS-158.173.20.208-aes-128-
   type: ss
-  server: 51.222.141.125
-  port: 44531
+  server: 158.173.20.208
+  port: 44360
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-84.247.155.196-aes-256-
+  type: ss
+  server: 84.247.155.196
+  port: 44368
   cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
+  password: 3eOFeNssde7PYYMv
   udp: true
-- name: SS-37.19.198.160-aes-128-
+- name: SS-158.173.20.171-aes-128-
   type: ss
-  server: 37.19.198.160
-  port: 44341
+  server: 158.173.20.171
+  port: 44369
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-198.98.53.130-chacha20
+- name: SS-141.98.101.181-aes-128-
   type: ss
-  server: 198.98.53.130
-  port: 44342
+  server: 141.98.101.181
+  port: 44391
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-bogging-eyeteeth-fly.freesocks.work-chacha20
+  type: ss
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 44396
   cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-  udp: true
-- name: SS-156.146.38.167-aes-128-
-  type: ss
-  server: 156.146.38.167
-  port: 44346
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.6-aes-128-
-  type: ss
-  server: 173.244.56.6
-  port: 44353
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-82.38.31.162-chacha20
-  type: ss
-  server: 82.38.31.162
-  port: 44362
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - SS-4.168.233.69-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-51.222.141.125-aes-256-
-  - SS-37.19.198.160-aes-128-
-  - SS-198.98.53.130-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-82.38.31.162-chacha20
+  - SS-37.19.198.236-aes-128-
+  - SS-158.173.20.208-aes-128-
+  - SS-84.247.155.196-aes-256-
+  - SS-158.173.20.171-aes-128-
+  - SS-141.98.101.181-aes-128-
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
 - name: Auto
   type: url-test
   proxies:
   - SS-4.168.233.69-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-51.222.141.125-aes-256-
-  - SS-37.19.198.160-aes-128-
-  - SS-198.98.53.130-chacha20
-  - SS-156.146.38.167-aes-128-
-  - SS-173.244.56.6-aes-128-
-  - SS-82.38.31.162-chacha20
+  - SS-37.19.198.236-aes-128-
+  - SS-158.173.20.208-aes-128-
+  - SS-84.247.155.196-aes-256-
+  - SS-158.173.20.171-aes-128-
+  - SS-141.98.101.181-aes-128-
+  - SS-bogging-eyeteeth-fly.freesocks.work-chacha20
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

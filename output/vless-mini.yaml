@@ -161,75 +161,76 @@ proxies:
     public-key: D_wVvCZGOUWDp1-TscOXN6MnTqcHmhZyGxc8hL_A1n8
     fingerprint: safari
   sni: ea.com
-- name: VLESS-69.48.201.136
+- name: VLESS-www.iplocation.net
   type: vless
-  server: 69.48.201.136
-  port: 30016
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  server: www.iplocation.net
+  port: 8080
+  uuid: 5c4ce4e3-d4cd-43ff-8eb0-9aa553410bff
   udp: true
   tls: false
-  network: ws#Farah_VPN-15
-- name: VLESS-156.226.168.221
+  network: ws
+  ws-path: /#Farah_VPN-15
+  ws-headers:
+    Host: n23odi-jolly-sound-f784.mbkl61es.workers.dev
+- name: VLESS-51.158.206.86
   type: vless
-  server: 156.226.168.221
-  port: 35193
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  server: 51.158.206.86
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: true
-  network: tcp
+  network: tcp#Farah_VPN-16
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
     fingerprint: chrome
-  sni: www.apple.com
-- name: VLESS-sw.golangwikito.cfd
+  sni: fuck.rkn
+- name: VLESS-172.67.65.56
   type: vless
-  server: sw.golangwikito.cfd
-  port: 443
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  server: 172.67.65.56
+  port: 2053
+  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
   udp: true
   tls: true
+  network: ws
+  ws-path: /proxyip
+  ws-headers:
+    Host: whitecreeper.pages.dev
+  sni: whitecreeper.pages.dev#Farah_VPN-17
+- name: VLESS-2.26.6.1
+  type: vless
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  udp: true
+  tls: false
   network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
-    fingerprint: chrome
-  sni: sw.golangwikito.cfd
-- name: VLESS-ee.subv.ru
+  sni: 2.26.6.1
+- name: VLESS-5.178.109.174
   type: vless
-  server: ee.subv.ru
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  server: 5.178.109.174
+  port: 14430
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    fingerprint: firefox
-  sni: dvizhok.su
-- name: VLESS-169.40.42.16
+  tls: false
+  network: ws
+  ws-path: /vless#Farah_VPN-19
+  ws-headers:
+    Host: 5.178.109.174
+  sni: 5.178.109.174
+- name: VLESS-95.174.68.188
   type: vless
-  server: 169.40.42.16
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 95.174.68.188
+  port: 14430
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    fingerprint: chrome
-  sni: yahoo.com
-- name: VLESS-172.64.144.198
-  type: vless
-  server: 172.64.144.198
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  udp: true
-  tls: true
-  network: ws#Farah_VPN-20
-  sni: powered-by-surena.configfarsi695fd42d43c58.workers.dev
+  tls: false
+  network: ws
+  ws-path: /vless#Farah_VPN-20
+  ws-headers:
+    Host: 95.174.68.188
+  sni: 95.174.68.188
 proxy-groups:
 - name: PROXY
   type: select
@@ -247,12 +248,12 @@ proxy-groups:
   - VLESS-216.86.70.155
   - VLESS-185.86.147.182
   - VLESS-185.186.140.69
-  - VLESS-69.48.201.136
-  - VLESS-156.226.168.221
-  - VLESS-sw.golangwikito.cfd
-  - VLESS-ee.subv.ru
-  - VLESS-169.40.42.16
-  - VLESS-172.64.144.198
+  - VLESS-www.iplocation.net
+  - VLESS-51.158.206.86
+  - VLESS-172.67.65.56
+  - VLESS-2.26.6.1
+  - VLESS-5.178.109.174
+  - VLESS-95.174.68.188
 - name: Auto
   type: url-test
   proxies:
@@ -269,12 +270,12 @@ proxy-groups:
   - VLESS-216.86.70.155
   - VLESS-185.86.147.182
   - VLESS-185.186.140.69
-  - VLESS-69.48.201.136
-  - VLESS-156.226.168.221
-  - VLESS-sw.golangwikito.cfd
-  - VLESS-ee.subv.ru
-  - VLESS-169.40.42.16
-  - VLESS-172.64.144.198
+  - VLESS-www.iplocation.net
+  - VLESS-51.158.206.86
+  - VLESS-172.67.65.56
+  - VLESS-2.26.6.1
+  - VLESS-5.178.109.174
+  - VLESS-95.174.68.188
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

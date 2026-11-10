@@ -5,277 +5,271 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-84.32.209.103
+- name: VLESS-doghkzf.zalolink.com
   type: vless
-  server: 84.32.209.103
-  port: 443
-  uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82
+  server: doghkzf.zalolink.com
+  port: 28675
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   udp: true
-  tls: false
-  network: grpc
-  grpc-service-name: grpc
-  sni: edge-lt.lindenpixel.com
-- name: 'آلمان 🇩🇪 | @GetXConfig | #12005-3'
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA
+  sni: www.lamer.com.hk
+- name: VLESS-154.9.240.186
+  type: vless
+  server: 154.9.240.186
+  port: 26990
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA
+  sni: us1p1.xn--ghq880n3na965a.com
+- name: VLESS-38.180.225.247
+  type: vless
+  server: 38.180.225.247
+  port: 2053
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  network: ws#GetXConfig-5
+  sni: fs.qicai99.com
+- name: VLESS-45.83.182.80
+  type: vless
+  server: 45.83.182.80
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  network: ws#GetXConfig-7
+  sni: fs.qicai99.com
+- name: VLESS-38.244.155.67
+  type: vless
+  server: 38.244.155.67
+  port: 443
+  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: NLXltMEkWIxv9bL2J4XkPGb4oVwGbCkITCTXF-jVxAE
+    fingerprint: firefox
+  sni: node-eu-1.nztpro.com
+- name: VLESS-s1.berluno.ir
+  type: vless
+  server: s1.berluno.ir
+  port: 1155
+  uuid: d07acc1a-c51d-4a1e-93d9-4753d29ae24b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    fingerprint: edge
+  sni: tgju.org
+- name: VLESS-138.124.251.98
+  type: vless
+  server: 138.124.251.98
+  port: 443
+  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
+    fingerprint: firefox
+  sni: tradingview.com
+- name: 'آلمان 🇩🇪 | @GetXConfig | #12059-15'
   type: vmess
   server: 109.70.74.202
   port: 56696
-  uuid: 22c8f96a-fe4e-482e-9656-467ddc014e83
+  uuid: 164de7f3-0943-4d91-8941-f315c923644d
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: tcp
-- name: VLESS-31.129.42.14
+- name: VLESS-109.70.74.177
   type: vless
-  server: 31.129.42.14
-  port: 2053
-  uuid: de496cfe-2b07-441a-b5e5-658d9b2128df
+  server: 109.70.74.177
+  port: 33970
+  uuid: 9d606175-cd71-46be-ac8c-469a08770173
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Y4pAWkxIJInwJocdDzx86X3tp0EMLpwjLr2dkWvdyF4
-    fingerprint: edge
-  sni: germany.hshp.onkno.ru
-- name: VLESS-mouyhninn-production.up.railway.app
-  type: vless
-  server: mouyhninn-production.up.railway.app
-  port: 443
-  uuid: 2d62008e-800c-4483-aa9a-f3772a2ce773
-  udp: true
-  tls: true
-  network: xhttp
-  sni: mouyhninn-production.up.railway.app#GetXConfig-7
-- name: VLESS-puohertestc-production.up.railway.app
-  type: vless
-  server: puohertestc-production.up.railway.app
-  port: 443
-  uuid: 0354d7d4-b444-41f5-9441-68378aa4e537
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/ujg1db
-  ws-headers:
-    Host: puohertestc-production.up.railway.app
-  sni: puohertestc-production.up.railway.app#GetXConfig-9
-- name: 'نامشخص 🏳️ | @GetXConfig | #12009-11'
-  type: vmess
-  server: mouyhninn-production.up.railway.app
-  port: 443
-  uuid: 2d62008e-800c-4483-aa9a-f3772a2ce773
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /api/0dmRnp
-  ws-headers:
-    Host: mouyhninn-production.up.railway.app
-- name: TROJAN-puohertestc-production.up.railway.app
-  type: trojan
-  server: puohertestc-production.up.railway.app
-  port: 443
-  password: fHISHD7-aTAMYYuE
-  udp: true
-  tls: true
-  sni: puohertestc-production.up.railway.app#GetXConfig-13
-  skip-cert-verify: false
-- name: 'آلمان 🇩🇪 | @GetXConfig | #12012-15'
-  type: vmess
-  server: 109.70.74.138
-  port: 58856
-  uuid: 83032237-7561-4277-93a7-2ac5a9665b25
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-176.123.11.42
-  type: vless
-  server: 176.123.11.42
-  port: 443
-  uuid: c1208c5a-2350-4506-affd-fc41b4319286
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /media/ws/
-  ws-headers:
-    Host: groupbackoff.ratethatrestaurant.org
-  sni: groupbackoff.ratethatrestaurant.org
-- name: VLESS-85.90.197.158
-  type: vless
-  server: 85.90.197.158
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: fs.qicai99.com
-  sni: fs.qicai99.com#GetXConfig-20
-- name: VLESS-193.219.97.198
-  type: vless
-  server: 193.219.97.198
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws#GetXConfig-22
-  sni: fs.qicai99.com
-- name: VLESS-84.46.251.105
-  type: vless
-  server: 84.46.251.105
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws#GetXConfig-24
-  sni: fs.qicai99.com
-- name: VLESS-cmnvc.banfuna.ir
-  type: vless
-  server: cmnvc.banfuna.ir
-  port: 30349
-  uuid: 1fd9bcca-bccf-493f-a9a7-570859bd0cc3
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#GetXConfig-26
-  ws-headers:
-    Host: tl3.tavqila.ir
-  sni: tl3.tavqila.ir
-- name: VLESS-avcd.banfuna.ir
-  type: vless
-  server: avcd.banfuna.ir
-  port: 29448
-  uuid: 1fd9bcca-bccf-493f-a9a7-570859bd0cc3
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#GetXConfig-28
-  ws-headers:
-    Host: tl3.tavqila.ir
-  sni: tl3.tavqila.ir
-- name: VLESS-179.255.190.21
-  type: vless
-  server: 179.255.190.21
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /fp=chrome#GetXConfig-30
-  ws-headers:
-    Host: fs.qicai99.com
-  sni: fs.qicai99.com
-- name: VLESS-13.143.165.124
-  type: vless
-  server: 13.143.165.124
-  port: 8443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws#GetXConfig-32
-  sni: fs.qicai99.com
-- name: VLESS-195.206.235.202
-  type: vless
-  server: 195.206.235.202
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-34
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-  sni: 4935e4t.de25.h1clayd.click
-- name: VLESS-5.253.38.69
-  type: vless
-  server: 5.253.38.69
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /#GetXConfig-36
-  ws-headers:
-    Host: fs.qicai99.com
-  sni: fs.qicai99.com
-- name: VLESS-51.158.206.26
-  type: vless
-  server: 51.158.206.26
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: 01faa38
+    public-key: GwUduwZQoBNQ9Rm7l-07aSvV3Y3zrHafZvLERdxgvjs
     fingerprint: chrome
-  sni: fuck.rkn
-- name: VLESS-5.252.179.15
+  sni: www.samsung.com
+- name: VLESS-154.9.240.138
   type: vless
-  server: 5.252.179.15
+  server: 154.9.240.138
+  port: 26990
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  udp: true
+  tls: true
+  network: tcp#GetXConfig-19
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA
+    short-id: e51285e3
+    fingerprint: firefox
+  sni: us1p1.xn--ghq880n3na965a.com
+- name: VLESS-static.167.125.29.2.clients.your-server.de
+  type: vless
+  server: static.167.125.29.2.clients.your-server.de
+  port: 8443
+  uuid: 3c407db5-d048-4d1f-aede-fb4492e33232
+  udp: true
+  tls: true
+  network: tcp
+  sni: static.159.132.31.2.clients.your-server.de
+  flow: xtls-rprx-vision
+- name: VLESS-static.224.138.28.2.clients.your-server.de
+  type: vless
+  server: static.224.138.28.2.clients.your-server.de
+  port: 8443
+  uuid: 3c407db5-d048-4d1f-aede-fb4492e33232
+  udp: true
+  tls: true
+  network: tcp
+  sni: static.44.128.217.95.clients.your-server.de
+  flow: xtls-rprx-vision
+- name: VLESS-static.69.71.203.116.clients.your-server.de
+  type: vless
+  server: static.69.71.203.116.clients.your-server.de
+  port: 8443
+  uuid: 3c407db5-d048-4d1f-aede-fb4492e33232
+  udp: true
+  tls: true
+  network: tcp
+  sni: static.252.108.99.91.clients.your-server.de
+  flow: xtls-rprx-vision
+- name: VLESS-static.107.217.233.167.clients.your-server.de
+  type: vless
+  server: static.107.217.233.167.clients.your-server.de
+  port: 8443
+  uuid: 3c407db5-d048-4d1f-aede-fb4492e33232
+  udp: true
+  tls: true
+  network: tcp
+  sni: static.40.68.12.49.clients.your-server.de
+  flow: xtls-rprx-vision
+- name: VLESS-nln10.mobileemdad.top
+  type: vless
+  server: nln10.mobileemdad.top
   port: 443
-  uuid: 0ab273e4-cea6-41d0-bbab-41071d2fc455
+  uuid: 3fe2af1c-1955-43d0-934a-2f587225276a
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
-    fingerprint: qq
-  sni: www.bing.com
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    fingerprint: edge
+  sni: delivery.mp.microsoft.com
+- name: VLESS-13.53.216.223
+  type: vless
+  server: 13.53.216.223
+  port: 2053
+  uuid: 7164a272-94c9-402c-bb6a-74d5095d230c
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: YTkTPsdfj1hNYd5s32IJ267ayxKP-GY6FcQpVF9aJns
+    fingerprint: chrome
+  sni: digikala.com
+- name: VLESS-wwww.qarvian.ir
+  type: vless
+  server: wwww.qarvian.ir
+  port: 443
+  uuid: 64ce5faf-427b-4dd1-926c-6b7ced6b8c38
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /#Farah_VPN-38
+  ws-headers:
+    Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
+  sni: cdn.akamai.steamstatic.com
+- name: VLESS-60.248.219.54
+  type: vless
+  server: 60.248.219.54
+  port: 443
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530#Farah_VPN-39
+  ws-headers:
+    Host: ty986gfazs.cainiaohub.xyz
+  sni: ty986gfazs.cainiaohub.xyz
+- name: VLESS-server16.peekconfig.workers.dev
+  type: vless
+  server: server16.peekconfig.workers.dev
+  port: 443
+  uuid: 419b7a2c-9fa2-4870-b58a-0498ccc7d6c4
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /eyJqdW5rIjoiYXdUWFpSYnZubU5hIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
+  ws-headers:
+    Host: server16.peekconfig.workers.dev
+  sni: sERveR16.pEeKCoNFIg.worKerS.DeV#Farah_VPN-40
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-84.32.209.103
-  - 'آلمان 🇩🇪 | @GetXConfig | #12005-3'
-  - VLESS-31.129.42.14
-  - VLESS-mouyhninn-production.up.railway.app
-  - VLESS-puohertestc-production.up.railway.app
-  - 'نامشخص 🏳️ | @GetXConfig | #12009-11'
-  - TROJAN-puohertestc-production.up.railway.app
-  - 'آلمان 🇩🇪 | @GetXConfig | #12012-15'
-  - VLESS-176.123.11.42
-  - VLESS-85.90.197.158
-  - VLESS-193.219.97.198
-  - VLESS-84.46.251.105
-  - VLESS-cmnvc.banfuna.ir
-  - VLESS-avcd.banfuna.ir
-  - VLESS-179.255.190.21
-  - VLESS-13.143.165.124
-  - VLESS-195.206.235.202
-  - VLESS-5.253.38.69
-  - VLESS-51.158.206.26
-  - VLESS-5.252.179.15
+  - VLESS-doghkzf.zalolink.com
+  - VLESS-154.9.240.186
+  - VLESS-38.180.225.247
+  - VLESS-45.83.182.80
+  - VLESS-38.244.155.67
+  - VLESS-s1.berluno.ir
+  - VLESS-138.124.251.98
+  - 'آلمان 🇩🇪 | @GetXConfig | #12059-15'
+  - VLESS-109.70.74.177
+  - VLESS-154.9.240.138
+  - VLESS-static.167.125.29.2.clients.your-server.de
+  - VLESS-static.224.138.28.2.clients.your-server.de
+  - VLESS-static.69.71.203.116.clients.your-server.de
+  - VLESS-static.107.217.233.167.clients.your-server.de
+  - VLESS-nln10.mobileemdad.top
+  - VLESS-13.53.216.223
+  - VLESS-wwww.qarvian.ir
+  - VLESS-60.248.219.54
+  - VLESS-server16.peekconfig.workers.dev
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-84.32.209.103
-  - 'آلمان 🇩🇪 | @GetXConfig | #12005-3'
-  - VLESS-31.129.42.14
-  - VLESS-mouyhninn-production.up.railway.app
-  - VLESS-puohertestc-production.up.railway.app
-  - 'نامشخص 🏳️ | @GetXConfig | #12009-11'
-  - TROJAN-puohertestc-production.up.railway.app
-  - 'آلمان 🇩🇪 | @GetXConfig | #12012-15'
-  - VLESS-176.123.11.42
-  - VLESS-85.90.197.158
-  - VLESS-193.219.97.198
-  - VLESS-84.46.251.105
-  - VLESS-cmnvc.banfuna.ir
-  - VLESS-avcd.banfuna.ir
-  - VLESS-179.255.190.21
-  - VLESS-13.143.165.124
-  - VLESS-195.206.235.202
-  - VLESS-5.253.38.69
-  - VLESS-51.158.206.26
-  - VLESS-5.252.179.15
+  - VLESS-doghkzf.zalolink.com
+  - VLESS-154.9.240.186
+  - VLESS-38.180.225.247
+  - VLESS-45.83.182.80
+  - VLESS-38.244.155.67
+  - VLESS-s1.berluno.ir
+  - VLESS-138.124.251.98
+  - 'آلمان 🇩🇪 | @GetXConfig | #12059-15'
+  - VLESS-109.70.74.177
+  - VLESS-154.9.240.138
+  - VLESS-static.167.125.29.2.clients.your-server.de
+  - VLESS-static.224.138.28.2.clients.your-server.de
+  - VLESS-static.69.71.203.116.clients.your-server.de
+  - VLESS-static.107.217.233.167.clients.your-server.de
+  - VLESS-nln10.mobileemdad.top
+  - VLESS-13.53.216.223
+  - VLESS-wwww.qarvian.ir
+  - VLESS-60.248.219.54
+  - VLESS-server16.peekconfig.workers.dev
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

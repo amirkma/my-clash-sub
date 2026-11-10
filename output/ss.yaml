@@ -5,41 +5,77 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-158.173.24.73-aes-128-
+- name: SS-mojigr.fusetea.ir-chacha20
   type: ss
-  server: 158.173.24.73
-  port: 44338
+  server: mojigr.fusetea.ir
+  port: 12027
+  cipher: chacha20-ietf-poly1305
+  password: u5pQhekaEgIHRoaIPGsMM-H4BS4nOYhE
+  udp: true
+- name: SS-156.146.38.170-aes-128-
+  type: ss
+  server: 156.146.38.170
+  port: 44332
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.95.183-aes-128-
+- name: SS-37.19.198.244-aes-128-
   type: ss
-  server: 149.22.95.183
-  port: 44384
+  server: 37.19.198.244
+  port: 44340
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.87.241-aes-128-
+- name: SS-37.19.198.160-aes-128-
   type: ss
-  server: 149.22.87.241
-  port: 44385
+  server: 37.19.198.160
+  port: 44341
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-173.244.56.9-aes-128-
+- name: SS-156.146.38.169-aes-128-
   type: ss
-  server: 173.244.56.9
-  port: 44388
+  server: 156.146.38.169
+  port: 44365
   cipher: aes-128-gcm
   password: shadowsocks
+  udp: true
+- name: SS-37.19.198.243-aes-128-
+  type: ss
+  server: 37.19.198.243
+  port: 44367
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-216.105.168.18-chacha20
+  type: ss
+  server: 216.105.168.18
+  port: 44373
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-158.173.24.73-aes-128-
-  - SS-149.22.95.183-aes-128-
-  - SS-149.22.87.241-aes-128-
-  - SS-173.244.56.9-aes-128-
+  - SS-mojigr.fusetea.ir-chacha20
+  - SS-156.146.38.170-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-216.105.168.18-chacha20
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-mojigr.fusetea.ir-chacha20
+  - SS-156.146.38.170-aes-128-
+  - SS-37.19.198.244-aes-128-
+  - SS-37.19.198.160-aes-128-
+  - SS-156.146.38.169-aes-128-
+  - SS-37.19.198.243-aes-128-
+  - SS-216.105.168.18-chacha20
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

@@ -5,10 +5,17 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-156.146.38.167-aes-128-
+- name: SS-173.244.56.9-aes-128-
   type: ss
-  server: 156.146.38.167
-  port: 44377
+  server: 173.244.56.9
+  port: 44324
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.168-aes-128-
+  type: ss
+  server: 156.146.38.168
+  port: 44381
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -16,6 +23,7 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-156.146.38.167-aes-128-
+  - SS-173.244.56.9-aes-128-
+  - SS-156.146.38.168-aes-128-
 rules:
 - MATCH,PROXY

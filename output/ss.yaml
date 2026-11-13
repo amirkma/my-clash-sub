@@ -5,45 +5,10 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-dns24.m3hrzd.ir-chacha20
+- name: SS-156.146.38.167-aes-128-
   type: ss
-  server: dns24.m3hrzd.ir
-  port: 13529
-  cipher: chacha20-ietf-poly1305
-  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
-  udp: true
-- name: SS-156.146.38.168-aes-128-
-  type: ss
-  server: 156.146.38.168
-  port: 44328
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-173.244.56.9-aes-128-
-  type: ss
-  server: 173.244.56.9
-  port: 44354
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-158.173.24.73-aes-128-
-  type: ss
-  server: 158.173.24.73
-  port: 44374
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: SS-54.36.174.140-chacha20
-  type: ss
-  server: 54.36.174.140
-  port: 44376
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-  udp: true
-- name: SS-156.146.38.170-aes-128-
-  type: ss
-  server: 156.146.38.170
-  port: 44390
+  server: 156.146.38.167
+  port: 44361
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -51,22 +16,6 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-dns24.m3hrzd.ir-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-54.36.174.140-chacha20
-  - SS-156.146.38.170-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-dns24.m3hrzd.ir-chacha20
-  - SS-156.146.38.168-aes-128-
-  - SS-173.244.56.9-aes-128-
-  - SS-158.173.24.73-aes-128-
-  - SS-54.36.174.140-chacha20
-  - SS-156.146.38.170-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-156.146.38.167-aes-128-
 rules:
 - MATCH,PROXY

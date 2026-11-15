@@ -5,38 +5,31 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-Germany.Tunnel.ufou008.com-chacha20
+- name: SS-158.173.24.73-aes-128-
   type: ss
-  server: Germany.Tunnel.ufou008.com
-  port: 20117
-  cipher: chacha20-ietf-poly1305
-  password: fLJHL2rZuNuKx7v7_HKG-Blg6Rj_3hkd
-  udp: true
-- name: SS-yyy.ahbpanel.ir-chacha20
-  type: ss
-  server: yyy.ahbpanel.ir
-  port: 10818
-  cipher: chacha20-ietf-poly1305
-  password: VYSbsLYaCBSquKAq7Tc059Bppmhzs2Yw
-  udp: true
-- name: SS-s5.abol.ahbpanel.ir-chacha20
-  type: ss
-  server: s5.abol.ahbpanel.ir
-  port: 809
-  cipher: chacha20-ietf-poly1305
-  password: VYSbsLYaCBSquKAq7Tc059Bppmhzs2Yw
-  udp: true
-- name: SS-149.22.87.204-aes-128-
-  type: ss
-  server: 149.22.87.204
-  port: 44371
+  server: 158.173.24.73
+  port: 44335
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: SS-149.22.95.183-aes-128-
+- name: SS-54.36.174.140-chacha20
   type: ss
-  server: 149.22.95.183
-  port: 44374
+  server: 54.36.174.140
+  port: 44338
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+  udp: true
+- name: SS-149.22.87.240-aes-128-
+  type: ss
+  server: 149.22.87.240
+  port: 44340
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-156.146.38.170-aes-128-
+  type: ss
+  server: 156.146.38.170
+  port: 44381
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
@@ -44,20 +37,9 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-Germany.Tunnel.ufou008.com-chacha20
-  - SS-yyy.ahbpanel.ir-chacha20
-  - SS-s5.abol.ahbpanel.ir-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.95.183-aes-128-
-- name: Auto
-  type: url-test
-  proxies:
-  - SS-Germany.Tunnel.ufou008.com-chacha20
-  - SS-yyy.ahbpanel.ir-chacha20
-  - SS-s5.abol.ahbpanel.ir-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.95.183-aes-128-
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  - SS-158.173.24.73-aes-128-
+  - SS-54.36.174.140-chacha20
+  - SS-149.22.87.240-aes-128-
+  - SS-156.146.38.170-aes-128-
 rules:
 - MATCH,PROXY

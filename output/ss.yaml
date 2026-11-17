@@ -5,25 +5,59 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-dash.chiex.ir-chacha20
+  type: ss
+  server: dash.chiex.ir
+  port: 13493
+  cipher: chacha20-ietf-poly1305
+  password: 9SEaslNl_pEIU3Mg_Lqhvnygb4xM6kkf
+  udp: true
+- name: SS-40.123.240.235-chacha20
+  type: ss
+  server: 40.123.240.235
+  port: 44318
+  cipher: chacha20-ietf-poly1305
+  password: WTQlw0DYHp6QQjow
+  udp: true
 - name: SS-156.146.38.169-aes-128-
   type: ss
   server: 156.146.38.169
-  port: 44347
+  port: 44337
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-51.222.12.127-aes-256-
   type: ss
   server: 51.222.12.127
-  port: 44556
+  port: 44546
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
+  udp: true
+- name: SS-84.247.155.196-aes-256-
+  type: ss
+  server: 84.247.155.196
+  port: 44393
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-dash.chiex.ir-chacha20
+  - SS-40.123.240.235-chacha20
   - SS-156.146.38.169-aes-128-
   - SS-51.222.12.127-aes-256-
+  - SS-84.247.155.196-aes-256-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-dash.chiex.ir-chacha20
+  - SS-40.123.240.235-chacha20
+  - SS-156.146.38.169-aes-128-
+  - SS-51.222.12.127-aes-256-
+  - SS-84.247.155.196-aes-256-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

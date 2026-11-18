@@ -5,201 +5,146 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-182.16.69.178
+- name: VLESS-104.17.3.81
   type: vless
-  server: 182.16.69.178
+  server: 104.17.3.81
   port: 443
-  uuid: baaa4c32-a606-4b5d-802f-17a4c0adea22
+  uuid: 12d67d2b-ae5c-4d56-9f14-d71d96f7826f
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: hLH987c7kuDMVFHiw2ErecWQhwMKIPOwZsBLGrpN6io
-    fingerprint: chrome
-  sni: cloudflare.com
-- name: VLESS-homestead-walloping.sports-streams.org
+  network: ws
+  ws-path: /vlessws
+  ws-headers:
+    Host: natan.srpcom.cloud
+  sni: natan.srpcom.cloud#GetXConfig-1
+- name: VLESS-45.144.52.252
   type: vless
-  server: homestead-walloping.sports-streams.org
-  port: 443
-  uuid: a18d0149-a511-4489-ad4f-4496d8d91ca3
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: iQCvXMQZR-eT2MVmXP7c99cvcle22mVWuKem_345BWM#GetXConfig-2
-    fingerprint: chrome
-  sni: rss.worldoftanks.eu
-- name: VLESS-jize.behmangt.qzz.io
-  type: vless
-  server: jize.behmangt.qzz.io
-  port: 443
-  uuid: 0c53a6f3-a2ea-49f6-9eb4-2cdeb6da714b
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: rXknkFOUb6eoQ-JQT2OC9LrBH8huewlJQcBgu_a-bTI
-    fingerprint: chrome
-  sni: jize.behmangt.qzz.io
-- name: VLESS-87.120.106.95
-  type: vless
-  server: 87.120.106.95
-  port: 443
-  uuid: a18d0149-a511-4489-ad4f-4496d8d91ca3
-  udp: true
-  tls: true
-  network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: iQCvXMQZR-eT2MVmXP7c99cvcle22mVWuKem_345BWM#GetXConfig-4
-    fingerprint: chrome
-  sni: rss.worldoftanks.eu
-- name: VLESS-zibanabz.jonsonvip.ir
-  type: vless
-  server: zibanabz.jonsonvip.ir
-  port: 3939
-  uuid: 329c4c9a-f3c4-44b7-806e-e92c3b8793b0
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: dnnN66V_xqEbGoG5P8E_Zqk3TaZt2lM4SI9N7Ana7FA
-    fingerprint: chrome
-  sni: ai.android
-- name: VLESS-103.31.78.112
-  type: vless
-  server: 103.31.78.112
-  port: 443
-  uuid: 92ffb0ab-25df-4b8e-aa89-d85f02eccae0
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-6
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nx7s3ql4ibDWAsRyyONxnSeUvjXDoXdtUZm3TefeXkY
-    short-id: '06'
-    fingerprint: firefox
-  sni: dl.google.com
-- name: VLESS-fdh11.mobileemdad.top
-  type: vless
-  server: fdh11.mobileemdad.top
-  port: 8080
-  uuid: 7def466a-5810-47cd-b56a-402f28dd03bf
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tIQQp41fRrliguh9hOjPdKHkR5P_tFHqfhpHU_SKazc
-    fingerprint: firefox
-  sni: tgju.org#GetXConfig-8
-- name: VLESS-37.114.37.192
-  type: vless
-  server: 37.114.37.192
+  server: 45.144.52.252
   port: 443
   uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
   udp: true
   tls: true
+  network: tcp#GetXConfig-2
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -GuGq2rg6lgl4LcxHBFhBZCKKEtES2EGeD2qwXilrXI
+    fingerprint: firefox
+  sni: wergmb.wey-land.net
+- name: VLESS-leviko-fr3382.shopingggg.ir
+  type: vless
+  server: leviko-fr3382.shopingggg.ir
+  port: 80
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  udp: true
+  tls: false
+  network: ws#GetXConfig-3
+- name: VLESS-sync.2ml.bid
+  type: vless
+  server: sync.2ml.bid
+  port: 443
+  uuid: 8344360f-0349-4784-a19f-33fd92e89389
+  udp: true
+  tls: true
   network: grpc
-  grpc-service-name: api-mod#GetXConfig-9
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: eyEGQfdxyhZG0bCKlwp8hSihdc5WHTGmw4umrW4_bxY
-    fingerprint: firefox
-  sni: api-mod.storagedirectguide.com
-- name: VLESS-xn417wt3p3rj.didpadaz.ir
+  grpc-service-name: v3-direct#GetXConfig-4
+  sni: sync.2ml.bid
+- name: VLESS-46.17.47.121
   type: vless
-  server: xn417wt3p3rj.didpadaz.ir
-  port: 8447
-  uuid: fa21a0c7-918c-4059-82fd-98c1583a6188
+  server: 46.17.47.121
+  port: 8080
+  uuid: FastKey_803815
   udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: 739dda6ae2.didpadaz.ir
-  sni: 739dda6ae2.didpadaz.ir#GetXConfig-10
-- name: VLESS-48.103.120.8
+  tls: false
+  network: grpc
+  grpc-service-name: api#GetXConfig-5
+- name: VLESS-46.247.109.129
   type: vless
-  server: 48.103.120.8
+  server: 46.247.109.129
   port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    public-key: AiLOqdc8MtLlRdtyjM9wNd1CIStXleOlP6-NCOSKlTg
     fingerprint: firefox
-  sni: api-gw-ctl.galioncc.com
-- name: VLESS-xcunnztn7vvg.didpadaz.ir
+  sni: auto-2.storagedirectguide.com#GetXConfig-6
+- name: VLESS-178.104.118.69
   type: vless
-  server: xcunnztn7vvg.didpadaz.ir
-  port: 8443
-  uuid: fa21a0c7-918c-4059-82fd-98c1583a6188
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: de-iran-test.didpadaz.ir
-  sni: e0f40cf7c1.didpadaz.ir#GetXConfig-12
-- name: VLESS-x0kdk0huixkf.didpadaz.ir
-  type: vless
-  server: x0kdk0huixkf.didpadaz.ir
-  port: 8443
-  uuid: fa21a0c7-918c-4059-82fd-98c1583a6188
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /
-  ws-headers:
-    Host: e0f40cf7c1.didpadaz.ir
-  sni: e0f40cf7c1.didpadaz.ir#GetXConfig-13
-- name: VLESS-frn3.mobileemdad.top
-  type: vless
-  server: frn3.mobileemdad.top
+  server: 178.104.118.69
   port: 443
-  uuid: 7def466a-5810-47cd-b56a-402f28dd03bf
+  uuid: f1b9efe3-1d57-41ba-9b72-2a0e72aeda8d
+  udp: true
+  tls: true
+  network: tcp
+  sni: bp4q3mbu3ad7.greendop.com#GetXConfig-7
+  flow: xtls-rprx-vision
+- name: VLESS-dertyghusweaqw-production.up.railway.app
+  type: vless
+  server: dertyghusweaqw-production.up.railway.app
+  port: 443
+  uuid: c4645ab3-eec2-430a-a8f5-83fc3fdce3ef
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /api/c6GOe8
+  ws-headers:
+    Host: dertyghusweaqw-production.up.railway.app
+  sni: dertyghusweaqw-production.up.railway.app#GetXConfig-8
+- name: VLESS-104.21.1.213
+  type: vless
+  server: 104.21.1.213
+  port: 443
+  uuid: fa80a2a1-edb1-461a-b94b-e360b8574e27
+  udp: true
+  tls: true
+  network: ws
+  ws-path: /27ae75d08381b6af#GetXConfig-9
+  ws-headers:
+    Host: media-0a02cd.aiacademyhub.org
+  sni: media-0a02cd.aiacademyhub.org
+- name: VLESS-trsv1.shimobile.net
+  type: vless
+  server: trsv1.shimobile.net
+  port: 443
+  uuid: 1b0b1650-5125-43a1-a6bb-9886623f4bf9
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    short-id: 9ed2fa
-    fingerprint: ios
-  sni: delivery.mp.microsoft.com#GetXConfig-14
-- name: VLESS-185.112.56.83
+    public-key: TOHxnZsUo-bxkD3kd_PluEPqyOAXEKIuG1xU9ZmOWwY
+    fingerprint: chrome
+  sni: www.plnitude.com
+- name: VLESS-deployedhazde.shimobile.net
   type: vless
-  server: 185.112.56.83
+  server: deployedhazde.shimobile.net
   port: 8443
-  uuid: 019832a7-9376-445a-ba66-76ee9df0685d
+  uuid: 1b0b1650-5125-43a1-a6bb-9886623f4bf9
   udp: true
   tls: true
   network: xhttp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: CsB20mYga1ELkQfn_MTZP1Rr6RHVWJ_P6yVP0NproWo
-    fingerprint: firefox
-  sni: github.com
-- name: VLESS-netherlands.vpnserverhub.com
+  sni: static.shimobile.net#GetXConfig-11
+- name: VLESS-144.31.214.68
   type: vless
-  server: netherlands.vpnserverhub.com
-  port: 443
-  uuid: 2ba6c5c3-4ad1-4ce1-9f85-345e674f3239
+  server: 144.31.214.68
+  port: 8443
+  uuid: 12910384-1ef8-40a3-818a-57277063ea66
   udp: true
   tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0
-    fingerprint: chrome
-  sni: yahoo.com#GetXConfig-16
+  network: grpc
+  grpc-service-name: vlgrpc
+  sni: kk-fr2-21468.testkknegr.online#GetXConfig-12
+- name: VLESS-nativehazde.shimobile.net
+  type: vless
+  server: nativehazde.shimobile.net
+  port: 8443
+  uuid: 1b0b1650-5125-43a1-a6bb-9886623f4bf9
+  udp: true
+  tls: true
+  network: xhttp
+  sni: sync.shimobile.net
 - name: VLESS-172.67.213.218
   type: vless
   server: 172.67.213.218
@@ -208,7 +153,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /eyJqdW5rIjoiYWNoMkxHaUVYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19#Farah_VPN-17
+  ws-path: /eyJqdW5rIjoiYWNoMkxHaUVYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19#Farah_VPN-14
   ws-headers:
     Host: REd-suRf-2007.MatriSkA.wOrkeRs.DeV
   sni: REd-suRf-2007.MatriSkA.wOrkeRs.DeV
@@ -246,53 +191,90 @@ proxies:
   uuid: 73996ef7-544c-45e7-abc0-973218c727e2
   udp: true
   tls: true
-  network: ws#Farah_VPN-20
+  network: ws#Farah_VPN-17
   sni: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- name: VLESS-212.227.235.66
+  type: vless
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk#Farah_VPN-18
+    fingerprint: firefox
+  sni: www.apple.com
+- name: VLESS-172.67.148.163
+  type: vless
+  server: 172.67.148.163
+  port: 443
+  uuid: 682d30e4-3dfc-49f2-a017-9049119e3497
+  udp: true
+  tls: true
+  network: ws#Farah_VPN-19
+  sni: free.server7peekconfig.workers.dev
+- name: VLESS-145.223.68.58
+  type: vless
+  server: 145.223.68.58
+  port: 443
+  uuid: edb50d20-2d3e-4c1e-8a75-a17168a89aa5
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: qc2DcqT9zPPZr6ePZ7ukxACWrYhRNIBjDIjCK7veyQg#Farah_VPN-20
+    fingerprint: firefox
+  sni: www.cloudflare.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-182.16.69.178
-  - VLESS-homestead-walloping.sports-streams.org
-  - VLESS-jize.behmangt.qzz.io
-  - VLESS-87.120.106.95
-  - VLESS-zibanabz.jonsonvip.ir
-  - VLESS-103.31.78.112
-  - VLESS-fdh11.mobileemdad.top
-  - VLESS-37.114.37.192
-  - VLESS-xn417wt3p3rj.didpadaz.ir
-  - VLESS-48.103.120.8
-  - VLESS-xcunnztn7vvg.didpadaz.ir
-  - VLESS-x0kdk0huixkf.didpadaz.ir
-  - VLESS-frn3.mobileemdad.top
-  - VLESS-185.112.56.83
-  - VLESS-netherlands.vpnserverhub.com
+  - VLESS-104.17.3.81
+  - VLESS-45.144.52.252
+  - VLESS-leviko-fr3382.shopingggg.ir
+  - VLESS-sync.2ml.bid
+  - VLESS-46.17.47.121
+  - VLESS-46.247.109.129
+  - VLESS-178.104.118.69
+  - VLESS-dertyghusweaqw-production.up.railway.app
+  - VLESS-104.21.1.213
+  - VLESS-trsv1.shimobile.net
+  - VLESS-deployedhazde.shimobile.net
+  - VLESS-144.31.214.68
+  - VLESS-nativehazde.shimobile.net
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
   - VLESS-148.135.86.162
   - VLESS-80.240.18.227
+  - VLESS-212.227.235.66
+  - VLESS-172.67.148.163
+  - VLESS-145.223.68.58
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-182.16.69.178
-  - VLESS-homestead-walloping.sports-streams.org
-  - VLESS-jize.behmangt.qzz.io
-  - VLESS-87.120.106.95
-  - VLESS-zibanabz.jonsonvip.ir
-  - VLESS-103.31.78.112
-  - VLESS-fdh11.mobileemdad.top
-  - VLESS-37.114.37.192
-  - VLESS-xn417wt3p3rj.didpadaz.ir
-  - VLESS-48.103.120.8
-  - VLESS-xcunnztn7vvg.didpadaz.ir
-  - VLESS-x0kdk0huixkf.didpadaz.ir
-  - VLESS-frn3.mobileemdad.top
-  - VLESS-185.112.56.83
-  - VLESS-netherlands.vpnserverhub.com
+  - VLESS-104.17.3.81
+  - VLESS-45.144.52.252
+  - VLESS-leviko-fr3382.shopingggg.ir
+  - VLESS-sync.2ml.bid
+  - VLESS-46.17.47.121
+  - VLESS-46.247.109.129
+  - VLESS-178.104.118.69
+  - VLESS-dertyghusweaqw-production.up.railway.app
+  - VLESS-104.21.1.213
+  - VLESS-trsv1.shimobile.net
+  - VLESS-deployedhazde.shimobile.net
+  - VLESS-144.31.214.68
+  - VLESS-nativehazde.shimobile.net
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
   - VLESS-148.135.86.162
   - VLESS-80.240.18.227
+  - VLESS-212.227.235.66
+  - VLESS-172.67.148.163
+  - VLESS-145.223.68.58
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

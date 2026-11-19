@@ -5,64 +5,66 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-93.190.9.103
+- name: VLESS-50.7.12.24
   type: vless
-  server: 93.190.9.103
-  port: 3090
-  uuid: b98bf712-7cbf-4d0a-8b3d-4b216066f024
+  server: 50.7.12.24
+  port: 443
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: okmubqm6BQNL2e8C1BQAz5uDCBokmUBF8SnsegVcJys
+    fingerprint: qq
+  sni: play.recrent-sell.com#GetXConfig-1
+- name: VLESS-share8.gifmems.com
+  type: vless
+  server: share8.gifmems.com
+  port: 443
+  uuid: 31e407b3-6e1e-425f-98ea-fcf8f494c6a0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TkuZvhr3gm6AI1gzSpVKJl5v1xEjS_0jV5R-FEHxm0E
+    fingerprint: qq
+  sni: share8.gifmems.com
+- name: VLESS-de.g-boot.ir
+  type: vless
+  server: de.g-boot.ir
+  port: 443
+  uuid: 728f6bed-3c2d-43bb-a7aa-7080380daa25
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KaVqOudPdBy9TIEDxGMN_fcOGlKJmNg2e2grikDJ2lE
+    fingerprint: chrome
+  sni: www.nvidia.com
+- name: VLESS-45.131.111.145
+  type: vless
+  server: 45.131.111.145
+  port: 9889
+  uuid: 0dcefe19-a42a-4d57-96be-83dcbffd425f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GPwEGfRBoztNbcAvfX4ojY9FJ1vaMD3v21tnIrN2xyE
+    fingerprint: firefox
+  sni: tiktok.transitbp2systems.com#GetXConfig-7
+- name: VLESS-94.249.198.124
+  type: vless
+  server: 94.249.198.124
+  port: 31652
+  uuid: 2da03bdf-8af3-4207-96c7-d70e0dd22c36
   udp: true
   tls: false
-  network: grpc
-  grpc-service-name: vless
-- name: VLESS-122.9.123.248
-  type: vless
-  server: 122.9.123.248
-  port: 44306
-  uuid: 9195e0f1-f466-4e69-838f-a95519b5d45e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qzoG-cG8dG_C1T2tsWnWgooE9eekntARY0fVGIyg4Fg
-    short-id: c11a9913
-    fingerprint: chrome
-  sni: dl.google.com
-- name: VLESS-43.162.217.104
-  type: vless
-  server: 43.162.217.104
-  port: 443
-  uuid: 9195e0f1-f466-4e69-838f-a95519b5d45e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qzoG-cG8dG_C1T2tsWnWgooE9eekntARY0fVGIyg4Fg
-    short-id: c11a9913
-    fingerprint: chrome
-  sni: dl.google.com
-- name: VLESS-196.245.153.105
-  type: vless
-  server: 196.245.153.105
-  port: 443
-  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-    fingerprint: chrome#GetXConfig-7
-  sni: 345739t.de15.h1clayd.click
-- name: VLESS-out2.amirport.ir
-  type: vless
-  server: out2.amirport.ir
-  port: 82
-  uuid: 401c23eb-191b-4934-abb4-4a277d5870ba
-  udp: true
-  tls: false
-  network: tcp
+  network: tcp#GetXConfig-9
 - name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   type: vmess
   server: US032012.westmgreen.com
@@ -225,6 +227,15 @@ proxies:
   network: ws
   ws-path: /vpnjantit
   sni: tr2.vpnjantit.com#meliproxyy-27
+- name: TROJAN-ipfast.kingmna.com
+  type: trojan
+  server: ipfast.kingmna.com
+  port: 443
+  password: auRVImItMy7CqRAY7FC8Wg
+  udp: true
+  tls: true
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: true
 - name: VLESS-n1.topingr.ir
   type: vless
   server: n1.topingr.ir
@@ -233,7 +244,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /api/v3/pulse#anotherme_night-31
+  ws-path: /api/v3/pulse#anotherme_night-36
   ws-headers:
     Host: cdn2.zovip2.ir
   sni: cdn2.zovip2.ir
@@ -281,11 +292,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-93.190.9.103
-  - VLESS-122.9.123.248
-  - VLESS-43.162.217.104
-  - VLESS-196.245.153.105
-  - VLESS-out2.amirport.ir
+  - VLESS-50.7.12.24
+  - VLESS-share8.gifmems.com
+  - VLESS-de.g-boot.ir
+  - VLESS-45.131.111.145
+  - VLESS-94.249.198.124
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
@@ -300,6 +311,7 @@ proxy-groups:
   - VLESS-200.96.106.2
   - VLESS-online.shop.ir.eeso.cc
   - VLESS-185.39.204.117
+  - TROJAN-ipfast.kingmna.com
   - VLESS-n1.topingr.ir
   - VLESS-rs9.zapkey.ir
   - VLESS-zfapi.zalolink.com
@@ -307,11 +319,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-93.190.9.103
-  - VLESS-122.9.123.248
-  - VLESS-43.162.217.104
-  - VLESS-196.245.153.105
-  - VLESS-out2.amirport.ir
+  - VLESS-50.7.12.24
+  - VLESS-share8.gifmems.com
+  - VLESS-de.g-boot.ir
+  - VLESS-45.131.111.145
+  - VLESS-94.249.198.124
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
@@ -326,6 +338,7 @@ proxy-groups:
   - VLESS-200.96.106.2
   - VLESS-online.shop.ir.eeso.cc
   - VLESS-185.39.204.117
+  - TROJAN-ipfast.kingmna.com
   - VLESS-n1.topingr.ir
   - VLESS-rs9.zapkey.ir
   - VLESS-zfapi.zalolink.com

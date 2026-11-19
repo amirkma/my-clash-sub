@@ -5,239 +5,185 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-93.190.9.103
+- name: VLESS-50.7.12.24
   type: vless
-  server: 93.190.9.103
-  port: 3090
-  uuid: b98bf712-7cbf-4d0a-8b3d-4b216066f024
+  server: 50.7.12.24
+  port: 443
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: okmubqm6BQNL2e8C1BQAz5uDCBokmUBF8SnsegVcJys
+    fingerprint: qq
+  sni: play.recrent-sell.com#GetXConfig-1
+- name: VLESS-share8.gifmems.com
+  type: vless
+  server: share8.gifmems.com
+  port: 443
+  uuid: 31e407b3-6e1e-425f-98ea-fcf8f494c6a0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TkuZvhr3gm6AI1gzSpVKJl5v1xEjS_0jV5R-FEHxm0E
+    fingerprint: qq
+  sni: share8.gifmems.com
+- name: VLESS-de.g-boot.ir
+  type: vless
+  server: de.g-boot.ir
+  port: 443
+  uuid: 728f6bed-3c2d-43bb-a7aa-7080380daa25
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KaVqOudPdBy9TIEDxGMN_fcOGlKJmNg2e2grikDJ2lE
+    fingerprint: chrome
+  sni: www.nvidia.com
+- name: VLESS-45.131.111.145
+  type: vless
+  server: 45.131.111.145
+  port: 9889
+  uuid: 0dcefe19-a42a-4d57-96be-83dcbffd425f
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GPwEGfRBoztNbcAvfX4ojY9FJ1vaMD3v21tnIrN2xyE
+    fingerprint: firefox
+  sni: tiktok.transitbp2systems.com#GetXConfig-4
+- name: VLESS-94.249.198.124
+  type: vless
+  server: 94.249.198.124
+  port: 31652
+  uuid: 2da03bdf-8af3-4207-96c7-d70e0dd22c36
   udp: true
   tls: false
-  network: grpc
-  grpc-service-name: vless
-- name: VLESS-122.9.123.248
+  network: tcp#GetXConfig-5
+- name: VLESS-48.102.217.33
   type: vless
-  server: 122.9.123.248
-  port: 44306
-  uuid: 9195e0f1-f466-4e69-838f-a95519b5d45e
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qzoG-cG8dG_C1T2tsWnWgooE9eekntARY0fVGIyg4Fg
-    short-id: c11a9913
-    fingerprint: chrome
-  sni: dl.google.com
-- name: VLESS-43.162.217.104
-  type: vless
-  server: 43.162.217.104
+  server: 48.102.217.33
   port: 443
-  uuid: 9195e0f1-f466-4e69-838f-a95519b5d45e
+  uuid: 12c39efa-b6d8-4467-bfd5-22dca077225e
   udp: true
   tls: true
-  network: tcp
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: qzoG-cG8dG_C1T2tsWnWgooE9eekntARY0fVGIyg4Fg
-    short-id: c11a9913
-    fingerprint: chrome
-  sni: dl.google.com
-- name: VLESS-196.245.153.105
-  type: vless
-  server: 196.245.153.105
-  port: 443
-  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-    fingerprint: chrome#GetXConfig-4
-  sni: 345739t.de15.h1clayd.click
-- name: VLESS-out2.amirport.ir
-  type: vless
-  server: out2.amirport.ir
-  port: 82
-  uuid: 401c23eb-191b-4934-abb4-4a277d5870ba
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-89.125.94.232
-  type: vless
-  server: 89.125.94.232
-  port: 2053
-  uuid: 0001f119-4d6d-42ae-b2f0-d07ed4694381
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: f3Ooz7Yxw4QqQNxddxYG0zOewK8zullgKVTBZxR1a0Y
+    public-key: NVwzzeQbvYYkT2-MGGBCgsHNnGfsSWupuMtTvd6gEzY
     fingerprint: firefox
   sni: www.samsung.com
-- name: VLESS-digitalwaypoint.website
+- name: VLESS-s1-check.pixo-space.com
   type: vless
-  server: digitalwaypoint.website
-  port: 443
-  uuid: 17c068a5-97cb-40a2-bf60-215b749c0508
+  server: s1-check.pixo-space.com
+  port: 2112
+  uuid: 45ef2743-ad11-4812-b7dc-82e311517c11
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: x_X15Vl6mHKSDHI0ku9FOyUA9a6djCnGNhfsW6BEXXA
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    fingerprint: edge
+  sni: tgju.org
+- name: VLESS-cdn-waw.edgeptr.org
+  type: vless
+  server: cdn-waw.edgeptr.org
+  port: 2052
+  uuid: 7ee311c8-f56e-4065-a75d-89336cdb409b
+  udp: true
+  tls: false
+  network: ws#GetXConfig-8
+- name: VLESS-leviko-se9938.shopingggg.ir
+  type: vless
+  server: leviko-se9938.shopingggg.ir
+  port: 443
+  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
+  udp: true
+  tls: true
+  network: tcp
+  sni: lodizu.hagrid-connected.com
+  flow: xtls-rprx-vision
+- name: VLESS-89.106.12.183
+  type: vless
+  server: 89.106.12.183
+  port: 443
+  uuid: 31e407b3-6e1e-425f-98ea-fcf8f494c6a0
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TkuZvhr3gm6AI1gzSpVKJl5v1xEjS_0jV5R-FEHxm0E
     fingerprint: qq
-  sni: digitalwaypoint.website
-- name: VLESS-acornterminal.website
+  sni: share8.gifmems.com
+- name: VLESS-46.19.137.37
   type: vless
-  server: acornterminal.website
+  server: 46.19.137.37
   port: 443
-  uuid: 17c068a5-97cb-40a2-bf60-215b749c0508
+  uuid: 31e407b3-6e1e-425f-98ea-fcf8f494c6a0
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: J7NjN_Zda-cRyvbEGl1bAK4tfpc0ZjuXOKiYACk-3FI
+    public-key: UGQPJAkxXArjmKVbPQ4ZDSh3hVrs9RhFPmjFAvDi5Q0
     fingerprint: qq
-  sni: acornterminal.website
-- name: VLESS-honeycombnode.website
+  sni: share.gifmems.com
+- name: VLESS-tun.pannexo.ir
   type: vless
-  server: honeycombnode.website
-  port: 443
-  uuid: 17c068a5-97cb-40a2-bf60-215b749c0508
+  server: tun.pannexo.ir
+  port: 2053
+  uuid: 21d557b8-36cd-4e5b-983f-e94e933001a3
+  udp: true
+  tls: true
+  network: xhttp
+  sni: tun2.pannexo.ir#GetXConfig-12
+- name: VLESS-84.252.100.33
+  type: vless
+  server: 84.252.100.33
+  port: 43000
+  uuid: 4a923161-156f-4914-8cac-762fb2433bfb
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 7EY13JUT6TfZc9Jnk-SiZL3foUw6PA56byhCQi1szxs
-    fingerprint: qq
-  sni: honeycombnode.website
-- name: VLESS-documentnest.website
+    public-key: CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ
+    fingerprint: ios
+  sni: 84.252.100.33
+- name: VLESS-62.217.181.109
   type: vless
-  server: documentnest.website
-  port: 443
-  uuid: 17c068a5-97cb-40a2-bf60-215b749c0508
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: c-H0VVzHFRX0ni_uoja11AJF3M5TPf8ZIIgz4hIqBQk
-    fingerprint: qq
-  sni: documentnest.website
-- name: VLESS-digitalrepository.online
-  type: vless
-  server: digitalrepository.online
-  port: 443
-  uuid: 17c068a5-97cb-40a2-bf60-215b749c0508
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: bKTzJLYj74IilLkZPG0GO_WPkZdAllAFnetWRDqj5h8
-    fingerprint: qq
-  sni: digitalrepository.online
-- name: VLESS-5.1.40.71
-  type: vless
-  server: 5.1.40.71
-  port: 2083
-  uuid: 0001f119-4d6d-42ae-b2f0-d07ed4694381
-  udp: true
-  tls: true
-  network: ws
-  ws-path: /vless-ws
-  sni: onecloudstream.com#GetXConfig-12
-- name: VLESS-de6.rvpn.online
-  type: vless
-  server: de6.rvpn.online
-  port: 443
-  uuid: ROChtSUYxmxK2V
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: MoLUMyBCaTkH_xXlZF6HwgM2oi8bBeW08JQmyu7HVEo
-    fingerprint: chrome
-  sni: onlycats.photos
-- name: VLESS-fr.rvpn.online
-  type: vless
-  server: fr.rvpn.online
-  port: 443
-  uuid: d7MhME9BjfiLAY
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: UiAgjoF0l2QZO0tqXWjKaP-ikGB-uuIY5_wLH9XS0Ug
-    fingerprint: chrome
-  sni: www.dirndlcustom.com
-- name: VLESS-de5.rvpn.online
-  type: vless
-  server: de5.rvpn.online
-  port: 443
-  uuid: VjbzAL3fXn01D9
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: K3Qci9i3W2_Pn88RiUGD8cjfuJ0fmFbc7e_YyupZBkM
-    fingerprint: chrome
-  sni: onlycats.photos
-- name: VLESS-france.rvpn.online
-  type: vless
-  server: france.rvpn.online
-  port: 443
-  uuid: cGutxv99nIK30R
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: A95WNfoLr0YCFjI1QRGf_G-7eQmITHGprEqCEry1pmU
-    fingerprint: chrome
-  sni: ia.gurjack.com
-- name: VLESS-free.fugui.lol
-  type: vless
-  server: free.fugui.lol
-  port: 47396
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    fingerprint: chrome
-  sni: swdist.apple.com
-- name: VLESS-45.152.113.249
-  type: vless
-  server: 45.152.113.249
+  server: 62.217.181.109
   port: 8443
-  uuid: 266e7048-b5dd-4674-b8e3-eea10fd21aea
+  uuid: 68a19895-7b8e-8400-8055-6aeab39515b2
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: UgqPM4EO_ZYMdHKCtAiVfW6I1DVjljvkyyKl19gNxCY
-  sni: static.selectel.ru
-- name: VLESS-167.104.223.233
+    public-key: _bXTdS7SEP3arribAnbsdiC3VXRhKRVCsYI533sjsCM
+    fingerprint: firefox
+  sni: ya.ru
+- name: VLESS-130.49.188.120
   type: vless
-  server: 167.104.223.233
-  port: 8443
-  uuid: 12910384-1ef8-40a3-818a-57277063ea66
+  server: 130.49.188.120
+  port: 443
+  uuid: 08452ee9-1653-4d08-8d83-6cb0528dad13
   udp: true
   tls: true
-  network: grpc
-  grpc-service-name: vlgrpc
-  sni: kk-gb2-223233.testkknegr.online#GetXConfig-19
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: RsUYIPGTv1QIAC1wERleUBoyMZ-mpxHPRT_hA80u-BM
+    short-id: 1aa760b0
+    fingerprint: firefox
+  sni: dk-1.alpha-ai-studio.com#GetXConfig-16
 - name: VLESS-172.67.213.218
   type: vless
   server: 172.67.213.218
@@ -246,57 +192,91 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /eyJqdW5rIjoiYWNoMkxHaUVYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19#Farah_VPN-20
+  ws-path: /eyJqdW5rIjoiYWNoMkxHaUVYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19#Farah_VPN-17
   ws-headers:
     Host: REd-suRf-2007.MatriSkA.wOrkeRs.DeV
   sni: REd-suRf-2007.MatriSkA.wOrkeRs.DeV
+- name: VLESS-147.93.173.45
+  type: vless
+  server: 147.93.173.45
+  port: 10444
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    fingerprint: safari
+  sni: video.yandex.ru
+- name: VLESS-148.135.86.162
+  type: vless
+  server: 148.135.86.162
+  port: 10000
+  uuid: 327b1113-049e-4256-8d72-8815643dbb65
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: DCbnS4mIPc1W2-wI0MGHhykwzf2nVuZvBadErSE6MxU
+    short-id: a1b2c3d4
+    fingerprint: chrome
+  sni: addons.mozilla.org
+- name: VLESS-80.240.18.227
+  type: vless
+  server: 80.240.18.227
+  port: 10051
+  uuid: 73996ef7-544c-45e7-abc0-973218c727e2
+  udp: true
+  tls: true
+  network: ws#Farah_VPN-20
+  sni: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-93.190.9.103
-  - VLESS-122.9.123.248
-  - VLESS-43.162.217.104
-  - VLESS-196.245.153.105
-  - VLESS-out2.amirport.ir
-  - VLESS-89.125.94.232
-  - VLESS-digitalwaypoint.website
-  - VLESS-acornterminal.website
-  - VLESS-honeycombnode.website
-  - VLESS-documentnest.website
-  - VLESS-digitalrepository.online
-  - VLESS-5.1.40.71
-  - VLESS-de6.rvpn.online
-  - VLESS-fr.rvpn.online
-  - VLESS-de5.rvpn.online
-  - VLESS-france.rvpn.online
-  - VLESS-free.fugui.lol
-  - VLESS-45.152.113.249
-  - VLESS-167.104.223.233
+  - VLESS-50.7.12.24
+  - VLESS-share8.gifmems.com
+  - VLESS-de.g-boot.ir
+  - VLESS-45.131.111.145
+  - VLESS-94.249.198.124
+  - VLESS-48.102.217.33
+  - VLESS-s1-check.pixo-space.com
+  - VLESS-cdn-waw.edgeptr.org
+  - VLESS-leviko-se9938.shopingggg.ir
+  - VLESS-89.106.12.183
+  - VLESS-46.19.137.37
+  - VLESS-tun.pannexo.ir
+  - VLESS-84.252.100.33
+  - VLESS-62.217.181.109
+  - VLESS-130.49.188.120
   - VLESS-172.67.213.218
+  - VLESS-147.93.173.45
+  - VLESS-148.135.86.162
+  - VLESS-80.240.18.227
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-93.190.9.103
-  - VLESS-122.9.123.248
-  - VLESS-43.162.217.104
-  - VLESS-196.245.153.105
-  - VLESS-out2.amirport.ir
-  - VLESS-89.125.94.232
-  - VLESS-digitalwaypoint.website
-  - VLESS-acornterminal.website
-  - VLESS-honeycombnode.website
-  - VLESS-documentnest.website
-  - VLESS-digitalrepository.online
-  - VLESS-5.1.40.71
-  - VLESS-de6.rvpn.online
-  - VLESS-fr.rvpn.online
-  - VLESS-de5.rvpn.online
-  - VLESS-france.rvpn.online
-  - VLESS-free.fugui.lol
-  - VLESS-45.152.113.249
-  - VLESS-167.104.223.233
+  - VLESS-50.7.12.24
+  - VLESS-share8.gifmems.com
+  - VLESS-de.g-boot.ir
+  - VLESS-45.131.111.145
+  - VLESS-94.249.198.124
+  - VLESS-48.102.217.33
+  - VLESS-s1-check.pixo-space.com
+  - VLESS-cdn-waw.edgeptr.org
+  - VLESS-leviko-se9938.shopingggg.ir
+  - VLESS-89.106.12.183
+  - VLESS-46.19.137.37
+  - VLESS-tun.pannexo.ir
+  - VLESS-84.252.100.33
+  - VLESS-62.217.181.109
+  - VLESS-130.49.188.120
   - VLESS-172.67.213.218
+  - VLESS-147.93.173.45
+  - VLESS-148.135.86.162
+  - VLESS-80.240.18.227
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

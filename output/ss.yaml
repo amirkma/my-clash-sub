@@ -5,6 +5,27 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: SS-leviko-nl8242.shopingggg.ir-aes-128-
+  type: ss
+  server: leviko-nl8242.shopingggg.ir
+  port: 44310
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-leviko-gb2271.shopingggg.ir-aes-128-
+  type: ss
+  server: leviko-gb2271.shopingggg.ir
+  port: 44311
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-leviko-ie6840.shopingggg.ir-chacha20
+  type: ss
+  server: leviko-ie6840.shopingggg.ir
+  port: 44312
+  cipher: chacha20-ietf-poly1305
+  password: VBzys1cahfGVlOwR
+  udp: true
 - name: SS-156.146.38.169-aes-128-
   type: ss
   server: 156.146.38.169
@@ -30,8 +51,22 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
+  - SS-leviko-nl8242.shopingggg.ir-aes-128-
+  - SS-leviko-gb2271.shopingggg.ir-aes-128-
+  - SS-leviko-ie6840.shopingggg.ir-chacha20
   - SS-156.146.38.169-aes-128-
   - SS-51.222.12.127-aes-256-
   - SS-84.247.155.196-aes-256-
+- name: Auto
+  type: url-test
+  proxies:
+  - SS-leviko-nl8242.shopingggg.ir-aes-128-
+  - SS-leviko-gb2271.shopingggg.ir-aes-128-
+  - SS-leviko-ie6840.shopingggg.ir-chacha20
+  - SS-156.146.38.169-aes-128-
+  - SS-51.222.12.127-aes-256-
+  - SS-84.247.155.196-aes-256-
+  url: http://www.gstatic.com/generate_204
+  interval: 300
 rules:
 - MATCH,PROXY

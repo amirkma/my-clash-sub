@@ -5,72 +5,66 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-nln8.mobileemdad.top
+- name: VLESS-Su.mamad.web.tr
   type: vless
-  server: nln8.mobileemdad.top
-  port: 443
-  uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
+  server: Su.mamad.web.tr
+  port: 2096
+  uuid: afd3f2f4-de83-4e36-af8c-b3f18ca46dd6
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 2W57pOqrVL0Wij5tOIHWndlvsbx8HsTXq-J7lNXnsWg
+    fingerprint: chrome
+  sni: Aparat.com
+- name: VLESS-Ge.mamad.web.tr
+  type: vless
+  server: Ge.mamad.web.tr
+  port: 2096
+  uuid: afd3f2f4-de83-4e36-af8c-b3f18ca46dd6
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 2W57pOqrVL0Wij5tOIHWndlvsbx8HsTXq-J7lNXnsWg
+    fingerprint: chrome
+  sni: Aparat.com
+- name: VLESS-p2real5.greewebservices.ir
+  type: vless
+  server: p2real5.greewebservices.ir
+  port: 1350
+  uuid: bee52362-4183-42c5-b065-d3a3f344d00c
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    short-id: 377decf1
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
     fingerprint: ios
-  sni: delivery.mp.microsoft.com
-- name: VLESS-usa3.mobileemdad.top
+  sni: play.googleapis.com
+- name: VLESS-83.166.237.124
   type: vless
-  server: usa3.mobileemdad.top
-  port: 443
-  uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
+  server: 83.166.237.124
+  port: 8444
+  uuid: a77d6228-85a9-449f-b600-ccf4018230eb
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: ios
-  sni: nobitex.ir
-- name: VLESS-frn3.mobileemdad.top
+    public-key: h16vbQ_IBohiTlEVzz1oEZBf63peHSTbhQ3sJuQO-Vw
+    fingerprint: edge
+  sni: game2.stich.my
+- name: VLESS-46.8.103.55
   type: vless
-  server: frn3.mobileemdad.top
+  server: 46.8.103.55
   port: 443
-  uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
+  uuid: c567d32a-60a0-46df-abc1-a44136d09a19
   udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: ios
-  sni: delivery.mp.microsoft.com
-- name: VLESS-ir3.mobileemdad.top
-  type: vless
-  server: ir3.mobileemdad.top
-  port: 443
-  uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: firefox
-  sni: play.google.com
-- name: VLESS-trn36.mobileemdad.top
-  type: vless
-  server: trn36.mobileemdad.top
-  port: 443
-  uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-    fingerprint: ios
-  sni: delivery.mp.microsoft.com
+  tls: false
+  network: tcp#GetXConfig-9
 - name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   type: vmess
   server: US032012.westmgreen.com
@@ -249,11 +243,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-nln8.mobileemdad.top
-  - VLESS-usa3.mobileemdad.top
-  - VLESS-frn3.mobileemdad.top
-  - VLESS-ir3.mobileemdad.top
-  - VLESS-trn36.mobileemdad.top
+  - VLESS-Su.mamad.web.tr
+  - VLESS-Ge.mamad.web.tr
+  - VLESS-p2real5.greewebservices.ir
+  - VLESS-83.166.237.124
+  - VLESS-46.8.103.55
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
@@ -272,11 +266,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-nln8.mobileemdad.top
-  - VLESS-usa3.mobileemdad.top
-  - VLESS-frn3.mobileemdad.top
-  - VLESS-ir3.mobileemdad.top
-  - VLESS-trn36.mobileemdad.top
+  - VLESS-Su.mamad.web.tr
+  - VLESS-Ge.mamad.web.tr
+  - VLESS-p2real5.greewebservices.ir
+  - VLESS-83.166.237.124
+  - VLESS-46.8.103.55
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45

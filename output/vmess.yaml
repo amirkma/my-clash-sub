@@ -5,17 +5,16 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 'ژاپن 🇯🇵 | @GetXConfig | #13731-1'
+- name: 'هلند 🇳🇱 | @GetXConfig | #13756-1'
   type: vmess
-  server: 161.33.20.255
-  port: 8880
-  uuid: e0856508-d693-450a-a099-455091dc4f25
+  server: 31.15.16.87
+  port: 26662
+  uuid: 1b594942-0830-4dfc-891a-d6d087b96736
   alterId: 0
   cipher: auto
   udp: true
   tls: false
-  network: ws
-  ws-path: e0856508-d693-450a-a099-455091dc4f25-vm
+  network: tcp
 - name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-2
   type: vmess
   server: US032012.westmgreen.com
@@ -318,11 +317,21 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: 'Channel : @proxy_kafee-30'
+  type: vmess
+  server: 154.47.19.225
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - 'ژاپن 🇯🇵 | @GetXConfig | #13731-1'
+  - 'هلند 🇳🇱 | @GetXConfig | #13756-1'
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-2
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-3
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-4
@@ -351,10 +360,11 @@ proxy-groups:
   - '@meliproxy-27'
   - '@meliproxy-28'
   - '@meliproxy-29'
+  - 'Channel : @proxy_kafee-30'
 - name: Auto
   type: url-test
   proxies:
-  - 'ژاپن 🇯🇵 | @GetXConfig | #13731-1'
+  - 'هلند 🇳🇱 | @GetXConfig | #13756-1'
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-2
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-3
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-4
@@ -383,6 +393,7 @@ proxy-groups:
   - '@meliproxy-27'
   - '@meliproxy-28'
   - '@meliproxy-29'
+  - 'Channel : @proxy_kafee-30'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

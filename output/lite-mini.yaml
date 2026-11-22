@@ -5,64 +5,66 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-31.171.152.222
+- name: VLESS-13.114.101.22
   type: vless
-  server: 31.171.152.222
-  port: 8443
-  uuid: 9a597d68-6688-4046-bf24-a5a541e115e0
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU
-    fingerprint: chrome
-  sni: www.apple.com
-- name: VLESS-94.159.98.82
-  type: vless
-  server: 94.159.98.82
-  port: 2053
-  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  udp: true
-  tls: true
-  network: tcp
-  sni: 94.159.98.82
-  flow: xtls-rprx-vision
-- name: VLESS-45.140.204.17
-  type: vless
-  server: 45.140.204.17
-  port: 22444
-  uuid: a9ff24d3-f308-4e72-acb9-a76062583837
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8
-    fingerprint: firefox
-  sni: fontanka.ru
-- name: VLESS-5.182.87.242
-  type: vless
-  server: 5.182.87.242
+  server: 13.114.101.22
   port: 443
-  uuid: d96bdba8-70d6-407f-9863-e2a61e4b1399
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
-  network: grpc
-  sni: de2.omgcloud.ru
-- name: VLESS-fi.starsov.pro
+  network: ws
+  ws-path: /tyxyws
+  ws-headers:
+    Host: jp3.yohototo.top
+  sni: jp3.yohototo.top
+- name: VLESS-172.64.146.66
   type: vless
-  server: fi.starsov.pro
+  server: 172.64.146.66
   port: 443
-  uuid: 488f41fb-b1e6-4b21-9206-837d016167cb
+  uuid: 16e80f38-e97e-4b14-ba89-77d87a3e637f
+  udp: true
+  tls: true
+  network: ws#GetXConfig-3
+  sni: ex3r.qzz.io
+- name: VLESS-176.108.243.24
+  type: vless
+  server: 176.108.243.24
+  port: 443
+  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Nb9IwEEhUHEbHSc6e5uYTjxDgN4ZExhDckM3OgYhj2o
+    public-key: QMPA4RVilYFEnDrbdj93up66oDk5I_btjil9vC7ppgc
     fingerprint: firefox
-  sni: api8.eaglors.com
+  sni: sbmicro740.gangtype.com
+- name: VLESS-45.84.1.207
+  type: vless
+  server: 45.84.1.207
+  port: 443
+  uuid: c50eae6b-18de-4bdc-a22f-9edda40a57ed
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM
+    fingerprint: firefox
+  sni: at01.tunnely.space
+- name: VLESS-179.254.115.200
+  type: vless
+  server: 179.254.115.200
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    fingerprint: firefox
+  sni: 04535dt.us8.h1clayd.click
 - name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   type: vmess
   server: US032012.westmgreen.com
@@ -250,11 +252,11 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-31.171.152.222
-  - VLESS-94.159.98.82
-  - VLESS-45.140.204.17
-  - VLESS-5.182.87.242
-  - VLESS-fi.starsov.pro
+  - VLESS-13.114.101.22
+  - VLESS-172.64.146.66
+  - VLESS-176.108.243.24
+  - VLESS-45.84.1.207
+  - VLESS-179.254.115.200
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45
@@ -273,11 +275,11 @@ proxy-groups:
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-31.171.152.222
-  - VLESS-94.159.98.82
-  - VLESS-45.140.204.17
-  - VLESS-5.182.87.242
-  - VLESS-fi.starsov.pro
+  - VLESS-13.114.101.22
+  - VLESS-172.64.146.66
+  - VLESS-176.108.243.24
+  - VLESS-45.84.1.207
+  - VLESS-179.254.115.200
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
   - VLESS-172.67.213.218
   - VLESS-147.93.173.45

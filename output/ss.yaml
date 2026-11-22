@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-136.148.64.74-chacha20
-  type: ss
-  server: 136.148.64.74
-  port: 8020
-  cipher: chacha20-ietf-poly1305
-  password: 9zXo2bPItCfjfpY3Uf6F0kq-QTwrV0zn
-  udp: true
 - name: SS-156.146.38.169-aes-128-
   type: ss
   server: 156.146.38.169
@@ -37,7 +30,6 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-136.148.64.74-chacha20
   - SS-156.146.38.169-aes-128-
   - SS-51.222.12.127-aes-256-
   - SS-84.247.155.196-aes-256-

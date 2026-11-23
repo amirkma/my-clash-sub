@@ -5,99 +5,6 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-191.217.253.12
-  type: vless
-  server: 191.217.253.12
-  port: 443
-  uuid: 6dd17e9f-5b7c-466d-a53a-7c30f5dc8338
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    fingerprint: chrome
-  sni: 191.217.253.12
-- name: VLESS-tu.g-boot.ir
-  type: vless
-  server: tu.g-boot.ir
-  port: 443
-  uuid: e2bbc15d-8121-4ecf-beb5-1fecf46abfc6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: KaVqOudPdBy9TIEDxGMN_fcOGlKJmNg2e2grikDJ2lE
-    fingerprint: chrome
-  sni: www.nvidia.com
-- name: VLESS-ir.g-boot.ir
-  type: vless
-  server: ir.g-boot.ir
-  port: 443
-  uuid: e2bbc15d-8121-4ecf-beb5-1fecf46abfc6
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: KaVqOudPdBy9TIEDxGMN_fcOGlKJmNg2e2grikDJ2lE
-    fingerprint: chrome
-  sni: www.nvidia.com
-- name: 'آلمان 🇩🇪 | @GetXConfig | #13874-7'
-  type: vmess
-  server: 91.107.149.64
-  port: 2083
-  uuid: 90a8b839-feea-43a9-9554-9b4ad5ead3e2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: tcp
-- name: VLESS-91.107.149.64
-  type: vless
-  server: 91.107.149.64
-  port: 443
-  uuid: 90a8b839-feea-43a9-9554-9b4ad5ead3e2
-  udp: true
-  tls: true
-  network: tcp#GetXConfig-9
-  sni: qxfvrvcmf898.dop66.com
-- name: VLESS-leviko-pl7374.shopingggg.ir
-  type: vless
-  server: leviko-pl7374.shopingggg.ir
-  port: 443
-  uuid: 6dd17e9f-5b7c-466d-a53a-7c30f5dc8338
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    fingerprint: chrome
-  sni: 191.217.253.12
-- name: TROJAN-tu.g-boot.ir
-  type: trojan
-  server: tu.g-boot.ir
-  port: 443
-  password: e2bbc15d-8121-4ecf-beb5-1fecf46abfc6
-  udp: true
-  tls: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: VLESS-leviko-us6922.shopingggg.ir
-  type: vless
-  server: leviko-us6922.shopingggg.ir
-  port: 8443
-  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
-    fingerprint: firefox
-  sni: tradingview.com
 - name: VLESS-2.56.125.209
   type: vless
   server: 2.56.125.209
@@ -109,7 +16,7 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: rI-T-Tg9OSeTitOe9zwApjKQfVZ6bhYZ5CJGJneatmE
-    short-id: edecf16
+    short-id: edecf1
     fingerprint: chrome
   sni: api-stg.semiconductor.samsung.cn
 - name: VLESS-de.g-boot.ir
@@ -157,6 +64,13 @@ proxies:
   tls: true
   sni: www.yahoo.com
   skip-cert-verify: true
+- name: SS-3.146.200.226-chacha20
+  type: ss
+  server: 3.146.200.226
+  port: 20839
+  cipher: chacha20-ietf-poly1305
+  password: 32ba834682c3f77d9b7e4851e38ac18b
+  udp: true
 - name: VLESS-homestead-walloping.sports-streams.org
   type: vless
   server: homestead-walloping.sports-streams.org
@@ -169,7 +83,7 @@ proxies:
   reality-opts:
     public-key: iQCvXMQZR-eT2MVmXP7c99cvcle22mVWuKem_345BWM
     fingerprint: chrome
-  sni: rss.worldoftanks.eu#GetXConfig-25
+  sni: rss.worldoftanks.eu#GetXConfig-10
 - name: VLESS-rebecca.nikanesalamat.ir
   type: vless
   server: rebecca.nikanesalamat.ir
@@ -178,7 +92,7 @@ proxies:
   udp: true
   tls: true
   network: ws
-  ws-path: /vlws#GetXConfig-27
+  ws-path: /vlws#GetXConfig-12
   ws-headers:
     Host: rebecca.nikanesalamat.ir
   sni: rebecca.nikanesalamat.ir
@@ -203,7 +117,7 @@ proxies:
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   udp: true
   tls: true
-  sni: i1tr.mateflora.com#GetXConfig-31
+  sni: i1tr.mateflora.com#GetXConfig-16
   skip-cert-verify: true
 - name: VLESS-n08nre2.arvono.ir
   type: vless
@@ -213,7 +127,7 @@ proxies:
   udp: true
   tls: true
   network: tcp
-  sni: f8b91f4c2fc9d6a0.novarix.ir#GetXConfig-32
+  sni: f8b91f4c2fc9d6a0.novarix.ir#GetXConfig-17
   flow: xtls-rprx-vision
 - name: TROJAN-91.209.253.54
   type: trojan
@@ -224,66 +138,141 @@ proxies:
   tls: true
   sni: mhpanel.kigaping.com
   skip-cert-verify: true
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-35
-  type: vmess
-  server: US032012.westmgreen.com
-  port: 443
-  uuid: fbc990c5-c62e-4e31-a9a5-db3a4fe42741
-  alterId: 0
-  cipher: auto
+- name: VLESS-de2.fusetea.ir
+  type: vless
+  server: de2.fusetea.ir
+  port: 4040
+  uuid: 89ce34ac-17e3-4710-ac0f-d151963c3bd8
   udp: true
   tls: true
-  network: ws
-  ws-path: /wes
-  ws-headers:
-    Host: US032012.westmgreen.com
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: AeKqcN80qHkABrpJeS9pFNbfrrr-U32nsXDcnlXcHjM
+    fingerprint: chrome
+  sni: play.google.com
+- name: TROJAN-162.159.144.209
+  type: trojan
+  server: 162.159.144.209
+  port: 443
+  password: 1vkFHbQX_gN1U8V8jVc
+  udp: true
+  tls: true
+  sni: mhpanel.kigaping.com
+  skip-cert-verify: true
+- name: VLESS-195.226.93.224
+  type: vless
+  server: 195.226.93.224
+  port: 443
+  uuid: 86420b69-84f9-4726-ab17-fb0a7bc05d8f
+  udp: true
+  tls: true
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xRIN4AZSp2c_yaCurN9DNoh0q8zSj-AlMCflpb1pwBA
+    fingerprint: firefox
+  sni: n2.fernstatic.com
+- name: TROJAN-172.64.150.28
+  type: trojan
+  server: 172.64.150.28
+  port: 443
+  password: 1vkFHbQX_gN1U8V8jVc
+  udp: true
+  tls: true
+  sni: mhpanel.kigaping.com
+  skip-cert-verify: true
+- name: TROJAN-a2dgus.supertoolify.com
+  type: trojan
+  server: a2dgus.supertoolify.com
+  port: 443
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  udp: true
+  tls: true
+  sni: a2dgus.supertoolify.com#GetXConfig-28
+  skip-cert-verify: true
+- name: VLESS-94.103.168.62
+  type: vless
+  server: 94.103.168.62
+  port: 2087
+  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
+  udp: true
+  tls: true
+  network: tcp
+  sni: uuyjnfbv.localip.ir#GetXConfig-29
+- name: VLESS-151.241.226.201
+  type: vless
+  server: 151.241.226.201
+  port: 2053
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    fingerprint: firefox
+  sni: www.apple.com
+- name: VLESS-68.221.177.135
+  type: vless
+  server: 68.221.177.135
+  port: 2083
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    fingerprint: chrome
+  sni: www.apple.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-191.217.253.12
-  - VLESS-tu.g-boot.ir
-  - VLESS-ir.g-boot.ir
-  - 'آلمان 🇩🇪 | @GetXConfig | #13874-7'
-  - VLESS-91.107.149.64
-  - VLESS-leviko-pl7374.shopingggg.ir
-  - TROJAN-tu.g-boot.ir
-  - VLESS-leviko-us6922.shopingggg.ir
   - VLESS-2.56.125.209
   - VLESS-de.g-boot.ir
   - TROJAN-de.g-boot.ir
   - VLESS-leviko-de8799.shopingggg.ir
   - TROJAN-ir.g-boot.ir
+  - SS-3.146.200.226-chacha20
   - VLESS-homestead-walloping.sports-streams.org
   - VLESS-rebecca.nikanesalamat.ir
   - VLESS-3.146.200.226
   - TROJAN-i1tr.mateflora.com
   - VLESS-n08nre2.arvono.ir
   - TROJAN-91.209.253.54
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-35
+  - VLESS-de2.fusetea.ir
+  - TROJAN-162.159.144.209
+  - VLESS-195.226.93.224
+  - TROJAN-172.64.150.28
+  - TROJAN-a2dgus.supertoolify.com
+  - VLESS-94.103.168.62
+  - VLESS-151.241.226.201
+  - VLESS-68.221.177.135
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-191.217.253.12
-  - VLESS-tu.g-boot.ir
-  - VLESS-ir.g-boot.ir
-  - 'آلمان 🇩🇪 | @GetXConfig | #13874-7'
-  - VLESS-91.107.149.64
-  - VLESS-leviko-pl7374.shopingggg.ir
-  - TROJAN-tu.g-boot.ir
-  - VLESS-leviko-us6922.shopingggg.ir
   - VLESS-2.56.125.209
   - VLESS-de.g-boot.ir
   - TROJAN-de.g-boot.ir
   - VLESS-leviko-de8799.shopingggg.ir
   - TROJAN-ir.g-boot.ir
+  - SS-3.146.200.226-chacha20
   - VLESS-homestead-walloping.sports-streams.org
   - VLESS-rebecca.nikanesalamat.ir
   - VLESS-3.146.200.226
   - TROJAN-i1tr.mateflora.com
   - VLESS-n08nre2.arvono.ir
   - TROJAN-91.209.253.54
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-35
+  - VLESS-de2.fusetea.ir
+  - TROJAN-162.159.144.209
+  - VLESS-195.226.93.224
+  - TROJAN-172.64.150.28
+  - TROJAN-a2dgus.supertoolify.com
+  - VLESS-94.103.168.62
+  - VLESS-151.241.226.201
+  - VLESS-68.221.177.135
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

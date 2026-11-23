@@ -5,58 +5,130 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: SS-3.146.200.226-chacha20
+- name: SS-sw4.thugiping.com-aes-256-
   type: ss
-  server: 3.146.200.226
-  port: 20834
-  cipher: chacha20-ietf-poly1305
-  password: 32ba834682c3f77d9b7e4851e38ac18b
+  server: sw4.thugiping.com
+  port: 44313
+  cipher: aes-256-gcm
+  password: 1814e548-140f-480d-bf35-9c947cd1a245
   udp: true
-- name: SS-149.22.87.204-aes-128-
+- name: SS-e1n1g.pubgpubg.org-aes-256-
   type: ss
-  server: 149.22.87.204
-  port: 44352
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: e1n1g.pubgpubg.org
+  port: 44314
+  cipher: aes-256-gcm
+  password: 1814e548-140f-480d-bf35-9c947cd1a245
   udp: true
-- name: SS-149.22.87.241-aes-128-
+- name: SS-grm.thugiping.com-aes-256-
   type: ss
-  server: 149.22.87.241
-  port: 44374
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: grm.thugiping.com
+  port: 44315
+  cipher: aes-256-gcm
+  password: 1814e548-140f-480d-bf35-9c947cd1a245
+  udp: true
+- name: SS-sweed1.thugiping.com-aes-256-
+  type: ss
+  server: sweed1.thugiping.com
+  port: 44316
+  cipher: aes-256-gcm
+  password: 1814e548-140f-480d-bf35-9c947cd1a245
+  udp: true
+- name: SS-sw2.thugiping.com-aes-256-
+  type: ss
+  server: sw2.thugiping.com
+  port: 44317
+  cipher: aes-256-gcm
+  password: 1814e548-140f-480d-bf35-9c947cd1a245
   udp: true
 - name: SS-149.22.87.240-aes-128-
   type: ss
   server: 149.22.87.240
-  port: 44382
+  port: 44323
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: SS-102.37.156.224-chacha20
   type: ss
   server: 102.37.156.224
-  port: 44393
+  port: 44334
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: SS-149.22.87.204-aes-128-
+  type: ss
+  server: 149.22.87.204
+  port: 44345
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-51.222.141.125-aes-256-
+  type: ss
+  server: 51.222.141.125
+  port: 44575
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
+- name: SS-51.222.12.127-aes-256-
+  type: ss
+  server: 51.222.12.127
+  port: 44586
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
+- name: SS-141.98.101.178-aes-128-
+  type: ss
+  server: 141.98.101.178
+  port: 44389
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-141.98.101.181-aes-128-
+  type: ss
+  server: 141.98.101.181
+  port: 44390
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: SS-158.173.24.73-aes-128-
+  type: ss
+  server: 158.173.24.73
+  port: 44392
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - SS-3.146.200.226-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
+  - SS-sw4.thugiping.com-aes-256-
+  - SS-e1n1g.pubgpubg.org-aes-256-
+  - SS-grm.thugiping.com-aes-256-
+  - SS-sweed1.thugiping.com-aes-256-
+  - SS-sw2.thugiping.com-aes-256-
   - SS-149.22.87.240-aes-128-
   - SS-102.37.156.224-chacha20
+  - SS-149.22.87.204-aes-128-
+  - SS-51.222.141.125-aes-256-
+  - SS-51.222.12.127-aes-256-
+  - SS-141.98.101.178-aes-128-
+  - SS-141.98.101.181-aes-128-
+  - SS-158.173.24.73-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - SS-3.146.200.226-chacha20
-  - SS-149.22.87.204-aes-128-
-  - SS-149.22.87.241-aes-128-
+  - SS-sw4.thugiping.com-aes-256-
+  - SS-e1n1g.pubgpubg.org-aes-256-
+  - SS-grm.thugiping.com-aes-256-
+  - SS-sweed1.thugiping.com-aes-256-
+  - SS-sw2.thugiping.com-aes-256-
   - SS-149.22.87.240-aes-128-
   - SS-102.37.156.224-chacha20
+  - SS-149.22.87.204-aes-128-
+  - SS-51.222.141.125-aes-256-
+  - SS-51.222.12.127-aes-256-
+  - SS-141.98.101.178-aes-128-
+  - SS-141.98.101.181-aes-128-
+  - SS-158.173.24.73-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:

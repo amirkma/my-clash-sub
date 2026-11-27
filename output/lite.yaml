@@ -5,133 +5,141 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: VLESS-185.227.137.69
+- name: VLESS-client0.ryne-x.ir
   type: vless
-  server: 185.227.137.69
+  server: client0.ryne-x.ir
+  port: 2095
+  uuid: 408bea70-aa17-4c0b-a65f-26bf873d3241
+  udp: true
+  tls: false
+  network: tcp#GetXConfig-1
+- name: VLESS-37.235.196.22
+  type: vless
+  server: 37.235.196.22
+  port: 8443
+  uuid: 70371ff1-20f5-426f-b381-e8781bcc2a71
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    fingerprint: firefox
+  sni: apple.com
+- name: VLESS-144.31.75.168
+  type: vless
+  server: 144.31.75.168
   port: 443
-  uuid: 04a7bdda-c749-4255-8b05-948380de4dd4
+  uuid: b0fd9db4-24b8-45d0-88e1-c709c97646e6
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: ygBHinch-Hdr9jq11BOT0pQqVEcRFrZ0y9_1jYeF0H8
-    fingerprint: chrome
-  sni: www.google.com
-- name: SS-47.74.17.125-aes-256-
-  type: ss
-  server: 47.74.17.125
-  port: 55557
-  cipher: aes-256-gcm
-  password: '123456'
-  udp: true
-- name: VLESS-p2real22.greewebservices.ir
+    public-key: _OxeyvQDpHcak4ou_pmWb5GmhWcG1j7A8LOIqYXghxg
+    fingerprint: edge
+  sni: www.fortum.com
+- name: VLESS-test02.electrowizard.ir
   type: vless
-  server: p2real22.greewebservices.ir
-  port: 1320
-  uuid: 860b5c7f-7a71-41b3-8e6e-2660d0e6375d
+  server: test02.electrowizard.ir
+  port: 5565
+  uuid: 41bcd5ea-f90c-4227-ab6f-23de50b0a226
   udp: true
   tls: true
-  network: tcp
+  network: xhttp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    public-key: MYqLevTK85yKyNkMGnghN3oFxOiRv8NGu8Jy6q9VICc
     fingerprint: chrome
-  sni: play.googleapis.com
-- name: VLESS-areal4.greewebservices.ir
-  type: vless
-  server: areal4.greewebservices.ir
-  port: 5455
-  uuid: 8f2940bc-a353-4efc-a9a0-22184cd4f1ac
-  udp: true
-  tls: true
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nOBPd5aR2G7qpuUbUE2QuLSWGcZu2hzaomJDlMqgi3g
-    fingerprint: chrome
-  sni: play.googleapis.com
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
+  sni: aparat.com
+- name: 'نامشخص 🏳️ | @GetXConfig | #14462-9'
   type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: julia-lows-petite-newly.trycloudflare.com
+  port: 443
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
   alterId: 0
   cipher: auto
   udp: true
+  tls: true
+  network: ws
+  ws-path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
+  ws-headers:
+    Host: julia-lows-petite-newly.trycloudflare.com
+- name: VLESS-152.53.120.90
+  type: vless
+  server: 152.53.120.90
+  port: 50955
+  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
+  udp: true
   tls: false
   network: tcp
-- name: VLESS-172.66.213.98
+- name: VLESS-172.64.154.113
   type: vless
-  server: 172.66.213.98
-  port: 443
-  uuid: 366449c5-ac1e-4314-8142-27a6b1c8c0fb
+  server: 172.64.154.113
+  port: 8443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
   udp: true
   tls: true
   network: ws
-  ws-path: /yn-lax-fb366a66e8526ebc4a311464#Farah_VPN-12
+  ws-path: /proxyip=ProxyIP.JP.CMLiussss.net#Farah_VPN-12
   ws-headers:
-    Host: us5-cdn.xyn.lgbt
-  sni: us5-cdn.xyn.lgbt
-- name: VLESS-104.25.252.78
+    Host: freeceshi6.frii.site
+  sni: freeceshi6.frii.site
+- name: VLESS-207.148.124.12
   type: vless
-  server: 104.25.252.78
-  port: 443
-  uuid: 84d4b268-0a82-4c9d-9517-03ea78e8d505
+  server: 207.148.124.12
+  port: 8443
+  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
   udp: true
-  tls: true
-  network: ws
-  ws-path: /vless/84d4b268-0a82-4c9d-9517-03ea78e8d505#Farah_VPN-13
-  ws-headers:
-    Host: 3xui.995677.xyz
-  sni: 3xui.995677.xyz
-- name: VLESS-185.200.64.124
+  tls: false
+  network: tcp
+  sni: www.bing.com
+- name: VLESS-104.26.13.31
   type: vless
-  server: 185.200.64.124
-  port: 443
-  uuid: aff1b196-478c-425a-9403-7ea15d9aafdf
+  server: 104.26.13.31
+  port: 8080
+  uuid: 3e06b1db-2efb-446e-ba2d-68850dfd2f9d
   udp: true
-  tls: true
+  tls: false
   network: ws
-  ws-path: /487e07e6-2930-4e71-99b3-6792e5909f16#Farah_VPN-14
+  ws-path: /#Farah_VPN-15
   ws-headers:
-    Host: hkg.kkp.us.ci
-  sni: hkg.kkp.us.ci
-- name: TROJAN-193.108.119.15
-  type: trojan
-  server: 193.108.119.15
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
+  sni: ip.sb
+- name: VLESS-138.124.86.230
+  type: vless
+  server: 138.124.86.230
+  port: 48115
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
   udp: true
-  tls: true
-  sni: courses.iloverussia2026.com#Farah_VPN-15
-  skip-cert-verify: true
-- name: TROJAN-66.163.112.13
+  tls: false
+  network: grpc
+  grpc-service-name: 138-124-86-230-sslip-io
+  sni: 138-124-86-230.sslip.io
+- name: TROJAN-66.163.118.244
   type: trojan
-  server: 66.163.112.13
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  sni: blog.unlockyourfuturefindyourperfectcareer.com#Farah_VPN-16
-  skip-cert-verify: true
-- name: TROJAN-193.108.119.78
-  type: trojan
-  server: 193.108.119.78
+  server: 66.163.118.244
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
   skip-cert-verify: true
-- name: TROJAN-167.88.61.52
+- name: TROJAN-216.152.147.79
   type: trojan
-  server: 167.88.61.52
+  server: 216.152.147.79
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com#Farah_VPN-18
-  skip-cert-verify: true
+  sni: blog.connectingpeoplewithgreatjobs.com#Farah_VPN-18
+  skip-cert-verify: false
+- name: SS-51.222.12.127-aes-256-
+  type: ss
+  server: 51.222.12.127
+  port: 44519
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
 - name: '@meliproxy-21'
   type: vmess
   server: 103.14.27.207
@@ -246,110 +254,105 @@ proxies:
     public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
     fingerprint: chrome
   sni: www.apple.com
-- name: 'Channel : @proxy_kafee-31'
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: tcp
-- name: VLESS-31.77.56.68
+- name: VLESS-51.158.206.96
   type: vless
-  server: 31.77.56.68
-  port: 2052
-  uuid: 8f154051-5b60-4e04-8880-a416c133a61b
-  udp: true
-  tls: true
-  network: grpc
-  grpc-service-name: plogrpc
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 4UA4nr9RIIEOC6ZDK5AHkj5v0Q-e3_jNeVI5cIgPSg4
-    short-id: 24afee32
-  sni: cdn.ozon.ru
-- name: VLESS-146.103.43.124
-  type: vless
-  server: 146.103.43.124
-  port: 9543
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  server: 51.158.206.96
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: true
   network: tcp
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: 01afee31
+  sni: fuck.rkn
+- name: VLESS-48.102.207.172
+  type: vless
+  server: 48.102.207.172
+  port: 443
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  udp: true
+  tls: true
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: iZOSshApMLZQ_qeN8ra7h_y9ig2P5yHHiKcN_6kxNmU
     fingerprint: firefox
-  sni: storage.yandexcloud.net
-- name: VLESS-payablemeta.cleanfoodshop.org
+  sni: www.google.com
+- name: VLESS-185.200.244.37
   type: vless
-  server: payablemeta.cleanfoodshop.org
+  server: 185.200.244.37
   port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: 7ce93cef-119d-4cba-9d9d-da0056ba979c
   udp: true
   tls: true
-  network: ws
-  ws-path: /media/ws/
-  sni: payablemeta.cleanfoodshop.org#proxy_kafee-34
-- name: VLESS-31.76.3.52
+  network: xhttp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EhKlZ3cHsJQRkNH7Qeya0ZeAy5jovCT-H4VNivwPyls
+  sni: es1.green-tg.com
+- name: VLESS-147.45.45.194
   type: vless
-  server: 31.76.3.52
+  server: 147.45.45.194
   port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: 639b131f-d0f3-460c-aa17-423047f8a5df
   udp: true
   tls: true
-  network: ws
-  ws-path: /media/ws/
-  ws-headers:
-    Host: payablemeta.cleanfoodshop.org
-  sni: payablemeta.cleanfoodshop.org#proxy_kafee-35
-- name: VLESS-191.217.215.228
+  network: tcp
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo
+    fingerprint: firefox
+  sni: finb2.mcufa.pro#proxy_kafee-34
+- name: VLESS-one.alpheratzz.org
   type: vless
-  server: 191.217.215.228
-  port: 2096
-  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  server: one.alpheratzz.org
+  port: 8443
+  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
   udp: true
   tls: true
-  network: ws
-  ws-path: /cdn/v3/live
-  ws-headers:
-    Host: st3b6e5.rumedia-cdn.com
-  sni: st3b6e5.rumedia-cdn.com#proxy_kafee-36
-- name: VLESS-176.114.95.249
-  type: vless
-  server: 176.114.95.249
-  port: 443
-  uuid: 9a591702-24c7-4abf-9f14-ac59438a64e6
+  network: tcp
+  sni: api-6b04608f.adhil.uk#proxy_kafee-35
+  flow: xtls-rprx-vision
+- name: SS-leviko-fr1459.shopingggg.ir-chacha20
+  type: ss
+  server: leviko-fr1459.shopingggg.ir
+  port: 44337
+  cipher: chacha20-ietf-poly1305
+  password: ySGkGhr2sKHV
   udp: true
-  tls: false
-  network: tcp#proxy_kafee-37
-- name: TROJAN-66.163.127.215
-  type: trojan
-  server: 66.163.127.215
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: SS-141.98.101.178-aes-128-
+  type: ss
+  server: 141.98.101.178
+  port: 44339
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  tls: true
-  sni: courses.indyourperfectremotetechjobfromthecomfortofhome.com#proxy_kafee-38
-  skip-cert-verify: false
+- name: SS-141.98.101.179-aes-128-
+  type: ss
+  server: 141.98.101.179
+  port: 44340
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - VLESS-185.227.137.69
-  - SS-47.74.17.125-aes-256-
-  - VLESS-p2real22.greewebservices.ir
-  - VLESS-areal4.greewebservices.ir
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
-  - VLESS-172.66.213.98
-  - VLESS-104.25.252.78
-  - VLESS-185.200.64.124
-  - TROJAN-193.108.119.15
-  - TROJAN-66.163.112.13
-  - TROJAN-193.108.119.78
-  - TROJAN-167.88.61.52
+  - VLESS-client0.ryne-x.ir
+  - VLESS-37.235.196.22
+  - VLESS-144.31.75.168
+  - VLESS-test02.electrowizard.ir
+  - 'نامشخص 🏳️ | @GetXConfig | #14462-9'
+  - VLESS-152.53.120.90
+  - VLESS-172.64.154.113
+  - VLESS-207.148.124.12
+  - VLESS-104.26.13.31
+  - VLESS-138.124.86.230
+  - TROJAN-66.163.118.244
+  - TROJAN-216.152.147.79
+  - SS-51.222.12.127-aes-256-
   - '@meliproxy-21'
   - '@meliproxy-22'
   - VLESS-85.90.197.220
@@ -360,29 +363,30 @@ proxy-groups:
   - VLESS-79.182.70.192
   - VLESS-2.26.204.46
   - VLESS-185.71.216.177
-  - 'Channel : @proxy_kafee-31'
-  - VLESS-31.77.56.68
-  - VLESS-146.103.43.124
-  - VLESS-payablemeta.cleanfoodshop.org
-  - VLESS-31.76.3.52
-  - VLESS-191.217.215.228
-  - VLESS-176.114.95.249
-  - TROJAN-66.163.127.215
+  - VLESS-51.158.206.96
+  - VLESS-48.102.207.172
+  - VLESS-185.200.244.37
+  - VLESS-147.45.45.194
+  - VLESS-one.alpheratzz.org
+  - SS-leviko-fr1459.shopingggg.ir-chacha20
+  - SS-141.98.101.178-aes-128-
+  - SS-141.98.101.179-aes-128-
 - name: Auto
   type: url-test
   proxies:
-  - VLESS-185.227.137.69
-  - SS-47.74.17.125-aes-256-
-  - VLESS-p2real22.greewebservices.ir
-  - VLESS-areal4.greewebservices.ir
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-11
-  - VLESS-172.66.213.98
-  - VLESS-104.25.252.78
-  - VLESS-185.200.64.124
-  - TROJAN-193.108.119.15
-  - TROJAN-66.163.112.13
-  - TROJAN-193.108.119.78
-  - TROJAN-167.88.61.52
+  - VLESS-client0.ryne-x.ir
+  - VLESS-37.235.196.22
+  - VLESS-144.31.75.168
+  - VLESS-test02.electrowizard.ir
+  - 'نامشخص 🏳️ | @GetXConfig | #14462-9'
+  - VLESS-152.53.120.90
+  - VLESS-172.64.154.113
+  - VLESS-207.148.124.12
+  - VLESS-104.26.13.31
+  - VLESS-138.124.86.230
+  - TROJAN-66.163.118.244
+  - TROJAN-216.152.147.79
+  - SS-51.222.12.127-aes-256-
   - '@meliproxy-21'
   - '@meliproxy-22'
   - VLESS-85.90.197.220
@@ -393,14 +397,14 @@ proxy-groups:
   - VLESS-79.182.70.192
   - VLESS-2.26.204.46
   - VLESS-185.71.216.177
-  - 'Channel : @proxy_kafee-31'
-  - VLESS-31.77.56.68
-  - VLESS-146.103.43.124
-  - VLESS-payablemeta.cleanfoodshop.org
-  - VLESS-31.76.3.52
-  - VLESS-191.217.215.228
-  - VLESS-176.114.95.249
-  - TROJAN-66.163.127.215
+  - VLESS-51.158.206.96
+  - VLESS-48.102.207.172
+  - VLESS-185.200.244.37
+  - VLESS-147.45.45.194
+  - VLESS-one.alpheratzz.org
+  - SS-leviko-fr1459.shopingggg.ir-chacha20
+  - SS-141.98.101.178-aes-128-
+  - SS-141.98.101.179-aes-128-
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
